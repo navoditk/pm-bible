@@ -1,0 +1,29 @@
+# Codex Workflow
+
+Use Codex as the primary repo-aware build agent.
+
+## Start-of-session prompt
+
+Paste this from the repository root:
+
+> Read README.md, ROADMAP.md, LEARNING_PATHS.md, AGENTS.md, resources/README.md, and the README for the curriculum module I am working on. This is a learning-first PM/FICC repository. Do not solve cells or exercises marked MANUAL FIRST, PREDICT, HAND CALCULATION, or ORAL CHECK. Wait for my attempted implementation. When I tell you I have completed one, first review mathematical correctness, dimensions/units, edge cases, and financial interpretation. Explain errors before editing. Then make the smallest necessary correction, extract reusable code into src/pm where appropriate, add or update tests, and update the relevant reference page. Run tests before concluding. Do not silently expand scope.
+
+## During a notebook lab
+
+You:
+1. watch/read,
+2. derive,
+3. type implementation,
+4. run it.
+
+Then ask Codex:
+
+> Review the implementation in notebook XX and compare it with the formula in reference/... . Do not rewrite yet. Identify mathematical, numerical, dimensional, and interpretation issues.
+
+After review:
+
+> Apply the agreed correction. Extract the reusable implementation into src/pm/... . Keep the notebook pedagogical. Add tests for hand-calculated examples and invariants.
+
+## End-of-session prompt
+
+> Run relevant tests. Update docs/PROGRESS.md with what was completed, what concepts I demonstrated manually, known limitations, and the exact next notebook/reference page to open. Do not mark a concept complete unless its tests pass and a reference page exists.

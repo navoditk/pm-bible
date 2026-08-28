@@ -1,0 +1,4 @@
+id,face,coupon_rate,years,frequency,ytm,market_value,spread_duration
+UST5,100,0.04,5,2,0.042,10000000,0
+IG7,100,0.055,7,2,0.06,8000000,4.8
+HY5,100,0.075,5,2,0.085,3000000,3.2
