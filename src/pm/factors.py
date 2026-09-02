@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def factor_model_covariance(exposures, factor_covariance, specific_variance):
     B = np.asarray(exposures, float)
     F = np.asarray(factor_covariance, float)

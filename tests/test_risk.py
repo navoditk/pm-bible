@@ -1,5 +1,7 @@
 import numpy as np
-from pm.risk import portfolio_variance, portfolio_volatility, component_risk_contribution
+
+from pm.risk import component_risk_contribution, portfolio_variance, portfolio_volatility
+
 
 def test_two_asset_variance_matches_expansion():
     v1, v2, rho = 0.20, 0.10, 0.25

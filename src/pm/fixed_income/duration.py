@@ -1,5 +1,7 @@
 import numpy as np
+
 from .bond import bond_cashflows, bond_price
+
 
 def macaulay_duration(ytm, face=100.0, coupon_rate=0.05, years=5.0, frequency=2):
     times, flows = bond_cashflows(face, coupon_rate, years, frequency)

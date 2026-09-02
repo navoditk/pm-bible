@@ -32,3 +32,6 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
+# Notebooks intentionally contain unfinished MANUAL FIRST cells (see AGENTS.md);
+# linting them would flag pedagogical scaffolding as errors.
+extend-exclude = ["notebooks"]

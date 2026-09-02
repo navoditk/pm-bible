@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def portfolio_variance(weights, covariance):
     w = np.asarray(weights, dtype=float)
     cov = np.asarray(covariance, dtype=float)

@@ -1,5 +1,6 @@
-import numpy as np
 import cvxpy as cp
+import numpy as np
+
 
 def minimum_variance(covariance, long_only=True, max_weight=None):
     cov = np.asarray(covariance, float)

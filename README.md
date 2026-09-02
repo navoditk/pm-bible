@@ -1,5 +1,7 @@
 # Portfolio Management Bible — Starter Repository
 
+[![CI](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml/badge.svg)](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml)
+
 A living, build-first reference and learning system for portfolio management, portfolio construction, optimization, risk, and FICC.
 
 This repository is intended to serve three modes simultaneously:

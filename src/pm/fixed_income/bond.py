@@ -1,7 +1,8 @@
 import numpy as np
 
+
 def bond_cashflows(face=100.0, coupon_rate=0.05, years=5.0, frequency=2):
-    n = int(round(years * frequency))
+    n = round(years * frequency)
     coupon = face * coupon_rate / frequency
     flows = np.full(n, coupon, dtype=float)
     flows[-1] += face
