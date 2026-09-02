@@ -16,6 +16,9 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Mean-variance optimization | `reference/concepts/mean_variance_optimization.md` | untested | — |
 | Tracking error / active weights | `reference/concepts/tracking_error.md` | untested | — |
 | Factor risk | `reference/concepts/factor_risk.md` | untested | — |
+| Factor risk contribution | `reference/concepts/factor_risk_contribution.md` | untested | — |
+| Value at risk / expected shortfall | `reference/concepts/value_at_risk.md` | untested | — |
+| Stress testing | `reference/concepts/stress_testing.md` | untested | — |
 | Bond pricing / YTM | `reference/fixed_income/bond_pricing.md` | untested | — |
 | Duration, DV01, convexity, KRD | `reference/fixed_income/duration.md`, `dv01.md`, `key_rate_duration.md` | untested | — |
 | Credit spreads, spread duration | `reference/fixed_income/spread_duration.md` | untested | — |

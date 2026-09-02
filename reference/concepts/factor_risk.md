@@ -28,4 +28,4 @@ def factor_model_covariance(exposures, factor_covariance, specific_variance):
 - treating factor exposures as static when they drift over time
 
 ## Related concepts
-tracking error, risk contribution, mean-variance optimization.
+tracking error, risk contribution, factor risk contribution, mean-variance optimization.

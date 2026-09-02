@@ -9,10 +9,15 @@
 - `concepts/drawdown.md`
 - `concepts/benchmark_basics.md`
 - `concepts/tracking_error.md`
-- `concepts/factor_risk.md`
 
 ## Optimization
 - `concepts/mean_variance_optimization.md`
+
+## Risk models
+- `concepts/factor_risk.md`
+- `concepts/factor_risk_contribution.md`
+- `concepts/value_at_risk.md`
+- `concepts/stress_testing.md`
 
 ## Fixed income
 

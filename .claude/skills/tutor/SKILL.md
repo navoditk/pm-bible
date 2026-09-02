@@ -60,6 +60,9 @@ If no specialized persona matches the topic, fall back to
 | mean-variance optimization, efficient frontier | `portfolio_construction_tutor.md` | `reference/concepts/mean_variance_optimization.md` | `notebooks/optimization/04_efficient_frontier.ipynb`, `05_constrained_optimization.ipynb` | `tests/test_optimization.py` |
 | tracking error, active weights | `concept_tutor.md` | `reference/concepts/tracking_error.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
 | factor risk | `concept_tutor.md` | `reference/concepts/factor_risk.md` | `notebooks/active/07_factor_risk.ipynb` | `tests/test_factors.py` |
+| factor risk contribution | `concept_tutor.md` | `reference/concepts/factor_risk_contribution.md` | `notebooks/active/18_factor_risk_contribution.ipynb` | `tests/test_factors.py` |
+| value at risk, expected shortfall | `concept_tutor.md` | `reference/concepts/value_at_risk.md` | `notebooks/active/19_var_and_expected_shortfall.ipynb` | `tests/test_var.py` |
+| stress testing, scenario design | `concept_tutor.md` | `reference/concepts/stress_testing.md` | `notebooks/integration/11_scenarios.ipynb` | — (see `src/pm/scenarios.py`, no dedicated test) |
 | bond pricing, YTM | `fixed_income_tutor.md` | `reference/fixed_income/bond_pricing.md` | `notebooks/fixed_income/08_bond_math.ipynb` | `tests/test_fixed_income.py` |
 | duration, DV01, convexity, key-rate duration | `fixed_income_tutor.md` | `reference/fixed_income/duration.md`, `dv01.md`, `key_rate_duration.md` | `notebooks/fixed_income/09_duration_curve_risk.ipynb` | `tests/test_fixed_income.py` |
 | credit spreads, spread duration | `fixed_income_tutor.md` | `reference/fixed_income/spread_duration.md` | `notebooks/fixed_income/10_credit_spreads.ipynb` | `tests/test_fixed_income.py` |

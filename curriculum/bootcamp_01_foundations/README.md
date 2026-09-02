@@ -92,3 +92,16 @@ Notebooks:
 - `15_curve_trades_scenarios.ipynb`
 - `16_swaps_and_swap_spreads.ipynb`
 - `17_futures_and_hedging.ipynb`
+
+## Extension — Day 7: Risk models (VaR, ES, factor contribution)
+
+Phase 4 of `ROADMAP.md` (risk models), building on Day 3's factor model.
+
+1. factor variance vs. specific variance contribution
+2. parametric VaR and expected shortfall
+3. stress testing (reuses Day 5's `Scenario` mechanism — see
+   `reference/concepts/stress_testing.md`)
+
+Notebooks:
+- `notebooks/active/18_factor_risk_contribution.ipynb`
+- `19_var_and_expected_shortfall.ipynb`
