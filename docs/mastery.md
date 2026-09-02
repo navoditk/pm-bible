@@ -39,3 +39,7 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Effective duration | `reference/fixed_income/effective_duration.md` | untested | — |
 | MBS negative convexity | `reference/fixed_income/mbs_convexity.md` | untested | — |
 | Non-agency, ABS, CMBS | `reference/fixed_income/non_agency_overview.md` | untested | — |
+| FX spot/forward, CIP | `reference/fx/spot_and_forward.md` | untested | — |
+| Cross-currency basis | `reference/fx/cross_currency_basis.md` | untested | — |
+| FX carry | `reference/fx/fx_carry.md` | untested | — |
+| Commodity roll yield, contango/backwardation | `reference/commodities/roll_yield.md` | untested | — |

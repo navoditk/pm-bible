@@ -83,6 +83,10 @@ If no specialized persona matches the topic, fall back to
 | effective duration | `fixed_income_tutor.md` | `reference/fixed_income/effective_duration.md` | `notebooks/fixed_income/23_effective_duration_and_convexity.ipynb` | `tests/test_mbs.py` |
 | MBS negative convexity, extension/contraction | `fixed_income_tutor.md` | `reference/fixed_income/mbs_convexity.md` | `notebooks/fixed_income/23_effective_duration_and_convexity.ipynb` | `tests/test_mbs.py` |
 | non-agency, ABS, CMBS | `fixed_income_tutor.md` | `reference/fixed_income/non_agency_overview.md` | — (conceptual only, no code) | — |
+| FX spot/forward, covered interest parity | `concept_tutor.md` | `reference/fx/spot_and_forward.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
+| cross-currency basis | `concept_tutor.md` | `reference/fx/cross_currency_basis.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
+| FX carry, FX hedging | `concept_tutor.md` | `reference/fx/fx_carry.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
+| commodity roll yield, contango, backwardation | `concept_tutor.md` | `reference/commodities/roll_yield.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_commodities.py` |
 
 Where a reference page or test file is listed as missing, say so plainly
 rather than inventing content — that gap is real and belongs on the roadmap,

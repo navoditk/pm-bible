@@ -14,4 +14,5 @@ See:
 - `portfolio_foundations.md`
 - `active_management.md`
 - `fixed_income.md`
+- `fx_and_commodities.md`
 - `implementation.md`

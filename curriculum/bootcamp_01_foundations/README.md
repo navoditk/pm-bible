@@ -140,3 +140,15 @@ convexity/OAS and non-agency tranche waterfalls are conceptual only — see
 Notebooks:
 - `notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb`
 - `23_effective_duration_and_convexity.ipynb`
+
+## Extension — Day 10: FX and commodities
+
+Phase 9 of `ROADMAP.md` (FX and commodities).
+
+1. FX spot/forward, covered interest parity
+2. cross-currency basis
+3. FX carry and hedging
+4. commodity futures curves: contango, backwardation, roll yield
+
+Notebooks:
+- `notebooks/fx_commodities/24_fx_and_commodities.ipynb`
