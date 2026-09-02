@@ -43,3 +43,7 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Cross-currency basis | `reference/fx/cross_currency_basis.md` | untested | — |
 | FX carry | `reference/fx/fx_carry.md` | untested | — |
 | Commodity roll yield, contango/backwardation | `reference/commodities/roll_yield.md` | untested | — |
+| Brinson attribution | `reference/concepts/brinson_attribution.md` | untested | — |
+| Fixed-income attribution (carry/curve/spread) | `reference/concepts/fixed_income_attribution.md` | untested | — |
+| Transaction costs, rebalancing | `reference/concepts/transaction_costs_and_rebalancing.md` | untested | — |
+| Liquidity risk | `reference/concepts/liquidity.md` | untested | — |

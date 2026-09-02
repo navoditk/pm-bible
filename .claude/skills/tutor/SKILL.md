@@ -87,6 +87,10 @@ If no specialized persona matches the topic, fall back to
 | cross-currency basis | `concept_tutor.md` | `reference/fx/cross_currency_basis.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
 | FX carry, FX hedging | `concept_tutor.md` | `reference/fx/fx_carry.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
 | commodity roll yield, contango, backwardation | `concept_tutor.md` | `reference/commodities/roll_yield.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_commodities.py` |
+| Brinson attribution, allocation, selection | `concept_tutor.md` | `reference/concepts/brinson_attribution.md` | `notebooks/integration/25_brinson_and_rebalancing.ipynb` | `tests/test_attribution.py` |
+| fixed-income attribution (carry/curve/spread) | `concept_tutor.md` | `reference/concepts/fixed_income_attribution.md` | `notebooks/integration/12_attribution.ipynb` | `tests/test_attribution.py` |
+| transaction costs, rebalancing | `concept_tutor.md` | `reference/concepts/transaction_costs_and_rebalancing.md` | `notebooks/integration/25_brinson_and_rebalancing.ipynb` | `tests/test_attribution.py` |
+| liquidity risk | `concept_tutor.md` | `reference/concepts/liquidity.md` | — (conceptual only, no code) | — |
 
 Where a reference page or test file is listed as missing, say so plainly
 rather than inventing content — that gap is real and belongs on the roadmap,

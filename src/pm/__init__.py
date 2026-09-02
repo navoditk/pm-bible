@@ -1,4 +1,11 @@
 from .active import active_return, active_weights, tracking_error
+from .attribution import (
+    brinson_attribution,
+    fixed_income_return_decomposition,
+    rebalancing_trades,
+    total_attribution,
+    transaction_cost,
+)
 from .commodities import commodity_curve_state, roll_yield
 from .factors import (
     factor_model_covariance,
@@ -27,6 +34,7 @@ from .risk import (
 __all__ = [
     "active_return",
     "active_weights",
+    "brinson_attribution",
     "commodity_curve_state",
     "component_risk_contribution",
     "cross_currency_basis",
@@ -34,6 +42,7 @@ __all__ = [
     "expected_shortfall",
     "factor_model_covariance",
     "factor_variance_contribution",
+    "fixed_income_return_decomposition",
     "fx_carry",
     "fx_forward_rate",
     "log_returns",
@@ -44,9 +53,12 @@ __all__ = [
     "portfolio_return",
     "portfolio_variance",
     "portfolio_volatility",
+    "rebalancing_trades",
     "roll_yield",
     "sharpe_ratio",
     "simple_returns",
     "specific_variance_contribution",
+    "total_attribution",
     "tracking_error",
+    "transaction_cost",
 ]

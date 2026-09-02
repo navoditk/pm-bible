@@ -59,4 +59,10 @@
 ## Commodities
 - `commodities/roll_yield.md`
 
+## Attribution and implementation
+- `concepts/brinson_attribution.md`
+- `concepts/fixed_income_attribution.md`
+- `concepts/transaction_costs_and_rebalancing.md`
+- `concepts/liquidity.md`
+
 More pages should be added continuously using `templates/CONCEPT_TEMPLATE.md`.

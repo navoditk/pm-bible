@@ -152,3 +152,20 @@ Phase 9 of `ROADMAP.md` (FX and commodities).
 
 Notebooks:
 - `notebooks/fx_commodities/24_fx_and_commodities.ipynb`
+
+## Extension — Day 11: Attribution and implementation (deep dive)
+
+Phase 10 of `ROADMAP.md`, extending Day 5's attribution intuition into a
+real Brinson decomposition plus transaction costs/rebalancing. Liquidity
+is conceptual only — see `reference/concepts/liquidity.md`.
+
+1. Brinson attribution (allocation, selection, interaction)
+2. fixed-income carry/curve/spread decomposition
+3. transaction costs
+4. rebalancing trades
+
+Notebooks:
+- `notebooks/integration/25_brinson_and_rebalancing.ipynb`
+
+Notebooks:
+- `notebooks/fx_commodities/24_fx_and_commodities.ipynb`

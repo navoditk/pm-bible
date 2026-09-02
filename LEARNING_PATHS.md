@@ -23,7 +23,7 @@ Sequence:
 5. FX — `curriculum/bootcamp_01_foundations/README.md` Day 10 extension (built)
 6. Commodities — `curriculum/bootcamp_01_foundations/README.md` Day 10 extension (built)
 7. FICC portfolio construction — not yet built
-8. FICC scenarios and attribution — not yet built
+8. FICC scenarios and attribution — scenarios: Day 5 (`notebooks/integration/11_scenarios.ipynb`); attribution: `curriculum/bootcamp_01_foundations/README.md` Day 11 extension (built; liquidity-aware costs are conceptual-only, see `reference/concepts/liquidity.md`)
 
 ## Path C — Portfolio Construction Specialist
 
