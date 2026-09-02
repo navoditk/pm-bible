@@ -74,3 +74,21 @@ Notebooks:
 ## Daily rule
 
 Never spend more than ~45 minutes searching for learning materials. Use the curated references and build.
+
+## Extension — Day 6: Rates portfolio management
+
+This sprint was originally scoped to five days. Phase 6 of `ROADMAP.md`
+(rates portfolio management) extends it by one day, building on Day 4's
+fixed-income foundations.
+
+1. curve construction (bootstrapping), forward rates
+2. curve trades: steepeners, flatteners, butterflies
+3. scenario analysis on curve shocks
+4. swaps, swap DV01, swap spreads
+5. Treasury futures, hedge ratio
+
+Notebooks:
+- `notebooks/fixed_income/14_curve_construction_forwards.ipynb`
+- `15_curve_trades_scenarios.ipynb`
+- `16_swaps_and_swap_spreads.ipynb`
+- `17_futures_and_hedging.ipynb`

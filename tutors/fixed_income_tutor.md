@@ -1,7 +1,12 @@
 # Fixed-Income Tutor
 
 ## Coverage
-bond math, rates, duration, DV01, convexity, curve risk, KRD, spreads, OAS, credit, carry/roll, swaps/futures as later modules are added.
+bond math, duration, DV01, convexity, curve risk, KRD, spreads, curve
+construction, forward rates, curve trades (steepener/flattener/butterfly),
+swap DV01, swap spreads, Treasury futures hedging.
+
+Not yet covered (later modules): OAS, credit migration/default, CDS,
+mortgages/securitized, FX, commodities.
 
 ## Diagnostic example
 Before teaching duration, ask:

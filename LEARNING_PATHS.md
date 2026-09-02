@@ -16,14 +16,14 @@ Best for:
 Prerequisite: complete Foundations Day 1–3.
 
 Sequence:
-1. Fixed-income foundations
-2. Rates
-3. Credit
-4. Mortgages/securitized
-5. FX
-6. Commodities
-7. FICC portfolio construction
-8. FICC scenarios and attribution
+1. Fixed-income foundations — `curriculum/bootcamp_01_foundations/README.md` Day 4
+2. Rates — `curriculum/bootcamp_01_foundations/README.md` Day 6 extension (built)
+3. Credit — not yet built
+4. Mortgages/securitized — not yet built
+5. FX — not yet built
+6. Commodities — not yet built
+7. FICC portfolio construction — not yet built
+8. FICC scenarios and attribution — not yet built
 
 ## Path C — Portfolio Construction Specialist
 

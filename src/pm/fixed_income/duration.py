@@ -18,3 +18,11 @@ def dv01(ytm, face=100.0, coupon_rate=0.05, years=5.0, frequency=2):
     p = bond_price(ytm, face, coupon_rate, years, frequency)
     d = modified_duration(ytm, face, coupon_rate, years, frequency)
     return d * p * 1e-4
+
+
+def hedge_ratio(target_dv01, hedge_instrument_dv01):
+    """Units of the hedge instrument needed to offset target_dv01.
+
+    Negative = short the hedge instrument, positive = long it.
+    """
+    return -target_dv01 / hedge_instrument_dv01

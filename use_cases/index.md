@@ -5,10 +5,10 @@ Starter use cases:
 - `curve_positioning/README.md`
 - `spread_shock/README.md`
 - `benchmark_relative/README.md`
+- `swap_dv01_hedge/README.md`
+- `treasury_futures_hedge/README.md`
 
 Future:
-- Treasury futures hedge
-- swap DV01 hedge
 - credit beta reduction
 - liquidity-aware rebalance
 - risk-budget breach
