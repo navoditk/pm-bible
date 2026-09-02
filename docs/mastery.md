@@ -54,3 +54,4 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Hierarchical risk parity | `reference/concepts/hierarchical_risk_parity.md` | untested | — |
 | Regime-aware allocation | `reference/concepts/regime_aware_allocation.md` | untested | — |
 | Multi-period optimization | `reference/concepts/multi_period_optimization.md` | untested | — |
+| Agentic PM analytics | `reference/concepts/agentic_pm_analytics.md` | untested | — |

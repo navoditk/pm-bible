@@ -74,4 +74,7 @@
 - `concepts/regime_aware_allocation.md`
 - `concepts/multi_period_optimization.md`
 
+## Agentic PM analytics
+- `concepts/agentic_pm_analytics.md`
+
 More pages should be added continuously using `templates/CONCEPT_TEMPLATE.md`.

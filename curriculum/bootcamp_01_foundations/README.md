@@ -182,3 +182,17 @@ optimization are conceptual only — see `reference/concepts/hierarchical_risk_p
 Notebooks:
 - `notebooks/optimization/26_shrinkage_and_black_litterman.ipynb`
 - `27_risk_parity_and_robust_optimization.ipynb`
+
+## Extension — Day 13: Agentic PM analytics
+
+Phase 12 of `ROADMAP.md`, the final roadmap phase. No notebook — this is
+the agent layer over everything built in Days 1–12, not new financial
+math. Read `reference/concepts/agentic_pm_analytics.md` first; it maps
+every roadmap bullet to the concrete artifact that satisfies it.
+
+1. tool schemas — `docs/tool_schema.json`
+2. natural-language query layer — `/pm-query` (`.claude/skills/pm-query/SKILL.md`)
+3. tutor agents — `/tutor` (`.claude/skills/tutor/SKILL.md`, built earlier)
+4. evals — `docs/agentic_analytics_evals.md`
+5. grounding, guardrails, explainability, observability — see how both
+   skills apply `AGENTS.md`'s rules and cite/log every answer

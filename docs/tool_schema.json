@@ -1,0 +1,1126 @@
+{
+  "tools": [
+    {
+      "name": "active_return",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "portfolio_return",
+          "default": null
+        },
+        {
+          "name": "benchmark_return",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "active_weights",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "portfolio_weights",
+          "default": null
+        },
+        {
+          "name": "benchmark_weights",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "tracking_error",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "portfolio_weights",
+          "default": null
+        },
+        {
+          "name": "benchmark_weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "brinson_attribution",
+      "module": "pm.attribution",
+      "parameters": [
+        {
+          "name": "portfolio_weights",
+          "default": null
+        },
+        {
+          "name": "benchmark_weights",
+          "default": null
+        },
+        {
+          "name": "portfolio_returns",
+          "default": null
+        },
+        {
+          "name": "benchmark_returns",
+          "default": null
+        }
+      ],
+      "description": "Classic 3-effect Brinson decomposition per segment (sector, country,"
+    },
+    {
+      "name": "fixed_income_return_decomposition",
+      "module": "pm.attribution",
+      "parameters": [
+        {
+          "name": "carry",
+          "default": null
+        },
+        {
+          "name": "curve_effect",
+          "default": null
+        },
+        {
+          "name": "spread_effect",
+          "default": null
+        }
+      ],
+      "description": "Combine already-computed carry/curve/spread contributions (e.g. from"
+    },
+    {
+      "name": "rebalancing_trades",
+      "module": "pm.attribution",
+      "parameters": [
+        {
+          "name": "current_weights",
+          "default": null
+        },
+        {
+          "name": "target_weights",
+          "default": null
+        },
+        {
+          "name": "portfolio_value",
+          "default": null
+        }
+      ],
+      "description": "Dollar trade needed per position to move from current to target"
+    },
+    {
+      "name": "total_attribution",
+      "module": "pm.attribution",
+      "parameters": [
+        {
+          "name": "contributions",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "transaction_cost",
+      "module": "pm.attribution",
+      "parameters": [
+        {
+          "name": "trade_value",
+          "default": null
+        },
+        {
+          "name": "cost_bps",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "commodity_curve_state",
+      "module": "pm.commodities",
+      "parameters": [
+        {
+          "name": "near_price",
+          "default": null
+        },
+        {
+          "name": "far_price",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "roll_yield",
+      "module": "pm.commodities",
+      "parameters": [
+        {
+          "name": "near_price",
+          "default": null
+        },
+        {
+          "name": "far_price",
+          "default": null
+        }
+      ],
+      "description": "Return from rolling a futures position from the near contract into"
+    },
+    {
+      "name": "factor_model_covariance",
+      "module": "pm.factors",
+      "parameters": [
+        {
+          "name": "exposures",
+          "default": null
+        },
+        {
+          "name": "factor_covariance",
+          "default": null
+        },
+        {
+          "name": "specific_variance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "factor_variance_contribution",
+      "module": "pm.factors",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "exposures",
+          "default": null
+        },
+        {
+          "name": "factor_covariance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "portfolio_factor_exposure",
+      "module": "pm.factors",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "exposures",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "specific_variance_contribution",
+      "module": "pm.factors",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "specific_variance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "bond_cashflows",
+      "module": "pm.fixed_income.bond",
+      "parameters": [
+        {
+          "name": "face",
+          "default": "100.0"
+        },
+        {
+          "name": "coupon_rate",
+          "default": "0.05"
+        },
+        {
+          "name": "years",
+          "default": "5.0"
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "bond_price",
+      "module": "pm.fixed_income.bond",
+      "parameters": [
+        {
+          "name": "ytm",
+          "default": null
+        },
+        {
+          "name": "face",
+          "default": "100.0"
+        },
+        {
+          "name": "coupon_rate",
+          "default": "0.05"
+        },
+        {
+          "name": "years",
+          "default": "5.0"
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "cds_bond_basis",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "cds_spread",
+          "default": null
+        },
+        {
+          "name": "bond_spread",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "credit_spread_from_hazard",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "hazard_rate",
+          "default": null
+        },
+        {
+          "name": "recovery_rate",
+          "default": null
+        }
+      ],
+      "description": "Approximate par CDS/credit spread implied by a constant hazard rate"
+    },
+    {
+      "name": "expected_loss",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "notional",
+          "default": null
+        },
+        {
+          "name": "default_probability",
+          "default": null
+        },
+        {
+          "name": "recovery_rate",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "spread_pnl",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "market_value",
+          "default": null
+        },
+        {
+          "name": "spread_duration",
+          "default": null
+        },
+        {
+          "name": "spread_change_bp",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "survival_probability",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "hazard_rate",
+          "default": null
+        },
+        {
+          "name": "t",
+          "default": null
+        }
+      ],
+      "description": "Probability of no default by time t, under a constant hazard rate."
+    },
+    {
+      "name": "z_spread",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "price",
+          "default": null
+        },
+        {
+          "name": "face",
+          "default": null
+        },
+        {
+          "name": "coupon_rate",
+          "default": null
+        },
+        {
+          "name": "years",
+          "default": null
+        },
+        {
+          "name": "frequency",
+          "default": null
+        },
+        {
+          "name": "curve_tenors",
+          "default": null
+        },
+        {
+          "name": "curve_rates",
+          "default": null
+        }
+      ],
+      "description": "Constant spread over the interpolated zero curve that reprices the"
+    },
+    {
+      "name": "bootstrap_zero_rates",
+      "module": "pm.fixed_income.curve",
+      "parameters": [
+        {
+          "name": "par_yields",
+          "default": null
+        },
+        {
+          "name": "frequency",
+          "default": "1"
+        }
+      ],
+      "description": "Bootstrap annual zero (spot) rates from annual-pay par yields."
+    },
+    {
+      "name": "forward_rate",
+      "module": "pm.fixed_income.curve",
+      "parameters": [
+        {
+          "name": "t1",
+          "default": null
+        },
+        {
+          "name": "z1",
+          "default": null
+        },
+        {
+          "name": "t2",
+          "default": null
+        },
+        {
+          "name": "z2",
+          "default": null
+        }
+      ],
+      "description": "Annually-compounded forward rate between t1 and t2 (t2 > t1) implied"
+    },
+    {
+      "name": "interpolate_zero_rate",
+      "module": "pm.fixed_income.curve",
+      "parameters": [
+        {
+          "name": "tenor",
+          "default": null
+        },
+        {
+          "name": "curve_tenors",
+          "default": null
+        },
+        {
+          "name": "curve_rates",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "key_rate_return_approximation",
+      "module": "pm.fixed_income.curve",
+      "parameters": [
+        {
+          "name": "key_rate_durations",
+          "default": null
+        },
+        {
+          "name": "curve_shocks_decimal",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "dv01",
+      "module": "pm.fixed_income.duration",
+      "parameters": [
+        {
+          "name": "ytm",
+          "default": null
+        },
+        {
+          "name": "face",
+          "default": "100.0"
+        },
+        {
+          "name": "coupon_rate",
+          "default": "0.05"
+        },
+        {
+          "name": "years",
+          "default": "5.0"
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "hedge_ratio",
+      "module": "pm.fixed_income.duration",
+      "parameters": [
+        {
+          "name": "target_dv01",
+          "default": null
+        },
+        {
+          "name": "hedge_instrument_dv01",
+          "default": null
+        }
+      ],
+      "description": "Units of the hedge instrument needed to offset target_dv01."
+    },
+    {
+      "name": "macaulay_duration",
+      "module": "pm.fixed_income.duration",
+      "parameters": [
+        {
+          "name": "ytm",
+          "default": null
+        },
+        {
+          "name": "face",
+          "default": "100.0"
+        },
+        {
+          "name": "coupon_rate",
+          "default": "0.05"
+        },
+        {
+          "name": "years",
+          "default": "5.0"
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "modified_duration",
+      "module": "pm.fixed_income.duration",
+      "parameters": [
+        {
+          "name": "ytm",
+          "default": null
+        },
+        {
+          "name": "face",
+          "default": "100.0"
+        },
+        {
+          "name": "coupon_rate",
+          "default": "0.05"
+        },
+        {
+          "name": "years",
+          "default": "5.0"
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "futures_dv01_per_contract",
+      "module": "pm.fixed_income.futures",
+      "parameters": [
+        {
+          "name": "ctd_dv01_per_contract",
+          "default": null
+        },
+        {
+          "name": "conversion_factor",
+          "default": null
+        }
+      ],
+      "description": "DV01 of one futures contract, approximated from the cheapest-to-deliver"
+    },
+    {
+      "name": "apply_prepayment",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "beginning_balance",
+          "default": null
+        },
+        {
+          "name": "scheduled_principal",
+          "default": null
+        },
+        {
+          "name": "smm",
+          "default": null
+        }
+      ],
+      "description": "Overlay a prepayment assumption on a scheduled amortization."
+    },
+    {
+      "name": "effective_duration",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "price_down",
+          "default": null
+        },
+        {
+          "name": "price_up",
+          "default": null
+        },
+        {
+          "name": "price_base",
+          "default": null
+        },
+        {
+          "name": "bump_decimal",
+          "default": null
+        }
+      ],
+      "description": "Numerical (bump-and-reprice) duration - the right tool when price"
+    },
+    {
+      "name": "mortgage_amortization_schedule",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "balance",
+          "default": null
+        },
+        {
+          "name": "annual_rate",
+          "default": null
+        },
+        {
+          "name": "months",
+          "default": null
+        }
+      ],
+      "description": "Level-payment (scheduled, no prepayment) amortization schedule."
+    },
+    {
+      "name": "psa_cpr",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "month",
+          "default": null
+        },
+        {
+          "name": "psa_multiplier",
+          "default": "1.0"
+        }
+      ],
+      "description": "CPR implied by the PSA benchmark: ramps linearly from 0% to"
+    },
+    {
+      "name": "refinancing_incentive_cpr",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "wac",
+          "default": null
+        },
+        {
+          "name": "market_rate",
+          "default": null
+        },
+        {
+          "name": "base_cpr",
+          "default": "0.06"
+        },
+        {
+          "name": "sensitivity",
+          "default": "2.0"
+        }
+      ],
+      "description": "Simple behavioral prepayment model: CPR rises with refinancing"
+    },
+    {
+      "name": "single_monthly_mortality",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "cpr",
+          "default": null
+        }
+      ],
+      "description": "Convert an annualized CPR to a monthly prepayment rate (SMM)."
+    },
+    {
+      "name": "weighted_average_life",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "times",
+          "default": null
+        },
+        {
+          "name": "principal_payments",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "swap_dv01",
+      "module": "pm.fixed_income.swaps",
+      "parameters": [
+        {
+          "name": "notional",
+          "default": null
+        },
+        {
+          "name": "swap_rate",
+          "default": null
+        },
+        {
+          "name": "years",
+          "default": null
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": "Proxy: treat the swap's fixed leg as a par bond (coupon = swap_rate,"
+    },
+    {
+      "name": "swap_spread",
+      "module": "pm.fixed_income.swaps",
+      "parameters": [
+        {
+          "name": "swap_rate",
+          "default": null
+        },
+        {
+          "name": "treasury_yield",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "cross_currency_basis",
+      "module": "pm.fx",
+      "parameters": [
+        {
+          "name": "market_forward",
+          "default": null
+        },
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "domestic_rate",
+          "default": null
+        },
+        {
+          "name": "foreign_rate",
+          "default": null
+        },
+        {
+          "name": "years",
+          "default": null
+        }
+      ],
+      "description": "Deviation from CIP: the spread that, added to foreign_rate, would"
+    },
+    {
+      "name": "fx_carry",
+      "module": "pm.fx",
+      "parameters": [
+        {
+          "name": "domestic_rate",
+          "default": null
+        },
+        {
+          "name": "foreign_rate",
+          "default": null
+        }
+      ],
+      "description": "Uncovered interest rate differential: the P&L from holding the"
+    },
+    {
+      "name": "fx_forward_rate",
+      "module": "pm.fx",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "domestic_rate",
+          "default": null
+        },
+        {
+          "name": "foreign_rate",
+          "default": null
+        },
+        {
+          "name": "years",
+          "default": null
+        }
+      ],
+      "description": "Covered interest parity (CIP) forward rate, simple interest."
+    },
+    {
+      "name": "mean_variance",
+      "module": "pm.optimization",
+      "parameters": [
+        {
+          "name": "expected_returns",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "risk_aversion",
+          "default": "5.0"
+        },
+        {
+          "name": "long_only",
+          "default": "True"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "minimum_variance",
+      "module": "pm.optimization",
+      "parameters": [
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "long_only",
+          "default": "True"
+        },
+        {
+          "name": "max_weight",
+          "default": "None"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "cumulative_return",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "returns",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "log_returns",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "prices",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "max_drawdown",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "returns",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "portfolio_return",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "asset_returns",
+          "default": null
+        },
+        {
+          "name": "weights",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "sharpe_ratio",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "returns",
+          "default": null
+        },
+        {
+          "name": "risk_free_rate",
+          "default": "0.0"
+        },
+        {
+          "name": "periods_per_year",
+          "default": "12"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "simple_returns",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "prices",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "component_risk_contribution",
+      "module": "pm.risk",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "expected_shortfall",
+      "module": "pm.risk",
+      "parameters": [
+        {
+          "name": "portfolio_value",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "confidence",
+          "default": "0.95"
+        }
+      ],
+      "description": "Gaussian expected shortfall (average loss beyond the VaR threshold)."
+    },
+    {
+      "name": "marginal_risk_contribution",
+      "module": "pm.risk",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "parametric_var",
+      "module": "pm.risk",
+      "parameters": [
+        {
+          "name": "portfolio_value",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "confidence",
+          "default": "0.95"
+        }
+      ],
+      "description": "Gaussian (delta-normal) VaR, same units/horizon as volatility."
+    },
+    {
+      "name": "portfolio_variance",
+      "module": "pm.risk",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "portfolio_volatility",
+      "module": "pm.risk",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "black_litterman_posterior",
+      "module": "pm.robust",
+      "parameters": [
+        {
+          "name": "prior_returns",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "view_matrix",
+          "default": null
+        },
+        {
+          "name": "view_returns",
+          "default": null
+        },
+        {
+          "name": "view_uncertainty",
+          "default": null
+        },
+        {
+          "name": "tau",
+          "default": "0.05"
+        }
+      ],
+      "description": "Combine a prior (e.g. from market_implied_returns) with investor"
+    },
+    {
+      "name": "market_implied_returns",
+      "module": "pm.robust",
+      "parameters": [
+        {
+          "name": "risk_aversion",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "market_weights",
+          "default": null
+        }
+      ],
+      "description": "Reverse-optimize the market-implied (equilibrium) expected returns"
+    },
+    {
+      "name": "risk_parity_weights",
+      "module": "pm.robust",
+      "parameters": [
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": "Long-only weights giving each asset equal risk contribution, via the"
+    },
+    {
+      "name": "scenario_robust_weights",
+      "module": "pm.robust",
+      "parameters": [
+        {
+          "name": "scenario_returns",
+          "default": null
+        },
+        {
+          "name": "long_only",
+          "default": "True"
+        }
+      ],
+      "description": "Minimax (robust) portfolio: maximize the worst-case return across a"
+    },
+    {
+      "name": "shrink_covariance",
+      "module": "pm.robust",
+      "parameters": [
+        {
+          "name": "sample_covariance",
+          "default": null
+        },
+        {
+          "name": "shrinkage",
+          "default": null
+        }
+      ],
+      "description": "Shrink the sample covariance toward a diagonal target (correlations"
+    }
+  ]
+}

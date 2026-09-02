@@ -98,6 +98,7 @@ If no specialized persona matches the topic, fall back to
 | hierarchical risk parity | `portfolio_construction_tutor.md` | `reference/concepts/hierarchical_risk_parity.md` | — (conceptual only, no code) | — |
 | regime-aware allocation | `portfolio_construction_tutor.md` | `reference/concepts/regime_aware_allocation.md` | — (conceptual only, no code) | — |
 | multi-period optimization | `portfolio_construction_tutor.md` | `reference/concepts/multi_period_optimization.md` | — (conceptual only, no code) | — |
+| agentic PM analytics, tool schemas | `concept_tutor.md` | `reference/concepts/agentic_pm_analytics.md` | — (no notebook — see `.claude/skills/pm-query/SKILL.md` instead) | `tests/test_tool_schema.py` |
 
 Where a reference page or test file is listed as missing, say so plainly
 rather than inventing content — that gap is real and belongs on the roadmap,
