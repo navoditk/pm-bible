@@ -9,6 +9,7 @@
 - `concepts/drawdown.md`
 - `concepts/benchmark_basics.md`
 - `concepts/tracking_error.md`
+- `concepts/factor_risk.md`
 
 ## Optimization
 - `concepts/mean_variance_optimization.md`
@@ -16,6 +17,7 @@
 ## Fixed income
 
 ### Foundations
+- `fixed_income/bond_pricing.md`
 - `fixed_income/duration.md`
 - `fixed_income/dv01.md`
 - `fixed_income/key_rate_duration.md`

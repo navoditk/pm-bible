@@ -57,10 +57,10 @@ If no specialized persona matches the topic, fall back to
 | Sharpe ratio | `concept_tutor.md` | `reference/concepts/sharpe_ratio.md` | `notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb` | `tests/test_returns.py` |
 | drawdown | `concept_tutor.md` | `reference/concepts/drawdown.md` | `notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb` | `tests/test_returns.py` |
 | benchmark basics, active return/weight | `concept_tutor.md` | `reference/concepts/benchmark_basics.md`, `tracking_error.md` | `notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb` | `tests/test_active.py` |
-| mean-variance optimization, efficient frontier | `portfolio_construction_tutor.md` | `reference/concepts/mean_variance_optimization.md` | `notebooks/optimization/04_efficient_frontier.ipynb`, `05_constrained_optimization.ipynb` | — (no test file yet) |
+| mean-variance optimization, efficient frontier | `portfolio_construction_tutor.md` | `reference/concepts/mean_variance_optimization.md` | `notebooks/optimization/04_efficient_frontier.ipynb`, `05_constrained_optimization.ipynb` | `tests/test_optimization.py` |
 | tracking error, active weights | `concept_tutor.md` | `reference/concepts/tracking_error.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
-| factor risk | `concept_tutor.md` | — (no reference page yet) | `notebooks/active/07_factor_risk.ipynb` | — (no test file yet) |
-| bond pricing, YTM | `fixed_income_tutor.md` | — (no reference page yet) | `notebooks/fixed_income/08_bond_math.ipynb` | `tests/test_fixed_income.py` |
+| factor risk | `concept_tutor.md` | `reference/concepts/factor_risk.md` | `notebooks/active/07_factor_risk.ipynb` | `tests/test_factors.py` |
+| bond pricing, YTM | `fixed_income_tutor.md` | `reference/fixed_income/bond_pricing.md` | `notebooks/fixed_income/08_bond_math.ipynb` | `tests/test_fixed_income.py` |
 | duration, DV01, convexity, key-rate duration | `fixed_income_tutor.md` | `reference/fixed_income/duration.md`, `dv01.md`, `key_rate_duration.md` | `notebooks/fixed_income/09_duration_curve_risk.ipynb` | `tests/test_fixed_income.py` |
 | credit spreads, spread duration | `fixed_income_tutor.md` | `reference/fixed_income/spread_duration.md` | `notebooks/fixed_income/10_credit_spreads.ipynb` | `tests/test_fixed_income.py` |
 | curve construction, bootstrapping | `fixed_income_tutor.md` | `reference/fixed_income/curve_construction.md` | `notebooks/fixed_income/14_curve_construction_forwards.ipynb` | `tests/test_fixed_income.py` |
