@@ -1,8 +1,20 @@
 import numpy as np
-from pm.returns import portfolio_return, cumulative_return
+
+from pm.returns import cumulative_return, max_drawdown, portfolio_return, sharpe_ratio
+
 
 def test_portfolio_return_hand_example():
     assert np.isclose(portfolio_return([0.10, -0.05], [0.60, 0.40]), 0.04)
 
 def test_plus_50_minus_50_is_minus_25():
     assert np.isclose(cumulative_return([0.50, -0.50]), -0.25)
+
+def test_sharpe_ratio_hand_example():
+    returns = [0.02, 0.04, 0.03]
+    assert np.isclose(sharpe_ratio(returns, risk_free_rate=0.0, periods_per_year=1), 3.0)
+
+def test_zero_excess_return_gives_zero_sharpe():
+    assert np.isclose(sharpe_ratio([0.01, -0.01], periods_per_year=1), 0.0)
+
+def test_max_drawdown_hand_example():
+    assert np.isclose(max_drawdown([0.10, -0.20, 0.05]), -0.20)

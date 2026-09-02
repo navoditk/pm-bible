@@ -5,6 +5,9 @@
 - `concepts/covariance.md`
 - `concepts/portfolio_volatility.md`
 - `concepts/risk_contribution.md`
+- `concepts/sharpe_ratio.md`
+- `concepts/drawdown.md`
+- `concepts/benchmark_basics.md`
 - `concepts/tracking_error.md`
 
 ## Optimization

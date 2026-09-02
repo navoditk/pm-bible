@@ -13,6 +13,7 @@ Notebooks:
 - `notebooks/foundations/01_returns_and_compounding.ipynb`
 - `02_covariance_and_diversification.ipynb`
 - `03_risk_contribution.ipynb`
+- `13_sharpe_drawdown_benchmark.ipynb` (Sharpe ratio, drawdown, benchmark vocabulary)
 
 ## Day 2 — Portfolio theory and optimization
 1. opportunity set
