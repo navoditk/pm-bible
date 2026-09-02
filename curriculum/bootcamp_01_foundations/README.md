@@ -167,5 +167,18 @@ is conceptual only — see `reference/concepts/liquidity.md`.
 Notebooks:
 - `notebooks/integration/25_brinson_and_rebalancing.ipynb`
 
+## Extension — Day 12: Advanced portfolio construction
+
+Phase 11 of `ROADMAP.md`, building on Day 2's mean-variance optimization.
+Hierarchical risk parity, regime-aware allocation, and multi-period
+optimization are conceptual only — see `reference/concepts/hierarchical_risk_parity.md`,
+`regime_aware_allocation.md`, and `multi_period_optimization.md` for why.
+
+1. covariance shrinkage (robust covariance)
+2. Black-Litterman
+3. risk parity
+4. scenario-robust (minimax) optimization
+
 Notebooks:
-- `notebooks/fx_commodities/24_fx_and_commodities.ipynb`
+- `notebooks/optimization/26_shrinkage_and_black_litterman.ipynb`
+- `27_risk_parity_and_robust_optimization.ipynb`

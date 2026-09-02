@@ -47,3 +47,10 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Fixed-income attribution (carry/curve/spread) | `reference/concepts/fixed_income_attribution.md` | untested | — |
 | Transaction costs, rebalancing | `reference/concepts/transaction_costs_and_rebalancing.md` | untested | — |
 | Liquidity risk | `reference/concepts/liquidity.md` | untested | — |
+| Covariance shrinkage | `reference/concepts/covariance_shrinkage.md` | untested | — |
+| Black-Litterman | `reference/concepts/black_litterman.md` | untested | — |
+| Risk parity | `reference/concepts/risk_parity.md` | untested | — |
+| Scenario-robust optimization | `reference/concepts/scenario_robust_optimization.md` | untested | — |
+| Hierarchical risk parity | `reference/concepts/hierarchical_risk_parity.md` | untested | — |
+| Regime-aware allocation | `reference/concepts/regime_aware_allocation.md` | untested | — |
+| Multi-period optimization | `reference/concepts/multi_period_optimization.md` | untested | — |

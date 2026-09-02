@@ -91,6 +91,13 @@ If no specialized persona matches the topic, fall back to
 | fixed-income attribution (carry/curve/spread) | `concept_tutor.md` | `reference/concepts/fixed_income_attribution.md` | `notebooks/integration/12_attribution.ipynb` | `tests/test_attribution.py` |
 | transaction costs, rebalancing | `concept_tutor.md` | `reference/concepts/transaction_costs_and_rebalancing.md` | `notebooks/integration/25_brinson_and_rebalancing.ipynb` | `tests/test_attribution.py` |
 | liquidity risk | `concept_tutor.md` | `reference/concepts/liquidity.md` | — (conceptual only, no code) | — |
+| covariance shrinkage, robust covariance | `portfolio_construction_tutor.md` | `reference/concepts/covariance_shrinkage.md` | `notebooks/optimization/26_shrinkage_and_black_litterman.ipynb` | `tests/test_robust.py` |
+| Black-Litterman | `portfolio_construction_tutor.md` | `reference/concepts/black_litterman.md` | `notebooks/optimization/26_shrinkage_and_black_litterman.ipynb` | `tests/test_robust.py` |
+| risk parity | `portfolio_construction_tutor.md` | `reference/concepts/risk_parity.md` | `notebooks/optimization/27_risk_parity_and_robust_optimization.ipynb` | `tests/test_robust.py` |
+| scenario-robust (minimax) optimization | `portfolio_construction_tutor.md` | `reference/concepts/scenario_robust_optimization.md` | `notebooks/optimization/27_risk_parity_and_robust_optimization.ipynb` | `tests/test_robust.py` |
+| hierarchical risk parity | `portfolio_construction_tutor.md` | `reference/concepts/hierarchical_risk_parity.md` | — (conceptual only, no code) | — |
+| regime-aware allocation | `portfolio_construction_tutor.md` | `reference/concepts/regime_aware_allocation.md` | — (conceptual only, no code) | — |
+| multi-period optimization | `portfolio_construction_tutor.md` | `reference/concepts/multi_period_optimization.md` | — (conceptual only, no code) | — |
 
 Where a reference page or test file is listed as missing, say so plainly
 rather than inventing content — that gap is real and belongs on the roadmap,

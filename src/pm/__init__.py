@@ -30,10 +30,18 @@ from .risk import (
     portfolio_variance,
     portfolio_volatility,
 )
+from .robust import (
+    black_litterman_posterior,
+    market_implied_returns,
+    risk_parity_weights,
+    scenario_robust_weights,
+    shrink_covariance,
+)
 
 __all__ = [
     "active_return",
     "active_weights",
+    "black_litterman_posterior",
     "brinson_attribution",
     "commodity_curve_state",
     "component_risk_contribution",
@@ -47,6 +55,7 @@ __all__ = [
     "fx_forward_rate",
     "log_returns",
     "marginal_risk_contribution",
+    "market_implied_returns",
     "max_drawdown",
     "parametric_var",
     "portfolio_factor_exposure",
@@ -54,8 +63,11 @@ __all__ = [
     "portfolio_variance",
     "portfolio_volatility",
     "rebalancing_trades",
+    "risk_parity_weights",
     "roll_yield",
+    "scenario_robust_weights",
     "sharpe_ratio",
+    "shrink_covariance",
     "simple_returns",
     "specific_variance_contribution",
     "total_attribution",

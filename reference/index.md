@@ -65,4 +65,13 @@
 - `concepts/transaction_costs_and_rebalancing.md`
 - `concepts/liquidity.md`
 
+## Advanced portfolio construction
+- `concepts/covariance_shrinkage.md`
+- `concepts/black_litterman.md`
+- `concepts/risk_parity.md`
+- `concepts/scenario_robust_optimization.md`
+- `concepts/hierarchical_risk_parity.md`
+- `concepts/regime_aware_allocation.md`
+- `concepts/multi_period_optimization.md`
+
 More pages should be added continuously using `templates/CONCEPT_TEMPLATE.md`.

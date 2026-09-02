@@ -27,16 +27,18 @@ Sequence:
 
 ## Path C — Portfolio Construction Specialist
 
-1. portfolio theory
-2. expected returns
-3. covariance/risk models
-4. optimization
-5. constraints
-6. active risk
-7. transaction costs
-8. robust optimization
-9. Black–Litterman
-10. multi-period construction
+1. portfolio theory — Day 1-2
+2. expected returns — Day 2 (`mean_variance`); Black-Litterman (below) is the more defensible way to build these
+3. covariance/risk models — Day 1, Day 7 (VaR/ES/factor contribution); covariance shrinkage below
+4. optimization — Day 2
+5. constraints — Day 2 (`notebooks/optimization/05_constrained_optimization.ipynb`)
+6. active risk — Day 3
+7. transaction costs — Day 11 (`reference/concepts/transaction_costs_and_rebalancing.md`)
+8. robust optimization — Day 12 (built: covariance shrinkage, risk parity, scenario-robust optimization)
+9. Black–Litterman — Day 12 (built)
+10. multi-period construction — conceptual only, see `reference/concepts/multi_period_optimization.md`
+
+Use `curriculum/bootcamp_01_foundations/README.md` Days 1, 2, 3, 7, 11, and 12.
 
 ## Path D — Quick Reference
 
