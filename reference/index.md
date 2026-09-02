@@ -44,4 +44,11 @@
 - `fixed_income/cds_and_basis.md`
 - `fixed_income/credit_migration.md`
 
+### Securitized
+- `fixed_income/pass_throughs.md`
+- `fixed_income/prepayment_models.md`
+- `fixed_income/effective_duration.md`
+- `fixed_income/mbs_convexity.md`
+- `fixed_income/non_agency_overview.md`
+
 More pages should be added continuously using `templates/CONCEPT_TEMPLATE.md`.

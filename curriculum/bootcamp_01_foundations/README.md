@@ -123,3 +123,20 @@ aren't implemented as code here.
 Notebooks:
 - `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb`
 - `21_default_recovery_and_cds.ipynb`
+
+## Extension — Day 9: Securitized / mortgages
+
+Phase 8 of `ROADMAP.md` (securitized/mortgages). Full price-based negative
+convexity/OAS and non-agency tranche waterfalls are conceptual only — see
+`reference/fixed_income/oas.md`, `mbs_convexity.md`, and
+`non_agency_overview.md` for why they aren't implemented as code here.
+
+1. agency MBS pass-throughs, amortization
+2. CPR / SMM / PSA prepayment
+3. effective duration (technique)
+4. extension and contraction (WAL response to rates)
+5. non-agency / ABS / CMBS overview
+
+Notebooks:
+- `notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb`
+- `23_effective_duration_and_convexity.ipynb`

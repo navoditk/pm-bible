@@ -78,6 +78,11 @@ If no specialized persona matches the topic, fall back to
 | default, recovery, hazard rate | `fixed_income_tutor.md` | `reference/fixed_income/default_recovery.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
 | CDS, CDS-bond basis | `fixed_income_tutor.md` | `reference/fixed_income/cds_and_basis.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
 | credit migration | `fixed_income_tutor.md` | `reference/fixed_income/credit_migration.md` | — (conceptual only, no code) | — |
+| pass-throughs, amortization | `fixed_income_tutor.md` | `reference/fixed_income/pass_throughs.md` | `notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb` | `tests/test_mbs.py` |
+| prepayment, CPR, SMM, PSA | `fixed_income_tutor.md` | `reference/fixed_income/prepayment_models.md` | `notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb` | `tests/test_mbs.py` |
+| effective duration | `fixed_income_tutor.md` | `reference/fixed_income/effective_duration.md` | `notebooks/fixed_income/23_effective_duration_and_convexity.ipynb` | `tests/test_mbs.py` |
+| MBS negative convexity, extension/contraction | `fixed_income_tutor.md` | `reference/fixed_income/mbs_convexity.md` | `notebooks/fixed_income/23_effective_duration_and_convexity.ipynb` | `tests/test_mbs.py` |
+| non-agency, ABS, CMBS | `fixed_income_tutor.md` | `reference/fixed_income/non_agency_overview.md` | — (conceptual only, no code) | — |
 
 Where a reference page or test file is listed as missing, say so plainly
 rather than inventing content — that gap is real and belongs on the roadmap,

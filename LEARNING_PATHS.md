@@ -19,7 +19,7 @@ Sequence:
 1. Fixed-income foundations — `curriculum/bootcamp_01_foundations/README.md` Day 4
 2. Rates — `curriculum/bootcamp_01_foundations/README.md` Day 6 extension (built)
 3. Credit — `curriculum/bootcamp_01_foundations/README.md` Day 8 extension (built; OAS and rating migration are conceptual-only, see `reference/fixed_income/oas.md` and `credit_migration.md`)
-4. Mortgages/securitized — not yet built
+4. Mortgages/securitized — `curriculum/bootcamp_01_foundations/README.md` Day 9 extension (built; full price-based negative convexity/OAS and non-agency tranche waterfalls are conceptual-only, see `reference/fixed_income/oas.md`, `mbs_convexity.md`, and `non_agency_overview.md`)
 5. FX — not yet built
 6. Commodities — not yet built
 7. FICC portfolio construction — not yet built

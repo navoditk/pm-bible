@@ -34,3 +34,8 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Default, recovery, hazard rate | `reference/fixed_income/default_recovery.md` | untested | — |
 | CDS, CDS-bond basis | `reference/fixed_income/cds_and_basis.md` | untested | — |
 | Credit migration | `reference/fixed_income/credit_migration.md` | untested | — |
+| Pass-throughs, amortization | `reference/fixed_income/pass_throughs.md` | untested | — |
+| Prepayment (CPR/SMM/PSA) | `reference/fixed_income/prepayment_models.md` | untested | — |
+| Effective duration | `reference/fixed_income/effective_duration.md` | untested | — |
+| MBS negative convexity | `reference/fixed_income/mbs_convexity.md` | untested | — |
+| Non-agency, ABS, CMBS | `reference/fixed_income/non_agency_overview.md` | untested | — |

@@ -15,15 +15,26 @@ from .curve import (
 )
 from .duration import dv01, hedge_ratio, macaulay_duration, modified_duration
 from .futures import futures_dv01_per_contract
+from .mbs import (
+    apply_prepayment,
+    effective_duration,
+    mortgage_amortization_schedule,
+    psa_cpr,
+    refinancing_incentive_cpr,
+    single_monthly_mortality,
+    weighted_average_life,
+)
 from .swaps import swap_dv01, swap_spread
 
 __all__ = [
+    "apply_prepayment",
     "bond_cashflows",
     "bond_price",
     "bootstrap_zero_rates",
     "cds_bond_basis",
     "credit_spread_from_hazard",
     "dv01",
+    "effective_duration",
     "expected_loss",
     "forward_rate",
     "futures_dv01_per_contract",
@@ -32,9 +43,14 @@ __all__ = [
     "key_rate_return_approximation",
     "macaulay_duration",
     "modified_duration",
+    "mortgage_amortization_schedule",
+    "psa_cpr",
+    "refinancing_incentive_cpr",
+    "single_monthly_mortality",
     "spread_pnl",
     "survival_probability",
     "swap_dv01",
     "swap_spread",
+    "weighted_average_life",
     "z_spread",
 ]
