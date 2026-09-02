@@ -72,6 +72,12 @@ If no specialized persona matches the topic, fall back to
 | swap DV01 | `fixed_income_tutor.md` | `reference/fixed_income/swap_dv01.md` | `notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb` | `tests/test_fixed_income.py` |
 | swap spread | `fixed_income_tutor.md` | `reference/fixed_income/swap_spread.md` | `notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb` | `tests/test_fixed_income.py` |
 | Treasury futures, futures DV01, hedge ratio | `fixed_income_tutor.md` | `reference/fixed_income/treasury_futures_hedging.md` | `notebooks/fixed_income/17_futures_and_hedging.ipynb` | `tests/test_fixed_income.py` |
+| Z-spread | `fixed_income_tutor.md` | `reference/fixed_income/z_spread.md` | `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb` | `tests/test_fixed_income.py` |
+| OAS | `fixed_income_tutor.md` | `reference/fixed_income/oas.md` | — (conceptual only, no code) | — |
+| credit curves, IG/HY | `fixed_income_tutor.md` | `reference/fixed_income/credit_curves.md` | `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb` | — |
+| default, recovery, hazard rate | `fixed_income_tutor.md` | `reference/fixed_income/default_recovery.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
+| CDS, CDS-bond basis | `fixed_income_tutor.md` | `reference/fixed_income/cds_and_basis.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
+| credit migration | `fixed_income_tutor.md` | `reference/fixed_income/credit_migration.md` | — (conceptual only, no code) | — |
 
 Where a reference page or test file is listed as missing, say so plainly
 rather than inventing content — that gap is real and belongs on the roadmap,

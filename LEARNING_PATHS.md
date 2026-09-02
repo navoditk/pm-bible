@@ -18,7 +18,7 @@ Prerequisite: complete Foundations Day 1–3.
 Sequence:
 1. Fixed-income foundations — `curriculum/bootcamp_01_foundations/README.md` Day 4
 2. Rates — `curriculum/bootcamp_01_foundations/README.md` Day 6 extension (built)
-3. Credit — not yet built
+3. Credit — `curriculum/bootcamp_01_foundations/README.md` Day 8 extension (built; OAS and rating migration are conceptual-only, see `reference/fixed_income/oas.md` and `credit_migration.md`)
 4. Mortgages/securitized — not yet built
 5. FX — not yet built
 6. Commodities — not yet built

@@ -28,3 +28,9 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Swap DV01 | `reference/fixed_income/swap_dv01.md` | untested | — |
 | Swap spread | `reference/fixed_income/swap_spread.md` | untested | — |
 | Treasury futures hedging | `reference/fixed_income/treasury_futures_hedging.md` | untested | — |
+| Z-spread | `reference/fixed_income/z_spread.md` | untested | — |
+| OAS | `reference/fixed_income/oas.md` | untested | — |
+| Credit curves, IG/HY | `reference/fixed_income/credit_curves.md` | untested | — |
+| Default, recovery, hazard rate | `reference/fixed_income/default_recovery.md` | untested | — |
+| CDS, CDS-bond basis | `reference/fixed_income/cds_and_basis.md` | untested | — |
+| Credit migration | `reference/fixed_income/credit_migration.md` | untested | — |

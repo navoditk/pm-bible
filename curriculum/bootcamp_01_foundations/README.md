@@ -105,3 +105,21 @@ Phase 4 of `ROADMAP.md` (risk models), building on Day 3's factor model.
 Notebooks:
 - `notebooks/active/18_factor_risk_contribution.ipynb`
 - `19_var_and_expected_shortfall.ipynb`
+
+## Extension — Day 8: Credit
+
+Phase 7 of `ROADMAP.md` (credit), building on Day 4's spread/spread
+duration. OAS and rating migration are covered conceptually only — see
+`reference/fixed_income/oas.md` and `credit_migration.md` for why they
+aren't implemented as code here.
+
+1. Z-spread
+2. credit curves, IG/HY
+3. default, recovery, hazard rate
+4. CDS and CDS-bond basis
+5. portfolio credit scenarios (reuses Day 5's `Scenario` mechanism and
+   `use_cases/spread_shock/README.md`)
+
+Notebooks:
+- `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb`
+- `21_default_recovery_and_cds.ipynb`

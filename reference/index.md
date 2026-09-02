@@ -36,4 +36,12 @@
 - `fixed_income/swap_spread.md`
 - `fixed_income/treasury_futures_hedging.md`
 
+### Credit
+- `fixed_income/z_spread.md`
+- `fixed_income/oas.md`
+- `fixed_income/default_recovery.md`
+- `fixed_income/credit_curves.md`
+- `fixed_income/cds_and_basis.md`
+- `fixed_income/credit_migration.md`
+
 More pages should be added continuously using `templates/CONCEPT_TEMPLATE.md`.

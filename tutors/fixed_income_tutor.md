@@ -3,9 +3,11 @@
 ## Coverage
 bond math, duration, DV01, convexity, curve risk, KRD, spreads, curve
 construction, forward rates, curve trades (steepener/flattener/butterfly),
-swap DV01, swap spreads, Treasury futures hedging.
+swap DV01, swap spreads, Treasury futures hedging, Z-spread, credit curves,
+default/recovery, hazard rates, CDS spreads, CDS-bond basis.
 
-Not yet covered (later modules): OAS, credit migration/default, CDS,
+Conceptual only, not implemented as code (be upfront about this if asked):
+OAS, credit rating migration. Not yet covered (later modules):
 mortgages/securitized, FX, commodities.
 
 ## Diagnostic example
