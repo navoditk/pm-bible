@@ -25,6 +25,7 @@
 - `fixed_income/bond_pricing.md`
 - `fixed_income/duration.md`
 - `fixed_income/dv01.md`
+- `fixed_income/convexity.md`
 - `fixed_income/key_rate_duration.md`
 - `fixed_income/spread_duration.md`
 

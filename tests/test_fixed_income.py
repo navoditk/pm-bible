@@ -1,6 +1,6 @@
 import numpy as np
 
-from pm.fixed_income.bond import bond_price
+from pm.fixed_income.bond import bond_cashflows, bond_price
 from pm.fixed_income.credit import (
     cds_bond_basis,
     credit_spread_from_hazard,
@@ -9,8 +9,13 @@ from pm.fixed_income.credit import (
     survival_probability,
     z_spread,
 )
-from pm.fixed_income.curve import bootstrap_zero_rates, forward_rate, interpolate_zero_rate
-from pm.fixed_income.duration import dv01, hedge_ratio
+from pm.fixed_income.curve import (
+    bootstrap_zero_rates,
+    forward_rate,
+    interpolate_zero_rate,
+    key_rate_return_approximation,
+)
+from pm.fixed_income.duration import convexity, dv01, hedge_ratio, macaulay_duration
 from pm.fixed_income.futures import futures_dv01_per_contract
 from pm.fixed_income.swaps import swap_dv01, swap_spread
 
@@ -18,8 +23,47 @@ from pm.fixed_income.swaps import swap_dv01, swap_spread
 def test_par_bond_at_coupon_yield():
     assert np.isclose(bond_price(.05, face=100, coupon_rate=.05, years=5, frequency=2), 100.0)
 
+def test_bond_cashflows_hand_example():
+    times, flows = bond_cashflows(face=100, coupon_rate=0.05, years=2, frequency=2)
+    assert np.allclose(times, [0.5, 1.0, 1.5, 2.0])
+    assert np.allclose(flows, [2.5, 2.5, 2.5, 102.5])
+
+def test_key_rate_return_approximation_hand_example():
+    r = key_rate_return_approximation([3, 5], [0.01, -0.005])
+    assert np.isclose(r, -(3 * 0.01 + 5 * (-0.005)))
+
 def test_dv01_positive():
     assert dv01(.05, face=100, coupon_rate=.05, years=5, frequency=2) > 0
+
+def test_macaulay_duration_par_bond_hand_bound():
+    # for a par bond, Macaulay duration must be less than its maturity
+    # (coupons are received before the final principal payment)
+    mac = macaulay_duration(.05, face=100, coupon_rate=.05, years=5, frequency=2)
+    assert 0 < mac < 5
+
+def test_convexity_matches_finite_difference_second_derivative():
+    ytm, face, coupon_rate, years, frequency = 0.05, 100.0, 0.05, 5.0, 2
+    h = 1e-4
+    price_base = bond_price(ytm, face, coupon_rate, years, frequency)
+    price_up = bond_price(ytm + h, face, coupon_rate, years, frequency)
+    price_down = bond_price(ytm - h, face, coupon_rate, years, frequency)
+    convexity_fd = (price_up - 2 * price_base + price_down) / h**2 / price_base
+
+    c = convexity(ytm, face, coupon_rate, years, frequency)
+    assert np.isclose(c, convexity_fd, rtol=1e-3)
+
+def test_convexity_improves_on_duration_only_approximation():
+    ytm, face, coupon_rate, years, frequency = 0.05, 100.0, 0.05, 5.0, 2
+    dy = 0.02
+    price_base = bond_price(ytm, face, coupon_rate, years, frequency)
+    actual_return = bond_price(ytm + dy, face, coupon_rate, years, frequency) / price_base - 1
+
+    d = macaulay_duration(ytm, face, coupon_rate, years, frequency) / (1 + ytm / frequency)
+    c = convexity(ytm, face, coupon_rate, years, frequency)
+    duration_only = -d * dy
+    duration_plus_convexity = -d * dy + 0.5 * c * dy**2
+
+    assert abs(duration_plus_convexity - actual_return) < abs(duration_only - actual_return)
 
 def test_spread_widening_loses_money():
     assert spread_pnl(1_000_000, 4.0, 50) < 0

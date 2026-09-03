@@ -13,7 +13,7 @@ from .curve import (
     interpolate_zero_rate,
     key_rate_return_approximation,
 )
-from .duration import dv01, hedge_ratio, macaulay_duration, modified_duration
+from .duration import convexity, dv01, hedge_ratio, macaulay_duration, modified_duration
 from .futures import futures_dv01_per_contract
 from .mbs import (
     apply_prepayment,
@@ -32,6 +32,7 @@ __all__ = [
     "bond_price",
     "bootstrap_zero_rates",
     "cds_bond_basis",
+    "convexity",
     "credit_spread_from_hazard",
     "dv01",
     "effective_duration",

@@ -3,6 +3,7 @@ import numpy as np
 from pm.risk import component_risk_contribution
 from pm.robust import (
     black_litterman_posterior,
+    market_implied_returns,
     risk_parity_weights,
     scenario_robust_weights,
     shrink_covariance,
@@ -20,6 +21,13 @@ def test_shrink_covariance_zero_shrinkage_unchanged():
     cov = np.array([[0.04, 0.01], [0.01, 0.09]])
     shrunk = shrink_covariance(cov, shrinkage=0.0)
     assert np.allclose(shrunk, cov)
+
+def test_market_implied_returns_hand_example():
+    sigma = np.array([[0.04, 0.01], [0.01, 0.09]])
+    w_market = np.array([0.6, 0.4])
+    pi = market_implied_returns(risk_aversion=3.0, covariance=sigma, market_weights=w_market)
+    expected = 3.0 * (sigma @ w_market)
+    assert np.allclose(pi, expected)
 
 def test_black_litterman_no_confidence_view_leaves_prior_unchanged():
     prior = np.array([0.05, 0.07])

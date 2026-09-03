@@ -20,7 +20,7 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Value at risk / expected shortfall | `reference/concepts/value_at_risk.md` | untested | — |
 | Stress testing | `reference/concepts/stress_testing.md` | untested | — |
 | Bond pricing / YTM | `reference/fixed_income/bond_pricing.md` | untested | — |
-| Duration, DV01, convexity, KRD | `reference/fixed_income/duration.md`, `dv01.md`, `key_rate_duration.md` | untested | — |
+| Duration, DV01, convexity, KRD | `reference/fixed_income/duration.md`, `dv01.md`, `convexity.md`, `key_rate_duration.md` | confirmed | 2026-09-02, `docs/tutor_sessions/2026-09-02-fixed_income_tutor-duration.md` |
 | Credit spreads, spread duration | `reference/fixed_income/spread_duration.md` | untested | — |
 | Curve construction, bootstrapping | `reference/fixed_income/curve_construction.md` | untested | — |
 | Forward rates | `reference/fixed_income/forward_rates.md` | untested | — |

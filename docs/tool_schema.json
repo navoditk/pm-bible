@@ -475,6 +475,33 @@
       "description": ""
     },
     {
+      "name": "convexity",
+      "module": "pm.fixed_income.duration",
+      "parameters": [
+        {
+          "name": "ytm",
+          "default": null
+        },
+        {
+          "name": "face",
+          "default": "100.0"
+        },
+        {
+          "name": "coupon_rate",
+          "default": "0.05"
+        },
+        {
+          "name": "years",
+          "default": "5.0"
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": "Second-order price sensitivity, for use in"
+    },
+    {
       "name": "dv01",
       "module": "pm.fixed_income.duration",
       "parameters": [
