@@ -30,4 +30,5 @@ up the carry you'd otherwise earn/pay unhedged).
   differential (or crashes, as in a "carry unwind")
 
 ## Related
-FX spot/forward, cross-currency basis, hedge ratio.
+- [FX spot and forward](spot_and_forward.md)
+- [Cross-currency basis](cross_currency_basis.md)

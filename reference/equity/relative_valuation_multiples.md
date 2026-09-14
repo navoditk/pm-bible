@@ -33,4 +33,5 @@ inputs beyond price/dividends/earnings — EV/EBITDA, P/B, P/S — aren't
 implemented here.
 
 ## Related
-Dividend discount model, CAPM and beta.
+- [Dividend discount model](dividend_discount_model.md)
+- [CAPM and beta](capm_and_beta.md)

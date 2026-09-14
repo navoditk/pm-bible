@@ -24,4 +24,5 @@ model. This page is the conceptual placeholder.
   liquidity overlay
 
 ## Related
-transaction costs and rebalancing, stress testing.
+- [Transaction costs and rebalancing](transaction_costs_and_rebalancing.md)
+- [Stress testing](stress_testing.md)

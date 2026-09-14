@@ -25,4 +25,6 @@ pool-level pass-through math in `mbs.py` — this page is the conceptual
 placeholder, not a working implementation.
 
 ## Related
-pass-throughs, credit curves, CDS and basis.
+- [Pass-throughs](pass_throughs.md)
+- [Credit curves](credit_curves.md)
+- [CDS and basis](cds_and_basis.md)

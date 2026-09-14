@@ -27,4 +27,6 @@ evaporates exactly when a portfolio needs it most, in a crisis regime
 where correlations spike toward 1.
 
 ## Related
-covariance shrinkage, stress testing, scenario-robust optimization.
+- [Covariance shrinkage](covariance_shrinkage.md)
+- [Stress testing](stress_testing.md)
+- [Scenario-robust optimization](scenario_robust_optimization.md)

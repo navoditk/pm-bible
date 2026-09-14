@@ -16,4 +16,5 @@ it depends on borrower behavior (refinancing, moving, default), not just
 a fixed schedule. That uncertainty is the whole story of MBS risk.
 
 ## Related
-prepayment models, WAL, effective duration.
+- [Prepayment models](prepayment_models.md)
+- [Effective duration](effective_duration.md)

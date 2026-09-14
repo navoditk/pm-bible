@@ -21,4 +21,5 @@ construction) are solid. Treat this page as the conceptual bridge to that
 future work, not a working implementation.
 
 ## Related
-Z-spread, effective duration (Phase 8, securitized/mortgages).
+- [Z-spread](z_spread.md)
+- [Effective duration](effective_duration.md)

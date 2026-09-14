@@ -29,7 +29,10 @@ trade at a yield premium, i.e. lower yield, for the same duration).
 - using duration alone for large yield shocks (>50-100bp), where the
   convexity term is no longer negligible
 - assuming all instruments have positive convexity — MBS is the classic
-  counterexample (`reference/fixed_income/mbs_convexity.md`)
+  counterexample ([MBS convexity](mbs_convexity.md))
 
 ## Related
-duration, DV01, MBS negative convexity, curve trades.
+- [Duration](duration.md)
+- [DV01](dv01.md)
+- [MBS negative convexity](mbs_convexity.md)
+- [Curve trades](curve_trades.md)

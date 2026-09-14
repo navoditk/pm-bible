@@ -8,7 +8,7 @@ from a closed-form price/yield formula.
 `EffectiveDuration = (Price_down - Price_up) / (2 * Price_base * bump)`
 
 ## Why PMs care
-Modified duration (`reference/fixed_income/duration.md`) assumes price is
+Modified [duration](duration.md) assumes price is
 a smooth, closed-form function of yield. That breaks down for
 instruments whose cash flows themselves change with rates — an MBS whose
 prepayment speed responds to rates is the classic example. Effective
@@ -29,4 +29,6 @@ reprices.
   assumption when bumping an MBS's yield)
 
 ## Related
-duration, MBS negative convexity, prepayment models.
+- [Duration](duration.md)
+- [MBS negative convexity](mbs_convexity.md)
+- [Prepayment models](prepayment_models.md)

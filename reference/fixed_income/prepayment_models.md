@@ -29,4 +29,6 @@ and turnover (home sales) — this repo's `refinancing_incentive_cpr` only
 captures the refinancing-incentive effect.
 
 ## Related
-pass-throughs, MBS negative convexity, effective duration.
+- [Pass-throughs](pass_throughs.md)
+- [MBS negative convexity](mbs_convexity.md)
+- [Effective duration](effective_duration.md)

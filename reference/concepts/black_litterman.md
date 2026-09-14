@@ -37,4 +37,6 @@ assets through `Sigma`).
   `Sigma` — a single-asset view can move the whole posterior
 
 ## Related
-covariance shrinkage, mean-variance optimization, risk parity.
+- [Covariance shrinkage](covariance_shrinkage.md)
+- [Mean-variance optimization](mean_variance_optimization.md)
+- [Risk parity](risk_parity.md)

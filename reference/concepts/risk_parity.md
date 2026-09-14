@@ -13,7 +13,7 @@ Teiletche 2010):
 to 1.
 
 This is equivalent to equal component risk contribution
-(`component_risk_contribution` from `reference/concepts/risk_contribution.md`)
+(`component_risk_contribution` from [risk contribution](risk_contribution.md))
 without needing to solve the equal-contribution condition directly.
 
 ## Why PMs care
@@ -38,4 +38,6 @@ contributions are equal, confirming the property.
   (like bonds) to bring their risk contribution up to match equities
 
 ## Related
-risk contribution, mean-variance optimization, covariance shrinkage.
+- [Risk contribution](risk_contribution.md)
+- [Mean-variance optimization](mean_variance_optimization.md)
+- [Covariance shrinkage](covariance_shrinkage.md)

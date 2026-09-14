@@ -17,4 +17,5 @@ This is a fixed-leg proxy. It ignores floating-leg resets and Libor/OIS
 discounting basis, and is least accurate for deeply off-market swaps.
 
 ## Related
-swap spread, hedge ratio, DV01.
+- [Swap spread](swap_spread.md)
+- [DV01](dv01.md)

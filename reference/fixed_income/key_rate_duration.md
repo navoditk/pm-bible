@@ -18,4 +18,5 @@ Treat KRD as data you're given or estimate elsewhere, not something this
 repo derives for you.
 
 ## Related
-curve risk, DV01, steepener/flattener, butterfly.
+- [DV01](dv01.md)
+- [Curve trades (steepener/flattener, butterfly)](curve_trades.md)

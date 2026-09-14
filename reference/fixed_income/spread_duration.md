@@ -17,3 +17,7 @@ given input, the same way `key_rate_return_approximation` takes KRD as
 given — nothing here derives spread duration from a bond's OAS
 sensitivity to spread. A full treatment needs the same option-adjusted
 machinery already called out as conceptual-only in `oas.md`.
+
+## Related
+- [Z-spread](z_spread.md)
+- [Credit curves](credit_curves.md)

@@ -56,11 +56,14 @@ nav:
   - Learning Paths: docs/learning-paths.md
   - Roadmap: ROADMAP.md
   - Architecture: docs/ARCHITECTURE.md
+  # Day-by-day navigation comes from the page's own table of contents
+  # (Material renders H2s in the right-hand TOC) - mkdocs nav entries
+  # can't point at in-page anchors, only at whole files.
   - Curriculum:
       - Bootcamp (14 Days): curriculum/bootcamp_01_foundations/README.md
   - Reference:
       - Index: reference/index.md
-      - Portfolio Concepts:
+      - Portfolio Foundations:
           - Portfolio Return: reference/concepts/portfolio_return.md
           - Covariance: reference/concepts/covariance.md
           - Portfolio Volatility: reference/concepts/portfolio_volatility.md
@@ -69,47 +72,41 @@ nav:
           - Drawdown: reference/concepts/drawdown.md
           - Benchmark Basics: reference/concepts/benchmark_basics.md
           - Tracking Error: reference/concepts/tracking_error.md
+      - Optimization:
           - Mean-Variance Optimization: reference/concepts/mean_variance_optimization.md
+      - Risk Models:
           - Factor Risk: reference/concepts/factor_risk.md
           - Factor Risk Contribution: reference/concepts/factor_risk_contribution.md
           - Value at Risk: reference/concepts/value_at_risk.md
           - Stress Testing: reference/concepts/stress_testing.md
-          - Brinson Attribution: reference/concepts/brinson_attribution.md
-          - Fixed-Income Attribution: reference/concepts/fixed_income_attribution.md
-          - Transaction Costs and Rebalancing: reference/concepts/transaction_costs_and_rebalancing.md
-          - Liquidity: reference/concepts/liquidity.md
-          - Covariance Shrinkage: reference/concepts/covariance_shrinkage.md
-          - Black-Litterman: reference/concepts/black_litterman.md
-          - Risk Parity: reference/concepts/risk_parity.md
-          - Scenario-Robust Optimization: reference/concepts/scenario_robust_optimization.md
-          - Hierarchical Risk Parity: reference/concepts/hierarchical_risk_parity.md
-          - Regime-Aware Allocation: reference/concepts/regime_aware_allocation.md
-          - Multi-Period Optimization: reference/concepts/multi_period_optimization.md
-          - Agentic PM Analytics: reference/concepts/agentic_pm_analytics.md
       - Fixed Income:
-          - Bond Pricing: reference/fixed_income/bond_pricing.md
-          - Duration: reference/fixed_income/duration.md
-          - DV01: reference/fixed_income/dv01.md
-          - Convexity: reference/fixed_income/convexity.md
-          - Key-Rate Duration: reference/fixed_income/key_rate_duration.md
-          - Spread Duration: reference/fixed_income/spread_duration.md
-          - Curve Construction: reference/fixed_income/curve_construction.md
-          - Forward Rates: reference/fixed_income/forward_rates.md
-          - Curve Trades: reference/fixed_income/curve_trades.md
-          - Swap DV01: reference/fixed_income/swap_dv01.md
-          - Swap Spread: reference/fixed_income/swap_spread.md
-          - Treasury Futures Hedging: reference/fixed_income/treasury_futures_hedging.md
-          - Z-Spread: reference/fixed_income/z_spread.md
-          - OAS: reference/fixed_income/oas.md
-          - Credit Curves: reference/fixed_income/credit_curves.md
-          - Default and Recovery: reference/fixed_income/default_recovery.md
-          - CDS and Basis: reference/fixed_income/cds_and_basis.md
-          - Credit Migration: reference/fixed_income/credit_migration.md
-          - Pass-Throughs: reference/fixed_income/pass_throughs.md
-          - Prepayment Models: reference/fixed_income/prepayment_models.md
-          - Effective Duration: reference/fixed_income/effective_duration.md
-          - MBS Convexity: reference/fixed_income/mbs_convexity.md
-          - Non-Agency Overview: reference/fixed_income/non_agency_overview.md
+          - Foundations:
+              - Bond Pricing: reference/fixed_income/bond_pricing.md
+              - Duration: reference/fixed_income/duration.md
+              - DV01: reference/fixed_income/dv01.md
+              - Convexity: reference/fixed_income/convexity.md
+              - Key-Rate Duration: reference/fixed_income/key_rate_duration.md
+              - Spread Duration: reference/fixed_income/spread_duration.md
+          - Rates Portfolio Management:
+              - Curve Construction: reference/fixed_income/curve_construction.md
+              - Forward Rates: reference/fixed_income/forward_rates.md
+              - Curve Trades: reference/fixed_income/curve_trades.md
+              - Swap DV01: reference/fixed_income/swap_dv01.md
+              - Swap Spread: reference/fixed_income/swap_spread.md
+              - Treasury Futures Hedging: reference/fixed_income/treasury_futures_hedging.md
+          - Credit:
+              - Z-Spread: reference/fixed_income/z_spread.md
+              - OAS: reference/fixed_income/oas.md
+              - Default and Recovery: reference/fixed_income/default_recovery.md
+              - Credit Curves: reference/fixed_income/credit_curves.md
+              - CDS and Basis: reference/fixed_income/cds_and_basis.md
+              - Credit Migration: reference/fixed_income/credit_migration.md
+          - Securitized:
+              - Pass-Throughs: reference/fixed_income/pass_throughs.md
+              - Prepayment Models: reference/fixed_income/prepayment_models.md
+              - Effective Duration: reference/fixed_income/effective_duration.md
+              - MBS Convexity: reference/fixed_income/mbs_convexity.md
+              - Non-Agency Overview: reference/fixed_income/non_agency_overview.md
       - Equity:
           - Dividend Discount Model: reference/equity/dividend_discount_model.md
           - Relative Valuation Multiples: reference/equity/relative_valuation_multiples.md
@@ -123,6 +120,21 @@ nav:
           - FX Carry: reference/fx/fx_carry.md
       - Commodities:
           - Roll Yield: reference/commodities/roll_yield.md
+      - Attribution and Implementation:
+          - Brinson Attribution: reference/concepts/brinson_attribution.md
+          - Fixed-Income Attribution: reference/concepts/fixed_income_attribution.md
+          - Transaction Costs and Rebalancing: reference/concepts/transaction_costs_and_rebalancing.md
+          - Liquidity: reference/concepts/liquidity.md
+      - Advanced Portfolio Construction:
+          - Covariance Shrinkage: reference/concepts/covariance_shrinkage.md
+          - Black-Litterman: reference/concepts/black_litterman.md
+          - Risk Parity: reference/concepts/risk_parity.md
+          - Scenario-Robust Optimization: reference/concepts/scenario_robust_optimization.md
+          - Hierarchical Risk Parity: reference/concepts/hierarchical_risk_parity.md
+          - Regime-Aware Allocation: reference/concepts/regime_aware_allocation.md
+          - Multi-Period Optimization: reference/concepts/multi_period_optimization.md
+      - Agentic PM Analytics:
+          - Agentic PM Analytics: reference/concepts/agentic_pm_analytics.md
   - Notebooks:
       - Foundations:
           - "01 Returns and Compounding": notebooks/foundations/01_returns_and_compounding.ipynb

@@ -26,4 +26,5 @@ Phase 8. Better to leave this conceptual than ship an unverified
 implementation.
 
 ## Related
-risk parity, covariance shrinkage.
+- [Risk parity](risk_parity.md)
+- [Covariance shrinkage](covariance_shrinkage.md)

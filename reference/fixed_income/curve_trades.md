@@ -20,9 +20,11 @@ front end, belly, long end, 2s10s, 5s30s, twist — see
 `notebooks/fixed_income/09_duration_curve_risk.ipynb`.
 
 ## Limitations
-DV01-neutral is not curve-neutral under a non-parallel shock; use key-rate
-duration (`reference/fixed_income/key_rate_duration.md`) to check the real
-exposure at each tenor.
+DV01-neutral is not curve-neutral under a non-parallel shock; use
+[key-rate duration](key_rate_duration.md) to check the real exposure at
+each tenor.
 
 ## Related
-key-rate duration, forward rates, scenario analysis.
+- [Key-rate duration](key_rate_duration.md)
+- [Forward rates](forward_rates.md)
+- [Stress testing (scenario analysis)](../concepts/stress_testing.md)

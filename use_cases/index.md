@@ -1,13 +1,13 @@
 # Use-Case Library
 
 Starter use cases:
-- `duration_hedging/README.md`
-- `curve_positioning/README.md`
-- `spread_shock/README.md`
-- `benchmark_relative/README.md`
-- `swap_dv01_hedge/README.md`
-- `treasury_futures_hedge/README.md`
-- `equity_factor_tilt/README.md`
+- [Duration Hedging](duration_hedging/README.md)
+- [Curve Positioning](curve_positioning/README.md)
+- [Spread Shock](spread_shock/README.md)
+- [Benchmark-Relative Risk](benchmark_relative/README.md)
+- [Swap DV01 Hedge](swap_dv01_hedge/README.md)
+- [Treasury Futures Hedge](treasury_futures_hedge/README.md)
+- [Equity Factor Tilt](equity_factor_tilt/README.md)
 
 Future:
 - credit beta reduction

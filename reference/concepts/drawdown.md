@@ -44,9 +44,9 @@ def max_drawdown(returns):
 - Path-dependent: same returns in a different order produce a different max drawdown.
 - A single historical path is one draw from many possible outcomes — pair with scenario/stress analysis for forward-looking risk.
 
-## Related concepts
-- `reference/concepts/sharpe_ratio.md`
-- `reference/concepts/portfolio_volatility.md`
+## Related
+- [Sharpe ratio](sharpe_ratio.md)
+- [Portfolio volatility](portfolio_volatility.md)
 
 ## Free resources
-- `resources/portfolio_foundations.md`
+- [Portfolio foundations resources](../../resources/portfolio_foundations.md)

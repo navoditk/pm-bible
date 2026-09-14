@@ -31,9 +31,9 @@ that are judgment calls, not a single formula — and a real multi-factor
 risk model (Barra/Axioma-style) additionally needs a cross-sectional
 regression to estimate factor returns each period. That's materially
 bigger than this repo's other "small transparent function" building
-blocks, in the same class as hierarchical risk parity
-(`reference/concepts/hierarchical_risk_parity.md`) — a conceptual
-placeholder here, not a shaky implementation.
+blocks, in the same class as
+[hierarchical risk parity](../concepts/hierarchical_risk_parity.md) — a
+conceptual placeholder here, not a shaky implementation.
 
 ## Common mistakes
 - treating "factor investing" as only value/growth — momentum, quality,
@@ -44,4 +44,7 @@ placeholder here, not a shaky implementation.
   still roughly factor-neutral, or vice versa
 
 ## Related
-Active share, CAPM and beta, factor risk, factor risk contribution.
+- [Active share](active_share.md)
+- [CAPM and beta](capm_and_beta.md)
+- [Factor risk](../concepts/factor_risk.md)
+- [Factor risk contribution](../concepts/factor_risk_contribution.md)

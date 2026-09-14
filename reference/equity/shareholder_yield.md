@@ -38,4 +38,5 @@ net out dilution from stock-based compensation issuance, which some
 "net buyback yield" definitions do.
 
 ## Related
-Dividend discount model, relative valuation multiples.
+- [Dividend discount model](dividend_discount_model.md)
+- [Relative valuation multiples](relative_valuation_multiples.md)

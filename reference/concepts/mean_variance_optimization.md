@@ -18,3 +18,8 @@ It formalizes the tradeoff between expected return, risk, and implementation con
 
 ## Important limitation
 Optimal weights can be extremely sensitive to estimation error, especially in expected returns.
+
+## Related
+- [Covariance shrinkage](covariance_shrinkage.md)
+- [Risk parity](risk_parity.md)
+- [Transaction costs and rebalancing](transaction_costs_and_rebalancing.md)

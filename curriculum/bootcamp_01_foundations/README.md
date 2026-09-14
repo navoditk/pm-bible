@@ -10,10 +10,10 @@
 7. Sharpe and drawdown
 
 Notebooks:
-- `notebooks/foundations/01_returns_and_compounding.ipynb`
-- `02_covariance_and_diversification.ipynb`
-- `03_risk_contribution.ipynb`
-- `13_sharpe_drawdown_benchmark.ipynb` (Sharpe ratio, drawdown, benchmark vocabulary)
+- [01 Returns and Compounding](../../notebooks/foundations/01_returns_and_compounding.ipynb)
+- [02 Covariance and Diversification](../../notebooks/foundations/02_covariance_and_diversification.ipynb)
+- [03 Risk Contribution](../../notebooks/foundations/03_risk_contribution.ipynb)
+- [13 Sharpe, Drawdown, Benchmark](../../notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb) (Sharpe ratio, drawdown, benchmark vocabulary)
 
 ## Day 2 — Portfolio theory and optimization
 1. opportunity set
@@ -27,8 +27,8 @@ Notebooks:
 9. optimizer instability
 
 Notebooks:
-- `notebooks/optimization/04_efficient_frontier.ipynb`
-- `05_constrained_optimization.ipynb`
+- [04 Efficient Frontier](../../notebooks/optimization/04_efficient_frontier.ipynb)
+- [05 Constrained Optimization](../../notebooks/optimization/05_constrained_optimization.ipynb)
 
 ## Day 3 — Active management and risk models
 1. benchmark-relative thinking
@@ -40,8 +40,8 @@ Notebooks:
 7. active optimization
 
 Notebooks:
-- `notebooks/active/06_active_portfolio.ipynb`
-- `07_factor_risk.ipynb`
+- [06 Active Portfolio](../../notebooks/active/06_active_portfolio.ipynb)
+- [07 Factor Risk](../../notebooks/active/07_factor_risk.ipynb)
 
 ## Day 4 — Fixed-income foundations
 1. bond vocabulary and price
@@ -55,9 +55,9 @@ Notebooks:
 9. carry/roll introduction
 
 Notebooks:
-- `notebooks/fixed_income/08_bond_math.ipynb`
-- `09_duration_curve_risk.ipynb`
-- `10_credit_spreads.ipynb`
+- [08 Bond Math](../../notebooks/fixed_income/08_bond_math.ipynb)
+- [09 Duration and Curve Risk](../../notebooks/fixed_income/09_duration_curve_risk.ipynb)
+- [10 Credit Spreads](../../notebooks/fixed_income/10_credit_spreads.ipynb)
 
 ## Day 5 — Scenario, attribution, integration
 1. scenario design
@@ -68,8 +68,8 @@ Notebooks:
 6. oral assessment
 
 Notebooks:
-- `notebooks/integration/11_scenarios.ipynb`
-- `12_attribution.ipynb`
+- [11 Scenarios](../../notebooks/integration/11_scenarios.ipynb)
+- [12 Attribution](../../notebooks/integration/12_attribution.ipynb)
 
 ## Daily rule
 
@@ -88,10 +88,10 @@ fixed-income foundations.
 5. Treasury futures, hedge ratio
 
 Notebooks:
-- `notebooks/fixed_income/14_curve_construction_forwards.ipynb`
-- `15_curve_trades_scenarios.ipynb`
-- `16_swaps_and_swap_spreads.ipynb`
-- `17_futures_and_hedging.ipynb`
+- [14 Curve Construction and Forwards](../../notebooks/fixed_income/14_curve_construction_forwards.ipynb)
+- [15 Curve Trades and Scenarios](../../notebooks/fixed_income/15_curve_trades_scenarios.ipynb)
+- [16 Swaps and Swap Spreads](../../notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb)
+- [17 Futures and Hedging](../../notebooks/fixed_income/17_futures_and_hedging.ipynb)
 
 ## Extension — Day 7: Risk models (VaR, ES, factor contribution)
 
@@ -103,8 +103,8 @@ Phase 4 of `ROADMAP.md` (risk models), building on Day 3's factor model.
    `reference/concepts/stress_testing.md`)
 
 Notebooks:
-- `notebooks/active/18_factor_risk_contribution.ipynb`
-- `19_var_and_expected_shortfall.ipynb`
+- [18 Factor Risk Contribution](../../notebooks/active/18_factor_risk_contribution.ipynb)
+- [19 VaR and Expected Shortfall](../../notebooks/active/19_var_and_expected_shortfall.ipynb)
 
 ## Extension — Day 8: Credit
 
@@ -121,8 +121,8 @@ aren't implemented as code here.
    `use_cases/spread_shock/README.md`)
 
 Notebooks:
-- `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb`
-- `21_default_recovery_and_cds.ipynb`
+- [20 Z-Spread and Credit Curves](../../notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb)
+- [21 Default, Recovery, and CDS](../../notebooks/fixed_income/21_default_recovery_and_cds.ipynb)
 
 ## Extension — Day 9: Securitized / mortgages
 
@@ -138,8 +138,8 @@ convexity/OAS and non-agency tranche waterfalls are conceptual only — see
 5. non-agency / ABS / CMBS overview
 
 Notebooks:
-- `notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb`
-- `23_effective_duration_and_convexity.ipynb`
+- [22 Pass-Throughs and Prepayment](../../notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb)
+- [23 Effective Duration and Convexity](../../notebooks/fixed_income/23_effective_duration_and_convexity.ipynb)
 
 ## Extension — Day 10: FX and commodities
 
@@ -151,7 +151,7 @@ Phase 9 of `ROADMAP.md` (FX and commodities).
 4. commodity futures curves: contango, backwardation, roll yield
 
 Notebooks:
-- `notebooks/fx_commodities/24_fx_and_commodities.ipynb`
+- [24 FX and Commodities](../../notebooks/fx_commodities/24_fx_and_commodities.ipynb)
 
 ## Extension — Day 11: Attribution and implementation (deep dive)
 
@@ -165,7 +165,7 @@ is conceptual only — see `reference/concepts/liquidity.md`.
 4. rebalancing trades
 
 Notebooks:
-- `notebooks/integration/25_brinson_and_rebalancing.ipynb`
+- [25 Brinson and Rebalancing](../../notebooks/integration/25_brinson_and_rebalancing.ipynb)
 
 ## Extension — Day 12: Advanced portfolio construction
 
@@ -180,8 +180,8 @@ optimization are conceptual only — see `reference/concepts/hierarchical_risk_p
 4. scenario-robust (minimax) optimization
 
 Notebooks:
-- `notebooks/optimization/26_shrinkage_and_black_litterman.ipynb`
-- `27_risk_parity_and_robust_optimization.ipynb`
+- [26 Shrinkage and Black-Litterman](../../notebooks/optimization/26_shrinkage_and_black_litterman.ipynb)
+- [27 Risk Parity and Robust Optimization](../../notebooks/optimization/27_risk_parity_and_robust_optimization.ipynb)
 
 ## Extension — Day 13: Agentic PM analytics
 
@@ -212,5 +212,5 @@ why.
 5. shareholder yield, buybacks, total shareholder return
 
 Notebooks:
-- `notebooks/equity/28_equity_valuation_and_capm.ipynb`
-- `notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb`
+- [28 Equity Valuation and CAPM](../../notebooks/equity/28_equity_valuation_and_capm.ipynb)
+- [29 Active Share, Factors, Shareholder Yield](../../notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb)

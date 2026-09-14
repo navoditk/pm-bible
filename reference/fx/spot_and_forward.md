@@ -30,5 +30,6 @@ the lower-rate currency's spot advantage — EUR is "expensive forward."
   in the numerator matters)
 
 ## Related
-cross-currency basis, FX carry, forward rates (same no-arbitrage logic
-applied to a single currency's curve).
+- [Cross-currency basis](cross_currency_basis.md)
+- [FX carry](fx_carry.md)
+- [Forward rates (same no-arbitrage logic)](../fixed_income/forward_rates.md)

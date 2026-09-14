@@ -18,4 +18,6 @@ Every other fixed-income sensitivity (duration, DV01, convexity) is a
 derivative of this pricing relationship.
 
 ## Related
-duration, DV01, curve construction.
+- [Duration](duration.md)
+- [DV01](dv01.md)
+- [Curve construction](curve_construction.md)

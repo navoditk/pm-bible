@@ -11,8 +11,7 @@ Factor variance contribution: `e^T F e`
 
 Specific variance contribution: `sum(w_i^2 * d_i)`
 
-These two sum to total portfolio variance under the factor model
-(`reference/concepts/factor_risk.md`).
+These two sum to total portfolio variance under the [factor model](factor_risk.md).
 
 ## Why PMs care
 Two portfolios with identical total volatility can have very different
@@ -41,5 +40,7 @@ def specific_variance_contribution(weights, specific_variance):
 - comparing factor exposure across portfolios without checking they share
   the same factor definitions
 
-## Related concepts
-factor risk, risk contribution, tracking error.
+## Related
+- [Factor risk](factor_risk.md)
+- [Risk contribution](risk_contribution.md)
+- [Tracking error](tracking_error.md)

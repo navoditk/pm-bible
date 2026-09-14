@@ -25,4 +25,6 @@ credit fundamentals.
   basis calls for opposite trades
 
 ## Related
-default and recovery, Z-spread, credit curves.
+- [Default and recovery](default_recovery.md)
+- [Z-spread](z_spread.md)
+- [Credit curves](credit_curves.md)

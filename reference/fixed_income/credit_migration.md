@@ -19,5 +19,6 @@ repo builds. This page is the conceptual placeholder; `default_recovery.md`
 is the buildable piece.
 
 ## Related
-default and recovery, credit curves, portfolio credit scenarios
-(`reference/concepts/stress_testing.md`).
+- [Default and recovery](default_recovery.md)
+- [Credit curves](credit_curves.md)
+- [Stress testing (portfolio credit scenarios)](../concepts/stress_testing.md)

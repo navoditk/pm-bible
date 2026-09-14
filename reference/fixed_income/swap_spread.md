@@ -17,4 +17,5 @@ compares the swap curve to the Treasury curve on a matched, zero-coupon
 basis, not par yields.
 
 ## Related
-swap DV01, curve construction, basis.
+- [Swap DV01](swap_dv01.md)
+- [Curve construction](curve_construction.md)

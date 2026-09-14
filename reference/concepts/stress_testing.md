@@ -32,5 +32,6 @@ multiplication (equity) per leg.
 - forgetting shocks can partially offset (e.g. falling rates cushioning
   widening credit spreads in a risk-off scenario)
 
-## Related concepts
-value at risk, scenario design, key-rate duration.
+## Related
+- [Value at risk](value_at_risk.md)
+- [Key-rate duration](../fixed_income/key_rate_duration.md)

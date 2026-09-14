@@ -21,4 +21,5 @@ equation. That's a different category of tool from the closed-form and
 single-period-convex functions this repo builds elsewhere.
 
 ## Related
-transaction costs and rebalancing, scenario-robust optimization.
+- [Transaction costs and rebalancing](transaction_costs_and_rebalancing.md)
+- [Scenario-robust optimization](scenario_robust_optimization.md)

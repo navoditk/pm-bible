@@ -1,0 +1,138 @@
+"""Single source of truth for reference-page titles and nesting, mirrored
+by reference/index.md, mkdocs.yml's nav, and the Artifact preview's
+sidebar. Update here first if the reference corpus changes shape, then
+re-run linkify_docs.py, build_docs_site.py, and build_artifact_preview.py
+(and hand-sync mkdocs.yml's nav, which can't import this directly).
+"""
+
+# (section_label, subsection_label_or_None, [(relpath_from_reference/, title)])
+SECTIONS = [
+    ("Portfolio Foundations", None, [
+        ("concepts/portfolio_return.md", "Portfolio Return"),
+        ("concepts/covariance.md", "Covariance"),
+        ("concepts/portfolio_volatility.md", "Portfolio Volatility"),
+        ("concepts/risk_contribution.md", "Risk Contribution"),
+        ("concepts/sharpe_ratio.md", "Sharpe Ratio"),
+        ("concepts/drawdown.md", "Drawdown"),
+        ("concepts/benchmark_basics.md", "Benchmark Basics"),
+        ("concepts/tracking_error.md", "Tracking Error"),
+    ]),
+    ("Optimization", None, [
+        ("concepts/mean_variance_optimization.md", "Mean-Variance Optimization"),
+    ]),
+    ("Risk Models", None, [
+        ("concepts/factor_risk.md", "Factor Risk"),
+        ("concepts/factor_risk_contribution.md", "Factor Risk Contribution"),
+        ("concepts/value_at_risk.md", "Value at Risk"),
+        ("concepts/stress_testing.md", "Stress Testing"),
+    ]),
+    ("Fixed Income", "Foundations", [
+        ("fixed_income/bond_pricing.md", "Bond Pricing"),
+        ("fixed_income/duration.md", "Duration"),
+        ("fixed_income/dv01.md", "DV01"),
+        ("fixed_income/convexity.md", "Convexity"),
+        ("fixed_income/key_rate_duration.md", "Key-Rate Duration"),
+        ("fixed_income/spread_duration.md", "Spread Duration"),
+    ]),
+    ("Fixed Income", "Rates Portfolio Management", [
+        ("fixed_income/curve_construction.md", "Curve Construction"),
+        ("fixed_income/forward_rates.md", "Forward Rates"),
+        ("fixed_income/curve_trades.md", "Curve Trades"),
+        ("fixed_income/swap_dv01.md", "Swap DV01"),
+        ("fixed_income/swap_spread.md", "Swap Spread"),
+        ("fixed_income/treasury_futures_hedging.md", "Treasury Futures Hedging"),
+    ]),
+    ("Fixed Income", "Credit", [
+        ("fixed_income/z_spread.md", "Z-Spread"),
+        ("fixed_income/oas.md", "OAS"),
+        ("fixed_income/default_recovery.md", "Default and Recovery"),
+        ("fixed_income/credit_curves.md", "Credit Curves"),
+        ("fixed_income/cds_and_basis.md", "CDS and Basis"),
+        ("fixed_income/credit_migration.md", "Credit Migration"),
+    ]),
+    ("Fixed Income", "Securitized", [
+        ("fixed_income/pass_throughs.md", "Pass-Throughs"),
+        ("fixed_income/prepayment_models.md", "Prepayment Models"),
+        ("fixed_income/effective_duration.md", "Effective Duration"),
+        ("fixed_income/mbs_convexity.md", "MBS Convexity"),
+        ("fixed_income/non_agency_overview.md", "Non-Agency Overview"),
+    ]),
+    ("Equity", None, [
+        ("equity/dividend_discount_model.md", "Dividend Discount Model"),
+        ("equity/relative_valuation_multiples.md", "Relative Valuation Multiples"),
+        ("equity/capm_and_beta.md", "CAPM and Beta"),
+        ("equity/equity_factor_investing.md", "Equity Factor Investing"),
+        ("equity/active_share.md", "Active Share"),
+        ("equity/shareholder_yield.md", "Shareholder Yield"),
+    ]),
+    ("FX", None, [
+        ("fx/spot_and_forward.md", "Spot and Forward"),
+        ("fx/cross_currency_basis.md", "Cross-Currency Basis"),
+        ("fx/fx_carry.md", "FX Carry"),
+    ]),
+    ("Commodities", None, [
+        ("commodities/roll_yield.md", "Roll Yield"),
+    ]),
+    ("Attribution and Implementation", None, [
+        ("concepts/brinson_attribution.md", "Brinson Attribution"),
+        ("concepts/fixed_income_attribution.md", "Fixed-Income Attribution"),
+        ("concepts/transaction_costs_and_rebalancing.md", "Transaction Costs and Rebalancing"),
+        ("concepts/liquidity.md", "Liquidity"),
+    ]),
+    ("Advanced Portfolio Construction", None, [
+        ("concepts/covariance_shrinkage.md", "Covariance Shrinkage"),
+        ("concepts/black_litterman.md", "Black-Litterman"),
+        ("concepts/risk_parity.md", "Risk Parity"),
+        ("concepts/scenario_robust_optimization.md", "Scenario-Robust Optimization"),
+        ("concepts/hierarchical_risk_parity.md", "Hierarchical Risk Parity"),
+        ("concepts/regime_aware_allocation.md", "Regime-Aware Allocation"),
+        ("concepts/multi_period_optimization.md", "Multi-Period Optimization"),
+    ]),
+    ("Agentic PM Analytics", None, [
+        ("concepts/agentic_pm_analytics.md", "Agentic PM Analytics"),
+    ]),
+]
+
+TITLES = {path: title for _, _, items in SECTIONS for path, title in items}
+
+NOTEBOOKS = {
+    "notebooks/foundations/01_returns_and_compounding.ipynb": "01 Returns and Compounding",
+    "notebooks/foundations/02_covariance_and_diversification.ipynb": "02 Covariance and Diversification",
+    "notebooks/foundations/03_risk_contribution.ipynb": "03 Risk Contribution",
+    "notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb": "13 Sharpe, Drawdown, Benchmark",
+    "notebooks/optimization/04_efficient_frontier.ipynb": "04 Efficient Frontier",
+    "notebooks/optimization/05_constrained_optimization.ipynb": "05 Constrained Optimization",
+    "notebooks/optimization/26_shrinkage_and_black_litterman.ipynb": "26 Shrinkage and Black-Litterman",
+    "notebooks/optimization/27_risk_parity_and_robust_optimization.ipynb": "27 Risk Parity and Robust Optimization",
+    "notebooks/active/06_active_portfolio.ipynb": "06 Active Portfolio",
+    "notebooks/active/07_factor_risk.ipynb": "07 Factor Risk",
+    "notebooks/active/18_factor_risk_contribution.ipynb": "18 Factor Risk Contribution",
+    "notebooks/active/19_var_and_expected_shortfall.ipynb": "19 VaR and Expected Shortfall",
+    "notebooks/fixed_income/08_bond_math.ipynb": "08 Bond Math",
+    "notebooks/fixed_income/09_duration_curve_risk.ipynb": "09 Duration and Curve Risk",
+    "notebooks/fixed_income/10_credit_spreads.ipynb": "10 Credit Spreads",
+    "notebooks/fixed_income/14_curve_construction_forwards.ipynb": "14 Curve Construction and Forwards",
+    "notebooks/fixed_income/15_curve_trades_scenarios.ipynb": "15 Curve Trades and Scenarios",
+    "notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb": "16 Swaps and Swap Spreads",
+    "notebooks/fixed_income/17_futures_and_hedging.ipynb": "17 Futures and Hedging",
+    "notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb": "20 Z-Spread and Credit Curves",
+    "notebooks/fixed_income/21_default_recovery_and_cds.ipynb": "21 Default, Recovery, and CDS",
+    "notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb": "22 Pass-Throughs and Prepayment",
+    "notebooks/fixed_income/23_effective_duration_and_convexity.ipynb": "23 Effective Duration and Convexity",
+    "notebooks/fx_commodities/24_fx_and_commodities.ipynb": "24 FX and Commodities",
+    "notebooks/equity/28_equity_valuation_and_capm.ipynb": "28 Equity Valuation and CAPM",
+    "notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb": "29 Active Share, Factors, Shareholder Yield",
+    "notebooks/integration/11_scenarios.ipynb": "11 Scenarios",
+    "notebooks/integration/12_attribution.ipynb": "12 Attribution",
+    "notebooks/integration/25_brinson_and_rebalancing.ipynb": "25 Brinson and Rebalancing",
+}
+
+USE_CASES = [
+    ("duration_hedging", "Duration Hedging"),
+    ("curve_positioning", "Curve Positioning"),
+    ("spread_shock", "Spread Shock"),
+    ("benchmark_relative", "Benchmark-Relative Risk"),
+    ("swap_dv01_hedge", "Swap DV01 Hedge"),
+    ("treasury_futures_hedge", "Treasury Futures Hedge"),
+    ("equity_factor_tilt", "Equity Factor Tilt"),
+]

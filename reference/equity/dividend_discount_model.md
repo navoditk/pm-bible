@@ -37,4 +37,6 @@ return `r` is itself an assumption — usually sourced from CAPM (see
 `capm_and_beta.md`), not directly observable.
 
 ## Related
-Relative valuation multiples, CAPM and beta, shareholder yield.
+- [Relative valuation multiples](relative_valuation_multiples.md)
+- [CAPM and beta](capm_and_beta.md)
+- [Shareholder yield](shareholder_yield.md)

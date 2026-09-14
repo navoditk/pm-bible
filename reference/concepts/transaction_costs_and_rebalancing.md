@@ -29,4 +29,6 @@ relative to average volume) — that's `liquidity.md`'s territory, which
 this repo treats conceptually only.
 
 ## Related
-liquidity, mean-variance optimization (constraints), Brinson attribution.
+- [Liquidity](liquidity.md)
+- [Mean-variance optimization (constraints)](mean_variance_optimization.md)
+- [Brinson attribution](brinson_attribution.md)

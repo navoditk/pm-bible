@@ -18,4 +18,5 @@ Treating the forward rate as a prediction rather than a break-even implied
 by no-arbitrage.
 
 ## Related
-curve construction, curve trades, carry and roll.
+- [Curve construction](curve_construction.md)
+- [Curve trades](curve_trades.md)

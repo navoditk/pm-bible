@@ -23,4 +23,6 @@ what you'd do next (e.g. a curve loss offset by carry is very different
 from a spread loss offset by curve).
 
 ## Related
-Brinson attribution, key-rate duration, spread duration.
+- [Brinson attribution](brinson_attribution.md)
+- [Key-rate duration](../fixed_income/key_rate_duration.md)
+- [Spread duration](../fixed_income/spread_duration.md)

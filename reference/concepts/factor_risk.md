@@ -27,5 +27,8 @@ def factor_model_covariance(exposures, factor_covariance, specific_variance):
 - double-counting risk already captured by a factor as specific risk
 - treating factor exposures as static when they drift over time
 
-## Related concepts
-tracking error, risk contribution, factor risk contribution, mean-variance optimization.
+## Related
+- [Tracking error](tracking_error.md)
+- [Risk contribution](risk_contribution.md)
+- [Factor risk contribution](factor_risk_contribution.md)
+- [Mean-variance optimization](mean_variance_optimization.md)

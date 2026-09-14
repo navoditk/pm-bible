@@ -19,4 +19,6 @@ semiannual coupons and interpolation for sparse/off-cycle tenors
 (e.g. 2Y/5Y/10Y/30Y) — see `interpolate_zero_rate` for the latter.
 
 ## Related
-forward rates, key-rate duration, curve trades.
+- [Forward rates](forward_rates.md)
+- [Key-rate duration](key_rate_duration.md)
+- [Curve trades](curve_trades.md)

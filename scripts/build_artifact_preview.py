@@ -4,100 +4,35 @@ publishing as a Claude Artifact - a companion to the full MkDocs site
 GitHub Pages at all. Covers reference pages, curriculum, and use cases;
 notebooks and code live in the full docs site and the repo itself.
 
-Refresh manually when content changes meaningfully:
+Section/subsection nesting and titles come from reference_taxonomy.py,
+the same source reference/index.md and mkdocs.yml's nav follow, so all
+three surfaces stay organized identically. Relative markdown links
+between reference pages are rewritten into in-page navigation so
+cross-references stay clickable inside the single-file artifact.
+
+Refresh manually when content changes meaningfully (see AGENTS.md rule 14):
   python scripts/build_artifact_preview.py
-Output is a gitignored build artifact; publish the resulting file with
-the Artifact tool.
+Output is a gitignored build artifact; publish it with the Artifact tool
+to the existing URL already linked from README.md.
 """
 import json
+import re
 from pathlib import Path
 
 import markdown
+from reference_taxonomy import SECTIONS, TITLES, USE_CASES
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "site_src" / "_artifact_preview.html"
+TEMPLATE = Path(__file__).with_name("_artifact_preview_template.html")
 
-MD_EXTENSIONS = ["tables", "fenced_code", "sane_lists", "toc"]
+MD_EXTENSIONS = ["tables", "fenced_code", "sane_lists"]
 
-# Titles kept in sync with mkdocs.yml's nav labels for the same pages.
-TITLES = {
-    "reference/concepts/portfolio_return.md": "Portfolio Return",
-    "reference/concepts/covariance.md": "Covariance",
-    "reference/concepts/portfolio_volatility.md": "Portfolio Volatility",
-    "reference/concepts/risk_contribution.md": "Risk Contribution",
-    "reference/concepts/sharpe_ratio.md": "Sharpe Ratio",
-    "reference/concepts/drawdown.md": "Drawdown",
-    "reference/concepts/benchmark_basics.md": "Benchmark Basics",
-    "reference/concepts/tracking_error.md": "Tracking Error",
-    "reference/concepts/mean_variance_optimization.md": "Mean-Variance Optimization",
-    "reference/concepts/factor_risk.md": "Factor Risk",
-    "reference/concepts/factor_risk_contribution.md": "Factor Risk Contribution",
-    "reference/concepts/value_at_risk.md": "Value at Risk",
-    "reference/concepts/stress_testing.md": "Stress Testing",
-    "reference/concepts/brinson_attribution.md": "Brinson Attribution",
-    "reference/concepts/fixed_income_attribution.md": "Fixed-Income Attribution",
-    "reference/concepts/transaction_costs_and_rebalancing.md": "Transaction Costs and Rebalancing",
-    "reference/concepts/liquidity.md": "Liquidity",
-    "reference/concepts/covariance_shrinkage.md": "Covariance Shrinkage",
-    "reference/concepts/black_litterman.md": "Black-Litterman",
-    "reference/concepts/risk_parity.md": "Risk Parity",
-    "reference/concepts/scenario_robust_optimization.md": "Scenario-Robust Optimization",
-    "reference/concepts/hierarchical_risk_parity.md": "Hierarchical Risk Parity",
-    "reference/concepts/regime_aware_allocation.md": "Regime-Aware Allocation",
-    "reference/concepts/multi_period_optimization.md": "Multi-Period Optimization",
-    "reference/concepts/agentic_pm_analytics.md": "Agentic PM Analytics",
-    "reference/fixed_income/bond_pricing.md": "Bond Pricing",
-    "reference/fixed_income/duration.md": "Duration",
-    "reference/fixed_income/dv01.md": "DV01",
-    "reference/fixed_income/convexity.md": "Convexity",
-    "reference/fixed_income/key_rate_duration.md": "Key-Rate Duration",
-    "reference/fixed_income/spread_duration.md": "Spread Duration",
-    "reference/fixed_income/curve_construction.md": "Curve Construction",
-    "reference/fixed_income/forward_rates.md": "Forward Rates",
-    "reference/fixed_income/curve_trades.md": "Curve Trades",
-    "reference/fixed_income/swap_dv01.md": "Swap DV01",
-    "reference/fixed_income/swap_spread.md": "Swap Spread",
-    "reference/fixed_income/treasury_futures_hedging.md": "Treasury Futures Hedging",
-    "reference/fixed_income/z_spread.md": "Z-Spread",
-    "reference/fixed_income/oas.md": "OAS",
-    "reference/fixed_income/credit_curves.md": "Credit Curves",
-    "reference/fixed_income/default_recovery.md": "Default and Recovery",
-    "reference/fixed_income/cds_and_basis.md": "CDS and Basis",
-    "reference/fixed_income/credit_migration.md": "Credit Migration",
-    "reference/fixed_income/pass_throughs.md": "Pass-Throughs",
-    "reference/fixed_income/prepayment_models.md": "Prepayment Models",
-    "reference/fixed_income/effective_duration.md": "Effective Duration",
-    "reference/fixed_income/mbs_convexity.md": "MBS Convexity",
-    "reference/fixed_income/non_agency_overview.md": "Non-Agency Overview",
-    "reference/equity/dividend_discount_model.md": "Dividend Discount Model",
-    "reference/equity/relative_valuation_multiples.md": "Relative Valuation Multiples",
-    "reference/equity/capm_and_beta.md": "CAPM and Beta",
-    "reference/equity/equity_factor_investing.md": "Equity Factor Investing",
-    "reference/equity/active_share.md": "Active Share",
-    "reference/equity/shareholder_yield.md": "Shareholder Yield",
-    "reference/fx/spot_and_forward.md": "Spot and Forward",
-    "reference/fx/cross_currency_basis.md": "Cross-Currency Basis",
-    "reference/fx/fx_carry.md": "FX Carry",
-    "reference/commodities/roll_yield.md": "Roll Yield",
-}
 
-USE_CASE_TITLES = {
-    "duration_hedging": "Duration Hedging",
-    "curve_positioning": "Curve Positioning",
-    "spread_shock": "Spread Shock",
-    "benchmark_relative": "Benchmark-Relative Risk",
-    "swap_dv01_hedge": "Swap DV01 Hedge",
-    "treasury_futures_hedge": "Treasury Futures Hedge",
-    "equity_factor_tilt": "Equity Factor Tilt",
-}
-
-SECTIONS = [
-    ("concepts", "Portfolio Concepts", "reference/concepts"),
-    ("fixed_income", "Fixed Income", "reference/fixed_income"),
-    ("equity", "Equity", "reference/equity"),
-    ("fx", "FX", "reference/fx"),
-    ("commodities", "Commodities", "reference/commodities"),
-]
+def page_id(ref_key):
+    """Stable in-page id for a reference page, e.g. concepts/covariance.md
+    -> ref-concepts-covariance."""
+    return "ref-" + ref_key.replace(".md", "").replace("/", "-")
 
 
 def md_to_html(text):
@@ -111,59 +46,86 @@ def strip_h1(text):
     return text
 
 
+def rewrite_xrefs(html_text, from_ref_key):
+    """Turn relative .md links between reference pages into in-page
+    anchors (#ref-...), since the artifact is one document rather than a
+    directory tree. Links that don't resolve to a known reference page
+    (notebooks, src/, resources/) are unwrapped to plain text - they'd
+    be dead inside a standalone file, and a dead link is worse than none.
+    """
+    from_dir = Path(from_ref_key).parent
+
+    def repl(m):
+        href, label = m.group(1), m.group(2)
+        if href.startswith(("http://", "https://", "#", "mailto:")):
+            return m.group(0)
+        parts = []
+        for seg in (from_dir / href).as_posix().split("/"):
+            if seg == "..":
+                if parts:
+                    parts.pop()
+            elif seg not in (".", ""):
+                parts.append(seg)
+        target = "/".join(parts)
+        if target in TITLES:
+            return f'<a href="#{page_id(target)}" class="xref">{label}</a>'
+        return label
+
+    return re.sub(r'<a href="([^"]+)">(.*?)</a>', repl, html_text, flags=re.DOTALL)
+
+
 def build_pages():
     pages = []
 
     overview = (ROOT / "docs" / "OVERVIEW.md").read_text()
     pages.append({
-        "id": "overview",
+        "id": "start-overview",
         "section": "Start Here",
+        "subsection": None,
         "title": "Repository Overview",
         "html": md_to_html(strip_h1(overview)),
     })
 
     curriculum = (ROOT / "curriculum" / "bootcamp_01_foundations" / "README.md").read_text()
     pages.append({
-        "id": "curriculum",
+        "id": "start-curriculum",
         "section": "Start Here",
+        "subsection": None,
         "title": "Curriculum (14-Day Bootcamp)",
         "html": md_to_html(strip_h1(curriculum)),
     })
 
-    for slug, label, reldir in SECTIONS:
-        for path in sorted((ROOT / reldir).glob("*.md")):
-            rel = str(path.relative_to(ROOT))
-            title = TITLES.get(rel, path.stem.replace("_", " ").title())
+    for section, subsection, items in SECTIONS:
+        for ref_key, title in items:
+            raw = (ROOT / "reference" / ref_key).read_text()
+            body = rewrite_xrefs(md_to_html(strip_h1(raw)), ref_key)
             pages.append({
-                "id": f"{slug}-{path.stem}",
-                "section": label,
+                "id": page_id(ref_key),
+                "section": section,
+                "subsection": subsection,
                 "title": title,
-                "html": md_to_html(strip_h1(path.read_text())),
+                "html": body,
             })
 
-    for path in sorted((ROOT / "use_cases").glob("*/README.md")):
-        slug = path.parent.name
-        title = USE_CASE_TITLES.get(slug, slug.replace("_", " ").title())
+    for slug, title in USE_CASES:
+        raw = (ROOT / "use_cases" / slug / "README.md").read_text()
         pages.append({
             "id": f"usecase-{slug}",
             "section": "Use Cases",
+            "subsection": None,
             "title": title,
-            "html": md_to_html(strip_h1(path.read_text())),
+            "html": md_to_html(strip_h1(raw)),
         })
 
     return pages
 
 
-PAGE_TEMPLATE = Path(__file__).with_name("_artifact_preview_template.html").read_text()
-
-
 def render(pages):
     data_json = json.dumps(pages)
-    # Neutralize "<" so the JSON can never contain a literal "</script>"
-    # (or any tag) - < is a valid JSON escape, decoded correctly by
-    # JSON.parse, so this is safe and standard for embedding JSON in HTML.
+    # Neutralize "<" so the JSON can never contain a literal "</script>".
+    # < is a valid JSON escape, decoded correctly by JSON.parse.
     safe_json = data_json.replace("<", "\\u003c")
-    return PAGE_TEMPLATE.replace("__PAGES_JSON__", safe_json)
+    return TEMPLATE.read_text().replace("__PAGES_JSON__", safe_json)
 
 
 def main():

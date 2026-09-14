@@ -26,4 +26,6 @@ this basis on top of the rate differential.
   and counterparty costs of the trade that generates it
 
 ## Related
-FX spot/forward, FX carry, swap spread (the fixed-income analogue).
+- [FX spot and forward](spot_and_forward.md)
+- [FX carry](fx_carry.md)
+- [Swap spread (the fixed-income analogue)](../fixed_income/swap_spread.md)

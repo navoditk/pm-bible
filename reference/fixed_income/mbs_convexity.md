@@ -28,7 +28,7 @@ mechanism (principal is returned at *par*, capping upside versus what an
 equivalent option-free bond would be worth at that rate), which requires
 comparing against an option-free benchmark under a proper term-structure
 model. That's exactly the OAS machinery this repo doesn't build — see
-`reference/fixed_income/oas.md`.
+[OAS](oas.md).
 
 ## Why PMs care
 A portfolio that looks duration-neutral against cash bonds can still be
@@ -43,4 +43,6 @@ effect but is not sophisticated enough to correctly price the option cost
 timing* behavior.
 
 ## Related
-prepayment models, effective duration, OAS.
+- [Prepayment models](prepayment_models.md)
+- [Effective duration](effective_duration.md)
+- [OAS](oas.md)

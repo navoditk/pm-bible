@@ -29,4 +29,6 @@ optimal shrinkage intensity from the data) is the more sophisticated
 standard approach and is not implemented here.
 
 ## Related
-mean-variance optimization, Black-Litterman, risk parity.
+- [Mean-variance optimization](mean_variance_optimization.md)
+- [Black-Litterman](black_litterman.md)
+- [Risk parity](risk_parity.md)

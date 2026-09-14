@@ -20,4 +20,5 @@ bond changes as yields move — both make realized futures DV01 drift from
 this static approximation.
 
 ## Related
-hedge ratio, swap DV01, DV01.
+- [Swap DV01](swap_dv01.md)
+- [DV01](dv01.md)

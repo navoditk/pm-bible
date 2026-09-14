@@ -31,3 +31,7 @@ def portfolio_return(asset_returns, weights):
 - weights not summing to intended net/gross exposure
 - mixing percent and decimal return units
 - confusing arithmetic period return with multi-period compounding
+
+## Related
+- [Portfolio volatility](portfolio_volatility.md)
+- [Sharpe ratio](sharpe_ratio.md)

@@ -23,4 +23,6 @@ Assumes the bond has no embedded optionality. For callable/putable bonds,
 Z-spread overstates true credit compensation — see `oas.md`.
 
 ## Related
-curve construction, OAS, spread duration.
+- [Curve construction](curve_construction.md)
+- [OAS](oas.md)
+- [Spread duration](spread_duration.md)

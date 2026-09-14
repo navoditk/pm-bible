@@ -8,7 +8,7 @@ A benchmark is the reference portfolio a manager's holdings and performance are 
 - **Portfolio weight** `w_p`: the weight of an asset actually held.
 - **Active weight** `a = w_p - w_b`: over/underweight versus the benchmark. Sums to zero when both are fully invested in the same universe.
 - **Active return**: `r_p - r_b`, the portfolio's return in excess of the benchmark's return.
-- **Tracking error**: the volatility of active return — see `reference/concepts/tracking_error.md`.
+- **Tracking error**: the volatility of active return — see [tracking error](tracking_error.md).
 
 ## Why PMs care
 Almost no institutional mandate is judged on absolute return alone. Sizing, risk budgets, and compensation are usually defined relative to a benchmark, so "am I long or short this name/sector versus the benchmark" is a more common question than "how much of this do I own."
@@ -40,9 +40,9 @@ def active_return(portfolio_return, benchmark_return):
 ## Limitations / approximations
 This page covers vocabulary only. The full quantitative treatment — tracking error, information ratio, IC, breadth, the Fundamental Law — is in Phase 3 (`notebooks/active/`, `src/pm/active.py`).
 
-## Related concepts
-- `reference/concepts/tracking_error.md`
+## Related
+- [Tracking error](tracking_error.md)
 
 ## Free resources
 - CFA Institute, Portfolio Risk and Return Part I & II
-- `resources/active_management.md`
+- [Active management resources](../../resources/active_management.md)

@@ -31,4 +31,6 @@ the other.
   the worst case, not the expected case
 
 ## Related
-stress testing, mean-variance optimization, Black-Litterman.
+- [Stress testing](stress_testing.md)
+- [Mean-variance optimization](mean_variance_optimization.md)
+- [Black-Litterman](black_litterman.md)

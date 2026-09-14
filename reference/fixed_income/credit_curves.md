@@ -22,4 +22,6 @@ Credit curve shape (steep vs. flat, IG vs. HY) reflects the market's view
 of near-term vs. long-term default risk for that issuer or sector.
 
 ## Related
-curve construction, Z-spread, default and recovery.
+- [Curve construction](curve_construction.md)
+- [Z-spread](z_spread.md)
+- [Default and recovery](default_recovery.md)

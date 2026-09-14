@@ -13,4 +13,7 @@ Modified duration of 5 implies approximately a 5% price decline for a 100 bp par
 Duration converts rate views and risk limits into portfolio sensitivity.
 
 ## Related
-DV01, convexity, key-rate duration, effective duration.
+- [DV01](dv01.md)
+- [Convexity](convexity.md)
+- [Key-rate duration](key_rate_duration.md)
+- [Effective duration](effective_duration.md)

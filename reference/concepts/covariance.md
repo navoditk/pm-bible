@@ -26,3 +26,7 @@ corr = returns.corr()
 
 ## Common mistake
 Treating a large number of holdings as synonymous with diversification.
+
+## Related
+- [Portfolio volatility](portfolio_volatility.md)
+- [Risk contribution](risk_contribution.md)

@@ -38,12 +38,12 @@ def sharpe_ratio(returns, risk_free_rate=0.0, periods_per_year=12):
 ## Limitations / approximations
 - Penalizes upside volatility the same as downside volatility.
 - Unstable with few observations or fat-tailed/skewed return distributions.
-- Says nothing about drawdown path or tail risk — pair with `drawdown.md`.
+- Says nothing about drawdown path or tail risk — pair with [drawdown](drawdown.md).
 
-## Related concepts
-- `reference/concepts/portfolio_volatility.md`
-- `reference/concepts/drawdown.md`
+## Related
+- [Portfolio volatility](portfolio_volatility.md)
+- [Drawdown](drawdown.md)
 
 ## Free resources
 - MIT OCW Portfolio Theory I–III
-- `resources/portfolio_foundations.md`
+- [Portfolio foundations resources](../../resources/portfolio_foundations.md)

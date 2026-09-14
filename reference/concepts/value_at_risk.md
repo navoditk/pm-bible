@@ -40,5 +40,6 @@ This is the parametric (delta-normal) method only. It assumes returns are
 normally distributed with no autocorrelation — historical simulation and
 Monte Carlo VaR relax that assumption but aren't implemented here.
 
-## Related concepts
-portfolio volatility, expected shortfall, stress testing.
+## Related
+- [Portfolio volatility](portfolio_volatility.md)
+- [Stress testing](stress_testing.md)

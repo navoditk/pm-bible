@@ -28,4 +28,6 @@ term structure of hazard rates, and real spreads include a risk premium
 above the pure expected-loss compensation shown here.
 
 ## Related
-CDS and basis, Z-spread, credit curves.
+- [CDS and basis](cds_and_basis.md)
+- [Z-spread](z_spread.md)
+- [Credit curves](credit_curves.md)

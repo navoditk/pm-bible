@@ -36,5 +36,6 @@ for the fuller multi-factor picture CAPM is a special (one-factor) case
 of.
 
 ## Related
-Dividend discount model, equity factor investing, factor risk
-(`reference/concepts/factor_risk.md`).
+- [Dividend discount model](dividend_discount_model.md)
+- [Equity factor investing](equity_factor_investing.md)
+- [Factor risk](../concepts/factor_risk.md)

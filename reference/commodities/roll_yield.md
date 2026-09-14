@@ -30,4 +30,5 @@ Near contract at $80, far contract at $78 (backwardation):
   supply/demand, and can flip
 
 ## Related
-carry (the FX analogue), forward rates.
+- [FX carry (the FX analogue)](../fx/fx_carry.md)
+- [Forward rates](../fixed_income/forward_rates.md)
