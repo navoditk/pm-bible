@@ -121,6 +121,9 @@ nav:
               - Effective Duration: reference/fixed_income/effective_duration.md
               - MBS Convexity: reference/fixed_income/mbs_convexity.md
               - Non-Agency Overview: reference/fixed_income/non_agency_overview.md
+              - TBA and the Dollar Roll: reference/fixed_income/tba_and_dollar_roll.md
+              - Specified Pools: reference/fixed_income/specified_pools.md
+              - CMO/REMIC Structuring: reference/fixed_income/cmo_remic_structuring.md
       - Equity:
           - Dividend Discount Model: reference/equity/dividend_discount_model.md
           - Relative Valuation Multiples: reference/equity/relative_valuation_multiples.md
@@ -180,6 +183,7 @@ nav:
           - "32 Fundamental Credit and Indices": notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb
           - "22 Pass-Throughs and Prepayment": notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb
           - "23 Effective Duration and Convexity": notebooks/fixed_income/23_effective_duration_and_convexity.ipynb
+          - "33 TBA, Dollar Roll, and Structuring": notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb
       - FX and Commodities:
           - "24 FX and Commodities": notebooks/fx_commodities/24_fx_and_commodities.ipynb
       - Equity:

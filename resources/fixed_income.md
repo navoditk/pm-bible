@@ -80,3 +80,24 @@ https://www.congress.gov/crs-product/R46096
 
 Leveraged Credit Markets: Then and Now — Western & Southern / Fort Washington:
 https://www.westernsouthern.com/fortwashington/insights/leveraged-credit-markets
+
+## TBA and the dollar roll
+Dollar roll — Wikipedia:
+https://en.wikipedia.org/wiki/Dollar_roll
+
+Using Dollar Rolls as a Balance Sheet and Earnings Strategy for Banks and Credit Unions — Doeren Mayhew:
+https://www.doeren.com/viewpoint/using-dollar-rolls-as-a-balance-sheet-and-earnings-strategy-for-banks-and-credit-unions
+
+## Specified pools
+Specified Pool and TBA Trading in the Mortgage Backed Securities Market — SMU Cox Finance Seminar Series:
+https://www.smu.edu/-/media/site/cox/departments/finance/finaseminarseries/tba_specified_pool_liquidity_smu.pdf?la=en
+
+Cash Payups for Mortgages with Specified Characteristics — Freddie Mac FAQ:
+https://sf.freddiemac.com/faqs/cash-payups-for-mortgages-with-specified-characteristics-faq
+
+## CMO / REMIC structuring
+Collateralized Mortgage Obligations (CMOs) — thisMatter.com:
+https://thismatter.com/money/bonds/types/collateralized-mortgage-obligations.htm
+
+Investor's Guide to RMBS & CMOs — SIFMA:
+https://www.53.com/content/dam/fifth-third/docs/legal/fts-sifma-investors-guide.pdf

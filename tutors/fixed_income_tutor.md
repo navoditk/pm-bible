@@ -9,12 +9,15 @@ inflation, Z-spread, credit curves, default/recovery, hazard rates, CDS
 spreads, CDS-bond basis, credit indices (CDX/iTraxx), fundamental
 credit analysis (leverage/coverage ratios, covenants), leveraged loans,
 agency MBS pass-throughs, CPR/SMM/PSA prepayment, effective duration,
-extension and contraction (WAL response to rates).
+extension and contraction (WAL response to rates), TBA and the dollar
+roll (implied financing rate), specified pools and pay-ups, CMO/REMIC
+tranche structuring (sequential, PAC, support).
 
 Conceptual only, not implemented as code (be upfront about this if asked):
 OAS (including MBS negative convexity in *price* terms - see
 `reference/fixed_income/mbs_convexity.md` for exactly what is and isn't
-shown), credit rating migration, non-agency/ABS/CMBS tranche waterfalls.
+shown), credit rating migration, non-agency/ABS/CMBS tranche waterfalls,
+specified-pool pay-ups, CMO/REMIC tranche cash-flow waterfalls.
 Not yet covered (later modules): FX, commodities.
 
 ## Diagnostic example

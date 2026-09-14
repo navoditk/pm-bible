@@ -75,6 +75,9 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 - [Effective Duration](fixed_income/effective_duration.md)
 - [MBS Convexity](fixed_income/mbs_convexity.md)
 - [Non-Agency Overview](fixed_income/non_agency_overview.md)
+- [TBA and the Dollar Roll](fixed_income/tba_and_dollar_roll.md)
+- [Specified Pools](fixed_income/specified_pools.md)
+- [CMO/REMIC Structuring](fixed_income/cmo_remic_structuring.md)
 
 ## Equity
 

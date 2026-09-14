@@ -28,3 +28,4 @@ placeholder, not a working implementation.
 - [Pass-throughs](pass_throughs.md)
 - [Credit curves](credit_curves.md)
 - [CDS and basis](cds_and_basis.md)
+- [CMO/REMIC structuring](cmo_remic_structuring.md)

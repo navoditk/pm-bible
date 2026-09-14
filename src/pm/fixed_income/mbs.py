@@ -82,3 +82,25 @@ def effective_duration(price_down, price_up, price_base, bump_decimal):
     changes with rates. Contrast with modified_duration (closed-form).
     """
     return (price_down - price_up) / (2 * price_base * bump_decimal)
+
+def dollar_roll_implied_financing_rate(coupon_income, drop_income, near_amount, horizon_years):
+    """Annualized financing rate implied by a TBA dollar roll: sell MBS for
+    near-month settlement, buy back (a substantially similar pool) for
+    far-month settlement, giving up a month of coupon income in exchange
+    for buying back at a lower ("dropped") price.
+
+    implied_financing_rate = (coupon_income - drop_income) / near_amount / horizon_years
+
+    coupon_income and drop_income are both dollar amounts over the roll
+    period (not annualized); near_amount is the near-leg proceeds
+    (near_price/100 * face); horizon_years is the roll period in years
+    (a standard monthly TBA roll is ~1/12). If drop_income exceeds
+    coupon_income the rate goes negative - the roll pays you more than the
+    coupon you gave up, cheaper than any real financing rate. Compare
+    against the prevailing GC repo rate: a dollar roll priced well below
+    GC repo is "special" - see reference/fixed_income/tba_and_dollar_roll.md.
+    This is a simplified version of the real calculation, which also nets
+    reinvestment income on the sale proceeds and any principal paydown
+    given up.
+    """
+    return (coupon_income - drop_income) / near_amount / horizon_years

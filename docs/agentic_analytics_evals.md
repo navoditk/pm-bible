@@ -29,6 +29,7 @@ number.
 | "Breakeven inflation with nominal 4.5% and TIPS real yield 2.0%?" | `pm.fixed_income.linkers.breakeven_inflation` | `nominal_yield=0.045, real_yield=0.02` | `0.025` |
 | "Leverage ratio for an issuer with $300M debt and $100M EBITDA?" | `pm.fixed_income.credit.leverage_ratio` | `total_debt=300, ebitda=100` | `3.0` |
 | "Index basis if 5 CDS constituents (80,90,100,70,110bp) trade equal-weighted and the index itself trades at 95bp?" | `pm.fixed_income.credit.index_intrinsic_spread` then `index_basis` | `constituent_spreads=[80,90,100,70,110]` → `intrinsic=90.0`; `index_basis(95, 90)` | `5.0` |
+| "Implied financing rate on a dollar roll: $1,000,000 face, 5% coupon, near price 101.00, far price 100.625, 1-month roll?" | `pm.fixed_income.mbs.dollar_roll_implied_financing_rate` | `coupon_income=4166.6667, drop_income=3750.0, near_amount=1010000.0, horizon_years=1/12` | `0.004950` (≈, 0.495%) |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like
