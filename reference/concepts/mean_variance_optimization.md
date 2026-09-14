@@ -1,9 +1,9 @@
 # Mean–Variance Optimization
 
 ## Core problem
-A common utility formulation:
+The utility formulation this repo's `mean_variance` uses:
 
-`maximize mu^T w - lambda * w^T Sigma w`
+`maximize mu^T w - (lambda / 2) * w^T Sigma w`
 
 subject to portfolio constraints.
 
@@ -12,6 +12,15 @@ subject to portfolio constraints.
 - `Sigma`: covariance matrix
 - `w`: weights
 - `lambda`: risk-aversion coefficient
+
+## Why the 1/2 matters
+This objective's first-order condition is `mu = lambda * Sigma @ w` —
+exactly what [`market_implied_returns`](black_litterman.md) inverts to
+recover a market-implied prior from observed weights. Drop the 1/2 and
+that round trip (reverse-optimize market weights into a prior, then feed
+the prior back into the optimizer) no longer returns the market weights
+at the same `lambda` — it only closes at `lambda / 2`. See
+`tests/test_robust.py::test_market_implied_returns_round_trips_through_mean_variance`.
 
 ## Why PMs care
 It formalizes the tradeoff between expected return, risk, and implementation constraints.

@@ -16,6 +16,12 @@ Posterior (combining prior with views `P`, `Q`, `Omega`):
 
 `posterior_mean = posterior_cov @ [(tau*Sigma)^-1 @ pi + P'*Omega^-1*Q]`
 
+`posterior_cov` here is the covariance of the *estimated mean itself*, not
+a posterior return covariance — don't pass it straight into an optimizer
+in place of `Sigma` (it's smaller by roughly a factor of `tau`, which
+would make the optimizer far too confident). Use `Sigma` itself, or
+`Sigma + posterior_cov`, as the optimizer's covariance input.
+
 ## Why PMs care
 Feeding raw historical average returns straight into a mean-variance
 optimizer is exactly what produces the extreme, unstable weights
@@ -35,6 +41,12 @@ assets through `Sigma`).
   the market prior with an unvalidated view
 - forgetting views on one asset spill over to correlated assets via
   `Sigma` — a single-asset view can move the whole posterior
+- passing `black_litterman_posterior`'s second return value straight into
+  an optimizer as the covariance — see the note above
+- reverse-optimizing a prior with one `risk_aversion` and then
+  re-optimizing with a *different* one — the round trip back to market
+  weights only holds at the same `risk_aversion` on both sides, see
+  [mean-variance optimization](mean_variance_optimization.md)
 
 ## Related
 - [Covariance shrinkage](covariance_shrinkage.md)
