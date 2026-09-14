@@ -33,14 +33,14 @@ frameworks, and manual reasoning comes before asking an agent.
 
 | | |
 |---|---|
-| Analytics code | 1,487 lines across 30 modules in `src/pm/` |
-| Tests | 190 passing, 17 test files |
-| Notebooks | 36, across 8 tracks (foundations, optimization, active, fixed income, FX/commodities, derivatives, equity, integration) |
-| Reference pages | 83 (including a glossary) |
-| Roadmap phases | 15 of 15 complete |
-| Bootcamp curriculum | 17 days (5 core + 12 extension) |
-| Use-case workflows | 7 |
-| Curated resource files | 8, 291 lines total |
+| Analytics code | 1,521 lines across 32 modules in `src/pm/` |
+| Tests | 198 passing, 18 test files |
+| Notebooks | 37, across 8 tracks (foundations, optimization, active, fixed income, FX/commodities, derivatives, equity, integration) |
+| Reference pages | 89 (including a glossary) |
+| Roadmap phases | 16 of 16 complete |
+| Bootcamp curriculum | 18 days (5 core + 13 extension) |
+| Use-case workflows | 11 |
+| Curated resource files | 10, 316 lines total |
 | Claude Code skills | `/tutor`, `/pm-query`, `/master` |
 
 Module size is small by design — the median `src/pm` module is roughly
@@ -68,6 +68,7 @@ production-grade curve or optimization engine beyond notebook exercises.
 | 13 | **Equity portfolio management** — DDM, relative valuation, CAPM/beta, factor investing, active share, shareholder yield |
 | 14 | **Derivatives and options** — Black-Scholes, the Greeks, put-call parity, implied volatility, Black-76, swaptions/caps/floors and option strategies (conceptual) |
 | 15 | **Asset allocation and performance measurement** — time-weighted vs. money-weighted return, GIPS (conceptual), liability-driven investing (funded ratio, surplus), strategic/tactical asset allocation (conceptual) |
+| 16 | **Wider investable universe** — municipal bonds (tax-equivalent yield), convertible bonds, preferred securities (perpetuity valuation), sovereign/EM debt, alternatives, and ESG (all conceptual except the first three) |
 
 Fixed income (Phases 5–8) remains the deepest vein by page count and
 code volume — rates, credit, and mortgages are each fully built out with
@@ -124,6 +125,21 @@ policy-portfolio level, not a new calculation; the latter because
 composite construction and verification are a compliance framework
 layered on top of the time-weighted-return calculation this repo already
 had (`cumulative_return`), not new math.
+
+Phase 16 (wider investable universe) closes the completeness audit's
+final, narrower findings: municipal bonds (`tax_equivalent_yield`),
+convertible bonds (`conversion_value`, `conversion_premium`), and
+preferred securities (which needed no new function at all - a
+non-callable preferred is exactly `gordon_growth_value` at
+`growth_rate=0`, reusing equity valuation machinery this repo already
+had). Sovereign/EM debt, alternative investments (private equity, hedge
+funds, real assets), and ESG are covered at survey depth as conceptual
+pages, each explicitly reusing existing machinery where it applies
+(CDS/credit-curve pricing for hard-currency sovereign risk, FX carry for
+local-currency risk) rather than duplicating it. The same pass also
+closed the last gaps in `use_cases/`: FX hedge, commodity futures roll,
+an MBS extension scenario, and a fundamental credit review, bringing
+every asset class this repo covers to at least one applied use case.
 
 A correctness-fix pass also caught and fixed several bugs surfaced by a
 detailed audit: a Black-Litterman round-trip that silently returned the
@@ -229,19 +245,19 @@ VaR/ES, Brinson attribution) supplies the buy-side vocabulary a
 sell-side trading background often lacks. With Phase 13, equity
 valuation, CAPM, factor investing, and active-share/shareholder-yield
 mechanics are now covered the same way fixed income is — derived, coded,
-and tested, not just described. Phases 14 and 15 close what a repo-wide
-completeness audit flagged as its two biggest remaining holes:
-options/volatility (previously absent despite deep linear-instrument
-coverage), and asset-allocation/performance-measurement framing
-(SAA/TAA, liability-driven investing, time-weighted vs. money-weighted
-return) on top of the existing optimization and return machinery.
+and tested, not just described. Phases 14, 15, and 16 close every gap a
+repo-wide completeness audit found: options/volatility (previously
+absent despite deep linear-instrument coverage), asset-allocation/
+performance-measurement framing (SAA/TAA, liability-driven investing,
+time-weighted vs. money-weighted return) on top of the existing
+optimization and return machinery, and the narrower gaps — municipal
+bonds, convertible bonds, preferred securities, sovereign/EM debt,
+alternatives, and ESG, plus `use_cases/` coverage for FX, commodities,
+mortgages, and fundamental credit.
 
-Remaining gaps the same audit found, still to close: narrower
-asset-class coverage (municipal bonds, sovereign/EM debt, convertibles,
-preferred securities); alternatives/private markets and ESG content; and
-`use_cases/` coverage for FX, commodities, mortgages, and fundamental
-credit despite all four already having reference pages and notebooks.
-Also: portfolio operations, compliance, and client reporting; live
-market data and desk-grade tooling (Bloomberg PORT/Barra/Aladdin-
-equivalent workflows); and depth beyond this repo's curated pointer list
-for whatever specific topics an interview process tests hardest.
+Remaining gaps, genuinely out of this repo's scope rather than
+unaddressed audit findings: portfolio operations, compliance, and client
+reporting; live market data and desk-grade tooling (Bloomberg PORT/
+Barra/Aladdin-equivalent workflows); and depth beyond this repo's
+curated pointer list for whatever specific topics an interview process
+tests hardest.

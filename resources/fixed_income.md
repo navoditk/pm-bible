@@ -101,3 +101,19 @@ https://thismatter.com/money/bonds/types/collateralized-mortgage-obligations.htm
 
 Investor's Guide to RMBS & CMOs — SIFMA:
 https://www.53.com/content/dam/fifth-third/docs/legal/fts-sifma-investors-guide.pdf
+
+## Municipal bonds
+Tax-Equivalent Yield — The Motley Fool:
+https://www.fool.com/terms/t/tax-equivalent-yield
+
+## Convertible bonds
+Conversion Ratio — Wall Street Prep:
+https://www.wallstreetprep.com/knowledge/conversion-ratio/
+
+## Preferred securities
+Cost of Preferred Stock — Wall Street Prep:
+https://www.wallstreetprep.com/knowledge/cost-of-preferred-stock/
+
+## Sovereign and EM debt
+Emerging market debt: Local or hard currency? — Robeco:
+https://www.robeco.com/en-int/insights/2025/10/emerging-market-debt-local-or-hard-currency

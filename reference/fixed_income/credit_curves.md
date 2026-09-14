@@ -25,3 +25,4 @@ of near-term vs. long-term default risk for that issuer or sector.
 - [Curve construction](curve_construction.md)
 - [Z-spread](z_spread.md)
 - [Default and recovery](default_recovery.md)
+- [Sovereign and EM debt](sovereign_and_em_debt.md)

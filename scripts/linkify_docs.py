@@ -203,6 +203,7 @@ RELATED = {
         ("Relative valuation multiples", "equity/relative_valuation_multiples.md"),
         ("CAPM and beta", "equity/capm_and_beta.md"),
         ("Shareholder yield", "equity/shareholder_yield.md"),
+        ("Preferred securities", "fixed_income/preferred_securities.md"),
     ],
     "equity/equity_factor_investing.md": [
         ("Active share", "equity/active_share.md"),
@@ -249,6 +250,28 @@ RELATED = {
         ("DV01", "fixed_income/dv01.md"),
         ("Curve construction", "fixed_income/curve_construction.md"),
         ("TIPS and breakeven inflation", "fixed_income/tips_and_breakevens.md"),
+        ("Convertible bonds", "fixed_income/convertible_bonds.md"),
+    ],
+    "fixed_income/convertible_bonds.md": [
+        ("Bond pricing", "fixed_income/bond_pricing.md"),
+        ("Black-Scholes pricing and the Greeks", "derivatives/black_scholes_and_greeks.md"),
+        ("Preferred securities", "fixed_income/preferred_securities.md"),
+    ],
+    "fixed_income/preferred_securities.md": [
+        ("Convertible bonds", "fixed_income/convertible_bonds.md"),
+        ("OAS", "fixed_income/oas.md"),
+        ("Dividend discount model", "equity/dividend_discount_model.md"),
+    ],
+    "fixed_income/municipal_bonds.md": [
+        ("Fundamental credit analysis", "fixed_income/fundamental_credit_analysis.md"),
+        ("TIPS and breakeven inflation", "fixed_income/tips_and_breakevens.md"),
+        ("Sovereign and EM debt", "fixed_income/sovereign_and_em_debt.md"),
+    ],
+    "fixed_income/sovereign_and_em_debt.md": [
+        ("Credit curves", "fixed_income/credit_curves.md"),
+        ("CDS and basis", "fixed_income/cds_and_basis.md"),
+        ("FX carry", "fx/fx_carry.md"),
+        ("Municipal bonds", "fixed_income/municipal_bonds.md"),
     ],
     "fixed_income/carry_and_rolldown.md": [
         ("Duration", "fixed_income/duration.md"),
@@ -283,6 +306,7 @@ RELATED = {
         ("Curve construction", "fixed_income/curve_construction.md"),
         ("Z-spread", "fixed_income/z_spread.md"),
         ("Default and recovery", "fixed_income/default_recovery.md"),
+        ("Sovereign and EM debt", "fixed_income/sovereign_and_em_debt.md"),
     ],
     "fixed_income/credit_migration.md": [
         ("Default and recovery", "fixed_income/default_recovery.md"),
@@ -306,6 +330,7 @@ RELATED = {
         ("Fundamental credit analysis", "fixed_income/fundamental_credit_analysis.md"),
         ("Spread duration", "fixed_income/spread_duration.md"),
         ("Credit curves", "fixed_income/credit_curves.md"),
+        ("Alternative investments overview", "alternatives/alternatives_overview.md"),
     ],
     "fixed_income/curve_construction.md": [
         ("Forward rates", "fixed_income/forward_rates.md"),
@@ -430,6 +455,17 @@ RELATED = {
         ("Cross-currency basis", "fx/cross_currency_basis.md"),
         ("FX carry", "fx/fx_carry.md"),
         ("Forward rates (same no-arbitrage logic)", "fixed_income/forward_rates.md"),
+    ],
+    "alternatives/alternatives_overview.md": [
+        ("ESG and sustainable investing", "alternatives/esg_and_sustainable_investing.md"),
+        ("Leveraged loans", "fixed_income/leveraged_loans.md"),
+        ("Liability-driven investing", "concepts/liability_driven_investing.md"),
+        ("Strategic and tactical asset allocation", "concepts/strategic_and_tactical_asset_allocation.md"),
+    ],
+    "alternatives/esg_and_sustainable_investing.md": [
+        ("Alternative investments overview", "alternatives/alternatives_overview.md"),
+        ("Fundamental credit analysis", "fixed_income/fundamental_credit_analysis.md"),
+        ("Liquidity", "concepts/liquidity.md"),
     ],
 }
 

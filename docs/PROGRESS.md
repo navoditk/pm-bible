@@ -6,8 +6,8 @@ The PM/FICC foundation is in place, extended one phase beyond FICC into equity p
 ## Current health
 - Test status: passing
 - Last validated: `pytest -q`
-- Result: `190 passed`
-- Notebooks: 36, all valid JSON (`python scripts/check_repo.py`)
+- Result: `198 passed`
+- Notebooks: 37, all valid JSON (`python scripts/check_repo.py`)
 
 ## Completed: rates/credit/mortgages PM-practitioner layer + roadmap
 A user-requested audit found the fixed-income coverage strong on pricing
@@ -31,7 +31,7 @@ pricing through TBA/dollar roll and CMO/REMIC structuring) with a
 reference page, notebook, and verified resource at every step - the
 user's original ask that started this whole workstream.
 
-## In-progress: curriculum-completeness audit
+## Completed: curriculum-completeness audit
 A repo-wide audit (not scoped to fixed income this time) found the
 curriculum strong across portfolio theory, risk, and every FICC/equity
 topic built so far, but with real gaps from a PM perspective: zero
@@ -40,16 +40,20 @@ options/volatility coverage anywhere, no asset-allocation framing
 machinery, no performance-measurement fundamentals (time-weighted vs.
 money-weighted return, GIPS), and narrower gaps in munis, sovereign/EM
 debt, convertibles, preferred securities, alternatives/private markets,
-ESG, and `use_cases/` coverage. Four planned workstreams, three done:
-glossary backfill (done), options and volatility - Phase 14 (done), and
-asset allocation/performance measurement - Phase 15 (done:
-`money_weighted_return` verified against the classic TWR-vs-MWR
+ESG, and `use_cases/` coverage. All four planned workstreams are done:
+glossary backfill, options and volatility (Phase 14: Black-Scholes, all
+five Greeks each cross-checked against a finite-difference bump, implied
+volatility, Black-76), asset allocation/performance measurement (Phase
+15: `money_weighted_return` verified against the classic TWR-vs-MWR
 divergence case; `funded_ratio`/`surplus` for LDI, reusing existing
-`dv01`/`hedge_ratio` for duration matching; SAA/TAA and GIPS composite
-construction conceptual-only, since both reuse existing tools rather
-than need new formulas). Remaining: the narrower Tier B/C items (munis,
-EM debt, convertibles, preferred securities, alternatives, ESG, missing
-use cases).
+`dv01`/`hedge_ratio`), and the wider investable universe (Phase 16:
+municipal bonds `tax_equivalent_yield`, convertible bonds
+`conversion_value`/`conversion_premium`, preferred securities reusing
+`gordon_growth_value` at zero growth with no new function needed;
+sovereign/EM debt, alternatives, and ESG conceptual; plus 4 new use
+cases - FX hedge, commodity futures roll, MBS extension scenario,
+fundamental credit review - closing every gap `use_cases/index.md`'s
+"Future" list had named).
 
 ## Completed modules
 - Foundations bootcamp structure in place
@@ -69,6 +73,7 @@ use cases).
 - `reference/glossary.md` backfilled: 12 new Fixed Income terms (carry, rolldown, repo/specialness, on-the-run/off-the-run, TIPS/breakevens, leverage/coverage ratios, credit indices, leveraged loans, TBA/dollar roll, specified pools, CMO/REMIC) plus new FX and Commodities sections that didn't exist before, despite both asset classes already having real reference-page content - all 64 links verified to resolve
 - Phase 14 (derivatives and options) built: `src/pm/options.py` (Black-Scholes call/put pricing, delta/gamma/vega/theta/rho, implied volatility via `brentq`, Black-76) - every Greek independently verified against a finite-difference bump of the pricing function itself, not just the closed-form formula, and Black-76 verified to reproduce Black-Scholes exactly at the matching forward price; 5 new reference pages (`black_scholes_and_greeks.md`, `put_call_parity.md`, `implied_volatility.md`, `options_on_forwards_and_rates_options.md`, `option_strategies.md` - the last two conceptual for the curve/annuity layer and strategy-composition reasons stated on each page) and notebook 34, closing this repo's single largest coverage gap found by the completeness audit
 - Phase 15 (asset allocation and performance measurement) built: `pm.returns.money_weighted_return` (solved via `brentq`, verified against the classic CFA textbook TWR-vs-MWR divergence case - a flat 0% time-weighted return alongside a roughly -26.8% money-weighted return) and `pm.allocation.funded_ratio`/`surplus` for liability-driven investing (reusing existing `dv01`/`hedge_ratio` for duration matching rather than new formulas); 3 new reference pages (`performance_measurement.md`, `liability_driven_investing.md`, `strategic_and_tactical_asset_allocation.md` - the last two conceptual, since SAA/TAA reapplies existing optimization tools and GIPS composite construction is a compliance layer on top of the existing `cumulative_return`) and notebook 35, closing the completeness audit's second-largest gap
+- Phase 16 (wider investable universe) built: `pm.fixed_income.munis.tax_equivalent_yield`, `pm.fixed_income.convertibles.conversion_value`/`conversion_premium`, and a confirmation that preferred-stock valuation needs no new function at all (`gordon_growth_value` at `growth_rate=0` is exactly the perpetuity formula, verified in `tests/test_equity.py`); 4 new reference pages (`municipal_bonds.md`, `convertible_bonds.md`, `preferred_securities.md`, `sovereign_and_em_debt.md`) plus a new `reference/alternatives/` section (`alternatives_overview.md`, `esg_and_sustainable_investing.md`, both conceptual survey pages) and notebook 36; 4 new use cases (FX hedge, commodity futures roll, MBS extension scenario, fundamental credit review) close every item `use_cases/index.md`'s "Future" list had named except multi-asset risk-off and risk-budget breach - this closes the curriculum-completeness audit entirely
 
 ## In progress
 - Documentation consolidation and onboarding cleanup
@@ -90,13 +95,13 @@ Only mark a module complete when:
 ## Branch / PR tracking
 
 Current branch:
-`feat/asset-allocation-and-performance-measurement`
+`feat/tier-b-c-gaps-munis-converts-preferred-em-alts-esg-usecases`
 
 Current issue:
 _Use issue/branch naming for each learning unit_
 
 Current PR:
-_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), #4 (efficient frontier/ex-post risk), #5 (zero-to-proficiency pedagogy), #6 (rates PM-practitioner layer), #7 (credit PM-practitioner layer), #8 (mortgages PM-practitioner layer), #9 (rates/credit/mortgages roadmap), #10 (glossary backfill), and #11 (derivatives and options) merged to `main`_
+_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), #4 (efficient frontier/ex-post risk), #5 (zero-to-proficiency pedagogy), #6 (rates PM-practitioner layer), #7 (credit PM-practitioner layer), #8 (mortgages PM-practitioner layer), #9 (rates/credit/mortgages roadmap), #10 (glossary backfill), #11 (derivatives and options), and #12 (asset allocation and performance measurement) merged to `main`_
 
 Last pushed checkpoint:
 _Not pushed yet — local commits only_

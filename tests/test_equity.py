@@ -23,6 +23,12 @@ def test_gordon_growth_hand_example():
     # D1=2, r=9%, g=4% -> V = 2 / 0.05 = 40
     assert np.isclose(gordon_growth_value(2.0, 0.09, 0.04), 40.0)
 
+def test_gordon_growth_at_zero_growth_prices_a_preferred_stock():
+    # growth_rate=0 collapses Gordon growth to a plain perpetuity,
+    # D1 / r - the standard preferred-stock valuation formula. See
+    # reference/fixed_income/preferred_securities.md.
+    assert np.isclose(gordon_growth_value(dividend_next=2.0, required_return=0.08, growth_rate=0.0), 25.0)
+
 def test_gordon_growth_rejects_growth_at_or_above_required_return():
     with pytest.raises(ValueError):
         gordon_growth_value(2.0, 0.05, 0.05)

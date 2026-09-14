@@ -36,6 +36,9 @@ number.
 | "Money-weighted return for cash flows of -100 at t=0, -200 at t=1, and +200 at t=2?" | `pm.returns.money_weighted_return` | `cash_flows=[-100.0,-200.0,200.0], times=[0.0,1.0,2.0]` | `-0.267949` (≈, the classic TWR-vs-MWR divergence case, where the matching TWR is 0%) |
 | "Funded ratio for a plan with $90M assets and $100M liabilities?" | `pm.allocation.funded_ratio` | `assets=90.0, liabilities=100.0` | `0.90` |
 | "What's the plan's ideal strategic asset allocation?" | none — conceptual only | — | should say plainly that SAA is this repo's existing optimization tools (`mean_variance_optimization`, `black_litterman_posterior`) reapplied at the policy level, not a separate calculation, and ask for the actual capital-market-expectation inputs rather than inventing an allocation |
+| "Tax-equivalent yield for a 3% muni, 32% tax bracket?" | `pm.fixed_income.munis.tax_equivalent_yield` | `muni_yield=0.03, tax_rate=0.32` | `0.044118` (≈, 4.41%) |
+| "Conversion value and premium for a $1,000 convertible, 20 conversion ratio, stock at $45, bond price 950?" | `pm.fixed_income.convertibles.conversion_value` then `conversion_premium` | `conversion_ratio=20, stock_price=45.0` → `900.0`; `conversion_premium(950.0, 900.0)` | `0.055556` (≈, 5.56%) |
+| "What's this preferred stock's fair value: $2 dividend, 8% required return?" | `pm.equity.valuation.gordon_growth_value` | `dividend_next=2.0, required_return=0.08, growth_rate=0.0` | `25.0` |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like

@@ -170,6 +170,16 @@ This file is the long-range view for the repository. The canonical docs hub is [
 - strategic vs. tactical asset allocation (conceptual - reuses existing
   optimization tools)
 
+## Phase 16 — Wider investable universe
+- municipal bonds: tax-equivalent yield
+- convertible bonds: conversion value, conversion premium
+- preferred securities: perpetuity valuation (reuses gordon_growth_value)
+- sovereign and EM debt: hard vs. local currency (conceptual)
+- alternative investments overview: private equity, hedge funds, real
+  assets, private debt (conceptual)
+- ESG and sustainable investing: screening, integration, engagement,
+  impact investing (conceptual)
+
 ## Definition of done
 
 This repository is never permanently done. Each real PM question should become one of:

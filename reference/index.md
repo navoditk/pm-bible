@@ -43,6 +43,8 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 - [Convexity](fixed_income/convexity.md)
 - [Key-Rate Duration](fixed_income/key_rate_duration.md)
 - [Spread Duration](fixed_income/spread_duration.md)
+- [Convertible Bonds](fixed_income/convertible_bonds.md)
+- [Preferred Securities](fixed_income/preferred_securities.md)
 
 ### Rates Portfolio Management
 
@@ -67,6 +69,8 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 - [Fundamental Credit Analysis](fixed_income/fundamental_credit_analysis.md)
 - [Credit Indices (CDX/iTraxx)](fixed_income/credit_indices.md)
 - [Leveraged Loans](fixed_income/leveraged_loans.md)
+- [Municipal Bonds](fixed_income/municipal_bonds.md)
+- [Sovereign and EM Debt](fixed_income/sovereign_and_em_debt.md)
 
 ### Securitized
 
@@ -128,6 +132,11 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 
 - [Strategic and Tactical Asset Allocation](concepts/strategic_and_tactical_asset_allocation.md)
 - [Liability-Driven Investing](concepts/liability_driven_investing.md)
+
+## Alternatives and ESG
+
+- [Alternative Investments Overview](alternatives/alternatives_overview.md)
+- [ESG and Sustainable Investing](alternatives/esg_and_sustainable_investing.md)
 
 ## Agentic PM Analytics
 

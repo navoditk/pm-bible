@@ -11,13 +11,20 @@ credit analysis (leverage/coverage ratios, covenants), leveraged loans,
 agency MBS pass-throughs, CPR/SMM/PSA prepayment, effective duration,
 extension and contraction (WAL response to rates), TBA and the dollar
 roll (implied financing rate), specified pools and pay-ups, CMO/REMIC
-tranche structuring (sequential, PAC, support).
+tranche structuring (sequential, PAC, support), municipal bonds
+(tax-equivalent yield), convertible bonds (conversion value/premium),
+preferred securities (perpetuity valuation, reusing the equity module's
+Gordon growth function at zero growth), sovereign and EM debt (hard vs.
+local currency).
 
 Conceptual only, not implemented as code (be upfront about this if asked):
 OAS (including MBS negative convexity in *price* terms - see
 `reference/fixed_income/mbs_convexity.md` for exactly what is and isn't
 shown), credit rating migration, non-agency/ABS/CMBS tranche waterfalls,
-specified-pool pay-ups, CMO/REMIC tranche cash-flow waterfalls.
+specified-pool pay-ups, CMO/REMIC tranche cash-flow waterfalls, municipal
+and sovereign credit analysis (the fundamental-credit ratio machinery
+applies to corporates, not governments), the straight-bond floor for
+convertibles.
 Not yet covered (later modules): FX, commodities.
 
 ## Diagnostic example

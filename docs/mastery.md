@@ -28,6 +28,8 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Bond pricing / YTM | `reference/fixed_income/bond_pricing.md` | untested | — |
 | Duration, DV01, convexity, KRD | `reference/fixed_income/duration.md`, `dv01.md`, `convexity.md`, `key_rate_duration.md` | confirmed | 2026-09-02, `docs/tutor_sessions/2026-09-02-fixed_income_tutor-duration.md` |
 | Credit spreads, spread duration | `reference/fixed_income/spread_duration.md` | untested | — |
+| Convertible bonds | `reference/fixed_income/convertible_bonds.md` | untested | — |
+| Preferred securities | `reference/fixed_income/preferred_securities.md` | untested | — |
 | Curve construction, bootstrapping | `reference/fixed_income/curve_construction.md` | untested | — |
 | Forward rates | `reference/fixed_income/forward_rates.md` | untested | — |
 | Curve trades (steepener/flattener/butterfly) | `reference/fixed_income/curve_trades.md` | untested | — |
@@ -46,6 +48,8 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Fundamental credit analysis (leverage/coverage, covenants) | `reference/fixed_income/fundamental_credit_analysis.md` | untested | — |
 | Credit indices (CDX/iTraxx) | `reference/fixed_income/credit_indices.md` | untested | — |
 | Leveraged loans | `reference/fixed_income/leveraged_loans.md` | untested | — |
+| Municipal bonds | `reference/fixed_income/municipal_bonds.md` | untested | — |
+| Sovereign and EM debt | `reference/fixed_income/sovereign_and_em_debt.md` | untested | — |
 | Pass-throughs, amortization | `reference/fixed_income/pass_throughs.md` | untested | — |
 | Prepayment (CPR/SMM/PSA) | `reference/fixed_income/prepayment_models.md` | untested | — |
 | Effective duration | `reference/fixed_income/effective_duration.md` | untested | — |
@@ -77,6 +81,8 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Multi-period optimization | `reference/concepts/multi_period_optimization.md` | untested | — |
 | Strategic and tactical asset allocation | `reference/concepts/strategic_and_tactical_asset_allocation.md` | untested | — |
 | Liability-driven investing | `reference/concepts/liability_driven_investing.md` | untested | — |
+| Alternative investments overview | `reference/alternatives/alternatives_overview.md` | untested | — |
+| ESG and sustainable investing | `reference/alternatives/esg_and_sustainable_investing.md` | untested | — |
 | Agentic PM analytics | `reference/concepts/agentic_pm_analytics.md` | untested | — |
 | Dividend discount model | `reference/equity/dividend_discount_model.md` | untested | — |
 | Relative valuation multiples | `reference/equity/relative_valuation_multiples.md` | untested | — |
