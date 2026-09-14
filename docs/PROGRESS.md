@@ -1,20 +1,21 @@
 # Progress
 
 ## Current stage
-The PM/FICC foundation is in place and the repository now extends one phase beyond FICC into equity portfolio management (Phase 13). It includes structured curriculum, a reusable analytics library, notebooks, reference pages, tests, a documentation hub, and a repo-level overview doc.
+The PM/FICC foundation is in place, extended one phase beyond FICC into equity portfolio management (Phase 13), and Phase 3 (active management) is now fully built out - it previously had only active weights and tracking error despite a reference page describing information ratio, IC, breadth, and the Fundamental Law as if they existed. A correctness-fix pass also closed several bugs a detailed audit surfaced (Black-Litterman round-trip, NaN propagation, silent optimizer failures, MBS domain errors), each with a regression test.
 
 ## Current health
 - Test status: passing
 - Last validated: `pytest -q`
-- Result: `94 passed`
+- Result: `122 passed`
 
 ## Completed modules
 - Foundations bootcamp structure in place
 - Core PM analytics library implemented under `src/pm/`
-- Fixed-income, optimization, integration, FX/commodities, and equity notebooks present
-- Reference pages added across portfolio foundations, optimization, risk, FICC, and equity
+- Fixed-income, optimization, integration, FX/commodities, equity, and active-management notebooks present
+- Reference pages added across portfolio foundations, optimization, risk, FICC, equity, and active management (information ratio, information coefficient, Fundamental Law) - each with real external sources
 - `docs/OVERVIEW.md` added as a quick-read repo summary
 - `/master` rebuilt as a single self-contained trainer (lesson/quiz/scenario/exam/status modes) with `docs/mastery-guide.md` as its walkthrough
+- Correctness-fix pass on `src/pm` (Black-Litterman round-trip, NaN propagation, silent solver failures, MBS domain errors)
 
 ## In progress
 - Documentation consolidation and onboarding cleanup
@@ -36,13 +37,13 @@ Only mark a module complete when:
 ## Branch / PR tracking
 
 Current branch:
-`main`
+`feat/phase-3-active-management-metrics`
 
 Current issue:
 _Use issue/branch naming for each learning unit_
 
 Current PR:
-_None open — #1 (Phase 13 equity, repo overview, /master skill) merged to `main`_
+_None open — #1 (Phase 13 equity, repo overview, /master skill) and #2 (correctness-fix pass) merged to `main`_
 
 Last pushed checkpoint:
-`7ffa5ac` — stop bare `/tutor` from half-replicating `/master`'s job
+_Not pushed yet — local commits only_

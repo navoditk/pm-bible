@@ -15,6 +15,12 @@
 
 - [Mean-Variance Optimization](concepts/mean_variance_optimization.md)
 
+## Active Management
+
+- [Information Ratio](concepts/information_ratio.md)
+- [Information Coefficient](concepts/information_coefficient.md)
+- [Fundamental Law](concepts/fundamental_law.md)
+
 ## Risk Models
 
 - [Factor Risk](concepts/factor_risk.md)

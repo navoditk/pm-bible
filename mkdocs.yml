@@ -74,6 +74,10 @@ nav:
           - Tracking Error: reference/concepts/tracking_error.md
       - Optimization:
           - Mean-Variance Optimization: reference/concepts/mean_variance_optimization.md
+      - Active Management:
+          - Information Ratio: reference/concepts/information_ratio.md
+          - Information Coefficient: reference/concepts/information_coefficient.md
+          - Fundamental Law: reference/concepts/fundamental_law.md
       - Risk Models:
           - Factor Risk: reference/concepts/factor_risk.md
           - Factor Risk Contribution: reference/concepts/factor_risk_contribution.md

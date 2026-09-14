@@ -20,6 +20,11 @@ SECTIONS = [
     ("Optimization", None, [
         ("concepts/mean_variance_optimization.md", "Mean-Variance Optimization"),
     ]),
+    ("Active Management", None, [
+        ("concepts/information_ratio.md", "Information Ratio"),
+        ("concepts/information_coefficient.md", "Information Coefficient"),
+        ("concepts/fundamental_law.md", "Fundamental Law"),
+    ]),
     ("Risk Models", None, [
         ("concepts/factor_risk.md", "Factor Risk"),
         ("concepts/factor_risk_contribution.md", "Factor Risk Contribution"),

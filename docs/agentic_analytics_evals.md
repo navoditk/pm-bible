@@ -22,6 +22,8 @@ number.
 | "Roll yield if the near contract is $80 and the far contract is $78?" | `pm.commodities.roll_yield` | `near_price=80, far_price=78` | `0.02564` (≈, backwardation) |
 | "Gordon growth value of a stock with a $2 next dividend, 9% required return, 4% growth?" | `pm.equity.valuation.gordon_growth_value` | `dividend_next=2.0, required_return=0.09, growth_rate=0.04` | `40.0` |
 | "Beta of a stock whose returns move 1.5x the market's?" | `pm.equity.capm.beta` | `stock_returns=[0.015,0.03,-0.015,0.045,0.0], market_returns=[0.01,0.02,-0.01,0.03,0.0]` | `1.5` |
+| "Information ratio if portfolio returns are 3%/5%/2% and benchmark returns are 1%/2%/1%, unannualized?" | `pm.active.information_ratio` | `portfolio_returns=[0.03,0.05,0.02], benchmark_returns=[0.01,0.02,0.01], periods_per_year=1` | `2.0` |
+| "Expected information ratio for a manager with a 0.05 IC and 100 independent bets, no constraints?" | `pm.active.fundamental_law_ir` | `information_coefficient_value=0.05, breadth_value=100, transfer_coefficient_value=1.0` | `0.5` |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like

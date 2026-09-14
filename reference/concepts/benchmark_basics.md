@@ -35,13 +35,20 @@ def active_return(portfolio_return, benchmark_return):
 ## Common mistakes
 - comparing a portfolio to a benchmark it isn't actually mandated against
 - forgetting that active weights only sum to zero when portfolio and benchmark share the same universe and are both fully invested
-- treating a positive active return in one period as skill rather than noise (see information ratio in Phase 3)
+- treating a positive active return in one period as skill rather than noise — see [information ratio](information_ratio.md)
 
 ## Limitations / approximations
-This page covers vocabulary only. The full quantitative treatment — tracking error, information ratio, IC, breadth, the Fundamental Law — is in Phase 3 (`notebooks/active/`, `src/pm/active.py`).
+This page covers vocabulary only. The full quantitative treatment lives
+in `src/pm/active.py`: [tracking error](tracking_error.md),
+[information ratio](information_ratio.md),
+[information coefficient](information_coefficient.md), and the
+[Fundamental Law](fundamental_law.md) (which covers breadth and the
+transfer coefficient).
 
 ## Related
 - [Tracking error](tracking_error.md)
+- [Information ratio](information_ratio.md)
+- [Fundamental Law](fundamental_law.md)
 
 ## Free resources
 - CFA Institute, Portfolio Risk and Return Part I & II
