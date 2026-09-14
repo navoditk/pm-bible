@@ -7,3 +7,6 @@ __pycache__/
 *.egg-info/
 .DS_Store
 .env
+site_src/
+site/
+.cache/

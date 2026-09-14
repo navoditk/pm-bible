@@ -1,0 +1,187 @@
+site_name: PM Bible
+site_description: A build-first PM/FICC-and-equity learning and analytics curriculum
+site_url: https://navoditk.github.io/pm-bible/
+repo_url: https://github.com/navoditk/pm-bible
+repo_name: navoditk/pm-bible
+edit_uri: edit/main/
+
+docs_dir: site_src
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: README.md
+  - Overview: docs/OVERVIEW.md
+  - Getting Started: docs/getting-started.md
+  - Mastery Guide: docs/mastery-guide.md
+  - Learning Paths: docs/learning-paths.md
+  - Roadmap: ROADMAP.md
+  - Architecture: docs/ARCHITECTURE.md
+  - Curriculum:
+      - Bootcamp (14 Days): curriculum/bootcamp_01_foundations/README.md
+  - Reference:
+      - Index: reference/index.md
+      - Portfolio Concepts:
+          - Portfolio Return: reference/concepts/portfolio_return.md
+          - Covariance: reference/concepts/covariance.md
+          - Portfolio Volatility: reference/concepts/portfolio_volatility.md
+          - Risk Contribution: reference/concepts/risk_contribution.md
+          - Sharpe Ratio: reference/concepts/sharpe_ratio.md
+          - Drawdown: reference/concepts/drawdown.md
+          - Benchmark Basics: reference/concepts/benchmark_basics.md
+          - Tracking Error: reference/concepts/tracking_error.md
+          - Mean-Variance Optimization: reference/concepts/mean_variance_optimization.md
+          - Factor Risk: reference/concepts/factor_risk.md
+          - Factor Risk Contribution: reference/concepts/factor_risk_contribution.md
+          - Value at Risk: reference/concepts/value_at_risk.md
+          - Stress Testing: reference/concepts/stress_testing.md
+          - Brinson Attribution: reference/concepts/brinson_attribution.md
+          - Fixed-Income Attribution: reference/concepts/fixed_income_attribution.md
+          - Transaction Costs and Rebalancing: reference/concepts/transaction_costs_and_rebalancing.md
+          - Liquidity: reference/concepts/liquidity.md
+          - Covariance Shrinkage: reference/concepts/covariance_shrinkage.md
+          - Black-Litterman: reference/concepts/black_litterman.md
+          - Risk Parity: reference/concepts/risk_parity.md
+          - Scenario-Robust Optimization: reference/concepts/scenario_robust_optimization.md
+          - Hierarchical Risk Parity: reference/concepts/hierarchical_risk_parity.md
+          - Regime-Aware Allocation: reference/concepts/regime_aware_allocation.md
+          - Multi-Period Optimization: reference/concepts/multi_period_optimization.md
+          - Agentic PM Analytics: reference/concepts/agentic_pm_analytics.md
+      - Fixed Income:
+          - Bond Pricing: reference/fixed_income/bond_pricing.md
+          - Duration: reference/fixed_income/duration.md
+          - DV01: reference/fixed_income/dv01.md
+          - Convexity: reference/fixed_income/convexity.md
+          - Key-Rate Duration: reference/fixed_income/key_rate_duration.md
+          - Spread Duration: reference/fixed_income/spread_duration.md
+          - Curve Construction: reference/fixed_income/curve_construction.md
+          - Forward Rates: reference/fixed_income/forward_rates.md
+          - Curve Trades: reference/fixed_income/curve_trades.md
+          - Swap DV01: reference/fixed_income/swap_dv01.md
+          - Swap Spread: reference/fixed_income/swap_spread.md
+          - Treasury Futures Hedging: reference/fixed_income/treasury_futures_hedging.md
+          - Z-Spread: reference/fixed_income/z_spread.md
+          - OAS: reference/fixed_income/oas.md
+          - Credit Curves: reference/fixed_income/credit_curves.md
+          - Default and Recovery: reference/fixed_income/default_recovery.md
+          - CDS and Basis: reference/fixed_income/cds_and_basis.md
+          - Credit Migration: reference/fixed_income/credit_migration.md
+          - Pass-Throughs: reference/fixed_income/pass_throughs.md
+          - Prepayment Models: reference/fixed_income/prepayment_models.md
+          - Effective Duration: reference/fixed_income/effective_duration.md
+          - MBS Convexity: reference/fixed_income/mbs_convexity.md
+          - Non-Agency Overview: reference/fixed_income/non_agency_overview.md
+      - Equity:
+          - Dividend Discount Model: reference/equity/dividend_discount_model.md
+          - Relative Valuation Multiples: reference/equity/relative_valuation_multiples.md
+          - CAPM and Beta: reference/equity/capm_and_beta.md
+          - Equity Factor Investing: reference/equity/equity_factor_investing.md
+          - Active Share: reference/equity/active_share.md
+          - Shareholder Yield: reference/equity/shareholder_yield.md
+      - FX:
+          - Spot and Forward: reference/fx/spot_and_forward.md
+          - Cross-Currency Basis: reference/fx/cross_currency_basis.md
+          - FX Carry: reference/fx/fx_carry.md
+      - Commodities:
+          - Roll Yield: reference/commodities/roll_yield.md
+  - Notebooks:
+      - Foundations:
+          - "01 Returns and Compounding": notebooks/foundations/01_returns_and_compounding.ipynb
+          - "02 Covariance and Diversification": notebooks/foundations/02_covariance_and_diversification.ipynb
+          - "03 Risk Contribution": notebooks/foundations/03_risk_contribution.ipynb
+          - "13 Sharpe, Drawdown, Benchmark": notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb
+      - Optimization:
+          - "04 Efficient Frontier": notebooks/optimization/04_efficient_frontier.ipynb
+          - "05 Constrained Optimization": notebooks/optimization/05_constrained_optimization.ipynb
+          - "26 Shrinkage and Black-Litterman": notebooks/optimization/26_shrinkage_and_black_litterman.ipynb
+          - "27 Risk Parity and Robust Optimization": notebooks/optimization/27_risk_parity_and_robust_optimization.ipynb
+      - Active Management:
+          - "06 Active Portfolio": notebooks/active/06_active_portfolio.ipynb
+          - "07 Factor Risk": notebooks/active/07_factor_risk.ipynb
+          - "18 Factor Risk Contribution": notebooks/active/18_factor_risk_contribution.ipynb
+          - "19 VaR and Expected Shortfall": notebooks/active/19_var_and_expected_shortfall.ipynb
+      - Fixed Income:
+          - "08 Bond Math": notebooks/fixed_income/08_bond_math.ipynb
+          - "09 Duration and Curve Risk": notebooks/fixed_income/09_duration_curve_risk.ipynb
+          - "10 Credit Spreads": notebooks/fixed_income/10_credit_spreads.ipynb
+          - "14 Curve Construction and Forwards": notebooks/fixed_income/14_curve_construction_forwards.ipynb
+          - "15 Curve Trades and Scenarios": notebooks/fixed_income/15_curve_trades_scenarios.ipynb
+          - "16 Swaps and Swap Spreads": notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb
+          - "17 Futures and Hedging": notebooks/fixed_income/17_futures_and_hedging.ipynb
+          - "20 Z-Spread and Credit Curves": notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb
+          - "21 Default, Recovery, and CDS": notebooks/fixed_income/21_default_recovery_and_cds.ipynb
+          - "22 Pass-Throughs and Prepayment": notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb
+          - "23 Effective Duration and Convexity": notebooks/fixed_income/23_effective_duration_and_convexity.ipynb
+      - FX and Commodities:
+          - "24 FX and Commodities": notebooks/fx_commodities/24_fx_and_commodities.ipynb
+      - Equity:
+          - "28 Equity Valuation and CAPM": notebooks/equity/28_equity_valuation_and_capm.ipynb
+          - "29 Active Share, Factors, Shareholder Yield": notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb
+      - Integration:
+          - "11 Scenarios": notebooks/integration/11_scenarios.ipynb
+          - "12 Attribution": notebooks/integration/12_attribution.ipynb
+          - "25 Brinson and Rebalancing": notebooks/integration/25_brinson_and_rebalancing.ipynb
+  - Use Cases:
+      - Index: use_cases/index.md
+      - Duration Hedging: use_cases/duration_hedging/README.md
+      - Curve Positioning: use_cases/curve_positioning/README.md
+      - Spread Shock: use_cases/spread_shock/README.md
+      - Benchmark Relative: use_cases/benchmark_relative/README.md
+      - Swap DV01 Hedge: use_cases/swap_dv01_hedge/README.md
+      - Treasury Futures Hedge: use_cases/treasury_futures_hedge/README.md
+      - Equity Factor Tilt: use_cases/equity_factor_tilt/README.md
+  - Tutors and Agents:
+      - Tutors Overview: tutors/README.md
+      - Concept Tutor: tutors/concept_tutor.md
+      - Fixed-Income Tutor: tutors/fixed_income_tutor.md
+      - Portfolio Construction Tutor: tutors/portfolio_construction_tutor.md
+      - Assessment Tutor: tutors/assessment_tutor.md
+      - Agentic Analytics Evals: docs/agentic_analytics_evals.md
+  - Resources:
+      - Index: resources/README.md
+      - Portfolio Foundations: resources/portfolio_foundations.md
+      - Active Management: resources/active_management.md
+      - Fixed Income: resources/fixed_income.md
+      - Equity: resources/equity.md
+      - FX and Commodities: resources/fx_and_commodities.md
+      - Implementation: resources/implementation.md
+  - Progress: docs/PROGRESS.md

@@ -1,8 +1,16 @@
 # Portfolio Management Bible
 
 [![CI](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml/badge.svg)](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml)
+[![Docs](https://github.com/navoditk/pm-bible/actions/workflows/docs.yml/badge.svg)](https://github.com/navoditk/pm-bible/actions/workflows/docs.yml)
 
 A build-first PM/FICC-and-equity learning and analytics repository for portfolio construction, risk, optimization, fixed-income, and equity work.
+
+## Browse without cloning
+
+- **[Docs site](https://navoditk.github.io/pm-bible/)** — the entire curriculum (every reference page, notebook, and use case) as a searchable static site, rebuilt automatically from `main` on every push
+- **Read-only preview** — a lighter standalone version for a quick look, refreshed on request (link pending)
+
+Either works without git, Python, or an account — for the interactive version (running tests, `/master`, `/tutor`, `/pm-query`), clone the repo instead.
 
 ## What this repo is
 
