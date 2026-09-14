@@ -90,6 +90,9 @@ If no specialized persona matches the topic, fall back to
 | default, recovery, hazard rate | `fixed_income_tutor.md` | `reference/fixed_income/default_recovery.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
 | CDS, CDS-bond basis | `fixed_income_tutor.md` | `reference/fixed_income/cds_and_basis.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
 | credit migration | `fixed_income_tutor.md` | `reference/fixed_income/credit_migration.md` | — (conceptual only, no code) | — |
+| fundamental credit analysis, leverage, coverage, covenants | `fixed_income_tutor.md` | `reference/fixed_income/fundamental_credit_analysis.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | `tests/test_fixed_income.py` |
+| credit indices, CDX, iTraxx, intrinsic spread, basis | `fixed_income_tutor.md` | `reference/fixed_income/credit_indices.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | `tests/test_fixed_income.py` |
+| leveraged loans, discount margin, covenant-lite | `fixed_income_tutor.md` | `reference/fixed_income/leveraged_loans.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | — (conceptual only, no code) |
 | fundamental credit analysis, leverage/coverage ratios, covenants | `fixed_income_tutor.md` | `reference/fixed_income/fundamental_credit_analysis.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | `tests/test_fixed_income.py` |
 | credit indices, CDX, iTraxx | `fixed_income_tutor.md` | `reference/fixed_income/credit_indices.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | `tests/test_fixed_income.py` |
 | leveraged loans | `fixed_income_tutor.md` | `reference/fixed_income/leveraged_loans.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | — (conceptual only, no code) |
@@ -98,6 +101,9 @@ If no specialized persona matches the topic, fall back to
 | effective duration | `fixed_income_tutor.md` | `reference/fixed_income/effective_duration.md` | `notebooks/fixed_income/23_effective_duration_and_convexity.ipynb` | `tests/test_mbs.py` |
 | MBS negative convexity, extension/contraction | `fixed_income_tutor.md` | `reference/fixed_income/mbs_convexity.md` | `notebooks/fixed_income/23_effective_duration_and_convexity.ipynb` | `tests/test_mbs.py` |
 | non-agency, ABS, CMBS | `fixed_income_tutor.md` | `reference/fixed_income/non_agency_overview.md` | — (conceptual only, no code) | — |
+| TBA, dollar roll, implied financing rate | `fixed_income_tutor.md` | `reference/fixed_income/tba_and_dollar_roll.md` | `notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb` | `tests/test_mbs.py` |
+| specified pools, pay-up | `fixed_income_tutor.md` | `reference/fixed_income/specified_pools.md` | `notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb` | — (conceptual only, no code) |
+| CMO, REMIC, PAC, support tranche | `fixed_income_tutor.md` | `reference/fixed_income/cmo_remic_structuring.md` | `notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb` | — (conceptual only, no code) |
 | FX spot/forward, covered interest parity | `concept_tutor.md` | `reference/fx/spot_and_forward.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
 | cross-currency basis | `concept_tutor.md` | `reference/fx/cross_currency_basis.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
 | FX carry, FX hedging | `concept_tutor.md` | `reference/fx/fx_carry.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |

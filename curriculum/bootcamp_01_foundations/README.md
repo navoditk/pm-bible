@@ -150,19 +150,24 @@ Notebooks:
 ## Extension — Day 9: Securitized / mortgages
 
 Phase 8 of `ROADMAP.md` (securitized/mortgages). Full price-based negative
-convexity/OAS and non-agency tranche waterfalls are conceptual only — see
-`reference/fixed_income/oas.md`, `mbs_convexity.md`, and
-`non_agency_overview.md` for why they aren't implemented as code here.
+convexity/OAS, non-agency tranche waterfalls, specified-pool pay-ups, and
+CMO/REMIC tranche cash-flow waterfalls are conceptual only — see
+`reference/fixed_income/oas.md`, `mbs_convexity.md`,
+`non_agency_overview.md`, `specified_pools.md`, and
+`cmo_remic_structuring.md` for why they aren't implemented as code here.
 
 1. agency MBS pass-throughs, amortization
 2. CPR / SMM / PSA prepayment
 3. effective duration (technique)
 4. extension and contraction (WAL response to rates)
 5. non-agency / ABS / CMBS overview
+6. TBA and the dollar roll (implied financing rate), specified pools and
+   pay-ups, CMO/REMIC tranche structuring (sequential, PAC, support)
 
 Notebooks:
 - [22 Pass-Throughs and Prepayment](../../notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb)
 - [23 Effective Duration and Convexity](../../notebooks/fixed_income/23_effective_duration_and_convexity.ipynb)
+- [33 TBA, Dollar Roll, and Structuring](../../notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb)
 
 ## Extension — Day 10: FX and commodities
 

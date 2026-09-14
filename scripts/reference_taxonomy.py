@@ -70,6 +70,9 @@ SECTIONS = [
         ("fixed_income/effective_duration.md", "Effective Duration"),
         ("fixed_income/mbs_convexity.md", "MBS Convexity"),
         ("fixed_income/non_agency_overview.md", "Non-Agency Overview"),
+        ("fixed_income/tba_and_dollar_roll.md", "TBA and the Dollar Roll"),
+        ("fixed_income/specified_pools.md", "Specified Pools"),
+        ("fixed_income/cmo_remic_structuring.md", "CMO/REMIC Structuring"),
     ]),
     ("Equity", None, [
         ("equity/dividend_discount_model.md", "Dividend Discount Model"),
@@ -136,6 +139,7 @@ NOTEBOOKS = {
     "notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb": "32 Fundamental Credit and Indices",
     "notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb": "22 Pass-Throughs and Prepayment",
     "notebooks/fixed_income/23_effective_duration_and_convexity.ipynb": "23 Effective Duration and Convexity",
+    "notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb": "33 TBA, Dollar Roll, and Structuring",
     "notebooks/fx_commodities/24_fx_and_commodities.ipynb": "24 FX and Commodities",
     "notebooks/equity/28_equity_valuation_and_capm.ipynb": "28 Equity Valuation and CAPM",
     "notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb": "29 Active Share, Factors, Shareholder Yield",

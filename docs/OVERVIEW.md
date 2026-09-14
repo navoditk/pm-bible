@@ -33,10 +33,10 @@ frameworks, and manual reasoning comes before asking an agent.
 
 | | |
 |---|---|
-| Analytics code | 1,264 lines across 28 modules in `src/pm/` |
-| Tests | 162 passing, 15 test files |
-| Notebooks | 33, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
-| Reference pages | 71 (including a glossary) |
+| Analytics code | 1,288 lines across 28 modules in `src/pm/` |
+| Tests | 165 passing, 15 test files |
+| Notebooks | 34, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
+| Reference pages | 75 (including a glossary) |
 | Roadmap phases | 13 of 13 complete |
 | Bootcamp curriculum | 14 days (5 core + 9 extension) |
 | Use-case workflows | 7 |
@@ -75,14 +75,14 @@ that claim overstated on the practitioner/market-structure layer,
 though: carry-and-rolldown was listed as a Phase 5 roadmap bullet and
 never implemented, and TBA/dollar roll, repo specialness, TIPS
 breakevens, credit indices, and fundamental credit analysis had zero
-coverage anywhere. Rates' and credit's gaps are now closed —
+coverage anywhere. All three gaps are now closed —
 `carry_and_rolldown.md`, `repo_and_financing.md`, and
 `tips_and_breakevens.md` for rates; `fundamental_credit_analysis.md`,
-`credit_indices.md`, and `leveraged_loans.md` for credit, each with
-tested `src/pm` code (where the math is genuinely codeable) and a
-notebook — with mortgages' equivalent gap (TBA/dollar roll, specified
-pools, CMO/REMIC structuring) being closed the same way. Phase 13
-(equity) closes what used to
+`credit_indices.md`, and `leveraged_loans.md` for credit;
+`tba_and_dollar_roll.md`, `specified_pools.md`, and
+`cmo_remic_structuring.md` for mortgages — each with tested `src/pm`
+code (where the math is genuinely codeable), a notebook, and real
+external sources. Phase 13 (equity) closes what used to
 be this repo's one clear gap: previously "equity" appeared only as a
 generic example asset class, with no valuation, CAPM, or factor-investing
 material anywhere. Phase 3 (active management) was similarly incomplete

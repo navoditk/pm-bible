@@ -46,3 +46,4 @@ timing* behavior.
 - [Prepayment models](prepayment_models.md)
 - [Effective duration](effective_duration.md)
 - [OAS](oas.md)
+- [CMO/REMIC structuring](cmo_remic_structuring.md)

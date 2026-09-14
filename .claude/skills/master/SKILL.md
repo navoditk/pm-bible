@@ -37,13 +37,13 @@ A bare topic name with no other context (e.g. someone just says "duration") duri
 
    | Confirmed | Level |
    |---|---|
-   | 0–4 | Trainee |
-   | 5–14 | Analyst |
-   | 15–24 | Associate PM |
-   | 25–34 | Portfolio Manager |
-   | 35–44 | Senior PM |
-   | 45–54 | Desk Head |
-   | all (55) | PM Bible Master |
+   | 0–9 | Trainee |
+   | 10–19 | Analyst |
+   | 20–31 | Associate PM |
+   | 32–43 | Portfolio Manager |
+   | 44–55 | Senior PM |
+   | 56–69 | Desk Head |
+   | all (70) | PM Bible Master |
 
 2. The curriculum order is the bootcamp day order in
    `curriculum/bootcamp_01_foundations/README.md` (Days 1–5, then
@@ -147,5 +147,5 @@ Just the one-line header. Nothing else, unless asked to elaborate.
 ## Completion
 
 When `confirmed` reaches the full total, say so plainly ("PM Bible
-Master — all 55 confirmed") and point to `/master scenario` or
+Master — all 70 confirmed") and point to `/master scenario` or
 `use_cases/index.md` as what's left worth doing.

@@ -29,6 +29,7 @@ from .linkers import (
 )
 from .mbs import (
     apply_prepayment,
+    dollar_roll_implied_financing_rate,
     effective_duration,
     mortgage_amortization_schedule,
     psa_cpr,
@@ -49,6 +50,7 @@ __all__ = [
     "cds_bond_basis",
     "convexity",
     "credit_spread_from_hazard",
+    "dollar_roll_implied_financing_rate",
     "dv01",
     "effective_duration",
     "expected_loss",

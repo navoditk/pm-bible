@@ -5,6 +5,7 @@ from pm.fixed_income.bond import bond_price
 from pm.fixed_income.duration import modified_duration
 from pm.fixed_income.mbs import (
     apply_prepayment,
+    dollar_roll_implied_financing_rate,
     effective_duration,
     mortgage_amortization_schedule,
     psa_cpr,
@@ -95,6 +96,33 @@ def test_amortization_schedule_handles_zero_rate():
     assert np.allclose(principal, 100.0)
     assert np.allclose(interest, 0.0)
     assert np.isclose(ending[-1], 0.0)
+
+def test_dollar_roll_implied_financing_rate_hand_example():
+    # $1mm face, 5% coupon, near 101.00 / far 100.625 (0.375 drop), 1-month roll
+    face, coupon_rate = 1_000_000.0, 0.05
+    near_price, far_price = 101.00, 100.625
+    coupon_income = face * coupon_rate / 12
+    drop_income = (near_price - far_price) / 100 * face
+    near_amount = near_price / 100 * face
+    rate = dollar_roll_implied_financing_rate(coupon_income, drop_income, near_amount, horizon_years=1 / 12)
+    assert np.isclose(rate, 0.004950495, atol=1e-6)
+
+def test_dollar_roll_negative_when_drop_exceeds_coupon_given_up():
+    # A drop rich enough to outweigh the forgone coupon makes the roll
+    # cheaper than free - a negative implied financing rate.
+    coupon_income = 4166.6667
+    drop_income = 9000.0
+    rate = dollar_roll_implied_financing_rate(coupon_income, drop_income, near_amount=1_010_000.0, horizon_years=1 / 12)
+    assert rate < 0.0
+
+def test_dollar_roll_zero_drop_equals_pure_forgone_coupon_cost():
+    # No compensating drop: the implied financing rate is just the
+    # annualized coupon carry given up, same as holding cost with no roll benefit.
+    face, coupon_rate = 1_000_000.0, 0.05
+    coupon_income = face * coupon_rate / 12
+    near_amount = 1_010_000.0
+    rate = dollar_roll_implied_financing_rate(coupon_income, drop_income=0.0, near_amount=near_amount, horizon_years=1 / 12)
+    assert np.isclose(rate, coupon_income / near_amount * 12)
 
 def test_wal_shortens_with_refinancing_incentive():
     wac, balance, months = 0.06, 1_000_000.0, 360

@@ -1272,6 +1272,29 @@
       "description": "Overlay a prepayment assumption on a scheduled amortization."
     },
     {
+      "name": "dollar_roll_implied_financing_rate",
+      "module": "pm.fixed_income.mbs",
+      "parameters": [
+        {
+          "name": "coupon_income",
+          "default": null
+        },
+        {
+          "name": "drop_income",
+          "default": null
+        },
+        {
+          "name": "near_amount",
+          "default": null
+        },
+        {
+          "name": "horizon_years",
+          "default": null
+        }
+      ],
+      "description": "Annualized financing rate implied by a TBA dollar roll: sell MBS for"
+    },
+    {
       "name": "effective_duration",
       "module": "pm.fixed_income.mbs",
       "parameters": [

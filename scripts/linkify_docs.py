@@ -217,6 +217,7 @@ RELATED = {
         ("Carry and rolldown", "fixed_income/carry_and_rolldown.md"),
         ("Curve trades", "fixed_income/curve_trades.md"),
         ("Treasury futures hedging", "fixed_income/treasury_futures_hedging.md"),
+        ("TBA and the dollar roll", "fixed_income/tba_and_dollar_roll.md"),
     ],
     "fixed_income/tips_and_breakevens.md": [
         ("Bond pricing", "fixed_income/bond_pricing.md"),
@@ -309,11 +310,13 @@ RELATED = {
         ("Prepayment models", "fixed_income/prepayment_models.md"),
         ("Effective duration", "fixed_income/effective_duration.md"),
         ("OAS", "fixed_income/oas.md"),
+        ("CMO/REMIC structuring", "fixed_income/cmo_remic_structuring.md"),
     ],
     "fixed_income/non_agency_overview.md": [
         ("Pass-throughs", "fixed_income/pass_throughs.md"),
         ("Credit curves", "fixed_income/credit_curves.md"),
         ("CDS and basis", "fixed_income/cds_and_basis.md"),
+        ("CMO/REMIC structuring", "fixed_income/cmo_remic_structuring.md"),
     ],
     "fixed_income/oas.md": [
         ("Z-spread", "fixed_income/z_spread.md"),
@@ -322,6 +325,26 @@ RELATED = {
     "fixed_income/pass_throughs.md": [
         ("Prepayment models", "fixed_income/prepayment_models.md"),
         ("Effective duration", "fixed_income/effective_duration.md"),
+        ("TBA and the dollar roll", "fixed_income/tba_and_dollar_roll.md"),
+        ("Specified pools", "fixed_income/specified_pools.md"),
+    ],
+    "fixed_income/tba_and_dollar_roll.md": [
+        ("Repo and financing", "fixed_income/repo_and_financing.md"),
+        ("Specified pools", "fixed_income/specified_pools.md"),
+        ("Pass-throughs", "fixed_income/pass_throughs.md"),
+        ("Prepayment models", "fixed_income/prepayment_models.md"),
+    ],
+    "fixed_income/specified_pools.md": [
+        ("TBA and the dollar roll", "fixed_income/tba_and_dollar_roll.md"),
+        ("Prepayment models", "fixed_income/prepayment_models.md"),
+        ("MBS negative convexity", "fixed_income/mbs_convexity.md"),
+        ("Pass-throughs", "fixed_income/pass_throughs.md"),
+    ],
+    "fixed_income/cmo_remic_structuring.md": [
+        ("MBS negative convexity", "fixed_income/mbs_convexity.md"),
+        ("Prepayment models", "fixed_income/prepayment_models.md"),
+        ("Non-agency overview", "fixed_income/non_agency_overview.md"),
+        ("Pass-throughs", "fixed_income/pass_throughs.md"),
     ],
     "fixed_income/prepayment_models.md": [
         ("Pass-throughs", "fixed_income/pass_throughs.md"),
