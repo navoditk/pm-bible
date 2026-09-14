@@ -87,3 +87,22 @@ Start with:
 - `reference/concepts/agentic_pm_analytics.md`
 
 This route focuses on the agent layer: tool schemas, grounded answers, evaluations, and deterministic analytics interfaces rather than new financial math.
+
+## Path G — Interactive mastery
+
+Start with:
+
+```
+/master
+```
+
+This is the odd one out among the paths above: instead of choosing where
+to start, `/master` chooses for you — it teaches the next concept you
+haven't mastered, in curriculum order, one question at a time, and
+remembers your progress automatically. Use `/master quiz` for a fast
+multiple-choice check, `/master scenario` to apply confirmed concepts to
+a real use case, or `/master exam` for a tougher multi-concept checkpoint.
+
+See [docs/mastery-guide.md](./mastery-guide.md) for a full walkthrough.
+This is the recommended starting point if you'd rather be guided than
+pick a path yourself.

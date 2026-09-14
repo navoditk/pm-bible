@@ -97,11 +97,15 @@ reading.
   Tracks per-concept status in `docs/mastery.md`.
 - `/pm-query <question>` — a direct answer computed by actually running
   the relevant `src/pm` function, cited and logged.
-- `/master` — sequences the *entire* curriculum in bootcamp-day order,
-  finds the next weak-or-untested concept in `docs/mastery.md`, hands
-  off to `/tutor` for it, and reports aggregate progress. Use this to
-  drive a full pass through the repository instead of picking topics one
-  at a time.
+- `/master` — a single, self-contained trainer covering the *entire*
+  curriculum: `/master` teaches the next weak-or-untested concept in
+  curriculum order, `/master quiz` runs 10 rapid multiple-choice checks
+  (`/master quiz 20` for a bigger round), `/master scenario` applies
+  confirmed concepts to a real use case, `/master exam` runs a
+  multi-concept assessment ladder, and `/master status` gives a one-line
+  progress readout. Use it to drive a full pass through the repository
+  instead of picking topics one at a time — see
+  [docs/mastery-guide.md](./mastery-guide.md) for a walkthrough.
 
 ## Fit for a bank → asset management move
 

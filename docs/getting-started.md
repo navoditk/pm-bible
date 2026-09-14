@@ -1,6 +1,21 @@
 # Getting started
 
-## Recommended first session
+## Two ways to learn this repo
+
+**Manual** — work through curated readings, notebooks, and reference
+pages yourself, at whatever pace and depth you choose. The rest of this
+page describes that path.
+
+**Interactive** — type `/master` and let it teach the curriculum to you,
+one question at a time, tracking progress automatically. See the
+[mastery guide](./mastery-guide.md) for how it works. This is the faster
+way to get started if you don't want to pick notebooks and track
+completion by hand.
+
+Both use the same underlying material (reference pages, notebooks,
+tests) — pick whichever fits how you like to learn, or mix the two.
+
+## Recommended first session (manual path)
 
 Use this sequence:
 

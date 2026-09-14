@@ -22,6 +22,11 @@ The goal is not just to read about PM concepts. The goal is to understand them d
 4. Open the matching notebook in `notebooks/`
 5. Run the test suite and update progress in [docs/PROGRESS.md](docs/PROGRESS.md)
 
+Prefer to be walked through it interactively instead of picking notebooks
+yourself? Type `/master` and see
+[docs/mastery-guide.md](docs/mastery-guide.md) — one command teaches the
+whole curriculum, tracks progress, and picks up where you left off.
+
 ## Quick start
 
 ```bash
@@ -60,6 +65,7 @@ Use the docs hub as the canonical starting point:
 
 - [docs/README.md](docs/README.md)
 - [docs/OVERVIEW.md](docs/OVERVIEW.md) — quick-read snapshot of coverage and gaps
+- [docs/mastery-guide.md](docs/mastery-guide.md) — how to learn interactively with `/master`
 - [docs/getting-started.md](docs/getting-started.md)
 - [docs/learning-paths.md](docs/learning-paths.md)
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)

@@ -2,6 +2,10 @@
 
 This file is maintained as a compatibility entry point. The canonical docs live in [docs/getting-started.md](docs/getting-started.md).
 
+Want to skip straight to an interactive walkthrough instead of picking
+notebooks yourself? Type `/master` — see
+[docs/mastery-guide.md](docs/mastery-guide.md).
+
 ## Recommended first session
 
 1. Read [docs/getting-started.md](docs/getting-started.md)

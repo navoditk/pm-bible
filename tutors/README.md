@@ -13,11 +13,18 @@ answer. See `reference/concepts/agentic_pm_analytics.md` for how the two
 skills relate.
 
 To work through the *entire* curriculum rather than one topic at a time,
-use `/master` (`.claude/skills/master/SKILL.md`). It doesn't teach —
-every actual session still runs through `/tutor` — it sequences the
-curriculum in bootcamp-day order, reads `docs/mastery.md` to find the
-next weak or untested concept, hands off to `/tutor` for that concept,
-and reports aggregate progress until everything is `confirmed`.
+use `/master` (`.claude/skills/master/SKILL.md`) — a single,
+self-contained trainer with no second skill to invoke. `/master` alone
+teaches the next weak-or-untested concept in curriculum order;
+`/master quiz` runs 10 rapid multiple-choice questions (`/master quiz 20`
+for a bigger round); `/master scenario` applies already-confirmed
+concepts to a real `use_cases/*` workflow; `/master exam` runs a
+multi-concept oral assessment ladder; `/master status` gives a one-line
+progress readout. It reads the same persona files and grounding
+materials `/tutor` uses, so `/tutor` remains available on its own for a
+quick one-off session on a single topic outside a mastery pass. See
+[docs/mastery-guide.md](../docs/mastery-guide.md) for a plain-language
+walkthrough of all five modes.
 
 All tutors should ground themselves in:
 - relevant reference pages,
