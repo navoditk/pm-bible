@@ -102,6 +102,9 @@ nav:
               - Swap DV01: reference/fixed_income/swap_dv01.md
               - Swap Spread: reference/fixed_income/swap_spread.md
               - Treasury Futures Hedging: reference/fixed_income/treasury_futures_hedging.md
+              - Carry and Rolldown: reference/fixed_income/carry_and_rolldown.md
+              - Repo and Financing: reference/fixed_income/repo_and_financing.md
+              - TIPS and Breakeven Inflation: reference/fixed_income/tips_and_breakevens.md
           - Credit:
               - Z-Spread: reference/fixed_income/z_spread.md
               - OAS: reference/fixed_income/oas.md
@@ -168,6 +171,7 @@ nav:
           - "15 Curve Trades and Scenarios": notebooks/fixed_income/15_curve_trades_scenarios.ipynb
           - "16 Swaps and Swap Spreads": notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb
           - "17 Futures and Hedging": notebooks/fixed_income/17_futures_and_hedging.ipynb
+          - "31 Carry, Roll, and Financing": notebooks/fixed_income/31_carry_roll_and_financing.ipynb
           - "20 Z-Spread and Credit Curves": notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb
           - "21 Default, Recovery, and CDS": notebooks/fixed_income/21_default_recovery_and_cds.ipynb
           - "22 Pass-Throughs and Prepayment": notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb

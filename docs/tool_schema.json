@@ -705,6 +705,83 @@
       "description": ""
     },
     {
+      "name": "carry_and_rolldown",
+      "module": "pm.fixed_income.carry",
+      "parameters": [
+        {
+          "name": "coupon_income",
+          "default": null
+        },
+        {
+          "name": "price",
+          "default": null
+        },
+        {
+          "name": "financing_rate",
+          "default": null
+        },
+        {
+          "name": "modified_duration",
+          "default": null
+        },
+        {
+          "name": "current_yield",
+          "default": null
+        },
+        {
+          "name": "rolled_yield",
+          "default": null
+        },
+        {
+          "name": "horizon_years",
+          "default": "1.0"
+        }
+      ],
+      "description": "Total expected return from carry and rolldown combined - the return"
+    },
+    {
+      "name": "carry_return",
+      "module": "pm.fixed_income.carry",
+      "parameters": [
+        {
+          "name": "coupon_income",
+          "default": null
+        },
+        {
+          "name": "price",
+          "default": null
+        },
+        {
+          "name": "financing_rate",
+          "default": null
+        },
+        {
+          "name": "horizon_years",
+          "default": "1.0"
+        }
+      ],
+      "description": "Funding-adjusted carry: income earned from holding the bond, funded"
+    },
+    {
+      "name": "rolldown_return",
+      "module": "pm.fixed_income.carry",
+      "parameters": [
+        {
+          "name": "modified_duration",
+          "default": null
+        },
+        {
+          "name": "current_yield",
+          "default": null
+        },
+        {
+          "name": "rolled_yield",
+          "default": null
+        }
+      ],
+      "description": "Price return from a bond 'sliding down' an unchanged yield curve as"
+    },
+    {
       "name": "cds_bond_basis",
       "module": "pm.fixed_income.credit",
       "parameters": [
@@ -1031,6 +1108,70 @@
         }
       ],
       "description": "DV01 of one futures contract, approximated from the cheapest-to-deliver"
+    },
+    {
+      "name": "breakeven_inflation",
+      "module": "pm.fixed_income.linkers",
+      "parameters": [
+        {
+          "name": "nominal_yield",
+          "default": null
+        },
+        {
+          "name": "real_yield",
+          "default": null
+        }
+      ],
+      "description": "Breakeven inflation rate: the market-implied average inflation rate"
+    },
+    {
+      "name": "tips_coupon_payment",
+      "module": "pm.fixed_income.linkers",
+      "parameters": [
+        {
+          "name": "real_coupon_rate",
+          "default": null
+        },
+        {
+          "name": "inflation_adjusted_principal",
+          "default": null
+        },
+        {
+          "name": "frequency",
+          "default": "2"
+        }
+      ],
+      "description": "A TIPS coupon payment: the fixed real coupon rate applied to the"
+    },
+    {
+      "name": "tips_index_ratio",
+      "module": "pm.fixed_income.linkers",
+      "parameters": [
+        {
+          "name": "cpi_reference_current",
+          "default": null
+        },
+        {
+          "name": "cpi_reference_base",
+          "default": null
+        }
+      ],
+      "description": "TIPS index ratio: how much a TIPS's principal has grown from"
+    },
+    {
+      "name": "tips_inflation_adjusted_principal",
+      "module": "pm.fixed_income.linkers",
+      "parameters": [
+        {
+          "name": "original_principal",
+          "default": null
+        },
+        {
+          "name": "index_ratio",
+          "default": null
+        }
+      ],
+      "description": "A TIPS's current (inflation-adjusted) principal - what its real"
     },
     {
       "name": "apply_prepayment",

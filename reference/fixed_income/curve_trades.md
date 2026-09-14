@@ -27,4 +27,6 @@ each tenor.
 ## Related
 - [Key-rate duration](key_rate_duration.md)
 - [Forward rates](forward_rates.md)
+- [Carry and rolldown](carry_and_rolldown.md)
+- [Repo and financing](repo_and_financing.md)
 - [Stress testing (scenario analysis)](../concepts/stress_testing.md)

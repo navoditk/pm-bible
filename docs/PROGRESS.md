@@ -6,8 +6,19 @@ The PM/FICC foundation is in place, extended one phase beyond FICC into equity p
 ## Current health
 - Test status: passing
 - Last validated: `pytest -q`
-- Result: `144 passed`
-- Notebooks: 31, all valid JSON (`python scripts/check_repo.py`)
+- Result: `154 passed`
+- Notebooks: 32, all valid JSON (`python scripts/check_repo.py`)
+
+## In-progress: rates/credit/mortgages PM-practitioner layer
+A user-requested audit found the fixed-income coverage strong on pricing
+and risk mechanics but missing the practitioner/market-structure layer:
+carry-and-rolldown was a broken ROADMAP Phase 5 promise, and TBA/dollar
+roll, repo specialness, TIPS breakevens, credit indices, and fundamental
+credit analysis had zero coverage. Rates is done (carry/rolldown, repo
+and financing, TIPS/breakevens - code, reference pages, notebook, all
+wired in). Credit and mortgages are next, then a "zero to hero"
+rates/credit/mortgages roadmap document tying it all together with
+external resources at each step.
 
 ## Completed modules
 - Foundations bootcamp structure in place
@@ -20,6 +31,7 @@ The PM/FICC foundation is in place, extended one phase beyond FICC into equity p
 - Efficient frontier / tangency portfolio / min-tracking-error optimizers added; notebook 04 now actually plots a frontier (previously titled but empty)
 - Ex-post risk analytics added (realized volatility/tracking error, downside deviation, MCTE/CCTE, group risk decomposition); notebook 19 now plots the VaR/ES tail and checks a risk model's assumption against realized data
 - Zero-to-proficiency pedagogy pass: notebooks 02/03/05/07/11/12 rebuilt (self-check asserts, plots, PREDICT before code); `notebooks/foundations/00_orientation.ipynb` added for true beginners (environment check, learning-cycle explainer, `w'Sigma*w` by hand); `reference/glossary.md` added (49 terms, every link verified); `notebooks/integration/30_capstone_portfolio_review.ipynb` added, the repo's first real capstone, using `data/mock_portfolio.csv`, `mock_benchmark.csv`, and `mock_bonds.csv` for the first time
+- Rates PM-practitioner layer: `carry_and_rolldown.md`/`repo_and_financing.md`/`tips_and_breakevens.md` (each tested `src/pm` code + real external sources), notebook 31, closing the broken "carry and roll" ROADMAP Phase 5 promise
 
 ## In progress
 - Documentation consolidation and onboarding cleanup
@@ -41,13 +53,13 @@ Only mark a module complete when:
 ## Branch / PR tracking
 
 Current branch:
-`feat/zero-to-proficiency-pedagogy`
+`feat/rates-pm-practitioner-layer`
 
 Current issue:
 _Use issue/branch naming for each learning unit_
 
 Current PR:
-_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), and #4 (efficient frontier/ex-post risk) merged to `main`_
+_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), #4 (efficient frontier/ex-post risk), and #5 (zero-to-proficiency pedagogy) merged to `main`_
 
 Last pushed checkpoint:
 _Not pushed yet — local commits only_

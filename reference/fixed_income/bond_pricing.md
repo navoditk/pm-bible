@@ -21,3 +21,4 @@ derivative of this pricing relationship.
 - [Duration](duration.md)
 - [DV01](dv01.md)
 - [Curve construction](curve_construction.md)
+- [TIPS and breakeven inflation](tips_and_breakevens.md)

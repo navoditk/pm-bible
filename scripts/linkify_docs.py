@@ -205,6 +205,23 @@ RELATED = {
         ("Duration", "fixed_income/duration.md"),
         ("DV01", "fixed_income/dv01.md"),
         ("Curve construction", "fixed_income/curve_construction.md"),
+        ("TIPS and breakeven inflation", "fixed_income/tips_and_breakevens.md"),
+    ],
+    "fixed_income/carry_and_rolldown.md": [
+        ("Duration", "fixed_income/duration.md"),
+        ("Curve trades", "fixed_income/curve_trades.md"),
+        ("Repo and financing", "fixed_income/repo_and_financing.md"),
+        ("Forward rates", "fixed_income/forward_rates.md"),
+    ],
+    "fixed_income/repo_and_financing.md": [
+        ("Carry and rolldown", "fixed_income/carry_and_rolldown.md"),
+        ("Curve trades", "fixed_income/curve_trades.md"),
+        ("Treasury futures hedging", "fixed_income/treasury_futures_hedging.md"),
+    ],
+    "fixed_income/tips_and_breakevens.md": [
+        ("Bond pricing", "fixed_income/bond_pricing.md"),
+        ("Forward rates", "fixed_income/forward_rates.md"),
+        ("Carry and rolldown", "fixed_income/carry_and_rolldown.md"),
     ],
     "fixed_income/cds_and_basis.md": [
         ("Default and recovery", "fixed_income/default_recovery.md"),
@@ -235,6 +252,8 @@ RELATED = {
     "fixed_income/curve_trades.md": [
         ("Key-rate duration", "fixed_income/key_rate_duration.md"),
         ("Forward rates", "fixed_income/forward_rates.md"),
+        ("Carry and rolldown", "fixed_income/carry_and_rolldown.md"),
+        ("Repo and financing", "fixed_income/repo_and_financing.md"),
         ("Stress testing (scenario analysis)", "concepts/stress_testing.md"),
     ],
     "fixed_income/default_recovery.md": [
@@ -247,6 +266,7 @@ RELATED = {
         ("Convexity", "fixed_income/convexity.md"),
         ("Key-rate duration", "fixed_income/key_rate_duration.md"),
         ("Effective duration", "fixed_income/effective_duration.md"),
+        ("Carry and rolldown", "fixed_income/carry_and_rolldown.md"),
     ],
     "fixed_income/dv01.md": [
         ("Duration", "fixed_income/duration.md"),
@@ -304,6 +324,7 @@ RELATED = {
     "fixed_income/treasury_futures_hedging.md": [
         ("Swap DV01", "fixed_income/swap_dv01.md"),
         ("DV01", "fixed_income/dv01.md"),
+        ("Repo and financing", "fixed_income/repo_and_financing.md"),
     ],
     "fixed_income/z_spread.md": [
         ("Curve construction", "fixed_income/curve_construction.md"),

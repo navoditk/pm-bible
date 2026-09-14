@@ -103,12 +103,15 @@ fixed-income foundations.
 3. scenario analysis on curve shocks
 4. swaps, swap DV01, swap spreads
 5. Treasury futures, hedge ratio
+6. carry and rolldown, repo/specialness/on-the-run vs. off-the-run, TIPS
+   and breakeven inflation
 
 Notebooks:
 - [14 Curve Construction and Forwards](../../notebooks/fixed_income/14_curve_construction_forwards.ipynb)
 - [15 Curve Trades and Scenarios](../../notebooks/fixed_income/15_curve_trades_scenarios.ipynb)
 - [16 Swaps and Swap Spreads](../../notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb)
 - [17 Futures and Hedging](../../notebooks/fixed_income/17_futures_and_hedging.ipynb)
+- [31 Carry, Roll, and Financing](../../notebooks/fixed_income/31_carry_roll_and_financing.ipynb)
 
 ## Extension — Day 7: Risk models (VaR, ES, factor contribution)
 

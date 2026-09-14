@@ -36,3 +36,26 @@ https://home.treasury.gov/policy-issues/financing-the-government/interest-rate-s
 
 FRED:
 https://fred.stlouisfed.org/
+
+10-Year Breakeven Inflation Rate (T10YIE) — FRED:
+https://fred.stlouisfed.org/series/T10YIE
+
+## Carry, rolldown, and financing
+Carry Roll-Down Explained — Risk Hub:
+https://riskhub.org/blogs/carry-roll-down-explained
+
+On the run (finance) — Wikipedia:
+https://en.wikipedia.org/wiki/On_the_run_(finance)
+
+What's going on in the US Treasury market, and why does it matter? — Brookings:
+https://www.brookings.edu/articles/whats-going-on-in-the-us-treasury-market-and-why-does-it-matter/
+
+Money Market Fund Repo and the ON RRP Facility — Federal Reserve:
+https://www.federalreserve.gov/econres/notes/feds-notes/money-market-fund-repo-and-the-on-rrp-facility-20231215.html
+
+## TIPS and breakevens
+TIPS for Inflation Protection — Charles Schwab:
+https://www.schwab.com/learn/story/tips-and-inflation-what-to-know-now
+
+Inflation expectations and inflation realities — U.S. Bureau of Labor Statistics:
+https://www.bls.gov/opub/mlr/2019/article/inflation-expectations-and-inflation-realities.htm

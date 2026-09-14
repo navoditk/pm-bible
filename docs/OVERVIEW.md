@@ -33,10 +33,10 @@ frameworks, and manual reasoning comes before asking an agent.
 
 | | |
 |---|---|
-| Analytics code | 1,133 lines across 26 modules in `src/pm/` |
-| Tests | 144 passing, 14 test files |
-| Notebooks | 31, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
-| Reference pages | 65 (including a glossary) |
+| Analytics code | 1,207 lines across 28 modules in `src/pm/` |
+| Tests | 154 passing, 15 test files |
+| Notebooks | 32, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
+| Reference pages | 68 (including a glossary) |
 | Roadmap phases | 13 of 13 complete |
 | Bootcamp curriculum | 14 days (5 core + 9 extension) |
 | Use-case workflows | 7 |
@@ -69,7 +69,16 @@ production-grade curve or optimization engine beyond notebook exercises.
 
 Fixed income (Phases 5–8) remains the deepest vein by page count and
 code volume — rates, credit, and mortgages are each fully built out with
-tested code, not left conceptual. Phase 13 (equity) closes what used to
+tested code on the *pricing and risk mechanics* (duration, DV01,
+convexity, Z-spread, CDS, CPR/PSA prepayment). A follow-up audit found
+that claim overstated on the practitioner/market-structure layer,
+though: carry-and-rolldown was listed as a Phase 5 roadmap bullet and
+never implemented, and TBA/dollar roll, repo specialness, TIPS
+breakevens, credit indices, and fundamental credit analysis had zero
+coverage anywhere. Rates' gap is now closed — `carry_and_rolldown.md`,
+`repo_and_financing.md`, and `tips_and_breakevens.md`, each with tested
+`src/pm` code and a notebook — with credit and mortgages' equivalent
+gaps being closed the same way. Phase 13 (equity) closes what used to
 be this repo's one clear gap: previously "equity" appeared only as a
 generic example asset class, with no valuation, CAPM, or factor-investing
 material anywhere. Phase 3 (active management) was similarly incomplete

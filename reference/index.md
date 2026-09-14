@@ -52,6 +52,9 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 - [Swap DV01](fixed_income/swap_dv01.md)
 - [Swap Spread](fixed_income/swap_spread.md)
 - [Treasury Futures Hedging](fixed_income/treasury_futures_hedging.md)
+- [Carry and Rolldown](fixed_income/carry_and_rolldown.md)
+- [Repo and Financing](fixed_income/repo_and_financing.md)
+- [TIPS and Breakeven Inflation](fixed_income/tips_and_breakevens.md)
 
 ### Credit
 
