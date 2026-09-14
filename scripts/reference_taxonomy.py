@@ -104,6 +104,7 @@ SECTIONS = [
 TITLES = {path: title for _, _, items in SECTIONS for path, title in items}
 
 NOTEBOOKS = {
+    "notebooks/foundations/00_orientation.ipynb": "00 Orientation",
     "notebooks/foundations/01_returns_and_compounding.ipynb": "01 Returns and Compounding",
     "notebooks/foundations/02_covariance_and_diversification.ipynb": "02 Covariance and Diversification",
     "notebooks/foundations/03_risk_contribution.ipynb": "03 Risk Contribution",
@@ -133,6 +134,7 @@ NOTEBOOKS = {
     "notebooks/integration/11_scenarios.ipynb": "11 Scenarios",
     "notebooks/integration/12_attribution.ipynb": "12 Attribution",
     "notebooks/integration/25_brinson_and_rebalancing.ipynb": "25 Brinson and Rebalancing",
+    "notebooks/integration/30_capstone_portfolio_review.ipynb": "30 Capstone Portfolio Review",
 }
 
 USE_CASES = [

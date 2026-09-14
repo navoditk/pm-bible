@@ -368,7 +368,11 @@ def rewrite_reference_index():
     path = ROOT / "reference" / "index.md"
     # Grouped by (section, subsection), preserving SECTIONS order, emitting
     # one H2 per new section and one H3 per subsection.
-    out = ["# PM/FICC Reference Index\n"]
+    glossary_callout = (
+        "\nNew to this vocabulary? Start with the [Glossary](glossary.md) "
+        "for a one-line-per-term cheat sheet before diving into a full page.\n"
+    )
+    out = ["# PM/FICC Reference Index\n", glossary_callout]
     seen_sections = set()
     for section, subsection, items in SECTIONS:
         if section not in seen_sections:

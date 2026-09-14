@@ -1,5 +1,22 @@
 # Bootcamp 01 — Five-Day PM/FICC Foundations
 
+## Day 0 — Orientation (optional, for true beginners)
+
+If you haven't taken a portfolio-theory or linear-algebra course before,
+start here. If `w' Sigma w` is already second nature and your `pm`
+package imports without error, skip straight to Day 1.
+
+1. confirm your environment works
+2. the PREDICT / MANUAL FIRST / HAND CALCULATION / ORAL CHECK learning cycle
+3. vectors, dot products, and the quadratic form `w' Sigma w` by hand
+
+Notebook:
+- [00 Orientation](../../notebooks/foundations/00_orientation.ipynb)
+
+Also see [reference/glossary.md](../../reference/glossary.md) — a
+one-line-per-term cheat sheet for vocabulary used throughout the
+curriculum.
+
 ## Day 1 — Portfolio mathematics and risk
 1. portfolio process and vocabulary
 2. returns and compounding
@@ -214,3 +231,21 @@ why.
 Notebooks:
 - [28 Equity Valuation and CAPM](../../notebooks/equity/28_equity_valuation_and_capm.ipynb)
 - [29 Active Share, Factors, Shareholder Yield](../../notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb)
+
+## Extension — Day 15: Capstone
+
+The last day. Less hand-holding on purpose — this is where you compose
+concepts from across the whole curriculum on one realistic portfolio
+(using `data/mock_portfolio.csv`, `mock_benchmark.csv`, and
+`mock_bonds.csv`, previously unused by any notebook) instead of learning
+a new one.
+
+1. absolute risk decomposition by group
+2. active risk: tracking error, MCTE/CCTE, information ratio
+3. ex-ante vs. ex-post — did the risk model match reality?
+4. bond-level duration/DV01, a rates scenario, a credit scenario
+5. Brinson attribution
+6. writing the one-page PM summary
+
+Notebook:
+- [30 Capstone: Full Portfolio Risk and Attribution Review](../../notebooks/integration/30_capstone_portfolio_review.ipynb)
