@@ -1619,6 +1619,467 @@
       "description": "Global minimum-variance weights: minimize w'Sigma*w s.t. sum(w)=1."
     },
     {
+      "name": "black76_call_price",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "forward",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        }
+      ],
+      "description": "European call on a forward/futures price (Black-76) - the model"
+    },
+    {
+      "name": "black76_put_price",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "forward",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        }
+      ],
+      "description": "European put on a forward/futures price (Black-76). See black76_call_price."
+    },
+    {
+      "name": "black_scholes_call_price",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "European call under Black-Scholes-Merton, with a continuous"
+    },
+    {
+      "name": "black_scholes_put_price",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "European put under Black-Scholes-Merton. See black_scholes_call_price."
+    },
+    {
+      "name": "delta_call",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "Price sensitivity to a $1 move in the underlying: dC/dS. In [0, 1]."
+    },
+    {
+      "name": "delta_put",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "dP/dS. In [-1, 0] - equals delta_call - exp(-qT) by put-call parity."
+    },
+    {
+      "name": "gamma",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "d(delta)/dS - identical for a call and a put at the same strike/expiry."
+    },
+    {
+      "name": "implied_volatility_call",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "market_price",
+          "default": null
+        },
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "Volatility that reprices black_scholes_call_price to market_price,"
+    },
+    {
+      "name": "implied_volatility_put",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "market_price",
+          "default": null
+        },
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "Volatility that reprices black_scholes_put_price to market_price. See implied_volatility_call."
+    },
+    {
+      "name": "put_call_parity_residual",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "call_price",
+          "default": null
+        },
+        {
+          "name": "put_price",
+          "default": null
+        },
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "C - P should equal S*exp(-qT) - K*exp(-rT) for European options on"
+    },
+    {
+      "name": "rho_call",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "dC/dr, per 1.0 (100%) of rate."
+    },
+    {
+      "name": "rho_put",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "dP/dr, per 1.0 (100%) of rate."
+    },
+    {
+      "name": "theta_call",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "-dC/d(time_to_expiry), i.e. value lost per year as expiry"
+    },
+    {
+      "name": "theta_put",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "-dP/d(time_to_expiry). See theta_call."
+    },
+    {
+      "name": "vega",
+      "module": "pm.options",
+      "parameters": [
+        {
+          "name": "spot",
+          "default": null
+        },
+        {
+          "name": "strike",
+          "default": null
+        },
+        {
+          "name": "rate",
+          "default": null
+        },
+        {
+          "name": "volatility",
+          "default": null
+        },
+        {
+          "name": "time_to_expiry",
+          "default": null
+        },
+        {
+          "name": "dividend_yield",
+          "default": "0.0"
+        }
+      ],
+      "description": "dV/d(volatility), per 1.0 (100 vol points) of volatility - identical"
+    },
+    {
       "name": "cumulative_return",
       "module": "pm.returns",
       "parameters": [

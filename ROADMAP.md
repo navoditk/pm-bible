@@ -152,6 +152,15 @@ This file is the long-range view for the repository. The canonical docs hub is [
 - active share
 - shareholder yield, buybacks, total shareholder return
 
+## Phase 14 — Derivatives and options
+- Black-Scholes pricing (call, put)
+- the Greeks (delta, gamma, vega, theta, rho)
+- put-call parity
+- implied volatility
+- Black-76 (options on forwards/futures)
+- swaptions, caps, floors (conceptual)
+- option strategies: covered call, protective put, collar (conceptual)
+
 ## Definition of done
 
 This repository is never permanently done. Each real PM question should become one of:

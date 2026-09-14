@@ -90,6 +90,13 @@ SECTIONS = [
     ("Commodities", None, [
         ("commodities/roll_yield.md", "Roll Yield"),
     ]),
+    ("Derivatives", None, [
+        ("derivatives/black_scholes_and_greeks.md", "Black-Scholes and the Greeks"),
+        ("derivatives/put_call_parity.md", "Put-Call Parity"),
+        ("derivatives/implied_volatility.md", "Implied Volatility"),
+        ("derivatives/options_on_forwards_and_rates_options.md", "Options on Forwards and Rates Options"),
+        ("derivatives/option_strategies.md", "Option Strategies"),
+    ]),
     ("Attribution and Implementation", None, [
         ("concepts/brinson_attribution.md", "Brinson Attribution"),
         ("concepts/fixed_income_attribution.md", "Fixed-Income Attribution"),
@@ -141,6 +148,7 @@ NOTEBOOKS = {
     "notebooks/fixed_income/23_effective_duration_and_convexity.ipynb": "23 Effective Duration and Convexity",
     "notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb": "33 TBA, Dollar Roll, and Structuring",
     "notebooks/fx_commodities/24_fx_and_commodities.ipynb": "24 FX and Commodities",
+    "notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb": "34 Black-Scholes, Greeks, and Rates Options",
     "notebooks/equity/28_equity_valuation_and_capm.ipynb": "28 Equity Valuation and CAPM",
     "notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb": "29 Active Share, Factors, Shareholder Yield",
     "notebooks/integration/11_scenarios.ipynb": "11 Scenarios",

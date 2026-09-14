@@ -30,6 +30,9 @@ number.
 | "Leverage ratio for an issuer with $300M debt and $100M EBITDA?" | `pm.fixed_income.credit.leverage_ratio` | `total_debt=300, ebitda=100` | `3.0` |
 | "Index basis if 5 CDS constituents (80,90,100,70,110bp) trade equal-weighted and the index itself trades at 95bp?" | `pm.fixed_income.credit.index_intrinsic_spread` then `index_basis` | `constituent_spreads=[80,90,100,70,110]` → `intrinsic=90.0`; `index_basis(95, 90)` | `5.0` |
 | "Implied financing rate on a dollar roll: $1,000,000 face, 5% coupon, near price 101.00, far price 100.625, 1-month roll?" | `pm.fixed_income.mbs.dollar_roll_implied_financing_rate` | `coupon_income=4166.6667, drop_income=3750.0, near_amount=1010000.0, horizon_years=1/12` | `0.004950` (≈, 0.495%) |
+| "Black-Scholes call price: spot 100, strike 100, rate 5%, vol 20%, 1 year to expiry?" | `pm.options.black_scholes_call_price` | `spot=100.0, strike=100.0, rate=0.05, volatility=0.20, time_to_expiry=1.0` | `10.450584` (≈) |
+| "Delta of that same call?" | `pm.options.delta_call` | `spot=100.0, strike=100.0, rate=0.05, volatility=0.20, time_to_expiry=1.0` | `0.636831` (≈) |
+| "What's the swaption's vega if the swap rate moves 1bp?" | none — conceptual only | — | should say plainly that a real swaption needs an annuity/curve factor `pm.options.black76_call_price` doesn't build, and point to `reference/derivatives/options_on_forwards_and_rates_options.md` rather than approximating one |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like

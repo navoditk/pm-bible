@@ -6,8 +6,8 @@ The PM/FICC foundation is in place, extended one phase beyond FICC into equity p
 ## Current health
 - Test status: passing
 - Last validated: `pytest -q`
-- Result: `165 passed`
-- Notebooks: 34, all valid JSON (`python scripts/check_repo.py`)
+- Result: `183 passed`
+- Notebooks: 35, all valid JSON (`python scripts/check_repo.py`)
 
 ## Completed: rates/credit/mortgages PM-practitioner layer + roadmap
 A user-requested audit found the fixed-income coverage strong on pricing
@@ -32,24 +32,23 @@ reference page, notebook, and verified resource at every step - the
 user's original ask that started this whole workstream.
 
 ## In-progress: curriculum-completeness audit
-A follow-up, repo-wide audit (not scoped to fixed income this time) found
-the curriculum strong across portfolio theory, risk, and every FICC/equity
-topic built so far, but with real gaps from a PM perspective: **zero
-options/volatility coverage anywhere** (no Black-Scholes, Greeks, implied
-vol, swaptions/caps/floors, or equity/FX options - the single biggest
-hole), no asset-allocation framing (SAA/TAA, liability-driven investing)
-on top of the existing optimization machinery, no performance-measurement
-fundamentals (time-weighted vs. money-weighted return, GIPS), and
-narrower gaps in munis, sovereign/EM debt, convertibles, preferred
-securities, alternatives/private markets, ESG, and `use_cases/` coverage
-(no FX, commodities, mortgage, or fundamental-credit use case despite all
-four having reference pages). The audit also caught `reference/glossary.md`
-drifting stale: the 9 rates/credit/mortgages practitioner-layer pages from
-PRs #6-#8 had no glossary entries, and FX/Commodities had no glossary
-section at all despite both having real reference-page content - fixed in
-this PR (glossary backfill, first of four planned workstreams: glossary,
-then options and volatility, then asset allocation/performance
-measurement, then the narrower Tier B/C items).
+A repo-wide audit (not scoped to fixed income this time) found the
+curriculum strong across portfolio theory, risk, and every FICC/equity
+topic built so far, but with real gaps from a PM perspective: zero
+options/volatility coverage anywhere, no asset-allocation framing
+(SAA/TAA, liability-driven investing) on top of the existing optimization
+machinery, no performance-measurement fundamentals (time-weighted vs.
+money-weighted return, GIPS), and narrower gaps in munis, sovereign/EM
+debt, convertibles, preferred securities, alternatives/private markets,
+ESG, and `use_cases/` coverage. Also caught `reference/glossary.md`
+drifting stale (fixed). Four planned workstreams, two done: glossary
+backfill (done), options and volatility - Phase 14 (done: Black-Scholes,
+all five Greeks each cross-checked against a finite-difference bump,
+implied volatility, Black-76, with swaptions/caps/floors and option
+strategies conceptual-only). Remaining: asset allocation/performance
+measurement, then the narrower Tier B/C items (munis, EM debt,
+convertibles, preferred securities, alternatives, ESG, missing use
+cases).
 
 ## Completed modules
 - Foundations bootcamp structure in place
@@ -67,6 +66,7 @@ measurement, then the narrower Tier B/C items).
 - Mortgages PM-practitioner layer: `tba_and_dollar_roll.md` (tested `src/pm` code - `dollar_roll_implied_financing_rate`, verified against a real published worked example), `specified_pools.md` and `cmo_remic_structuring.md` (conceptual-only, same honesty pattern as OAS/leveraged loans), notebook 33 - closes the rates/credit/mortgages PM-practitioner-layer audit entirely
 - `docs/rates_credit_mortgages_roadmap.md` added: a single sequenced zero-to-hero path across all of rates, credit, and mortgages, every step linking its reference page, notebook, and a verified external resource - wired into `docs/README.md`, `docs/learning-paths.md`, `docs/OVERVIEW.md`, root `README.md`, and `mkdocs.yml` nav
 - `reference/glossary.md` backfilled: 12 new Fixed Income terms (carry, rolldown, repo/specialness, on-the-run/off-the-run, TIPS/breakevens, leverage/coverage ratios, credit indices, leveraged loans, TBA/dollar roll, specified pools, CMO/REMIC) plus new FX and Commodities sections that didn't exist before, despite both asset classes already having real reference-page content - all 64 links verified to resolve
+- Phase 14 (derivatives and options) built: `src/pm/options.py` (Black-Scholes call/put pricing, delta/gamma/vega/theta/rho, implied volatility via `brentq`, Black-76) - every Greek independently verified against a finite-difference bump of the pricing function itself, not just the closed-form formula, and Black-76 verified to reproduce Black-Scholes exactly at the matching forward price; 5 new reference pages (`black_scholes_and_greeks.md`, `put_call_parity.md`, `implied_volatility.md`, `options_on_forwards_and_rates_options.md`, `option_strategies.md` - the last two conceptual for the curve/annuity layer and strategy-composition reasons stated on each page) and notebook 34, closing this repo's single largest coverage gap found by the completeness audit
 
 ## In progress
 - Documentation consolidation and onboarding cleanup
@@ -88,13 +88,13 @@ Only mark a module complete when:
 ## Branch / PR tracking
 
 Current branch:
-`feat/glossary-fx-commodities-backfill`
+`feat/options-and-volatility`
 
 Current issue:
 _Use issue/branch naming for each learning unit_
 
 Current PR:
-_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), #4 (efficient frontier/ex-post risk), #5 (zero-to-proficiency pedagogy), #6 (rates PM-practitioner layer), #7 (credit PM-practitioner layer), #8 (mortgages PM-practitioner layer), and #9 (rates/credit/mortgages roadmap) merged to `main`_
+_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), #4 (efficient frontier/ex-post risk), #5 (zero-to-proficiency pedagogy), #6 (rates PM-practitioner layer), #7 (credit PM-practitioner layer), #8 (mortgages PM-practitioner layer), #9 (rates/credit/mortgages roadmap), and #10 (glossary backfill) merged to `main`_
 
 Last pushed checkpoint:
 _Not pushed yet — local commits only_

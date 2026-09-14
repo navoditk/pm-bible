@@ -16,4 +16,5 @@ See:
 - `fixed_income.md`
 - `fx_and_commodities.md`
 - `equity.md`
+- `derivatives.md`
 - `implementation.md`

@@ -193,6 +193,32 @@ RELATED = {
         ("Factor risk", "concepts/factor_risk.md"),
         ("Factor risk contribution", "concepts/factor_risk_contribution.md"),
     ],
+    "derivatives/black_scholes_and_greeks.md": [
+        ("Put-call parity", "derivatives/put_call_parity.md"),
+        ("Implied volatility", "derivatives/implied_volatility.md"),
+        ("Options on forwards and rates options", "derivatives/options_on_forwards_and_rates_options.md"),
+        ("Option strategies", "derivatives/option_strategies.md"),
+    ],
+    "derivatives/put_call_parity.md": [
+        ("Black-Scholes pricing and the Greeks", "derivatives/black_scholes_and_greeks.md"),
+        ("Implied volatility", "derivatives/implied_volatility.md"),
+        ("Option strategies", "derivatives/option_strategies.md"),
+    ],
+    "derivatives/implied_volatility.md": [
+        ("Black-Scholes pricing and the Greeks", "derivatives/black_scholes_and_greeks.md"),
+        ("Put-call parity", "derivatives/put_call_parity.md"),
+    ],
+    "derivatives/options_on_forwards_and_rates_options.md": [
+        ("Black-Scholes pricing and the Greeks", "derivatives/black_scholes_and_greeks.md"),
+        ("Curve construction", "fixed_income/curve_construction.md"),
+        ("Swap DV01", "fixed_income/swap_dv01.md"),
+        ("MBS convexity", "fixed_income/mbs_convexity.md"),
+    ],
+    "derivatives/option_strategies.md": [
+        ("Black-Scholes pricing and the Greeks", "derivatives/black_scholes_and_greeks.md"),
+        ("Put-call parity", "derivatives/put_call_parity.md"),
+        ("Equity factor investing", "equity/equity_factor_investing.md"),
+    ],
     "equity/relative_valuation_multiples.md": [
         ("Dividend discount model", "equity/dividend_discount_model.md"),
         ("CAPM and beta", "equity/capm_and_beta.md"),
