@@ -15,6 +15,9 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Benchmark basics | `reference/concepts/benchmark_basics.md` | untested | — |
 | Mean-variance optimization | `reference/concepts/mean_variance_optimization.md` | untested | — |
 | Tracking error / active weights | `reference/concepts/tracking_error.md` | untested | — |
+| Information ratio | `reference/concepts/information_ratio.md` | untested | — |
+| Information coefficient | `reference/concepts/information_coefficient.md` | untested | — |
+| Fundamental Law (breadth, transfer coefficient) | `reference/concepts/fundamental_law.md` | untested | — |
 | Factor risk | `reference/concepts/factor_risk.md` | untested | — |
 | Factor risk contribution | `reference/concepts/factor_risk_contribution.md` | untested | — |
 | Value at risk / expected shortfall | `reference/concepts/value_at_risk.md` | untested | — |

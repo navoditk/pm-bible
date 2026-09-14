@@ -28,6 +28,8 @@ RELATED = {
     ],
     "concepts/benchmark_basics.md": [
         ("Tracking error", "concepts/tracking_error.md"),
+        ("Information ratio", "concepts/information_ratio.md"),
+        ("Fundamental Law", "concepts/fundamental_law.md"),
     ],
     "concepts/black_litterman.md": [
         ("Covariance shrinkage", "concepts/covariance_shrinkage.md"),
@@ -122,8 +124,23 @@ RELATED = {
     ],
     "concepts/tracking_error.md": [
         ("Benchmark basics", "concepts/benchmark_basics.md"),
+        ("Information ratio", "concepts/information_ratio.md"),
         ("Brinson attribution", "concepts/brinson_attribution.md"),
         ("Factor risk", "concepts/factor_risk.md"),
+    ],
+    "concepts/information_ratio.md": [
+        ("Tracking error", "concepts/tracking_error.md"),
+        ("Fundamental Law", "concepts/fundamental_law.md"),
+        ("Sharpe ratio", "concepts/sharpe_ratio.md"),
+    ],
+    "concepts/information_coefficient.md": [
+        ("Fundamental Law", "concepts/fundamental_law.md"),
+        ("Information ratio", "concepts/information_ratio.md"),
+    ],
+    "concepts/fundamental_law.md": [
+        ("Information coefficient", "concepts/information_coefficient.md"),
+        ("Information ratio", "concepts/information_ratio.md"),
+        ("Active share", "equity/active_share.md"),
     ],
     "concepts/transaction_costs_and_rebalancing.md": [
         ("Liquidity", "concepts/liquidity.md"),

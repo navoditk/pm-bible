@@ -62,6 +62,9 @@ If no specialized persona matches the topic, fall back to
 | benchmark basics, active return/weight | `concept_tutor.md` | `reference/concepts/benchmark_basics.md`, `tracking_error.md` | `notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb` | `tests/test_active.py` |
 | mean-variance optimization, efficient frontier | `portfolio_construction_tutor.md` | `reference/concepts/mean_variance_optimization.md` | `notebooks/optimization/04_efficient_frontier.ipynb`, `05_constrained_optimization.ipynb` | `tests/test_optimization.py` |
 | tracking error, active weights | `concept_tutor.md` | `reference/concepts/tracking_error.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
+| information ratio | `concept_tutor.md` | `reference/concepts/information_ratio.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
+| information coefficient, IC | `concept_tutor.md` | `reference/concepts/information_coefficient.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
+| fundamental law, breadth, transfer coefficient | `concept_tutor.md` | `reference/concepts/fundamental_law.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
 | factor risk | `concept_tutor.md` | `reference/concepts/factor_risk.md` | `notebooks/active/07_factor_risk.ipynb` | `tests/test_factors.py` |
 | factor risk contribution | `concept_tutor.md` | `reference/concepts/factor_risk_contribution.md` | `notebooks/active/18_factor_risk_contribution.ipynb` | `tests/test_factors.py` |
 | value at risk, expected shortfall | `concept_tutor.md` | `reference/concepts/value_at_risk.md` | `notebooks/active/19_var_and_expected_shortfall.ipynb` | `tests/test_var.py` |

@@ -33,10 +33,10 @@ frameworks, and manual reasoning comes before asking an agent.
 
 | | |
 |---|---|
-| Analytics code | 766 lines across 24 modules in `src/pm/` |
-| Tests | 94 passing, 14 test files |
+| Analytics code | 942 lines across 26 modules in `src/pm/` |
+| Tests | 122 passing, 14 test files |
 | Notebooks | 29, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
-| Reference pages | 59 |
+| Reference pages | 61 |
 | Roadmap phases | 13 of 13 complete |
 | Bootcamp curriculum | 14 days (5 core + 9 extension) |
 | Use-case workflows | 7 |
@@ -55,7 +55,7 @@ production-grade curve or optimization engine beyond notebook exercises.
 |---|---|
 | 1 | Portfolio foundations — returns, covariance, diversification, risk contribution, Sharpe, drawdown |
 | 2 | Portfolio theory & optimization — efficient frontier, mean-variance optimization, shrinkage, Black-Litterman |
-| 3 | Active management — active weights, tracking error, information ratio, factor models |
+| 3 | Active management — active weights, tracking error, information ratio, information coefficient, breadth, transfer coefficient, the Fundamental Law, factor models |
 | 4 | Risk models — factor covariance, marginal/component risk, VaR/ES, stress testing |
 | 5 | Fixed-income foundations — price, yield, duration, DV01, convexity, key-rate duration |
 | 6 | Rates portfolio management — curve bootstrapping, forwards, curve trades, swaps, futures |
@@ -72,7 +72,20 @@ code volume — rates, credit, and mortgages are each fully built out with
 tested code, not left conceptual. Phase 13 (equity) closes what used to
 be this repo's one clear gap: previously "equity" appeared only as a
 generic example asset class, with no valuation, CAPM, or factor-investing
-material anywhere.
+material anywhere. Phase 3 (active management) was similarly incomplete
+for a time — `src/pm/active.py` had only active weights and tracking
+error, while a reference page pointed readers at information ratio, IC,
+breadth, and the Fundamental Law as if they already existed there. All
+four are now implemented, tested, and referenced from real external
+sources (Wikipedia, CFA Institute, Financial Edge Training).
+
+A correctness-fix pass also caught and fixed several bugs surfaced by a
+detailed audit: a Black-Litterman round-trip that silently returned the
+wrong weights due to a risk-aversion convention mismatch, NaN silently
+propagating from `simple_returns` into every downstream metric, every
+optimizer returning `None` instead of raising on an infeasible problem,
+and a few MBS prepayment domain errors. Each fix shipped with a
+regression test that fails against the old code.
 
 ## What's implemented vs. conceptual-only
 

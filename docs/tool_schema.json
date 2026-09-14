@@ -31,6 +31,74 @@
       "description": ""
     },
     {
+      "name": "effective_breadth",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "n_bets",
+          "default": null
+        },
+        {
+          "name": "average_correlation",
+          "default": "0.0"
+        }
+      ],
+      "description": "Number of independent bets (breadth), adjusted for correlation"
+    },
+    {
+      "name": "fundamental_law_ir",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "information_coefficient_value",
+          "default": null
+        },
+        {
+          "name": "breadth_value",
+          "default": null
+        },
+        {
+          "name": "transfer_coefficient_value",
+          "default": "1.0"
+        }
+      ],
+      "description": "The Fundamental Law of Active Management (Grinold; extended by"
+    },
+    {
+      "name": "information_coefficient",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "forecasts",
+          "default": null
+        },
+        {
+          "name": "realized_returns",
+          "default": null
+        }
+      ],
+      "description": "Cross-sectional correlation between forecast scores (or ranks) and"
+    },
+    {
+      "name": "information_ratio",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "portfolio_returns",
+          "default": null
+        },
+        {
+          "name": "benchmark_returns",
+          "default": null
+        },
+        {
+          "name": "periods_per_year",
+          "default": "12"
+        }
+      ],
+      "description": "Realized information ratio: annualized mean active return per unit"
+    },
+    {
       "name": "tracking_error",
       "module": "pm.active",
       "parameters": [
@@ -48,6 +116,21 @@
         }
       ],
       "description": ""
+    },
+    {
+      "name": "transfer_coefficient",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "actual_active_weights",
+          "default": null
+        },
+        {
+          "name": "unconstrained_active_weights",
+          "default": null
+        }
+      ],
+      "description": "How well real-world constraints let a portfolio implement its"
     },
     {
       "name": "brinson_attribution",

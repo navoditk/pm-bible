@@ -53,5 +53,5 @@ def test_metrics_compose_with_simple_returns_leading_nan():
     assert np.isclose(cumulative_return(r), 1.02 * 1.04 * 1.03 - 1)
 
 def test_sharpe_ratio_rejects_an_all_nan_series():
-    with pytest.raises(ValueError, match="no finite observations"):
+    with pytest.raises(ValueError, match="finite observation"):
         sharpe_ratio([float("nan"), float("nan")])

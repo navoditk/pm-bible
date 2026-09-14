@@ -16,5 +16,6 @@ Confusing total portfolio volatility with tracking error.
 
 ## Related
 - [Benchmark basics](benchmark_basics.md)
+- [Information ratio](information_ratio.md)
 - [Brinson attribution](brinson_attribution.md)
 - [Factor risk](factor_risk.md)
