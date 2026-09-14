@@ -58,6 +58,17 @@ every page has a glossary entry, but every glossary entry has a page.
 - **Prepayment (CPR / SMM / PSA)** — the rate at which mortgage borrowers repay principal early, and the standard conventions for quoting that speed. [More →](fixed_income/prepayment_models.md)
 - **Effective duration** — numerical (bump-and-reprice) duration, needed when price isn't a closed-form function of yield (e.g. MBS). [More →](fixed_income/effective_duration.md)
 - **Negative convexity** — a bond (typically MBS) whose duration lengthens when rates rise and shortens when rates fall — the opposite of normal convexity. [More →](fixed_income/mbs_convexity.md)
+- **Carry** — the funding-adjusted income earned from holding a bond over time, `(running_yield - financing_rate) * horizon_years`. [More →](fixed_income/carry_and_rolldown.md)
+- **Rolldown** — the price gain (or loss) from a bond aging into a shorter point on an unchanged yield curve. [More →](fixed_income/carry_and_rolldown.md)
+- **Repo / specialness** — repurchase agreements are how a bond position is actually financed; "special" means a specific bond's repo rate trades below general collateral because it's in unusually high demand to borrow. [More →](fixed_income/repo_and_financing.md)
+- **On-the-run / off-the-run** — the most recently auctioned Treasury of a given maturity (on-the-run, most liquid) versus every earlier issue of that maturity (off-the-run, usually cheaper for equivalent cash flows). [More →](fixed_income/repo_and_financing.md)
+- **TIPS / breakeven inflation** — Treasury Inflation-Protected Securities adjust principal with CPI; breakeven inflation is `nominal_yield - real_yield`, the market's implied inflation expectation. [More →](fixed_income/tips_and_breakevens.md)
+- **Leverage / coverage ratios** — `leverage_ratio = total_debt / EBITDA` and `interest_coverage_ratio = EBITDA / interest_expense`, the core fundamental credit-analysis metrics behind bond and loan covenants. [More →](fixed_income/fundamental_credit_analysis.md)
+- **Credit index (CDX / iTraxx)** — a basket of single-name CDS trading as one instrument; its basis is the traded spread minus the weighted-average (intrinsic) spread of its constituents. [More →](fixed_income/credit_indices.md)
+- **Leveraged loan** — senior secured, floating-rate debt from a below-investment-grade borrower, priced on a discount-margin basis rather than a fixed yield. [More →](fixed_income/leveraged_loans.md)
+- **TBA (to-be-announced) / dollar roll** — generic forward trading of agency MBS without specifying exact pools; a dollar roll sells near-month and buys back far-month, usually at a lower ("dropped") price, functioning as short-term financing. [More →](fixed_income/tba_and_dollar_roll.md)
+- **Specified pool / pay-up** — an identified MBS pool traded for its specific collateral characteristics (e.g. low loan balance), commanding a price premium over generic TBA for more predictable prepayment. [More →](fixed_income/specified_pools.md)
+- **CMO / REMIC, PAC / support tranche** — a CMO carves one MBS pool into multiple tranches with different principal-payment priority; a PAC tranche gets a predictable schedule within a prepayment band, a support tranche absorbs the resulting variability. [More →](fixed_income/cmo_remic_structuring.md)
 
 ## Equity
 
@@ -65,6 +76,16 @@ every page has a glossary entry, but every glossary entry has a page.
 - **CAPM / beta** — the Capital Asset Pricing Model prices required return as `rf + beta*(market_return - rf)`; beta is systematic risk relative to the market. [More →](equity/capm_and_beta.md)
 - **Equity factor investing** — targeting stock returns through style characteristics (value, momentum, quality, size, low-vol) rather than single-market beta alone. [More →](equity/equity_factor_investing.md)
 - **Shareholder yield** — dividend yield plus buyback yield; the total cash a company returns to shareholders. [More →](equity/shareholder_yield.md)
+
+## FX
+
+- **Covered interest parity (CIP)** — the forward FX rate is a mechanical function of the two currencies' interest-rate differential, `F = S * (1 + r_domestic*T) / (1 + r_foreign*T)`, not an independent forecast of future spot. [More →](fx/spot_and_forward.md)
+- **Cross-currency basis** — the gap between the actual market forward and the forward pure CIP implies; persistently nonzero in practice due to funding constraints and dollar-funding demand. [More →](fx/cross_currency_basis.md)
+- **FX carry** — the interest-rate differential earned (or paid) holding a foreign currency unhedged, `r_foreign - r_domestic`; hedging removes it along with the currency risk. [More →](fx/fx_carry.md)
+
+## Commodities
+
+- **Roll yield / contango / backwardation** — the return from replacing an expiring futures contract with the next-dated one; positive in backwardation (near price above far), negative in contango (near price below far). [More →](commodities/roll_yield.md)
 
 ## Attribution and implementation
 
