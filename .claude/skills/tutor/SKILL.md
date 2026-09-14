@@ -40,8 +40,11 @@ Parse the argument passed to `/tutor`:
   specific topic → use that persona, ask the learner which concept from its
   coverage they want, or check `docs/mastery.md` for anything of theirs
   flagged `weak` in that persona's domain and offer to start there.
-- No args at all → read `docs/mastery.md`; if anything is flagged `weak`,
-  offer to revisit it first; otherwise ask what they want to study.
+- No args at all → ask the learner what they want to study. This skill
+  is for one named topic — it doesn't pick for you or track curriculum
+  position. If they want the software to choose what's next, or want
+  progress tracked across sessions, point them to `/master` instead of
+  reading `docs/mastery.md` here.
 
 If no specialized persona matches the topic, fall back to
 `tutors/concept_tutor.md` (the generalist).
