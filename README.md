@@ -8,7 +8,7 @@ A build-first PM/FICC-and-equity learning and analytics repository for portfolio
 ## Browse without cloning
 
 - **[Docs site](https://navoditk.github.io/pm-bible/)** — the entire curriculum (every reference page, notebook, and use case) as a searchable static site, rebuilt automatically from `main` on every push
-- **Read-only preview** — a lighter standalone version for a quick look, refreshed on request (link pending)
+- **[Read-only preview](https://claude.ai/code/artifact/902379a8-c198-4970-aca8-4cb71e2a3d5c)** — a lighter, single-page version covering every reference page, the curriculum outline, and use cases, for a quick look or if the docs site above isn't reachable; refreshed on request rather than automatically
 
 Either works without git, Python, or an account — for the interactive version (running tests, `/master`, `/tutor`, `/pm-query`), clone the repo instead.
 

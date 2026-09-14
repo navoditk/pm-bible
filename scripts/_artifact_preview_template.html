@@ -1,0 +1,232 @@
+<title>PM Bible Curriculum</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#ECEEEA;
+    --surface:#F7F8F4;
+    --surface-2:#FFFFFF;
+    --text:#171A21;
+    --text-soft:#565F6C;
+    --accent:#9A5F26;
+    --accent-soft:#B9793A;
+    --accent-wash:rgba(185,121,58,0.12);
+    --rule:rgba(23,26,33,0.13);
+    --rule-strong:rgba(23,26,33,0.24);
+    --code-bg:#EDE7DC;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12141B;
+      --surface:#191C25;
+      --surface-2:#20232F;
+      --text:#E9EAE6;
+      --text-soft:#9AA2AE;
+      --accent:#E3B37E;
+      --accent-soft:#D69A5C;
+      --accent-wash:rgba(214,154,92,0.14);
+      --rule:rgba(233,234,230,0.14);
+      --rule-strong:rgba(233,234,230,0.26);
+      --code-bg:#232733;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12141B;
+    --surface:#191C25;
+    --surface-2:#20232F;
+    --text:#E9EAE6;
+    --text-soft:#9AA2AE;
+    --accent:#E3B37E;
+    --accent-soft:#D69A5C;
+    --accent-wash:rgba(214,154,92,0.14);
+    --rule:rgba(233,234,230,0.14);
+    --rule-strong:rgba(233,234,230,0.26);
+    --code-bg:#232733;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Public Sans", -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Newsreader", Georgia, serif; text-wrap:balance;}
+  code, pre, kbd{font-family:"IBM Plex Mono", ui-monospace, monospace;}
+  a{color:var(--accent);}
+
+  .shell{display:grid;grid-template-columns:300px minmax(0,1fr);height:100vh;}
+
+  .rail{
+    border-right:1px solid var(--rule);
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+  }
+  .rail-head{padding:24px 20px 16px;border-bottom:1px solid var(--rule);}
+  .rail-title{font-family:"Newsreader";font-size:20px;font-weight:500;margin:0 0 2px;}
+  .rail-sub{font-size:11.5px;color:var(--text-soft);margin:0;}
+  .search-wrap{padding:14px 16px;border-bottom:1px solid var(--rule);}
+  .search-wrap input{
+    width:100%;box-sizing:border-box;
+    background:var(--surface-2);border:1px solid var(--rule-strong);
+    border-radius:7px;padding:8px 10px;font-size:13.5px;color:var(--text);
+    font-family:"Public Sans";
+  }
+  .search-wrap input:focus{outline:2px solid var(--accent-soft);outline-offset:1px;}
+  .nav-scroll{overflow-y:auto;flex:1;padding:10px 12px 30px;}
+  .nav-section{margin-bottom:4px;}
+  .nav-section-title{
+    font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--text-soft);padding:14px 10px 6px;
+  }
+  .nav-item{
+    all:unset;cursor:pointer;display:block;width:100%;
+    padding:7px 10px;border-radius:6px;font-size:13.3px;color:var(--text-soft);
+    line-height:1.4;
+  }
+  .nav-item:hover{background:var(--surface-2);color:var(--text);}
+  .nav-item.active{background:var(--accent-wash);color:var(--text);font-weight:500;}
+  .nav-empty{padding:14px 10px;font-size:12.5px;color:var(--text-soft);}
+
+  main{overflow-y:auto;padding:52px 56px 80px;}
+  .content{max-width:70ch;margin:0 auto;}
+  .content h1{font-size:34px;font-weight:500;margin:0 0 26px;padding-bottom:16px;border-bottom:1px solid var(--rule);}
+  .content h2{font-size:18px;font-weight:600;font-family:"Public Sans";text-transform:uppercase;letter-spacing:0.02em;color:var(--accent);margin:30px 0 10px;}
+  .content h3{font-size:15px;font-weight:600;margin:22px 0 8px;}
+  .content p{font-size:15.5px;line-height:1.72;margin:0 0 15px;}
+  .content ul,.content ol{font-size:15.5px;line-height:1.7;padding-left:22px;margin:0 0 15px;}
+  .content li{margin-bottom:6px;}
+  .content li p{margin:0;}
+  .content strong{font-weight:600;}
+  .content code{background:var(--code-bg);padding:2px 5px;border-radius:4px;font-size:13px;}
+  .content pre{background:var(--code-bg);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto;margin:0 0 16px;}
+  .content pre code{background:none;padding:0;}
+  .content blockquote{
+    margin:18px 0;padding:12px 16px;border-left:3px solid var(--accent-soft);
+    background:var(--surface);border-radius:0 8px 8px 0;color:var(--text-soft);font-size:14.5px;
+  }
+  .content .table-wrap{overflow-x:auto;margin:0 0 18px;}
+  .content table{border-collapse:collapse;width:100%;font-size:13.8px;}
+  .content th,.content td{padding:8px 12px;border-bottom:1px solid var(--rule);text-align:left;}
+  .content th{font-family:"IBM Plex Mono";font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-soft);border-bottom:1px solid var(--rule-strong);}
+  .content hr{border:none;border-top:1px solid var(--rule);margin:26px 0;}
+  .content a{text-decoration:underline;text-decoration-color:var(--rule-strong);text-underline-offset:2px;}
+
+  .banner{
+    background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+    padding:14px 18px;margin:0 0 30px;font-size:13.5px;color:var(--text-soft);line-height:1.6;
+  }
+  .banner a{color:var(--accent);}
+
+  @media (max-width:820px){
+    .shell{grid-template-columns:1fr;grid-template-rows:auto 1fr;height:auto;}
+    .rail{border-right:none;border-bottom:1px solid var(--rule);max-height:40vh;}
+    main{padding:32px 20px 60px;}
+  }
+</style>
+
+<div class="shell">
+  <nav class="rail">
+    <div class="rail-head">
+      <p class="rail-title">PM Bible</p>
+      <p class="rail-sub">Curriculum preview &middot; read-only</p>
+    </div>
+    <div class="search-wrap">
+      <input id="search" type="text" placeholder="Search topics&hellip;" autocomplete="off">
+    </div>
+    <div class="nav-scroll" id="navScroll"></div>
+  </nav>
+  <main id="main">
+    <div class="content" id="content"></div>
+  </main>
+</div>
+
+<script id="pages-data" type="application/json">__PAGES_JSON__</script>
+<script>
+(function(){
+  var pages = JSON.parse(document.getElementById('pages-data').textContent);
+  var SECTION_ORDER = ["Start Here", "Portfolio Concepts", "Fixed Income", "Equity", "FX", "Commodities", "Use Cases"];
+  var navScroll = document.getElementById('navScroll');
+  var contentEl = document.getElementById('content');
+  var searchEl = document.getElementById('search');
+  var current = pages[0].id;
+
+  var bySection = {};
+  SECTION_ORDER.forEach(function(s){ bySection[s] = []; });
+  pages.forEach(function(p){
+    if (!bySection[p.section]) bySection[p.section] = [];
+    bySection[p.section].push(p);
+  });
+
+  function buildNav(filterText){
+    navScroll.innerHTML = '';
+    var q = (filterText || '').trim().toLowerCase();
+    var anyMatch = false;
+    SECTION_ORDER.forEach(function(section){
+      var items = (bySection[section] || []).filter(function(p){
+        return !q || p.title.toLowerCase().indexOf(q) !== -1;
+      });
+      if (!items.length) return;
+      anyMatch = true;
+      var secDiv = document.createElement('div');
+      secDiv.className = 'nav-section';
+      var h = document.createElement('div');
+      h.className = 'nav-section-title';
+      h.textContent = section;
+      secDiv.appendChild(h);
+      items.forEach(function(p){
+        var btn = document.createElement('button');
+        btn.className = 'nav-item' + (p.id === current ? ' active' : '');
+        btn.textContent = p.title;
+        btn.addEventListener('click', function(){ goTo(p.id); });
+        secDiv.appendChild(btn);
+      });
+      navScroll.appendChild(secDiv);
+    });
+    if (!anyMatch){
+      var empty = document.createElement('div');
+      empty.className = 'nav-empty';
+      empty.textContent = 'No topics match "' + filterText + '".';
+      navScroll.appendChild(empty);
+    }
+  }
+
+  function banner(){
+    return '<div class="banner">Read-only preview of the ' +
+      '<a href="https://github.com/navoditk/pm-bible" target="_blank" rel="noopener">pm-bible</a> ' +
+      'curriculum &mdash; reference pages, curriculum outline, and use cases. ' +
+      'For notebooks, code, tests, and the interactive <code>/master</code> / <code>/tutor</code> / ' +
+      '<code>/pm-query</code> skills, see the ' +
+      '<a href="https://navoditk.github.io/pm-bible/" target="_blank" rel="noopener">full docs site</a> ' +
+      'or clone the repo.</div>';
+  }
+
+  function goTo(id){
+    var page = pages.find(function(p){ return p.id === id; });
+    if (!page) return;
+    current = id;
+    contentEl.innerHTML = (id === pages[0].id ? banner() : '') +
+      '<h1>' + page.title + '</h1>' + wrapTables(page.html);
+    document.getElementById('main').scrollTop = 0;
+    buildNav(searchEl.value);
+  }
+
+  function wrapTables(htmlStr){
+    var div = document.createElement('div');
+    div.innerHTML = htmlStr;
+    div.querySelectorAll('table').forEach(function(t){
+      var wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      t.parentNode.insertBefore(wrap, t);
+      wrap.appendChild(t);
+    });
+    return div.innerHTML;
+  }
+
+  searchEl.addEventListener('input', function(){ buildNav(searchEl.value); });
+
+  buildNav('');
+  goTo(current);
+})();
+</script>
