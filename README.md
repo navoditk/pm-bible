@@ -76,6 +76,7 @@ Use the docs hub as the canonical starting point:
 - [docs/mastery-guide.md](docs/mastery-guide.md) — how to learn interactively with `/master`
 - [docs/getting-started.md](docs/getting-started.md)
 - [docs/learning-paths.md](docs/learning-paths.md)
+- [docs/rates_credit_mortgages_roadmap.md](docs/rates_credit_mortgages_roadmap.md) — sequenced rates/credit/mortgages path, zero to proficient
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - [SDLC.md](SDLC.md)
 - [SETUP.md](SETUP.md)
