@@ -17,4 +17,5 @@ See:
 - `fx_and_commodities.md`
 - `equity.md`
 - `derivatives.md`
+- `allocation_and_performance.md`
 - `implementation.md`

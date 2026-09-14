@@ -102,6 +102,7 @@ SECTIONS = [
         ("concepts/fixed_income_attribution.md", "Fixed-Income Attribution"),
         ("concepts/transaction_costs_and_rebalancing.md", "Transaction Costs and Rebalancing"),
         ("concepts/liquidity.md", "Liquidity"),
+        ("concepts/performance_measurement.md", "Performance Measurement (TWR vs. MWR)"),
     ]),
     ("Advanced Portfolio Construction", None, [
         ("concepts/covariance_shrinkage.md", "Covariance Shrinkage"),
@@ -111,6 +112,10 @@ SECTIONS = [
         ("concepts/hierarchical_risk_parity.md", "Hierarchical Risk Parity"),
         ("concepts/regime_aware_allocation.md", "Regime-Aware Allocation"),
         ("concepts/multi_period_optimization.md", "Multi-Period Optimization"),
+    ]),
+    ("Asset Allocation", None, [
+        ("concepts/strategic_and_tactical_asset_allocation.md", "Strategic and Tactical Asset Allocation"),
+        ("concepts/liability_driven_investing.md", "Liability-Driven Investing"),
     ]),
     ("Agentic PM Analytics", None, [
         ("concepts/agentic_pm_analytics.md", "Agentic PM Analytics"),
@@ -155,6 +160,7 @@ NOTEBOOKS = {
     "notebooks/integration/12_attribution.ipynb": "12 Attribution",
     "notebooks/integration/25_brinson_and_rebalancing.ipynb": "25 Brinson and Rebalancing",
     "notebooks/integration/30_capstone_portfolio_review.ipynb": "30 Capstone Portfolio Review",
+    "notebooks/integration/35_performance_ldi_and_asset_allocation.ipynb": "35 Performance, LDI, and Asset Allocation",
 }
 
 USE_CASES = [

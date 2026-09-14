@@ -190,6 +190,36 @@
       "description": "How well real-world constraints let a portfolio implement its"
     },
     {
+      "name": "funded_ratio",
+      "module": "pm.allocation",
+      "parameters": [
+        {
+          "name": "assets",
+          "default": null
+        },
+        {
+          "name": "liabilities",
+          "default": null
+        }
+      ],
+      "description": "Plan assets as a fraction of plan liabilities - the core metric a"
+    },
+    {
+      "name": "surplus",
+      "module": "pm.allocation",
+      "parameters": [
+        {
+          "name": "assets",
+          "default": null
+        },
+        {
+          "name": "liabilities",
+          "default": null
+        }
+      ],
+      "description": "Plan assets minus plan liabilities, in currency terms - the"
+    },
+    {
       "name": "brinson_attribution",
       "module": "pm.attribution",
       "parameters": [
@@ -2130,6 +2160,21 @@
         }
       ],
       "description": ""
+    },
+    {
+      "name": "money_weighted_return",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "cash_flows",
+          "default": null
+        },
+        {
+          "name": "times",
+          "default": null
+        }
+      ],
+      "description": "Money-weighted return (dollar-weighted return / IRR): the constant"
     },
     {
       "name": "portfolio_return",

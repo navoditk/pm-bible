@@ -112,6 +112,7 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 - [Fixed-Income Attribution](concepts/fixed_income_attribution.md)
 - [Transaction Costs and Rebalancing](concepts/transaction_costs_and_rebalancing.md)
 - [Liquidity](concepts/liquidity.md)
+- [Performance Measurement (TWR vs. MWR)](concepts/performance_measurement.md)
 
 ## Advanced Portfolio Construction
 
@@ -122,6 +123,11 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 - [Hierarchical Risk Parity](concepts/hierarchical_risk_parity.md)
 - [Regime-Aware Allocation](concepts/regime_aware_allocation.md)
 - [Multi-Period Optimization](concepts/multi_period_optimization.md)
+
+## Asset Allocation
+
+- [Strategic and Tactical Asset Allocation](concepts/strategic_and_tactical_asset_allocation.md)
+- [Liability-Driven Investing](concepts/liability_driven_investing.md)
 
 ## Agentic PM Analytics
 

@@ -264,7 +264,28 @@ real swaption or cap needs are conceptual only - see
 Notebook:
 - [34 Black-Scholes, Greeks, and Rates Options](../../notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb)
 
-## Extension — Day 16: Capstone
+## Extension — Day 16: Performance measurement, LDI, and asset allocation
+
+The same completeness audit that found the options gap also found no
+performance-measurement fundamentals (time-weighted vs. money-weighted
+return, GIPS) and no asset-allocation framing on top of the existing
+optimization machinery. GIPS composite construction and full
+strategic/tactical asset allocation are conceptual only - see
+`reference/concepts/performance_measurement.md` and
+`strategic_and_tactical_asset_allocation.md` for why (the short version:
+SAA/TAA reuses `mean_variance_optimization`, `black_litterman_posterior`,
+and `risk_parity_weights` rather than needing a new formula).
+
+1. time-weighted return (TWR) vs. money-weighted return (MWR/IRR)
+2. GIPS and composite construction (conceptual)
+3. liability-driven investing: funded ratio, surplus
+4. duration/PV01 matching for liabilities (reuses `dv01`/`hedge_ratio`)
+5. strategic vs. tactical asset allocation (conceptual)
+
+Notebook:
+- [35 Performance, LDI, and Asset Allocation](../../notebooks/integration/35_performance_ldi_and_asset_allocation.ipynb)
+
+## Extension — Day 17: Capstone
 
 The last day. Less hand-holding on purpose — this is where you compose
 concepts from across the whole curriculum on one realistic portfolio

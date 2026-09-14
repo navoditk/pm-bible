@@ -161,6 +161,15 @@ This file is the long-range view for the repository. The canonical docs hub is [
 - swaptions, caps, floors (conceptual)
 - option strategies: covered call, protective put, collar (conceptual)
 
+## Phase 15 — Asset allocation and performance measurement
+- time-weighted return (TWR)
+- money-weighted return (MWR / IRR)
+- GIPS and composite construction (conceptual)
+- liability-driven investing: funded ratio, surplus
+- duration/PV01 matching for liabilities (reuses existing duration tools)
+- strategic vs. tactical asset allocation (conceptual - reuses existing
+  optimization tools)
+
 ## Definition of done
 
 This repository is never permanently done. Each real PM question should become one of:

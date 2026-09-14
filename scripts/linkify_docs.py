@@ -78,6 +78,11 @@ RELATED = {
         ("Transaction costs and rebalancing", "concepts/transaction_costs_and_rebalancing.md"),
         ("Stress testing", "concepts/stress_testing.md"),
     ],
+    "concepts/liability_driven_investing.md": [
+        ("Duration, DV01", "fixed_income/duration.md"),
+        ("Performance measurement", "concepts/performance_measurement.md"),
+        ("Strategic and tactical asset allocation", "concepts/strategic_and_tactical_asset_allocation.md"),
+    ],
     "concepts/mean_variance_optimization.md": [
         ("Efficient frontier and tangency portfolio", "concepts/efficient_frontier.md"),
         ("Covariance shrinkage", "concepts/covariance_shrinkage.md"),
@@ -92,6 +97,11 @@ RELATED = {
     "concepts/multi_period_optimization.md": [
         ("Transaction costs and rebalancing", "concepts/transaction_costs_and_rebalancing.md"),
         ("Scenario-robust optimization", "concepts/scenario_robust_optimization.md"),
+    ],
+    "concepts/performance_measurement.md": [
+        ("Sharpe ratio", "concepts/sharpe_ratio.md"),
+        ("Brinson attribution", "concepts/brinson_attribution.md"),
+        ("Liability-driven investing", "concepts/liability_driven_investing.md"),
     ],
     "concepts/portfolio_return.md": [
         ("Portfolio volatility", "concepts/portfolio_volatility.md"),
@@ -130,6 +140,13 @@ RELATED = {
         ("Portfolio volatility", "concepts/portfolio_volatility.md"),
         ("Drawdown", "concepts/drawdown.md"),
         ("Downside deviation and realized risk", "concepts/downside_risk.md"),
+    ],
+    "concepts/strategic_and_tactical_asset_allocation.md": [
+        ("Mean-variance optimization", "concepts/mean_variance_optimization.md"),
+        ("Efficient frontier and tangency portfolio", "concepts/efficient_frontier.md"),
+        ("Black-Litterman", "concepts/black_litterman.md"),
+        ("Risk parity", "concepts/risk_parity.md"),
+        ("Liability-driven investing", "concepts/liability_driven_investing.md"),
     ],
     "concepts/downside_risk.md": [
         ("Information ratio", "concepts/information_ratio.md"),

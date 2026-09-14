@@ -1,4 +1,5 @@
 from .active import active_return, active_weights, tracking_error
+from .allocation import funded_ratio, surplus
 from .attribution import (
     brinson_attribution,
     fixed_income_return_decomposition,
@@ -35,6 +36,7 @@ from .returns import (
     cumulative_return,
     log_returns,
     max_drawdown,
+    money_weighted_return,
     portfolio_return,
     sharpe_ratio,
     simple_returns,
@@ -74,6 +76,7 @@ __all__ = [
     "factor_model_covariance",
     "factor_variance_contribution",
     "fixed_income_return_decomposition",
+    "funded_ratio",
     "fx_carry",
     "fx_forward_rate",
     "gamma",
@@ -83,6 +86,7 @@ __all__ = [
     "marginal_risk_contribution",
     "market_implied_returns",
     "max_drawdown",
+    "money_weighted_return",
     "parametric_var",
     "portfolio_factor_exposure",
     "portfolio_return",
@@ -99,6 +103,7 @@ __all__ = [
     "shrink_covariance",
     "simple_returns",
     "specific_variance_contribution",
+    "surplus",
     "theta_call",
     "theta_put",
     "total_attribution",
