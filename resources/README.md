@@ -15,4 +15,5 @@ See:
 - `active_management.md`
 - `fixed_income.md`
 - `fx_and_commodities.md`
+- `equity.md`
 - `implementation.md`

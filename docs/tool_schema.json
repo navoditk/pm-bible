@@ -167,6 +167,286 @@
       "description": "Return from rolling a futures position from the near contract into"
     },
     {
+      "name": "beta",
+      "module": "pm.equity.capm",
+      "parameters": [
+        {
+          "name": "stock_returns",
+          "default": null
+        },
+        {
+          "name": "market_returns",
+          "default": null
+        }
+      ],
+      "description": "OLS beta: Cov(stock, market) / Var(market)."
+    },
+    {
+      "name": "capm_expected_return",
+      "module": "pm.equity.capm",
+      "parameters": [
+        {
+          "name": "risk_free_rate",
+          "default": null
+        },
+        {
+          "name": "beta_value",
+          "default": null
+        },
+        {
+          "name": "equity_risk_premium_value",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "equity_risk_premium",
+      "module": "pm.equity.capm",
+      "parameters": [
+        {
+          "name": "expected_market_return",
+          "default": null
+        },
+        {
+          "name": "risk_free_rate",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "jensens_alpha",
+      "module": "pm.equity.capm",
+      "parameters": [
+        {
+          "name": "realized_return",
+          "default": null
+        },
+        {
+          "name": "risk_free_rate",
+          "default": null
+        },
+        {
+          "name": "beta_value",
+          "default": null
+        },
+        {
+          "name": "market_return",
+          "default": null
+        }
+      ],
+      "description": "Realized return in excess of what CAPM would have predicted -"
+    },
+    {
+      "name": "active_share",
+      "module": "pm.equity.factors",
+      "parameters": [
+        {
+          "name": "portfolio_weights",
+          "default": null
+        },
+        {
+          "name": "benchmark_weights",
+          "default": null
+        }
+      ],
+      "description": "Half the sum of absolute active weights - the fraction of the"
+    },
+    {
+      "name": "style_tilt",
+      "module": "pm.equity.factors",
+      "parameters": [
+        {
+          "name": "portfolio_exposure",
+          "default": null
+        },
+        {
+          "name": "benchmark_exposure",
+          "default": null
+        }
+      ],
+      "description": "Active exposure to a style factor (value, momentum, quality, size,"
+    },
+    {
+      "name": "buyback_yield",
+      "module": "pm.equity.income",
+      "parameters": [
+        {
+          "name": "buyback_value",
+          "default": null
+        },
+        {
+          "name": "market_cap",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "dividend_yield",
+      "module": "pm.equity.income",
+      "parameters": [
+        {
+          "name": "dividend_per_share",
+          "default": null
+        },
+        {
+          "name": "price",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "payout_ratio",
+      "module": "pm.equity.income",
+      "parameters": [
+        {
+          "name": "dividend_per_share",
+          "default": null
+        },
+        {
+          "name": "earnings_per_share",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "shareholder_yield",
+      "module": "pm.equity.income",
+      "parameters": [
+        {
+          "name": "dividend_yield_value",
+          "default": null
+        },
+        {
+          "name": "buyback_yield_value",
+          "default": null
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "total_shareholder_return",
+      "module": "pm.equity.income",
+      "parameters": [
+        {
+          "name": "price_start",
+          "default": null
+        },
+        {
+          "name": "price_end",
+          "default": null
+        },
+        {
+          "name": "dividends_paid",
+          "default": null
+        }
+      ],
+      "description": "Price return plus dividends received, as a fraction of starting price."
+    },
+    {
+      "name": "gordon_growth_value",
+      "module": "pm.equity.valuation",
+      "parameters": [
+        {
+          "name": "dividend_next",
+          "default": null
+        },
+        {
+          "name": "required_return",
+          "default": null
+        },
+        {
+          "name": "growth_rate",
+          "default": null
+        }
+      ],
+      "description": "Gordon growth (constant-growth) DDM: V = D1 / (r - g)."
+    },
+    {
+      "name": "implied_growth_from_price",
+      "module": "pm.equity.valuation",
+      "parameters": [
+        {
+          "name": "price",
+          "default": null
+        },
+        {
+          "name": "dividend_next",
+          "default": null
+        },
+        {
+          "name": "required_return",
+          "default": null
+        }
+      ],
+      "description": "Invert the Gordon growth model to solve for the growth rate the"
+    },
+    {
+      "name": "justified_pe",
+      "module": "pm.equity.valuation",
+      "parameters": [
+        {
+          "name": "payout_ratio",
+          "default": null
+        },
+        {
+          "name": "required_return",
+          "default": null
+        },
+        {
+          "name": "growth_rate",
+          "default": null
+        }
+      ],
+      "description": "Fundamental P/E implied by the Gordon growth model:"
+    },
+    {
+      "name": "peg_ratio",
+      "module": "pm.equity.valuation",
+      "parameters": [
+        {
+          "name": "pe_ratio",
+          "default": null
+        },
+        {
+          "name": "growth_rate_pct",
+          "default": null
+        }
+      ],
+      "description": "P/E divided by expected growth expressed in percentage points"
+    },
+    {
+      "name": "two_stage_ddm_value",
+      "module": "pm.equity.valuation",
+      "parameters": [
+        {
+          "name": "dividend_now",
+          "default": null
+        },
+        {
+          "name": "high_growth",
+          "default": null
+        },
+        {
+          "name": "high_growth_years",
+          "default": null
+        },
+        {
+          "name": "terminal_growth",
+          "default": null
+        },
+        {
+          "name": "required_return",
+          "default": null
+        }
+      ],
+      "description": "Two-stage DDM: dividends grow at high_growth for high_growth_years,"
+    },
+    {
       "name": "factor_model_covariance",
       "module": "pm.factors",
       "parameters": [

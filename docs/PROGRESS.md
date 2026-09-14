@@ -1,18 +1,20 @@
 # Progress
 
 ## Current stage
-The PM/FICC foundation is in place. The repository now includes structured curriculum, a reusable analytics library, notebooks, reference pages, tests, and a documentation hub.
+The PM/FICC foundation is in place and the repository now extends one phase beyond FICC into equity portfolio management (Phase 13). It includes structured curriculum, a reusable analytics library, notebooks, reference pages, tests, a documentation hub, and a repo-level overview doc.
 
 ## Current health
 - Test status: passing
 - Last validated: `pytest -q`
-- Result: `74 passed`
+- Result: `94 passed`
 
 ## Completed modules
 - Foundations bootcamp structure in place
 - Core PM analytics library implemented under `src/pm/`
-- Fixed-income, optimization, integration, and FX/commodities notebooks present
-- Reference pages added across portfolio foundations, optimization, risk, and FICC
+- Fixed-income, optimization, integration, FX/commodities, and equity notebooks present
+- Reference pages added across portfolio foundations, optimization, risk, FICC, and equity
+- `docs/OVERVIEW.md` added as a quick-read repo summary
+- `/master` skill added to sequence a guided pass through the full curriculum
 
 ## In progress
 - Documentation consolidation and onboarding cleanup
@@ -34,7 +36,7 @@ Only mark a module complete when:
 ## Branch / PR tracking
 
 Current branch:
-`main`
+`feat/13-equity-portfolio-management`
 
 Current issue:
 _Use issue/branch naming for each learning unit_
@@ -43,4 +45,4 @@ Current PR:
 _Not active_
 
 Last pushed checkpoint:
-_Keep a short-lived learning branch per module_
+_Not pushed yet — local commits only_

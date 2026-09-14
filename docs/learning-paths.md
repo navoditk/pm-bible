@@ -33,6 +33,20 @@ Key notebooks:
 - `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb`
 - `notebooks/fx_commodities/24_fx_and_commodities.ipynb`
 
+## Path B2 — Equity portfolio management
+
+Recommended after foundations, alongside or after Path B:
+
+1. Dividend discount models and relative valuation
+2. CAPM, beta, and equity risk premium
+3. Equity factor investing and active share
+4. Shareholder yield and total shareholder return
+
+Key notebooks:
+
+- `notebooks/equity/28_equity_valuation_and_capm.ipynb`
+- `notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb`
+
 ## Path C — Portfolio construction specialist
 
 Focus on:

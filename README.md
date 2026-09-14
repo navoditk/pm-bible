@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml/badge.svg)](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml)
 
-A build-first PM/FICC learning and analytics repository for portfolio construction, risk, optimization, and fixed-income work.
+A build-first PM/FICC-and-equity learning and analytics repository for portfolio construction, risk, optimization, fixed-income, and equity work.
 
 ## What this repo is
 
@@ -59,6 +59,7 @@ pytest -q
 Use the docs hub as the canonical starting point:
 
 - [docs/README.md](docs/README.md)
+- [docs/OVERVIEW.md](docs/OVERVIEW.md) — quick-read snapshot of coverage and gaps
 - [docs/getting-started.md](docs/getting-started.md)
 - [docs/learning-paths.md](docs/learning-paths.md)
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)

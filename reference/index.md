@@ -60,6 +60,14 @@
 ## Commodities
 - `commodities/roll_yield.md`
 
+## Equity
+- `equity/dividend_discount_model.md`
+- `equity/relative_valuation_multiples.md`
+- `equity/capm_and_beta.md`
+- `equity/equity_factor_investing.md`
+- `equity/active_share.md`
+- `equity/shareholder_yield.md`
+
 ## Attribution and implementation
 - `concepts/brinson_attribution.md`
 - `concepts/fixed_income_attribution.md`

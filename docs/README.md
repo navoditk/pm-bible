@@ -5,6 +5,7 @@ This folder is the canonical documentation hub for the repository.
 ## Start here
 
 - [Getting started](./getting-started.md) — install, orient, and begin the first learning unit
+- [Overview](./OVERVIEW.md) — a quick-read snapshot of what the repo actually contains, coverage, and gaps
 - [Learning paths](./learning-paths.md) — choose a route by goal or time horizon
 - [Roadmap](../ROADMAP.md) — long-term curriculum and milestones
 - [Architecture](./ARCHITECTURE.md) — repository structure and design intent

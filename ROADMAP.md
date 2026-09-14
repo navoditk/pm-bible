@@ -144,6 +144,14 @@ This file is the long-range view for the repository. The canonical docs hub is [
 - observability
 - tutor agents
 
+## Phase 13 — Equity portfolio management
+- dividend discount model (Gordon growth, two-stage)
+- relative valuation multiples (justified P/E, PEG)
+- CAPM, beta, equity risk premium, Jensen's alpha
+- equity factor investing (value/size/momentum/quality/low-vol tilts)
+- active share
+- shareholder yield, buybacks, total shareholder return
+
 ## Definition of done
 
 This repository is never permanently done. Each real PM question should become one of:
