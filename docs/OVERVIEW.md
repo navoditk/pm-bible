@@ -33,14 +33,14 @@ frameworks, and manual reasoning comes before asking an agent.
 
 | | |
 |---|---|
-| Analytics code | 1,288 lines across 28 modules in `src/pm/` |
-| Tests | 165 passing, 15 test files |
-| Notebooks | 34, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
-| Reference pages | 75 (including a glossary) |
-| Roadmap phases | 13 of 13 complete |
-| Bootcamp curriculum | 14 days (5 core + 9 extension) |
+| Analytics code | 1,443 lines across 29 modules in `src/pm/` |
+| Tests | 183 passing, 16 test files |
+| Notebooks | 35, across 8 tracks (foundations, optimization, active, fixed income, FX/commodities, derivatives, equity, integration) |
+| Reference pages | 80 (including a glossary) |
+| Roadmap phases | 14 of 14 complete |
+| Bootcamp curriculum | 16 days (5 core + 11 extension) |
 | Use-case workflows | 7 |
-| Curated resource files | 6, 172 lines total |
+| Curated resource files | 7, 275 lines total |
 | Claude Code skills | `/tutor`, `/pm-query`, `/master` |
 
 Module size is small by design — the median `src/pm` module is roughly
@@ -66,6 +66,7 @@ production-grade curve or optimization engine beyond notebook exercises.
 | 11 | Advanced portfolio construction — robust covariance, risk parity, scenario-robust optimization |
 | 12 | Agentic PM analytics — tool schemas, `/pm-query`, `/tutor`, evals, grounding & guardrails |
 | 13 | **Equity portfolio management** — DDM, relative valuation, CAPM/beta, factor investing, active share, shareholder yield |
+| 14 | **Derivatives and options** — Black-Scholes, the Greeks, put-call parity, implied volatility, Black-76, swaptions/caps/floors and option strategies (conceptual) |
 
 Fixed income (Phases 5–8) remains the deepest vein by page count and
 code volume — rates, credit, and mortgages are each fully built out with
@@ -91,6 +92,20 @@ error, while a reference page pointed readers at information ratio, IC,
 breadth, and the Fundamental Law as if they already existed there. All
 four are now implemented, tested, and referenced from real external
 sources (Wikipedia, CFA Institute, Financial Edge Training).
+
+A repo-wide curriculum-completeness audit (distinct from the fixed-income-
+specific one above) found the single biggest remaining hole: zero
+options/volatility coverage anywhere, despite deep coverage of linear
+instruments. Phase 14 (derivatives and options) closes it —
+`src/pm/options.py` implements Black-Scholes call/put pricing, all five
+Greeks (each independently verified against a finite-difference bump of
+the pricing function, not just the closed-form formula), implied
+volatility (solved numerically), and Black-76 (options on forwards,
+verified to reproduce Black-Scholes exactly at the matching forward
+price) — with swaptions/caps/floors and option strategies (covered call,
+protective put, collar) covered conceptually, since a real swaption needs
+a curve-based annuity factor and a strategy payoff is a composition of
+already-priced legs, not new formulas.
 
 A correctness-fix pass also caught and fixed several bugs surfaced by a
 detailed audit: a Black-Litterman round-trip that silently returned the
@@ -196,10 +211,18 @@ VaR/ES, Brinson attribution) supplies the buy-side vocabulary a
 sell-side trading background often lacks. With Phase 13, equity
 valuation, CAPM, factor investing, and active-share/shareholder-yield
 mechanics are now covered the same way fixed income is — derived, coded,
-and tested, not just described.
+and tested, not just described. Phase 14 closes what a repo-wide
+completeness audit flagged as the single biggest remaining hole:
+options/volatility, previously absent despite deep linear-instrument
+coverage.
 
-Remaining gaps to cover elsewhere: portfolio operations, compliance,
-client reporting, and ESG content; live market data and desk-grade
-tooling (Bloomberg PORT/Barra/Aladdin-equivalent workflows); and depth
-beyond this repo's curated pointer list for whatever specific topics an
-interview process tests hardest.
+Remaining gaps the same audit found, still to close: asset allocation
+framing (SAA/TAA, liability-driven investing) on top of the existing
+optimization machinery; performance-measurement fundamentals
+(time-weighted vs. money-weighted return, GIPS); narrower asset-class
+coverage (municipal bonds, sovereign/EM debt, convertibles, preferred
+securities); alternatives/private markets and ESG content. Also:
+portfolio operations, compliance, and client reporting; live market data
+and desk-grade tooling (Bloomberg PORT/Barra/Aladdin-equivalent
+workflows); and depth beyond this repo's curated pointer list for
+whatever specific topics an interview process tests hardest.

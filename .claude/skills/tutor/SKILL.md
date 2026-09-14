@@ -108,6 +108,11 @@ If no specialized persona matches the topic, fall back to
 | cross-currency basis | `concept_tutor.md` | `reference/fx/cross_currency_basis.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
 | FX carry, FX hedging | `concept_tutor.md` | `reference/fx/fx_carry.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_fx.py` |
 | commodity roll yield, contango, backwardation | `concept_tutor.md` | `reference/commodities/roll_yield.md` | `notebooks/fx_commodities/24_fx_and_commodities.ipynb` | `tests/test_commodities.py` |
+| black-scholes, greeks, delta, gamma, vega, theta, rho | `concept_tutor.md` | `reference/derivatives/black_scholes_and_greeks.md` | `notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb` | `tests/test_options.py` |
+| put-call parity | `concept_tutor.md` | `reference/derivatives/put_call_parity.md` | `notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb` | `tests/test_options.py` |
+| implied volatility, volatility smile, VIX | `concept_tutor.md` | `reference/derivatives/implied_volatility.md` | `notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb` | `tests/test_options.py` |
+| black-76, swaptions, caps, floors, rates options | `concept_tutor.md` | `reference/derivatives/options_on_forwards_and_rates_options.md` | `notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb` | `tests/test_options.py` |
+| covered call, protective put, collar, option strategies | `concept_tutor.md` | `reference/derivatives/option_strategies.md` | `notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb` | — (conceptual only, no code) |
 | Brinson attribution, allocation, selection | `concept_tutor.md` | `reference/concepts/brinson_attribution.md` | `notebooks/integration/25_brinson_and_rebalancing.ipynb` | `tests/test_attribution.py` |
 | fixed-income attribution (carry/curve/spread) | `concept_tutor.md` | `reference/concepts/fixed_income_attribution.md` | `notebooks/integration/12_attribution.ipynb` | `tests/test_attribution.py` |
 | transaction costs, rebalancing | `concept_tutor.md` | `reference/concepts/transaction_costs_and_rebalancing.md` | `notebooks/integration/25_brinson_and_rebalancing.ipynb` | `tests/test_attribution.py` |

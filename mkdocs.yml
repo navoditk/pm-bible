@@ -138,6 +138,12 @@ nav:
           - FX Carry: reference/fx/fx_carry.md
       - Commodities:
           - Roll Yield: reference/commodities/roll_yield.md
+      - Derivatives:
+          - Black-Scholes and the Greeks: reference/derivatives/black_scholes_and_greeks.md
+          - Put-Call Parity: reference/derivatives/put_call_parity.md
+          - Implied Volatility: reference/derivatives/implied_volatility.md
+          - Options on Forwards and Rates Options: reference/derivatives/options_on_forwards_and_rates_options.md
+          - Option Strategies: reference/derivatives/option_strategies.md
       - Attribution and Implementation:
           - Brinson Attribution: reference/concepts/brinson_attribution.md
           - Fixed-Income Attribution: reference/concepts/fixed_income_attribution.md
@@ -187,6 +193,8 @@ nav:
           - "33 TBA, Dollar Roll, and Structuring": notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb
       - FX and Commodities:
           - "24 FX and Commodities": notebooks/fx_commodities/24_fx_and_commodities.ipynb
+      - Derivatives:
+          - "34 Black-Scholes, Greeks, and Rates Options": notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb
       - Equity:
           - "28 Equity Valuation and CAPM": notebooks/equity/28_equity_valuation_and_capm.ipynb
           - "29 Active Share, Factors, Shareholder Yield": notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb
@@ -218,5 +226,6 @@ nav:
       - Fixed Income: resources/fixed_income.md
       - Equity: resources/equity.md
       - FX and Commodities: resources/fx_and_commodities.md
+      - Derivatives: resources/derivatives.md
       - Implementation: resources/implementation.md
   - Progress: docs/PROGRESS.md

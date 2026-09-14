@@ -243,7 +243,28 @@ Notebooks:
 - [28 Equity Valuation and CAPM](../../notebooks/equity/28_equity_valuation_and_capm.ipynb)
 - [29 Active Share, Factors, Shareholder Yield](../../notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb)
 
-## Extension — Day 15: Capstone
+## Extension — Day 15: Derivatives and options
+
+A curriculum-completeness audit found zero options/derivatives coverage
+anywhere in this repo despite deep coverage of linear instruments
+(futures, swaps, CDS) — this closes that gap. Full volatility-surface
+construction, American-exercise pricing, and the curve/annuity layer a
+real swaption or cap needs are conceptual only - see
+`reference/derivatives/options_on_forwards_and_rates_options.md` and
+`option_strategies.md` for why.
+
+1. Black-Scholes pricing (call and put)
+2. the Greeks: delta, gamma, vega, theta, rho
+3. put-call parity
+4. implied volatility
+5. Black-76 (options on forwards/futures) and how it extends to
+   swaptions, caps, and floors
+6. option strategies: covered call, protective put, collar (conceptual)
+
+Notebook:
+- [34 Black-Scholes, Greeks, and Rates Options](../../notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb)
+
+## Extension — Day 16: Capstone
 
 The last day. Less hand-holding on purpose — this is where you compose
 concepts from across the whole curriculum on one realistic portfolio
