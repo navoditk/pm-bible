@@ -33,6 +33,12 @@ Key notebooks:
 - `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb`
 - `notebooks/fx_commodities/24_fx_and_commodities.ipynb`
 
+For rates, credit, and mortgages specifically, this sketch is the entry
+point, not the full route — see [Rates, credit, and mortgages: zero to
+hero](./rates_credit_mortgages_roadmap.md) for every step from bond
+pricing through TBA/dollar roll and CMO/REMIC structuring, each with a
+reference page, notebook, and verified external resources.
+
 ## Path B2 — Equity portfolio management
 
 Recommended after foundations, alongside or after Path B:

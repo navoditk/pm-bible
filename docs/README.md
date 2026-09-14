@@ -8,6 +8,7 @@ This folder is the canonical documentation hub for the repository.
 - [Overview](./OVERVIEW.md) — a quick-read snapshot of what the repo actually contains, coverage, and gaps
 - [Mastery guide](./mastery-guide.md) — learn interactively with `/master` instead of picking notebooks by hand
 - [Learning paths](./learning-paths.md) — choose a route by goal or time horizon
+- [Rates, credit, and mortgages: zero to hero](./rates_credit_mortgages_roadmap.md) — a fully sequenced fixed-income path with a reference page, notebook, and verified resources at every step
 - [Roadmap](../ROADMAP.md) — long-term curriculum and milestones
 - [Architecture](./ARCHITECTURE.md) — repository structure and design intent
 - [Workflow](../SDLC.md) — branch, checkpoint, PR, and merge discipline

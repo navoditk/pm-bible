@@ -168,7 +168,9 @@ reading.
 Starting from zero? Open `notebooks/foundations/00_orientation.ipynb`
 first and keep `reference/glossary.md` open as a look-up while you work
 — see "A pedagogy review..." above for what else changed to support
-this.
+this. For rates, credit, and mortgages specifically, [Rates, credit, and
+mortgages: zero to hero](./rates_credit_mortgages_roadmap.md) sequences
+every reference page, notebook, and verified resource end to end.
 
 - `/tutor <topic>` — a live, adaptive Socratic session on one concept,
   grounded in this repo's own reference pages, notebooks, and tests.

@@ -9,25 +9,27 @@ The PM/FICC foundation is in place, extended one phase beyond FICC into equity p
 - Result: `165 passed`
 - Notebooks: 34, all valid JSON (`python scripts/check_repo.py`)
 
-## In-progress: rates/credit/mortgages PM-practitioner layer
+## Completed: rates/credit/mortgages PM-practitioner layer + roadmap
 A user-requested audit found the fixed-income coverage strong on pricing
 and risk mechanics but missing the practitioner/market-structure layer:
 carry-and-rolldown was a broken ROADMAP Phase 5 promise, and TBA/dollar
 roll, repo specialness, TIPS breakevens, credit indices, and fundamental
-credit analysis had zero coverage. Rates is done (carry/rolldown, repo
-and financing, TIPS/breakevens). Credit is done (fundamental credit
-analysis/leverage-coverage ratios, credit indices/CDX-iTraxx, leveraged
-loans). Mortgages is done (TBA/dollar roll implied financing rate,
-specified pools, CMO/REMIC structuring) - all three areas now have code
-(where genuinely codeable), reference pages, notebooks, and verified
-external sources, all wired in. Also caught and fixed mid-mortgages-work:
-the Credit PR had shipped its three new reference pages without adding
-matching rows to `docs/mastery.md` or the `/tutor` routing table - fixed
-here, and `/master`'s confirmed-count level table (stale at "all 55"
-since before the Rates PR) updated to the true total of 70 concepts.
-Next: a "zero to hero" rates/credit/mortgages roadmap document tying it
-all together with external resources at each step - the user's original
-ask that started this whole workstream.
+credit analysis had zero coverage. All three legs are done: rates
+(carry/rolldown, repo and financing, TIPS/breakevens), credit
+(fundamental credit analysis/leverage-coverage ratios, credit
+indices/CDX-iTraxx, leveraged loans), and mortgages (TBA/dollar roll
+implied financing rate, specified pools, CMO/REMIC structuring) - each
+with code (where genuinely codeable), reference pages, notebooks, and
+verified external sources, all wired in. Also caught and fixed
+mid-mortgages-work: the Credit PR had shipped its three new reference
+pages without adding matching rows to `docs/mastery.md` or the `/tutor`
+routing table - fixed there, and `/master`'s confirmed-count level table
+(stale at "all 55" since before the Rates PR) updated to the true total
+of 70 concepts. Closing the loop:
+`docs/rates_credit_mortgages_roadmap.md` sequences the full path (bond
+pricing through TBA/dollar roll and CMO/REMIC structuring) with a
+reference page, notebook, and verified resource at every step - the
+user's original ask that started this whole workstream.
 
 ## Completed modules
 - Foundations bootcamp structure in place
@@ -43,6 +45,7 @@ ask that started this whole workstream.
 - Rates PM-practitioner layer: `carry_and_rolldown.md`/`repo_and_financing.md`/`tips_and_breakevens.md` (each tested `src/pm` code + real external sources), notebook 31, closing the broken "carry and roll" ROADMAP Phase 5 promise
 - Credit PM-practitioner layer: `fundamental_credit_analysis.md`/`credit_indices.md`/`leveraged_loans.md` (leverage/coverage ratios and CDX/iTraxx intrinsic-value/basis are tested `src/pm` code; leveraged loans and covenant/rating-agency mechanics are conceptual-only, same honesty pattern as OAS), notebook 32
 - Mortgages PM-practitioner layer: `tba_and_dollar_roll.md` (tested `src/pm` code - `dollar_roll_implied_financing_rate`, verified against a real published worked example), `specified_pools.md` and `cmo_remic_structuring.md` (conceptual-only, same honesty pattern as OAS/leveraged loans), notebook 33 - closes the rates/credit/mortgages PM-practitioner-layer audit entirely
+- `docs/rates_credit_mortgages_roadmap.md` added: a single sequenced zero-to-hero path across all of rates, credit, and mortgages, every step linking its reference page, notebook, and a verified external resource - wired into `docs/README.md`, `docs/learning-paths.md`, `docs/OVERVIEW.md`, root `README.md`, and `mkdocs.yml` nav
 
 ## In progress
 - Documentation consolidation and onboarding cleanup
@@ -64,13 +67,13 @@ Only mark a module complete when:
 ## Branch / PR tracking
 
 Current branch:
-`feat/mortgages-pm-practitioner-layer`
+`feat/rates-credit-mortgages-roadmap`
 
 Current issue:
 _Use issue/branch naming for each learning unit_
 
 Current PR:
-_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), #4 (efficient frontier/ex-post risk), #5 (zero-to-proficiency pedagogy), #6 (rates PM-practitioner layer), and #7 (credit PM-practitioner layer) merged to `main`_
+_None open — #1 (Phase 13 equity), #2 (correctness-fix pass), #3 (Phase 3 active management), #4 (efficient frontier/ex-post risk), #5 (zero-to-proficiency pedagogy), #6 (rates PM-practitioner layer), #7 (credit PM-practitioner layer), and #8 (mortgages PM-practitioner layer) merged to `main`_
 
 Last pushed checkpoint:
 _Not pushed yet — local commits only_
