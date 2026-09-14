@@ -4,10 +4,13 @@ import pytest
 from pm.active import (
     active_return,
     active_weights,
+    component_contribution_to_tracking_error,
     effective_breadth,
     fundamental_law_ir,
     information_coefficient,
     information_ratio,
+    marginal_contribution_to_tracking_error,
+    realized_tracking_error,
     tracking_error,
     transfer_coefficient,
 )
@@ -121,3 +124,53 @@ def test_fundamental_law_correlated_bets_reduce_expected_ir():
     independent = fundamental_law_ir(ic, effective_breadth(100, average_correlation=0.0))
     correlated = fundamental_law_ir(ic, effective_breadth(100, average_correlation=0.3))
     assert correlated < independent
+
+def test_realized_tracking_error_matches_manual_active_return_std():
+    portfolio = [0.03, 0.05, 0.02, 0.04]
+    benchmark = [0.01, 0.02, 0.01, 0.03]
+    active = np.array(portfolio) - np.array(benchmark)
+    expected = active.std(ddof=1) * np.sqrt(12)
+    assert np.isclose(realized_tracking_error(portfolio, benchmark, periods_per_year=12), expected)
+
+def test_information_ratio_is_consistent_with_realized_tracking_error():
+    # IR's denominator IS realized tracking error - proving this stays
+    # true both documents the relationship and guards against the two
+    # implementations silently drifting apart.
+    portfolio = [0.03, 0.05, 0.02, 0.04, 0.01]
+    benchmark = [0.01, 0.02, 0.01, 0.03, 0.02]
+    ppy = 12
+    active_mean = (np.array(portfolio) - np.array(benchmark)).mean()
+    rte = realized_tracking_error(portfolio, benchmark, periods_per_year=ppy)
+    ir = information_ratio(portfolio, benchmark, periods_per_year=ppy)
+    assert np.isclose(ir, active_mean * ppy / rte)
+
+def test_mcte_hand_example():
+    # a = [0.1, -0.1], TE = sqrt(a'Sigma*a); MCTE = (Sigma@a)/TE
+    portfolio = [0.35, 0.65]
+    benchmark = [0.25, 0.75]
+    cov = np.array([[0.04, 0.01], [0.01, 0.09]])
+    a = np.array([0.1, -0.1])
+    te = np.sqrt(a @ cov @ a)
+    expected_mcte = (cov @ a) / te
+    assert np.allclose(marginal_contribution_to_tracking_error(portfolio, benchmark, cov), expected_mcte)
+
+def test_ccte_sums_to_total_tracking_error():
+    portfolio = [0.30, 0.25, 0.25, 0.20]
+    benchmark = [0.25, 0.25, 0.30, 0.20]
+    cov = np.array([
+        [.040, .010, .005, .002],
+        [.010, .020, .004, .001],
+        [.005, .004, .010, .003],
+        [.002, .001, .003, .030],
+    ])
+    ccte = component_contribution_to_tracking_error(portfolio, benchmark, cov)
+    assert np.isclose(ccte.sum(), tracking_error(portfolio, benchmark, cov))
+
+def test_mcte_raises_when_tracking_error_is_zero():
+    # a=0 makes MCTE = (Sigma@0)/0, an undefined 0/0 - raise rather than
+    # silently return nan, matching pm.risk.marginal_risk_contribution's
+    # guard on zero total volatility.
+    w = [0.5, 0.5]
+    cov = np.eye(2) * 0.04
+    with pytest.raises(ValueError, match="Tracking error must be positive"):
+        marginal_contribution_to_tracking_error(w, w, cov)

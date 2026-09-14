@@ -29,6 +29,10 @@ It formalizes the tradeoff between expected return, risk, and implementation con
 Optimal weights can be extremely sensitive to estimation error, especially in expected returns.
 
 ## Related
+- [Efficient frontier and tangency portfolio](efficient_frontier.md)
 - [Covariance shrinkage](covariance_shrinkage.md)
 - [Risk parity](risk_parity.md)
 - [Transaction costs and rebalancing](transaction_costs_and_rebalancing.md)
+
+## Free resources
+- [Portfolio foundations resources](../../resources/portfolio_foundations.md) — MIT OCW's Portfolio Theory series covers mean/variance and the tangency portfolio directly

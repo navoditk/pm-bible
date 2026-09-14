@@ -50,6 +50,8 @@ fat-tailed active-return distribution both bias the ratio.
 
 ## Related
 - [Tracking error](tracking_error.md)
+- [MCTE and group risk decomposition](mcte_and_group_risk.md)
+- [Downside deviation and realized risk](downside_risk.md)
 - [Fundamental Law](fundamental_law.md)
 - [Sharpe ratio](sharpe_ratio.md)
 

@@ -12,13 +12,16 @@ SECTIONS = [
         ("concepts/covariance.md", "Covariance"),
         ("concepts/portfolio_volatility.md", "Portfolio Volatility"),
         ("concepts/risk_contribution.md", "Risk Contribution"),
+        ("concepts/mcte_and_group_risk.md", "MCTE and Group Risk Decomposition"),
         ("concepts/sharpe_ratio.md", "Sharpe Ratio"),
+        ("concepts/downside_risk.md", "Downside Deviation and Realized Risk"),
         ("concepts/drawdown.md", "Drawdown"),
         ("concepts/benchmark_basics.md", "Benchmark Basics"),
         ("concepts/tracking_error.md", "Tracking Error"),
     ]),
     ("Optimization", None, [
         ("concepts/mean_variance_optimization.md", "Mean-Variance Optimization"),
+        ("concepts/efficient_frontier.md", "Efficient Frontier and Tangency Portfolio"),
     ]),
     ("Active Management", None, [
         ("concepts/information_ratio.md", "Information Ratio"),

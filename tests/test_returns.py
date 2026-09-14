@@ -4,9 +4,11 @@ import pytest
 
 from pm.returns import (
     cumulative_return,
+    downside_deviation,
     log_returns,
     max_drawdown,
     portfolio_return,
+    realized_volatility,
     sharpe_ratio,
     simple_returns,
 )
@@ -55,3 +57,30 @@ def test_metrics_compose_with_simple_returns_leading_nan():
 def test_sharpe_ratio_rejects_an_all_nan_series():
     with pytest.raises(ValueError, match="finite observation"):
         sharpe_ratio([float("nan"), float("nan")])
+
+def test_realized_volatility_matches_manual_std():
+    returns = [0.02, -0.01, 0.03, 0.00, -0.02]
+    expected = np.std(returns, ddof=1) * np.sqrt(12)
+    assert np.isclose(realized_volatility(returns, periods_per_year=12), expected)
+
+def test_realized_volatility_drops_leading_nan_from_simple_returns():
+    prices = pd.Series([100.0, 102.0, 99.0, 103.0])
+    r = simple_returns(prices)
+    finite = r.dropna().to_numpy()
+    expected = np.std(finite, ddof=1) * np.sqrt(12)
+    assert np.isclose(realized_volatility(r, periods_per_year=12), expected)
+
+def test_downside_deviation_hand_example():
+    # shortfalls vs target=0: [0, -0.03, 0, -0.01]; mean(sq)=0.00025
+    returns = [0.02, -0.03, 0.01, -0.01]
+    expected = np.sqrt(0.00025) * np.sqrt(12)
+    assert np.isclose(downside_deviation(returns, target=0.0, periods_per_year=12), expected)
+
+def test_downside_deviation_zero_when_returns_never_fall_below_target():
+    assert np.isclose(downside_deviation([0.01, 0.02, 0.03], target=0.0), 0.0)
+
+def test_downside_deviation_less_than_or_equal_to_total_volatility():
+    # downside deviation only counts shortfalls, so it can never exceed
+    # the symmetric (upside+downside) volatility of the same series.
+    returns = [0.05, -0.03, 0.02, -0.04, 0.01, -0.01]
+    assert downside_deviation(returns, target=0.0) <= realized_volatility(returns)

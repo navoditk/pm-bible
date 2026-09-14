@@ -6,7 +6,9 @@
 - [Covariance](concepts/covariance.md)
 - [Portfolio Volatility](concepts/portfolio_volatility.md)
 - [Risk Contribution](concepts/risk_contribution.md)
+- [MCTE and Group Risk Decomposition](concepts/mcte_and_group_risk.md)
 - [Sharpe Ratio](concepts/sharpe_ratio.md)
+- [Downside Deviation and Realized Risk](concepts/downside_risk.md)
 - [Drawdown](concepts/drawdown.md)
 - [Benchmark Basics](concepts/benchmark_basics.md)
 - [Tracking Error](concepts/tracking_error.md)
@@ -14,6 +16,7 @@
 ## Optimization
 
 - [Mean-Variance Optimization](concepts/mean_variance_optimization.md)
+- [Efficient Frontier and Tangency Portfolio](concepts/efficient_frontier.md)
 
 ## Active Management
 

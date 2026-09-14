@@ -10,10 +10,13 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Covariance and diversification | `reference/concepts/covariance.md` | untested | — |
 | Portfolio volatility | `reference/concepts/portfolio_volatility.md` | untested | — |
 | Marginal/component risk contribution | `reference/concepts/risk_contribution.md` | untested | — |
+| MCTE and group risk decomposition | `reference/concepts/mcte_and_group_risk.md` | untested | — |
 | Sharpe ratio | `reference/concepts/sharpe_ratio.md` | untested | — |
+| Downside deviation and realized risk | `reference/concepts/downside_risk.md` | untested | — |
 | Drawdown | `reference/concepts/drawdown.md` | untested | — |
 | Benchmark basics | `reference/concepts/benchmark_basics.md` | untested | — |
 | Mean-variance optimization | `reference/concepts/mean_variance_optimization.md` | untested | — |
+| Efficient frontier and tangency portfolio | `reference/concepts/efficient_frontier.md` | untested | — |
 | Tracking error / active weights | `reference/concepts/tracking_error.md` | untested | — |
 | Information ratio | `reference/concepts/information_ratio.md` | untested | — |
 | Information coefficient | `reference/concepts/information_coefficient.md` | untested | — |

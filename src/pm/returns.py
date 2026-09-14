@@ -37,3 +37,26 @@ def max_drawdown(returns):
     running_max = np.maximum.accumulate(wealth)
     drawdown = wealth / running_max - 1
     return float(drawdown.min())
+
+
+def realized_volatility(returns, periods_per_year=12):
+    """Ex-post portfolio volatility: annualized sample standard deviation
+    of a realized return series - the natural counterpart to
+    `pm.risk.portfolio_volatility`'s ex-ante (covariance-based) version.
+    Comparing the two is how you check whether realized risk matched what
+    a risk model predicted.
+    """
+    r = finite_array(returns, min_size=2)
+    return float(r.std(ddof=1) * np.sqrt(periods_per_year))
+
+def downside_deviation(returns, target=0.0, periods_per_year=12):
+    """Semi-deviation below `target` (Sortino's risk measure): like
+    volatility, but only shortfalls below the target count, not upside
+    moves. Averaged over *all* periods, per Sortino's original
+    definition - not just the shortfall periods - so a mostly-upside
+    return series has a small downside deviation even if its total
+    volatility (which treats upside and downside symmetrically) is large.
+    """
+    r = finite_array(returns, min_size=2)
+    shortfall = np.minimum(r - target, 0.0)
+    return float(np.sqrt(np.mean(shortfall**2)) * np.sqrt(periods_per_year))

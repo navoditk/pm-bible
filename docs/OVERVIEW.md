@@ -33,10 +33,10 @@ frameworks, and manual reasoning comes before asking an agent.
 
 | | |
 |---|---|
-| Analytics code | 942 lines across 26 modules in `src/pm/` |
-| Tests | 122 passing, 14 test files |
+| Analytics code | 1,133 lines across 26 modules in `src/pm/` |
+| Tests | 144 passing, 14 test files |
 | Notebooks | 29, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
-| Reference pages | 61 |
+| Reference pages | 64 |
 | Roadmap phases | 13 of 13 complete |
 | Bootcamp curriculum | 14 days (5 core + 9 extension) |
 | Use-case workflows | 7 |
@@ -54,7 +54,7 @@ production-grade curve or optimization engine beyond notebook exercises.
 | Phase | Topic |
 |---|---|
 | 1 | Portfolio foundations — returns, covariance, diversification, risk contribution, Sharpe, drawdown |
-| 2 | Portfolio theory & optimization — efficient frontier, mean-variance optimization, shrinkage, Black-Litterman |
+| 2 | Portfolio theory & optimization — efficient frontier, tangency portfolio (max Sharpe), minimum tracking error, mean-variance optimization, shrinkage, Black-Litterman |
 | 3 | Active management — active weights, tracking error, information ratio, information coefficient, breadth, transfer coefficient, the Fundamental Law, factor models |
 | 4 | Risk models — factor covariance, marginal/component risk, VaR/ES, stress testing |
 | 5 | Fixed-income foundations — price, yield, duration, DV01, convexity, key-rate duration |
@@ -86,6 +86,23 @@ propagating from `simple_returns` into every downstream metric, every
 optimizer returning `None` instead of raising on an infeasible problem,
 and a few MBS prepayment domain errors. Each fix shipped with a
 regression test that fails against the old code.
+
+The same audit flagged the optimizer as the thinnest, most-promised part
+of the repo — `notebooks/optimization/04_efficient_frontier.ipynb` was
+titled "Efficient Frontier" but never computed one, and matplotlib was a
+paid-for dependency used nowhere. `src/pm/optimization.py` now has
+`efficient_frontier`, `max_sharpe` (tangency portfolio), and
+`min_tracking_error`; notebook 04 actually traces and plots a frontier
+with the GMV and tangency points marked and a capital market line drawn.
+A parallel gap in risk analytics — everything was ex-ante (covariance-
+based) with no way to check realized risk against a risk model's
+prediction, no way to see *which* position drives tracking error rather
+than just the total, and no way to decompose risk by group instead of
+by individual position — closed with `realized_volatility`,
+`downside_deviation`, `realized_tracking_error`, marginal/component
+contribution to tracking error, and `group_risk_contribution`; notebook
+19 (VaR/ES) now plots the shaded VaR/ES tail and demonstrates checking a
+risk model's assumed volatility against what a sample actually realized.
 
 ## What's implemented vs. conceptual-only
 

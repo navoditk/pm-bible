@@ -43,6 +43,7 @@ def sharpe_ratio(returns, risk_free_rate=0.0, periods_per_year=12):
 ## Related
 - [Portfolio volatility](portfolio_volatility.md)
 - [Drawdown](drawdown.md)
+- [Downside deviation and realized risk](downside_risk.md)
 
 ## Free resources
 - MIT OCW Portfolio Theory I–III
