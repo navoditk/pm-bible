@@ -28,3 +28,4 @@ credit fundamentals.
 - [Default and recovery](default_recovery.md)
 - [Z-spread](z_spread.md)
 - [Credit curves](credit_curves.md)
+- [Credit indices](credit_indices.md)

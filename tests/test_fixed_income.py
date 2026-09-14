@@ -5,6 +5,11 @@ from pm.fixed_income.credit import (
     cds_bond_basis,
     credit_spread_from_hazard,
     expected_loss,
+    fixed_charge_coverage_ratio,
+    index_basis,
+    index_intrinsic_spread,
+    interest_coverage_ratio,
+    leverage_ratio,
     spread_pnl,
     survival_probability,
     z_spread,
@@ -114,3 +119,39 @@ def test_credit_spread_from_hazard_hand_example():
 
 def test_cds_bond_basis_hand_example():
     assert np.isclose(cds_bond_basis(0.018, 0.022), -0.004)
+
+def test_leverage_ratio_hand_example():
+    assert np.isclose(leverage_ratio(total_debt=300, ebitda=100), 3.0)
+
+def test_interest_coverage_ratio_hand_example():
+    assert np.isclose(interest_coverage_ratio(ebitda=100, interest_expense=20), 5.0)
+
+def test_fixed_charge_coverage_is_stricter_than_interest_coverage():
+    ebitda, interest = 100, 20
+    coverage = interest_coverage_ratio(ebitda, interest)
+    fixed_charge = fixed_charge_coverage_ratio(ebitda, interest, mandatory_principal_payments=10)
+    assert np.isclose(fixed_charge, 100 / 30)
+    assert fixed_charge < coverage
+
+def test_fixed_charge_coverage_equals_interest_coverage_with_no_amortization():
+    ebitda, interest = 100, 20
+    assert np.isclose(
+        fixed_charge_coverage_ratio(ebitda, interest, mandatory_principal_payments=0),
+        interest_coverage_ratio(ebitda, interest),
+    )
+
+def test_index_intrinsic_spread_equal_weighted_hand_example():
+    spreads = [80, 90, 100, 70, 110]
+    assert np.isclose(index_intrinsic_spread(spreads), 90.0)
+
+def test_index_intrinsic_spread_with_explicit_weights():
+    spreads = [80, 90, 100, 70, 110]
+    weights = [0.1, 0.2, 0.3, 0.2, 0.2]
+    expected = sum(s * w for s, w in zip(spreads, weights))
+    assert np.isclose(index_intrinsic_spread(spreads, weights=weights), expected)
+
+def test_index_basis_hand_example():
+    assert np.isclose(index_basis(index_spread=95, intrinsic_spread=90), 5)
+
+def test_index_basis_zero_when_index_equals_intrinsic():
+    assert np.isclose(index_basis(90, 90), 0.0)

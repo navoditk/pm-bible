@@ -59,3 +59,24 @@ https://www.schwab.com/learn/story/tips-and-inflation-what-to-know-now
 
 Inflation expectations and inflation realities — U.S. Bureau of Labor Statistics:
 https://www.bls.gov/opub/mlr/2019/article/inflation-expectations-and-inflation-realities.htm
+
+## Fundamental credit analysis, covenants, and rating methodology
+Financial Ratios for Credit Analysis — AnalystPrep (CFA Level 1):
+https://analystprep.com/cfa-level-1-exam/fixed-income/financial-ratios-credit-analysis/
+
+An Introduction to Covenants in Leveraged Finance Debt — CredCore:
+https://credcore.com/insights/an-introduction-to-covenants-in-leveraged-finance-debt
+
+## Credit indices (CDX / iTraxx)
+Credit Default Swap Indices — Financial Edge Training:
+https://www.fe.training/free-resources/financial-markets/credit-default-swap-indices/
+
+Credit default swap index — Wikipedia:
+https://en.wikipedia.org/wiki/Credit_default_swap_index
+
+## Leveraged loans
+Leveraged Lending and Collateralized Loan Obligations: FAQs — Congressional Research Service:
+https://www.congress.gov/crs-product/R46096
+
+Leveraged Credit Markets: Then and Now — Western & Southern / Fort Washington:
+https://www.westernsouthern.com/fortwashington/insights/leveraged-credit-markets

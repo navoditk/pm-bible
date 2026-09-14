@@ -21,3 +21,4 @@ machinery already called out as conceptual-only in `oas.md`.
 ## Related
 - [Z-spread](z_spread.md)
 - [Credit curves](credit_curves.md)
+- [Fundamental credit analysis](fundamental_credit_analysis.md)

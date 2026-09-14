@@ -831,6 +831,85 @@
       "description": ""
     },
     {
+      "name": "fixed_charge_coverage_ratio",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "ebitda",
+          "default": null
+        },
+        {
+          "name": "interest_expense",
+          "default": null
+        },
+        {
+          "name": "mandatory_principal_payments",
+          "default": null
+        }
+      ],
+      "description": "EBITDA / (interest expense + mandatory principal payments) - a"
+    },
+    {
+      "name": "index_basis",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "index_spread",
+          "default": null
+        },
+        {
+          "name": "intrinsic_spread",
+          "default": null
+        }
+      ],
+      "description": "Index basis: the traded index spread minus its intrinsic value."
+    },
+    {
+      "name": "index_intrinsic_spread",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "constituent_spreads",
+          "default": null
+        },
+        {
+          "name": "weights",
+          "default": "None"
+        }
+      ],
+      "description": "Intrinsic value of a CDS index: the weighted average of its"
+    },
+    {
+      "name": "interest_coverage_ratio",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "ebitda",
+          "default": null
+        },
+        {
+          "name": "interest_expense",
+          "default": null
+        }
+      ],
+      "description": "EBITDA / interest expense - how many times over a borrower could"
+    },
+    {
+      "name": "leverage_ratio",
+      "module": "pm.fixed_income.credit",
+      "parameters": [
+        {
+          "name": "total_debt",
+          "default": null
+        },
+        {
+          "name": "ebitda",
+          "default": null
+        }
+      ],
+      "description": "Debt / EBITDA - the standard leverage measure in credit analysis"
+    },
+    {
       "name": "spread_pnl",
       "module": "pm.fixed_income.credit",
       "parameters": [

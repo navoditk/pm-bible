@@ -21,4 +21,5 @@ is the buildable piece.
 ## Related
 - [Default and recovery](default_recovery.md)
 - [Credit curves](credit_curves.md)
+- [Fundamental credit analysis](fundamental_credit_analysis.md)
 - [Stress testing (portfolio credit scenarios)](../concepts/stress_testing.md)

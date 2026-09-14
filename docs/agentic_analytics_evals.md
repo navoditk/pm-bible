@@ -27,6 +27,8 @@ number.
 | "Unconstrained tangency portfolio for two uncorrelated assets, mu=[8%,5%], vol=[20%,10%], risk-free 2%?" | `pm.optimization.max_sharpe` | `expected_returns=[0.08,0.05], covariance=[[0.04,0],[0,0.01]], risk_free_rate=0.02, long_only=False` | `[0.3333, 0.6667]` (≈) |
 | "Carry on a 5Y bond yielding 4.00% financed at 3.00% repo, held 1 year?" | `pm.fixed_income.carry.carry_return` | `coupon_income=4.0, price=100.0, financing_rate=0.03, horizon_years=1.0` | `0.01` |
 | "Breakeven inflation with nominal 4.5% and TIPS real yield 2.0%?" | `pm.fixed_income.linkers.breakeven_inflation` | `nominal_yield=0.045, real_yield=0.02` | `0.025` |
+| "Leverage ratio for an issuer with $300M debt and $100M EBITDA?" | `pm.fixed_income.credit.leverage_ratio` | `total_debt=300, ebitda=100` | `3.0` |
+| "Index basis if 5 CDS constituents (80,90,100,70,110bp) trade equal-weighted and the index itself trades at 95bp?" | `pm.fixed_income.credit.index_intrinsic_spread` then `index_basis` | `constituent_spreads=[80,90,100,70,110]` → `intrinsic=90.0`; `index_basis(95, 90)` | `5.0` |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like

@@ -227,6 +227,7 @@ RELATED = {
         ("Default and recovery", "fixed_income/default_recovery.md"),
         ("Z-spread", "fixed_income/z_spread.md"),
         ("Credit curves", "fixed_income/credit_curves.md"),
+        ("Credit indices", "fixed_income/credit_indices.md"),
     ],
     "fixed_income/convexity.md": [
         ("Duration", "fixed_income/duration.md"),
@@ -242,7 +243,25 @@ RELATED = {
     "fixed_income/credit_migration.md": [
         ("Default and recovery", "fixed_income/default_recovery.md"),
         ("Credit curves", "fixed_income/credit_curves.md"),
+        ("Fundamental credit analysis", "fixed_income/fundamental_credit_analysis.md"),
         ("Stress testing (portfolio credit scenarios)", "concepts/stress_testing.md"),
+    ],
+    "fixed_income/fundamental_credit_analysis.md": [
+        ("Spread duration", "fixed_income/spread_duration.md"),
+        ("Default and recovery", "fixed_income/default_recovery.md"),
+        ("Credit migration", "fixed_income/credit_migration.md"),
+        ("Leveraged loans", "fixed_income/leveraged_loans.md"),
+        ("Credit indices", "fixed_income/credit_indices.md"),
+    ],
+    "fixed_income/credit_indices.md": [
+        ("Fundamental credit analysis", "fixed_income/fundamental_credit_analysis.md"),
+        ("CDS and basis", "fixed_income/cds_and_basis.md"),
+        ("Credit curves", "fixed_income/credit_curves.md"),
+    ],
+    "fixed_income/leveraged_loans.md": [
+        ("Fundamental credit analysis", "fixed_income/fundamental_credit_analysis.md"),
+        ("Spread duration", "fixed_income/spread_duration.md"),
+        ("Credit curves", "fixed_income/credit_curves.md"),
     ],
     "fixed_income/curve_construction.md": [
         ("Forward rates", "fixed_income/forward_rates.md"),
@@ -312,6 +331,7 @@ RELATED = {
     "fixed_income/spread_duration.md": [
         ("Z-spread", "fixed_income/z_spread.md"),
         ("Credit curves", "fixed_income/credit_curves.md"),
+        ("Fundamental credit analysis", "fixed_income/fundamental_credit_analysis.md"),
     ],
     "fixed_income/swap_dv01.md": [
         ("Swap spread", "fixed_income/swap_spread.md"),
