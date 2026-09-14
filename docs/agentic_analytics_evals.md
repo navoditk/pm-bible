@@ -20,6 +20,8 @@ number.
 | "1-year FX forward for spot 1.10, USD rate 5%, EUR rate 3%?" | `pm.fx.fx_forward_rate` | `spot=1.10, domestic_rate=0.05, foreign_rate=0.03, years=1` | `1.121359` (≈) |
 | "Risk-parity weights for two uncorrelated assets at 20% and 10% vol?" | `pm.robust.risk_parity_weights` | `covariance=[[0.04,0],[0,0.01]]` | `[0.3333, 0.6667]` (≈) |
 | "Roll yield if the near contract is $80 and the far contract is $78?" | `pm.commodities.roll_yield` | `near_price=80, far_price=78` | `0.02564` (≈, backwardation) |
+| "Gordon growth value of a stock with a $2 next dividend, 9% required return, 4% growth?" | `pm.equity.valuation.gordon_growth_value` | `dividend_next=2.0, required_return=0.09, growth_rate=0.04` | `40.0` |
+| "Beta of a stock whose returns move 1.5x the market's?" | `pm.equity.capm.beta` | `stock_returns=[0.015,0.03,-0.015,0.045,0.0], market_returns=[0.01,0.02,-0.01,0.03,0.0]` | `1.5` |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like

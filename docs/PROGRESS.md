@@ -14,7 +14,7 @@ The PM/FICC foundation is in place and the repository now extends one phase beyo
 - Fixed-income, optimization, integration, FX/commodities, and equity notebooks present
 - Reference pages added across portfolio foundations, optimization, risk, FICC, and equity
 - `docs/OVERVIEW.md` added as a quick-read repo summary
-- `/master` skill added to sequence a guided pass through the full curriculum
+- `/master` rebuilt as a single self-contained trainer (lesson/quiz/scenario/exam/status modes) with `docs/mastery-guide.md` as its walkthrough
 
 ## In progress
 - Documentation consolidation and onboarding cleanup
@@ -36,13 +36,13 @@ Only mark a module complete when:
 ## Branch / PR tracking
 
 Current branch:
-`feat/13-equity-portfolio-management`
+`main`
 
 Current issue:
 _Use issue/branch naming for each learning unit_
 
 Current PR:
-_Not active_
+_None open — #1 (Phase 13 equity, repo overview, /master skill) merged to `main`_
 
 Last pushed checkpoint:
-_Not pushed yet — local commits only_
+`7ffa5ac` — stop bare `/tutor` from half-replicating `/master`'s job

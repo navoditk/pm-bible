@@ -28,7 +28,10 @@ function, never doing the arithmetic itself.
 - **Observability** — both skills log every session/query to
   `docs/tutor_sessions/` and `docs/analytics_queries/` respectively.
 - **Tutor agents** — `.claude/skills/tutor/SKILL.md` (`/tutor`), built in
-  an earlier session.
+  an earlier session, plus `.claude/skills/master/SKILL.md` (`/master`),
+  a later addition that sequences the whole curriculum through `/tutor`'s
+  same routing table and personas rather than duplicating them, and adds
+  quiz/scenario/exam modes `/tutor` doesn't have.
 
 ## Why PMs care
 An LLM confidently stating a plausible-sounding DV01 or VaR without
@@ -47,5 +50,5 @@ real analytics rather than just explanation.
   plainly that it isn't implemented
 
 ## Related
-tutor skill (`.claude/skills/tutor/SKILL.md`), `docs/tool_schema.json`,
-`AGENTS.md`.
+tutor skill (`.claude/skills/tutor/SKILL.md`), mastery skill
+(`.claude/skills/master/SKILL.md`), `docs/tool_schema.json`, `AGENTS.md`.
