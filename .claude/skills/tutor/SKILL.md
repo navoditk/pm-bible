@@ -81,6 +81,9 @@ If no specialized persona matches the topic, fall back to
 | swap DV01 | `fixed_income_tutor.md` | `reference/fixed_income/swap_dv01.md` | `notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb` | `tests/test_fixed_income.py` |
 | swap spread | `fixed_income_tutor.md` | `reference/fixed_income/swap_spread.md` | `notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb` | `tests/test_fixed_income.py` |
 | Treasury futures, futures DV01, hedge ratio | `fixed_income_tutor.md` | `reference/fixed_income/treasury_futures_hedging.md` | `notebooks/fixed_income/17_futures_and_hedging.ipynb` | `tests/test_fixed_income.py` |
+| carry and rolldown | `fixed_income_tutor.md` | `reference/fixed_income/carry_and_rolldown.md` | `notebooks/fixed_income/31_carry_roll_and_financing.ipynb` | `tests/test_carry_and_linkers.py` |
+| repo, specialness, on-the-run/off-the-run | `fixed_income_tutor.md` | `reference/fixed_income/repo_and_financing.md` | `notebooks/fixed_income/31_carry_roll_and_financing.ipynb` | `tests/test_carry_and_linkers.py` |
+| TIPS, breakeven inflation | `fixed_income_tutor.md` | `reference/fixed_income/tips_and_breakevens.md` | `notebooks/fixed_income/31_carry_roll_and_financing.ipynb` | `tests/test_carry_and_linkers.py` |
 | Z-spread | `fixed_income_tutor.md` | `reference/fixed_income/z_spread.md` | `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb` | `tests/test_fixed_income.py` |
 | OAS | `fixed_income_tutor.md` | `reference/fixed_income/oas.md` | — (conceptual only, no code) | — |
 | credit curves, IG/HY | `fixed_income_tutor.md` | `reference/fixed_income/credit_curves.md` | `notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb` | — |

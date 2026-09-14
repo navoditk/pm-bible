@@ -25,6 +25,8 @@ number.
 | "Information ratio if portfolio returns are 3%/5%/2% and benchmark returns are 1%/2%/1%, unannualized?" | `pm.active.information_ratio` | `portfolio_returns=[0.03,0.05,0.02], benchmark_returns=[0.01,0.02,0.01], periods_per_year=1` | `2.0` |
 | "Expected information ratio for a manager with a 0.05 IC and 100 independent bets, no constraints?" | `pm.active.fundamental_law_ir` | `information_coefficient_value=0.05, breadth_value=100, transfer_coefficient_value=1.0` | `0.5` |
 | "Unconstrained tangency portfolio for two uncorrelated assets, mu=[8%,5%], vol=[20%,10%], risk-free 2%?" | `pm.optimization.max_sharpe` | `expected_returns=[0.08,0.05], covariance=[[0.04,0],[0,0.01]], risk_free_rate=0.02, long_only=False` | `[0.3333, 0.6667]` (≈) |
+| "Carry on a 5Y bond yielding 4.00% financed at 3.00% repo, held 1 year?" | `pm.fixed_income.carry.carry_return` | `coupon_income=4.0, price=100.0, financing_rate=0.03, horizon_years=1.0` | `0.01` |
+| "Breakeven inflation with nominal 4.5% and TIPS real yield 2.0%?" | `pm.fixed_income.linkers.breakeven_inflation` | `nominal_yield=0.045, real_yield=0.02` | `0.025` |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like

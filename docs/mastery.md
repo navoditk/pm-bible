@@ -34,6 +34,9 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Swap DV01 | `reference/fixed_income/swap_dv01.md` | untested | — |
 | Swap spread | `reference/fixed_income/swap_spread.md` | untested | — |
 | Treasury futures hedging | `reference/fixed_income/treasury_futures_hedging.md` | untested | — |
+| Carry and rolldown | `reference/fixed_income/carry_and_rolldown.md` | untested | — |
+| Repo, specialness, on-the-run/off-the-run | `reference/fixed_income/repo_and_financing.md` | untested | — |
+| TIPS and breakeven inflation | `reference/fixed_income/tips_and_breakevens.md` | untested | — |
 | Z-spread | `reference/fixed_income/z_spread.md` | untested | — |
 | OAS | `reference/fixed_income/oas.md` | untested | — |
 | Credit curves, IG/HY | `reference/fixed_income/credit_curves.md` | untested | — |

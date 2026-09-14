@@ -3,10 +3,12 @@
 ## Coverage
 bond math, duration, DV01, convexity, curve risk, KRD, spreads, curve
 construction, forward rates, curve trades (steepener/flattener/butterfly),
-swap DV01, swap spreads, Treasury futures hedging, Z-spread, credit curves,
-default/recovery, hazard rates, CDS spreads, CDS-bond basis, agency MBS
-pass-throughs, CPR/SMM/PSA prepayment, effective duration, extension and
-contraction (WAL response to rates).
+swap DV01, swap spreads, Treasury futures hedging, carry and rolldown,
+repo/specialness/on-the-run vs. off-the-run, TIPS and breakeven
+inflation, Z-spread, credit curves, default/recovery, hazard rates, CDS
+spreads, CDS-bond basis, agency MBS pass-throughs, CPR/SMM/PSA
+prepayment, effective duration, extension and contraction (WAL response
+to rates).
 
 Conceptual only, not implemented as code (be upfront about this if asked):
 OAS (including MBS negative convexity in *price* terms - see

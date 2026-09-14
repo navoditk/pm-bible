@@ -49,6 +49,9 @@ SECTIONS = [
         ("fixed_income/swap_dv01.md", "Swap DV01"),
         ("fixed_income/swap_spread.md", "Swap Spread"),
         ("fixed_income/treasury_futures_hedging.md", "Treasury Futures Hedging"),
+        ("fixed_income/carry_and_rolldown.md", "Carry and Rolldown"),
+        ("fixed_income/repo_and_financing.md", "Repo and Financing"),
+        ("fixed_income/tips_and_breakevens.md", "TIPS and Breakeven Inflation"),
     ]),
     ("Fixed Income", "Credit", [
         ("fixed_income/z_spread.md", "Z-Spread"),
@@ -124,6 +127,7 @@ NOTEBOOKS = {
     "notebooks/fixed_income/15_curve_trades_scenarios.ipynb": "15 Curve Trades and Scenarios",
     "notebooks/fixed_income/16_swaps_and_swap_spreads.ipynb": "16 Swaps and Swap Spreads",
     "notebooks/fixed_income/17_futures_and_hedging.ipynb": "17 Futures and Hedging",
+    "notebooks/fixed_income/31_carry_roll_and_financing.ipynb": "31 Carry, Roll, and Financing",
     "notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb": "20 Z-Spread and Credit Curves",
     "notebooks/fixed_income/21_default_recovery_and_cds.ipynb": "21 Default, Recovery, and CDS",
     "notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb": "22 Pass-Throughs and Prepayment",
