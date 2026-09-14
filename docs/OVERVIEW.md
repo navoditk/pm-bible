@@ -20,6 +20,15 @@ Financial logic must be documented, unit-aware, and tested
 (`AGENTS.md`). Deterministic functions are preferred over opaque
 frameworks, and manual reasoning comes before asking an agent.
 
+## Browse without cloning
+
+- **[Docs site](https://navoditk.github.io/pm-bible/)** — every
+  reference page, notebook, and use case as a searchable static site,
+  rebuilt automatically from `main` on every push
+- **[Artifact preview](https://claude.ai/code/artifact/902379a8-c198-4970-aca8-4cb71e2a3d5c)**
+  — a lighter single-page version for a quick look or if the docs site
+  above isn't reachable; refreshed manually, not on every push
+
 ## At a glance
 
 | | |

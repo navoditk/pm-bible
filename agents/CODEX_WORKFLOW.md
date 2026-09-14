@@ -27,3 +27,13 @@ After review:
 ## End-of-session prompt
 
 > Run relevant tests. Update docs/PROGRESS.md with what was completed, what concepts I demonstrated manually, known limitations, and the exact next notebook/reference page to open. Do not mark a concept complete unless its tests pass and a reference page exists.
+
+## Artifact preview — flag, don't skip
+
+If this session pushed or merged a change touching `reference/`,
+`curriculum/`, or `use_cases/`, the read-only Claude Artifact preview
+linked from `README.md` is now stale (see `AGENTS.md` rule 14). Codex
+has no Artifact publishing tool, so it can't refresh it directly — say
+so explicitly at the end of the session and tell the developer to ask
+Claude Code to run `scripts/build_artifact_preview.py` and republish it,
+rather than leaving the staleness unmentioned.

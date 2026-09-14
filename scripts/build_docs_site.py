@@ -41,6 +41,12 @@ For the interactive version — running the tests, `/master`, `/tutor`,
 - **[Curriculum](curriculum/bootcamp_01_foundations/README.md)** — the
   14-day bootcamp, day by day
 - **[Use cases](use_cases/index.md)** — realistic portfolio workflows
+
+There's also a lighter, single-page
+[Artifact preview](https://claude.ai/code/artifact/902379a8-c198-4970-aca8-4cb71e2a3d5c)
+covering the reference pages, curriculum, and use cases — useful if this
+site isn't reachable. It's refreshed manually rather than on every push;
+this site is the always-current one.
 """
 
 

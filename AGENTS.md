@@ -24,3 +24,13 @@ This is a learning-first financial analytics repository.
 11. Run relevant tests before proposing a commit.
 12. Update `docs/PROGRESS.md` at module completion.
 13. Never commit secrets, credentials, tokens, generated virtual environments, or local `.env` files.
+14. After pushing or merging to `main` a change that touches `reference/`,
+    `curriculum/`, or `use_cases/` (the content the Claude Artifact
+    preview embeds), refresh and republish it: run
+    `scripts/build_artifact_preview.py`, then republish to the *same*
+    URL already linked from `README.md` — never a new one. This needs
+    the Claude Code Artifact tool. If you're working via Codex or
+    Copilot CLI, you don't have that tool — say so explicitly and tell
+    the developer to ask Claude Code to publish the refresh, rather than
+    silently skipping it. See `agents/CLAUDE_CODE_WORKFLOW.md`,
+    `agents/CODEX_WORKFLOW.md`, `agents/COPILOT_WORKFLOW.md`.
