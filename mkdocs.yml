@@ -63,6 +63,7 @@ nav:
       - Bootcamp (14 Days): curriculum/bootcamp_01_foundations/README.md
   - Reference:
       - Index: reference/index.md
+      - Glossary: reference/glossary.md
       - Portfolio Foundations:
           - Portfolio Return: reference/concepts/portfolio_return.md
           - Covariance: reference/concepts/covariance.md
@@ -144,6 +145,7 @@ nav:
           - Agentic PM Analytics: reference/concepts/agentic_pm_analytics.md
   - Notebooks:
       - Foundations:
+          - "00 Orientation": notebooks/foundations/00_orientation.ipynb
           - "01 Returns and Compounding": notebooks/foundations/01_returns_and_compounding.ipynb
           - "02 Covariance and Diversification": notebooks/foundations/02_covariance_and_diversification.ipynb
           - "03 Risk Contribution": notebooks/foundations/03_risk_contribution.ipynb
@@ -179,6 +181,7 @@ nav:
           - "11 Scenarios": notebooks/integration/11_scenarios.ipynb
           - "12 Attribution": notebooks/integration/12_attribution.ipynb
           - "25 Brinson and Rebalancing": notebooks/integration/25_brinson_and_rebalancing.ipynb
+          - "30 Capstone Portfolio Review": notebooks/integration/30_capstone_portfolio_review.ipynb
   - Use Cases:
       - Index: use_cases/index.md
       - Duration Hedging: use_cases/duration_hedging/README.md

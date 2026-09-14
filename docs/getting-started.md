@@ -37,6 +37,16 @@ pip install -e ".[dev]"
 pytest -q
 ```
 
+## Starting from zero
+
+If you haven't taken a portfolio-theory or linear-algebra course before,
+start with `notebooks/foundations/00_orientation.ipynb` first — it
+confirms your environment actually works, explains the PREDICT/MANUAL
+FIRST/ORAL CHECK cycle every later notebook uses, and walks through the
+one piece of matrix math (`w' Sigma w`) the rest of the curriculum
+assumes. Keep [reference/glossary.md](../reference/glossary.md) open
+alongside any notebook as a fast look-up for unfamiliar terms.
+
 ## The intended experience
 
 A concept such as covariance should be encountered in this order:
@@ -73,4 +83,4 @@ The default first module is:
 - `curriculum/bootcamp_01_foundations/README.md`
 - `notebooks/foundations/01_returns_and_compounding.ipynb`
 
-This is the ideal place to begin if you want a structured introduction to returns, diversification, risk, and portfolio basics.
+This is the ideal place to begin if you want a structured introduction to returns, diversification, risk, and portfolio basics. If you're starting from zero, do `00_orientation.ipynb` first — see "Starting from zero" above.

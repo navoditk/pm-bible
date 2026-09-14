@@ -86,6 +86,15 @@ def build_pages():
         "html": md_to_html(strip_h1(overview)),
     })
 
+    glossary = (ROOT / "reference" / "glossary.md").read_text()
+    pages.append({
+        "id": "start-glossary",
+        "section": "Start Here",
+        "subsection": None,
+        "title": "Glossary",
+        "html": rewrite_xrefs(md_to_html(strip_h1(glossary)), "glossary.md"),
+    })
+
     curriculum = (ROOT / "curriculum" / "bootcamp_01_foundations" / "README.md").read_text()
     pages.append({
         "id": "start-curriculum",

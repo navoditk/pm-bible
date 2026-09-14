@@ -1,5 +1,7 @@
 # PM/FICC Reference Index
 
+New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-per-term cheat sheet before diving into a full page.
+
 ## Portfolio Foundations
 
 - [Portfolio Return](concepts/portfolio_return.md)

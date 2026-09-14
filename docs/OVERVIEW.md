@@ -35,8 +35,8 @@ frameworks, and manual reasoning comes before asking an agent.
 |---|---|
 | Analytics code | 1,133 lines across 26 modules in `src/pm/` |
 | Tests | 144 passing, 14 test files |
-| Notebooks | 29, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
-| Reference pages | 64 |
+| Notebooks | 31, across 7 tracks (foundations, optimization, active, fixed income, FX/commodities, equity, integration) |
+| Reference pages | 65 (including a glossary) |
 | Roadmap phases | 13 of 13 complete |
 | Bootcamp curriculum | 14 days (5 core + 9 extension) |
 | Use-case workflows | 7 |
@@ -104,6 +104,27 @@ contribution to tracking error, and `group_risk_contribution`; notebook
 19 (VaR/ES) now plots the shaded VaR/ES tail and demonstrates checking a
 risk model's assumed volatility against what a sample actually realized.
 
+A pedagogy review of all 29 notebooks found a quality cliff at notebook
+13: the earliest notebooks — the ones a true beginner hits first — were
+the thinnest (5/12 template compliance on average, no plots anywhere
+despite matplotlib being a dependency, zero `assert`-based self-checks
+across all 29 notebooks, five with broken imports that had never been
+executed). Notebooks 02, 03, 05, 07, 11, and 12 are rebuilt to the
+standard the later notebooks already met — self-check asserts on every
+`MANUAL FIRST` cell, plots where the audit specifically flagged one
+missing, PREDICT questions moved before their code cells. `notebooks/foundations/00_orientation.ipynb`
+is a new Day 0 for readers starting from zero: environment setup, the
+PREDICT/MANUAL FIRST/ORAL CHECK cycle explained, and a linear-algebra
+primer building `w' Sigma w` by hand before it appears "for real" in
+notebook 02. `reference/glossary.md` is a one-line-per-term cheat sheet
+across the whole curriculum. `notebooks/integration/30_capstone_portfolio_review.ipynb`
+is a real capstone — using `data/mock_portfolio.csv`, `mock_benchmark.csv`,
+and `mock_bonds.csv` (previously unused by any notebook) to compose risk
+decomposition, active risk, bond-level DV01, a rates and a credit
+scenario, and Brinson attribution into the one-page summary a PM would
+actually read, closing out notebook 12's stub "Capstone" section that
+was never built out.
+
 ## What's implemented vs. conceptual-only
 
 The repository is deliberately explicit about this split — a reference
@@ -130,6 +151,11 @@ The actual depth comes from the derive-code-test cycle, not from
 reading.
 
 ## Mastering the curriculum
+
+Starting from zero? Open `notebooks/foundations/00_orientation.ipynb`
+first and keep `reference/glossary.md` open as a look-up while you work
+— see "A pedagogy review..." above for what else changed to support
+this.
 
 - `/tutor <topic>` — a live, adaptive Socratic session on one concept,
   grounded in this repo's own reference pages, notebooks, and tests.
