@@ -18,14 +18,16 @@ jobs:
       - name: Set up Python
         run: uv python install 3.12
 
-      - name: Install project
-        run: uv pip install --system -e ".[dev]"
+      - name: Create venv and install project
+        run: |
+          uv venv --python 3.12
+          uv pip install -e ".[dev]"
 
       - name: Lint (ruff)
-        run: ruff check src tests scripts
+        run: .venv/bin/ruff check src tests scripts
 
       - name: Repo structure check
-        run: python scripts/check_repo.py
+        run: .venv/bin/python scripts/check_repo.py
 
       - name: Test (pytest)
-        run: pytest
+        run: .venv/bin/pytest

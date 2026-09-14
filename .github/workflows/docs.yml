@@ -26,14 +26,16 @@ jobs:
       - name: Set up Python
         run: uv python install 3.12
 
-      - name: Install project
-        run: uv pip install --system -e ".[docs]"
+      - name: Create venv and install project
+        run: |
+          uv venv --python 3.12
+          uv pip install -e ".[docs]"
 
       - name: Stage docs site source
-        run: python scripts/build_docs_site.py
+        run: .venv/bin/python scripts/build_docs_site.py
 
       - name: Build site
-        run: mkdocs build --strict
+        run: .venv/bin/mkdocs build --strict
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
