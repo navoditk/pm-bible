@@ -31,6 +31,25 @@
       "description": ""
     },
     {
+      "name": "component_contribution_to_tracking_error",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "portfolio_weights",
+          "default": null
+        },
+        {
+          "name": "benchmark_weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": "Each asset's marginal contribution to tracking error, scaled by its"
+    },
+    {
       "name": "effective_breadth",
       "module": "pm.active",
       "parameters": [
@@ -97,6 +116,44 @@
         }
       ],
       "description": "Realized information ratio: annualized mean active return per unit"
+    },
+    {
+      "name": "marginal_contribution_to_tracking_error",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "portfolio_weights",
+          "default": null
+        },
+        {
+          "name": "benchmark_weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        }
+      ],
+      "description": "How much tracking error changes per unit change in each asset's"
+    },
+    {
+      "name": "realized_tracking_error",
+      "module": "pm.active",
+      "parameters": [
+        {
+          "name": "portfolio_returns",
+          "default": null
+        },
+        {
+          "name": "benchmark_returns",
+          "default": null
+        },
+        {
+          "name": "periods_per_year",
+          "default": "12"
+        }
+      ],
+      "description": "Ex-post (realized) tracking error: annualized volatility of the"
     },
     {
       "name": "tracking_error",
@@ -1204,6 +1261,52 @@
       "description": "Covered interest parity (CIP) forward rate, simple interest."
     },
     {
+      "name": "efficient_frontier",
+      "module": "pm.optimization",
+      "parameters": [
+        {
+          "name": "expected_returns",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "n_points",
+          "default": "20"
+        },
+        {
+          "name": "long_only",
+          "default": "True"
+        }
+      ],
+      "description": "Trace the efficient frontier: for `n_points` target returns spanning"
+    },
+    {
+      "name": "max_sharpe",
+      "module": "pm.optimization",
+      "parameters": [
+        {
+          "name": "expected_returns",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "risk_free_rate",
+          "default": "0.0"
+        },
+        {
+          "name": "long_only",
+          "default": "True"
+        }
+      ],
+      "description": "Tangency portfolio: the weights that maximize the Sharpe ratio"
+    },
+    {
       "name": "mean_variance",
       "module": "pm.optimization",
       "parameters": [
@@ -1229,6 +1332,29 @@
         }
       ],
       "description": "Mean-variance optimal weights under the standard utility"
+    },
+    {
+      "name": "min_tracking_error",
+      "module": "pm.optimization",
+      "parameters": [
+        {
+          "name": "benchmark_weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "long_only",
+          "default": "True"
+        },
+        {
+          "name": "max_weight",
+          "default": "None"
+        }
+      ],
+      "description": "Portfolio weights minimizing tracking error to a benchmark:"
     },
     {
       "name": "minimum_variance",
@@ -1259,6 +1385,25 @@
         }
       ],
       "description": ""
+    },
+    {
+      "name": "downside_deviation",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "returns",
+          "default": null
+        },
+        {
+          "name": "target",
+          "default": "0.0"
+        },
+        {
+          "name": "periods_per_year",
+          "default": "12"
+        }
+      ],
+      "description": "Semi-deviation below `target` (Sortino's risk measure): like"
     },
     {
       "name": "log_returns",
@@ -1296,6 +1441,21 @@
         }
       ],
       "description": ""
+    },
+    {
+      "name": "realized_volatility",
+      "module": "pm.returns",
+      "parameters": [
+        {
+          "name": "returns",
+          "default": null
+        },
+        {
+          "name": "periods_per_year",
+          "default": "12"
+        }
+      ],
+      "description": "Ex-post portfolio volatility: annualized sample standard deviation"
     },
     {
       "name": "sharpe_ratio",
@@ -1360,6 +1520,25 @@
         }
       ],
       "description": "Gaussian expected shortfall (average loss beyond the VaR threshold)."
+    },
+    {
+      "name": "group_risk_contribution",
+      "module": "pm.risk",
+      "parameters": [
+        {
+          "name": "weights",
+          "default": null
+        },
+        {
+          "name": "covariance",
+          "default": null
+        },
+        {
+          "name": "groups",
+          "default": null
+        }
+      ],
+      "description": "Aggregate component_risk_contribution by group (sector, country,"
     },
     {
       "name": "marginal_risk_contribution",

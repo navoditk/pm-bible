@@ -57,10 +57,13 @@ If no specialized persona matches the topic, fall back to
 | covariance, diversification | `concept_tutor.md` | `reference/concepts/covariance.md` | `notebooks/foundations/02_covariance_and_diversification.ipynb` | `tests/test_risk.py` |
 | portfolio volatility | `concept_tutor.md` | `reference/concepts/portfolio_volatility.md` | `notebooks/foundations/02_covariance_and_diversification.ipynb` | `tests/test_risk.py` |
 | marginal/component risk contribution | `concept_tutor.md` | `reference/concepts/risk_contribution.md` | `notebooks/foundations/03_risk_contribution.ipynb` | `tests/test_risk.py` |
+| MCTE, group risk decomposition | `concept_tutor.md` | `reference/concepts/mcte_and_group_risk.md` | `notebooks/foundations/03_risk_contribution.ipynb`, `notebooks/active/06_active_portfolio.ipynb` | `tests/test_risk.py`, `tests/test_active.py` |
 | Sharpe ratio | `concept_tutor.md` | `reference/concepts/sharpe_ratio.md` | `notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb` | `tests/test_returns.py` |
+| downside deviation, Sortino, realized risk | `concept_tutor.md` | `reference/concepts/downside_risk.md` | `notebooks/active/19_var_and_expected_shortfall.ipynb` | `tests/test_returns.py`, `tests/test_active.py` |
 | drawdown | `concept_tutor.md` | `reference/concepts/drawdown.md` | `notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb` | `tests/test_returns.py` |
 | benchmark basics, active return/weight | `concept_tutor.md` | `reference/concepts/benchmark_basics.md`, `tracking_error.md` | `notebooks/foundations/13_sharpe_drawdown_benchmark.ipynb` | `tests/test_active.py` |
-| mean-variance optimization, efficient frontier | `portfolio_construction_tutor.md` | `reference/concepts/mean_variance_optimization.md` | `notebooks/optimization/04_efficient_frontier.ipynb`, `05_constrained_optimization.ipynb` | `tests/test_optimization.py` |
+| mean-variance optimization | `portfolio_construction_tutor.md` | `reference/concepts/mean_variance_optimization.md` | `notebooks/optimization/04_efficient_frontier.ipynb`, `05_constrained_optimization.ipynb` | `tests/test_optimization.py` |
+| efficient frontier, tangency portfolio, max Sharpe, min tracking error | `portfolio_construction_tutor.md` | `reference/concepts/efficient_frontier.md` | `notebooks/optimization/04_efficient_frontier.ipynb` | `tests/test_optimization.py` |
 | tracking error, active weights | `concept_tutor.md` | `reference/concepts/tracking_error.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
 | information ratio | `concept_tutor.md` | `reference/concepts/information_ratio.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |
 | information coefficient, IC | `concept_tutor.md` | `reference/concepts/information_coefficient.md` | `notebooks/active/06_active_portfolio.ipynb` | `tests/test_active.py` |

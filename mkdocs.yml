@@ -68,12 +68,15 @@ nav:
           - Covariance: reference/concepts/covariance.md
           - Portfolio Volatility: reference/concepts/portfolio_volatility.md
           - Risk Contribution: reference/concepts/risk_contribution.md
+          - MCTE and Group Risk Decomposition: reference/concepts/mcte_and_group_risk.md
           - Sharpe Ratio: reference/concepts/sharpe_ratio.md
+          - Downside Deviation and Realized Risk: reference/concepts/downside_risk.md
           - Drawdown: reference/concepts/drawdown.md
           - Benchmark Basics: reference/concepts/benchmark_basics.md
           - Tracking Error: reference/concepts/tracking_error.md
       - Optimization:
           - Mean-Variance Optimization: reference/concepts/mean_variance_optimization.md
+          - Efficient Frontier and Tangency Portfolio: reference/concepts/efficient_frontier.md
       - Active Management:
           - Information Ratio: reference/concepts/information_ratio.md
           - Information Coefficient: reference/concepts/information_coefficient.md

@@ -79,9 +79,15 @@ RELATED = {
         ("Stress testing", "concepts/stress_testing.md"),
     ],
     "concepts/mean_variance_optimization.md": [
+        ("Efficient frontier and tangency portfolio", "concepts/efficient_frontier.md"),
         ("Covariance shrinkage", "concepts/covariance_shrinkage.md"),
         ("Risk parity", "concepts/risk_parity.md"),
         ("Transaction costs and rebalancing", "concepts/transaction_costs_and_rebalancing.md"),
+    ],
+    "concepts/efficient_frontier.md": [
+        ("Mean-variance optimization", "concepts/mean_variance_optimization.md"),
+        ("Black-Litterman", "concepts/black_litterman.md"),
+        ("Sharpe ratio", "concepts/sharpe_ratio.md"),
     ],
     "concepts/multi_period_optimization.md": [
         ("Transaction costs and rebalancing", "concepts/transaction_costs_and_rebalancing.md"),
@@ -103,6 +109,12 @@ RELATED = {
     "concepts/risk_contribution.md": [
         ("Portfolio volatility", "concepts/portfolio_volatility.md"),
         ("Factor risk contribution", "concepts/factor_risk_contribution.md"),
+        ("MCTE and group risk decomposition", "concepts/mcte_and_group_risk.md"),
+    ],
+    "concepts/mcte_and_group_risk.md": [
+        ("Risk contribution", "concepts/risk_contribution.md"),
+        ("Tracking error", "concepts/tracking_error.md"),
+        ("Factor risk contribution", "concepts/factor_risk_contribution.md"),
     ],
     "concepts/risk_parity.md": [
         ("Risk contribution", "concepts/risk_contribution.md"),
@@ -117,6 +129,13 @@ RELATED = {
     "concepts/sharpe_ratio.md": [
         ("Portfolio volatility", "concepts/portfolio_volatility.md"),
         ("Drawdown", "concepts/drawdown.md"),
+        ("Downside deviation and realized risk", "concepts/downside_risk.md"),
+    ],
+    "concepts/downside_risk.md": [
+        ("Information ratio", "concepts/information_ratio.md"),
+        ("Sharpe ratio", "concepts/sharpe_ratio.md"),
+        ("Drawdown", "concepts/drawdown.md"),
+        ("Value at risk", "concepts/value_at_risk.md"),
     ],
     "concepts/stress_testing.md": [
         ("Value at risk", "concepts/value_at_risk.md"),
@@ -125,11 +144,14 @@ RELATED = {
     "concepts/tracking_error.md": [
         ("Benchmark basics", "concepts/benchmark_basics.md"),
         ("Information ratio", "concepts/information_ratio.md"),
+        ("MCTE and group risk decomposition", "concepts/mcte_and_group_risk.md"),
         ("Brinson attribution", "concepts/brinson_attribution.md"),
         ("Factor risk", "concepts/factor_risk.md"),
     ],
     "concepts/information_ratio.md": [
         ("Tracking error", "concepts/tracking_error.md"),
+        ("MCTE and group risk decomposition", "concepts/mcte_and_group_risk.md"),
+        ("Downside deviation and realized risk", "concepts/downside_risk.md"),
         ("Fundamental Law", "concepts/fundamental_law.md"),
         ("Sharpe ratio", "concepts/sharpe_ratio.md"),
     ],

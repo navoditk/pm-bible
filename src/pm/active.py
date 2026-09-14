@@ -15,6 +15,47 @@ def tracking_error(portfolio_weights, benchmark_weights, covariance):
 def active_return(portfolio_return, benchmark_return):
     return float(portfolio_return - benchmark_return)
 
+def realized_tracking_error(portfolio_returns, benchmark_returns, periods_per_year=12):
+    """Ex-post (realized) tracking error: annualized volatility of the
+    active-return series - the same active risk `tracking_error` computes
+    ex-ante from a covariance matrix and active weights, but measured
+    after the fact from an actual return history. See
+    `information_ratio`, which uses this as its denominator.
+    """
+    p = np.asarray(portfolio_returns, dtype=float)
+    b = np.asarray(benchmark_returns, dtype=float)
+    if p.shape != b.shape:
+        raise ValueError("portfolio_returns and benchmark_returns must be the same shape.")
+    active = finite_array(p - b, min_size=2)
+    std = active.std(ddof=1)
+    if not np.isfinite(std) or std <= 0:
+        raise ValueError("Active return volatility must be positive and finite.")
+    return float(std * np.sqrt(periods_per_year))
+
+def marginal_contribution_to_tracking_error(portfolio_weights, benchmark_weights, covariance):
+    """How much tracking error changes per unit change in each asset's
+    active weight, holding the others fixed - the number a benchmark-
+    relative PM uses to decide which position to trim first to cut TE
+    fastest. Mathematically `pm.risk.marginal_risk_contribution` applied
+    at the active weights `a = w_p - w_b` instead of raw portfolio
+    weights, against tracking error instead of total volatility.
+    """
+    a = active_weights(portfolio_weights, benchmark_weights)
+    cov = np.asarray(covariance, dtype=float)
+    te = tracking_error(portfolio_weights, benchmark_weights, cov)
+    if te <= 0:
+        raise ValueError("Tracking error must be positive.")
+    return (cov @ a) / te
+
+def component_contribution_to_tracking_error(portfolio_weights, benchmark_weights, covariance):
+    """Each asset's marginal contribution to tracking error, scaled by its
+    own active weight - sums exactly to total tracking error, so this is
+    the per-position breakdown of "where is TE actually coming from."
+    """
+    a = active_weights(portfolio_weights, benchmark_weights)
+    mcte = marginal_contribution_to_tracking_error(portfolio_weights, benchmark_weights, covariance)
+    return a * mcte
+
 def information_ratio(portfolio_returns, benchmark_returns, periods_per_year=12):
     """Realized information ratio: annualized mean active return per unit
     of active-return volatility, from matched portfolio/benchmark return

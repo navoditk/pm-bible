@@ -1,7 +1,9 @@
 import numpy as np
+import pytest
 
 from pm.risk import (
     component_risk_contribution,
+    group_risk_contribution,
     marginal_risk_contribution,
     portfolio_variance,
     portfolio_volatility,
@@ -27,3 +29,30 @@ def test_component_risk_sums_to_volatility():
     w = np.array([0.5, 0.5])
     cr = component_risk_contribution(w, cov)
     assert np.isclose(cr.sum(), portfolio_volatility(w, cov))
+
+def test_group_risk_contribution_sums_to_total_volatility():
+    cov = np.array([
+        [0.04, 0.01, 0.00, 0.00],
+        [0.01, 0.03, 0.00, 0.00],
+        [0.00, 0.00, 0.02, 0.005],
+        [0.00, 0.00, 0.005, 0.01],
+    ])
+    w = np.array([0.3, 0.2, 0.25, 0.25])
+    groups = ["Tech", "Tech", "Energy", "Energy"]
+    grouped = group_risk_contribution(w, cov, groups)
+    assert set(grouped) == {"Tech", "Energy"}
+    assert np.isclose(sum(grouped.values()), portfolio_volatility(w, cov))
+
+def test_group_risk_contribution_matches_component_when_groups_are_unique():
+    cov = np.array([[0.04, 0.005], [0.005, 0.01]])
+    w = np.array([0.5, 0.5])
+    grouped = group_risk_contribution(w, cov, groups=["A", "B"])
+    component = component_risk_contribution(w, cov)
+    assert np.isclose(grouped["A"], component[0])
+    assert np.isclose(grouped["B"], component[1])
+
+def test_group_risk_contribution_rejects_mismatched_length():
+    cov = np.array([[0.04, 0.0], [0.0, 0.01]])
+    w = np.array([0.5, 0.5])
+    with pytest.raises(ValueError, match="one label per asset"):
+        group_risk_contribution(w, cov, groups=["A", "B", "C"])
