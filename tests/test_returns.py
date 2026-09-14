@@ -7,6 +7,7 @@ from pm.returns import (
     downside_deviation,
     log_returns,
     max_drawdown,
+    money_weighted_return,
     portfolio_return,
     realized_volatility,
     sharpe_ratio,
@@ -84,3 +85,24 @@ def test_downside_deviation_less_than_or_equal_to_total_volatility():
     # the symmetric (upside+downside) volatility of the same series.
     returns = [0.05, -0.03, 0.02, -0.04, 0.01, -0.01]
     assert downside_deviation(returns, target=0.0) <= realized_volatility(returns)
+
+def test_money_weighted_return_matches_simple_compounding_with_no_interim_flows():
+    # -100 at t=0, +121 at t=2, no interim cash flows: should reduce to a
+    # plain compound annual rate, (121/100)^(1/2) - 1 = 10%.
+    mwr = money_weighted_return([-100.0, 121.0], [0.0, 2.0])
+    assert np.isclose(mwr, 0.10, atol=1e-8)
+
+def test_money_weighted_return_classic_twr_divergence_example():
+    # The canonical TWR-vs-MWR textbook case: invest 100 at t=0; the
+    # portfolio doubles to 200 by t=1 (period-1 return +100%), the
+    # investor then contributes another 200 (now invested: 400); the
+    # portfolio ends at 200 by t=2 (period-2 return -50%).
+    # TWR = (1+1.00)*(1-0.50) - 1 = 0% - a wash.
+    twr = cumulative_return([1.00, -0.50])
+    assert np.isclose(twr, 0.0, atol=1e-8)
+    # MWR weights the -50% period (where 400 was at risk) far more
+    # heavily than the +100% period (where only 100 was at risk), so it
+    # comes out sharply negative even though TWR is flat.
+    mwr = money_weighted_return([-100.0, -200.0, 200.0], [0.0, 1.0, 2.0])
+    assert np.isclose(mwr, -0.26794919, atol=1e-6)
+    assert mwr < twr

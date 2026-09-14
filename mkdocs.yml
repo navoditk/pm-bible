@@ -149,6 +149,7 @@ nav:
           - Fixed-Income Attribution: reference/concepts/fixed_income_attribution.md
           - Transaction Costs and Rebalancing: reference/concepts/transaction_costs_and_rebalancing.md
           - Liquidity: reference/concepts/liquidity.md
+          - Performance Measurement (TWR vs. MWR): reference/concepts/performance_measurement.md
       - Advanced Portfolio Construction:
           - Covariance Shrinkage: reference/concepts/covariance_shrinkage.md
           - Black-Litterman: reference/concepts/black_litterman.md
@@ -157,6 +158,9 @@ nav:
           - Hierarchical Risk Parity: reference/concepts/hierarchical_risk_parity.md
           - Regime-Aware Allocation: reference/concepts/regime_aware_allocation.md
           - Multi-Period Optimization: reference/concepts/multi_period_optimization.md
+      - Asset Allocation:
+          - Strategic and Tactical Asset Allocation: reference/concepts/strategic_and_tactical_asset_allocation.md
+          - Liability-Driven Investing: reference/concepts/liability_driven_investing.md
       - Agentic PM Analytics:
           - Agentic PM Analytics: reference/concepts/agentic_pm_analytics.md
   - Notebooks:
@@ -203,6 +207,7 @@ nav:
           - "12 Attribution": notebooks/integration/12_attribution.ipynb
           - "25 Brinson and Rebalancing": notebooks/integration/25_brinson_and_rebalancing.ipynb
           - "30 Capstone Portfolio Review": notebooks/integration/30_capstone_portfolio_review.ipynb
+          - "35 Performance, LDI, and Asset Allocation": notebooks/integration/35_performance_ldi_and_asset_allocation.ipynb
   - Use Cases:
       - Index: use_cases/index.md
       - Duration Hedging: use_cases/duration_hedging/README.md
@@ -227,5 +232,6 @@ nav:
       - Equity: resources/equity.md
       - FX and Commodities: resources/fx_and_commodities.md
       - Derivatives: resources/derivatives.md
+      - Asset Allocation and Performance: resources/allocation_and_performance.md
       - Implementation: resources/implementation.md
   - Progress: docs/PROGRESS.md

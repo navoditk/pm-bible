@@ -117,6 +117,7 @@ If no specialized persona matches the topic, fall back to
 | fixed-income attribution (carry/curve/spread) | `concept_tutor.md` | `reference/concepts/fixed_income_attribution.md` | `notebooks/integration/12_attribution.ipynb` | `tests/test_attribution.py` |
 | transaction costs, rebalancing | `concept_tutor.md` | `reference/concepts/transaction_costs_and_rebalancing.md` | `notebooks/integration/25_brinson_and_rebalancing.ipynb` | `tests/test_attribution.py` |
 | liquidity risk | `concept_tutor.md` | `reference/concepts/liquidity.md` | — (conceptual only, no code) | — |
+| performance measurement, time-weighted return, money-weighted return, TWR, MWR, GIPS | `concept_tutor.md` | `reference/concepts/performance_measurement.md` | `notebooks/integration/35_performance_ldi_and_asset_allocation.ipynb` | `tests/test_returns.py` |
 | covariance shrinkage, robust covariance | `portfolio_construction_tutor.md` | `reference/concepts/covariance_shrinkage.md` | `notebooks/optimization/26_shrinkage_and_black_litterman.ipynb` | `tests/test_robust.py` |
 | Black-Litterman | `portfolio_construction_tutor.md` | `reference/concepts/black_litterman.md` | `notebooks/optimization/26_shrinkage_and_black_litterman.ipynb` | `tests/test_robust.py` |
 | risk parity | `portfolio_construction_tutor.md` | `reference/concepts/risk_parity.md` | `notebooks/optimization/27_risk_parity_and_robust_optimization.ipynb` | `tests/test_robust.py` |
@@ -124,6 +125,8 @@ If no specialized persona matches the topic, fall back to
 | hierarchical risk parity | `portfolio_construction_tutor.md` | `reference/concepts/hierarchical_risk_parity.md` | — (conceptual only, no code) | — |
 | regime-aware allocation | `portfolio_construction_tutor.md` | `reference/concepts/regime_aware_allocation.md` | — (conceptual only, no code) | — |
 | multi-period optimization | `portfolio_construction_tutor.md` | `reference/concepts/multi_period_optimization.md` | — (conceptual only, no code) | — |
+| strategic asset allocation, tactical asset allocation, SAA, TAA, policy portfolio | `portfolio_construction_tutor.md` | `reference/concepts/strategic_and_tactical_asset_allocation.md` | `notebooks/integration/35_performance_ldi_and_asset_allocation.ipynb` | — (conceptual only, no code — reuses existing optimization functions) |
+| liability-driven investing, LDI, funded ratio, surplus | `concept_tutor.md` | `reference/concepts/liability_driven_investing.md` | `notebooks/integration/35_performance_ldi_and_asset_allocation.ipynb` | `tests/test_allocation.py` |
 | agentic PM analytics, tool schemas | `concept_tutor.md` | `reference/concepts/agentic_pm_analytics.md` | — (no notebook — see `.claude/skills/pm-query/SKILL.md` instead) | `tests/test_tool_schema.py` |
 | dividend discount model, Gordon growth | `concept_tutor.md` | `reference/equity/dividend_discount_model.md` | `notebooks/equity/28_equity_valuation_and_capm.ipynb` | `tests/test_equity.py` |
 | relative valuation multiples, justified P/E, PEG | `concept_tutor.md` | `reference/equity/relative_valuation_multiples.md` | `notebooks/equity/28_equity_valuation_and_capm.ipynb` | `tests/test_equity.py` |

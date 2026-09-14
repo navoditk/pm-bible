@@ -33,6 +33,9 @@ number.
 | "Black-Scholes call price: spot 100, strike 100, rate 5%, vol 20%, 1 year to expiry?" | `pm.options.black_scholes_call_price` | `spot=100.0, strike=100.0, rate=0.05, volatility=0.20, time_to_expiry=1.0` | `10.450584` (≈) |
 | "Delta of that same call?" | `pm.options.delta_call` | `spot=100.0, strike=100.0, rate=0.05, volatility=0.20, time_to_expiry=1.0` | `0.636831` (≈) |
 | "What's the swaption's vega if the swap rate moves 1bp?" | none — conceptual only | — | should say plainly that a real swaption needs an annuity/curve factor `pm.options.black76_call_price` doesn't build, and point to `reference/derivatives/options_on_forwards_and_rates_options.md` rather than approximating one |
+| "Money-weighted return for cash flows of -100 at t=0, -200 at t=1, and +200 at t=2?" | `pm.returns.money_weighted_return` | `cash_flows=[-100.0,-200.0,200.0], times=[0.0,1.0,2.0]` | `-0.267949` (≈, the classic TWR-vs-MWR divergence case, where the matching TWR is 0%) |
+| "Funded ratio for a plan with $90M assets and $100M liabilities?" | `pm.allocation.funded_ratio` | `assets=90.0, liabilities=100.0` | `0.90` |
+| "What's the plan's ideal strategic asset allocation?" | none — conceptual only | — | should say plainly that SAA is this repo's existing optimization tools (`mean_variance_optimization`, `black_litterman_posterior`) reapplied at the policy level, not a separate calculation, and ask for the actual capital-market-expectation inputs rather than inventing an allocation |
 | "What's the OAS of this callable bond?" | none — conceptual only | — | should say plainly that OAS isn't implemented, and point to `reference/fixed_income/oas.md` rather than approximating one |
 
 ## What a passing run looks like

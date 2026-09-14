@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from scipy.optimize import brentq
 
 from ._utils import finite_array
 
@@ -22,6 +23,30 @@ def portfolio_return(asset_returns, weights):
 
 def cumulative_return(returns):
     return float(np.prod(1 + finite_array(returns)) - 1)
+
+def money_weighted_return(cash_flows, times):
+    """Money-weighted return (dollar-weighted return / IRR): the constant
+    periodic rate r that sets the NPV of all cash flows to zero,
+    sum(cf_i / (1+r)^t_i) = 0.
+
+    cash_flows are signed (negative = contribution/investment, positive =
+    withdrawal/ending value); times are in years from the start of the
+    measurement period. Unlike cumulative_return (the time-weighted
+    return, which geometrically links sub-period returns and so is
+    unaffected by cash-flow timing/size - see
+    reference/concepts/performance_measurement.md), money-weighted return
+    is exactly as sensitive to when and how much capital was invested as
+    an investor's own realized dollar return actually is.
+
+    Solved via bisection (brentq) over a wide (-0.99, 5.0) bracket. This
+    assumes a single real root in that range, which holds for a typical
+    contribution/withdrawal cash-flow pattern (one sign change, by
+    Descartes' rule of signs) but is not guaranteed for cash flows that
+    change sign more than once.
+    """
+    def npv(rate):
+        return sum(cf / (1 + rate) ** t for cf, t in zip(cash_flows, times))
+    return float(brentq(npv, -0.99, 5.0))
 
 
 def sharpe_ratio(returns, risk_free_rate=0.0, periods_per_year=12):

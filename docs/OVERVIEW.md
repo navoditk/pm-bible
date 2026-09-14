@@ -33,14 +33,14 @@ frameworks, and manual reasoning comes before asking an agent.
 
 | | |
 |---|---|
-| Analytics code | 1,443 lines across 29 modules in `src/pm/` |
-| Tests | 183 passing, 16 test files |
-| Notebooks | 35, across 8 tracks (foundations, optimization, active, fixed income, FX/commodities, derivatives, equity, integration) |
-| Reference pages | 80 (including a glossary) |
-| Roadmap phases | 14 of 14 complete |
-| Bootcamp curriculum | 16 days (5 core + 11 extension) |
+| Analytics code | 1,487 lines across 30 modules in `src/pm/` |
+| Tests | 190 passing, 17 test files |
+| Notebooks | 36, across 8 tracks (foundations, optimization, active, fixed income, FX/commodities, derivatives, equity, integration) |
+| Reference pages | 83 (including a glossary) |
+| Roadmap phases | 15 of 15 complete |
+| Bootcamp curriculum | 17 days (5 core + 12 extension) |
 | Use-case workflows | 7 |
-| Curated resource files | 7, 275 lines total |
+| Curated resource files | 8, 291 lines total |
 | Claude Code skills | `/tutor`, `/pm-query`, `/master` |
 
 Module size is small by design — the median `src/pm` module is roughly
@@ -67,6 +67,7 @@ production-grade curve or optimization engine beyond notebook exercises.
 | 12 | Agentic PM analytics — tool schemas, `/pm-query`, `/tutor`, evals, grounding & guardrails |
 | 13 | **Equity portfolio management** — DDM, relative valuation, CAPM/beta, factor investing, active share, shareholder yield |
 | 14 | **Derivatives and options** — Black-Scholes, the Greeks, put-call parity, implied volatility, Black-76, swaptions/caps/floors and option strategies (conceptual) |
+| 15 | **Asset allocation and performance measurement** — time-weighted vs. money-weighted return, GIPS (conceptual), liability-driven investing (funded ratio, surplus), strategic/tactical asset allocation (conceptual) |
 
 Fixed income (Phases 5–8) remains the deepest vein by page count and
 code volume — rates, credit, and mortgages are each fully built out with
@@ -106,6 +107,23 @@ price) — with swaptions/caps/floors and option strategies (covered call,
 protective put, collar) covered conceptually, since a real swaption needs
 a curve-based annuity factor and a strategy payoff is a composition of
 already-priced legs, not new formulas.
+
+The same audit's other two findings are also closed. Phase 15 (asset
+allocation and performance measurement) adds `money_weighted_return`
+(solved via bisection, verified against the canonical CFA textbook case
+where a manager's time-weighted return is a flat 0% while the investor's
+money-weighted return comes out to roughly -26.8% because more capital
+was at risk during the losing period) alongside `funded_ratio` and
+`surplus` for liability-driven investing, which reuses the existing
+`dv01`/`hedge_ratio` duration-matching machinery rather than needing new
+formulas. Strategic/tactical asset allocation and GIPS composite
+construction are covered conceptually — the former because it's this
+repo's existing optimization tools (`mean_variance_optimization`,
+`black_litterman_posterior`, `risk_parity_weights`) reapplied at the
+policy-portfolio level, not a new calculation; the latter because
+composite construction and verification are a compliance framework
+layered on top of the time-weighted-return calculation this repo already
+had (`cumulative_return`), not new math.
 
 A correctness-fix pass also caught and fixed several bugs surfaced by a
 detailed audit: a Black-Litterman round-trip that silently returned the
@@ -211,18 +229,19 @@ VaR/ES, Brinson attribution) supplies the buy-side vocabulary a
 sell-side trading background often lacks. With Phase 13, equity
 valuation, CAPM, factor investing, and active-share/shareholder-yield
 mechanics are now covered the same way fixed income is — derived, coded,
-and tested, not just described. Phase 14 closes what a repo-wide
-completeness audit flagged as the single biggest remaining hole:
-options/volatility, previously absent despite deep linear-instrument
-coverage.
+and tested, not just described. Phases 14 and 15 close what a repo-wide
+completeness audit flagged as its two biggest remaining holes:
+options/volatility (previously absent despite deep linear-instrument
+coverage), and asset-allocation/performance-measurement framing
+(SAA/TAA, liability-driven investing, time-weighted vs. money-weighted
+return) on top of the existing optimization and return machinery.
 
-Remaining gaps the same audit found, still to close: asset allocation
-framing (SAA/TAA, liability-driven investing) on top of the existing
-optimization machinery; performance-measurement fundamentals
-(time-weighted vs. money-weighted return, GIPS); narrower asset-class
-coverage (municipal bonds, sovereign/EM debt, convertibles, preferred
-securities); alternatives/private markets and ESG content. Also:
-portfolio operations, compliance, and client reporting; live market data
-and desk-grade tooling (Bloomberg PORT/Barra/Aladdin-equivalent
-workflows); and depth beyond this repo's curated pointer list for
-whatever specific topics an interview process tests hardest.
+Remaining gaps the same audit found, still to close: narrower
+asset-class coverage (municipal bonds, sovereign/EM debt, convertibles,
+preferred securities); alternatives/private markets and ESG content; and
+`use_cases/` coverage for FX, commodities, mortgages, and fundamental
+credit despite all four already having reference pages and notebooks.
+Also: portfolio operations, compliance, and client reporting; live
+market data and desk-grade tooling (Bloomberg PORT/Barra/Aladdin-
+equivalent workflows); and depth beyond this repo's curated pointer list
+for whatever specific topics an interview process tests hardest.
