@@ -8,7 +8,7 @@ def mortgage_amortization_schedule(balance, annual_rate, months):
     each an array of length `months`.
     """
     r = annual_rate / 12
-    payment = balance * r / (1 - (1 + r) ** (-months))
+    payment = balance / months if r == 0 else balance * r / (1 - (1 + r) ** (-months))
     beginning = np.zeros(months)
     principal = np.zeros(months)
     interest = np.zeros(months)
@@ -22,14 +22,26 @@ def mortgage_amortization_schedule(balance, annual_rate, months):
     return beginning, principal, interest, ending
 
 def single_monthly_mortality(cpr):
-    """Convert an annualized CPR to a monthly prepayment rate (SMM)."""
+    """Convert an annualized CPR to a monthly prepayment rate (SMM).
+
+    cpr must be in [0, 1) - at cpr=1, (1-cpr)**(1/12) is 0/0-adjacent and
+    above 1 the base of the fractional power goes negative, which returns
+    a complex number instead of raising. refinancing_incentive_cpr caps its
+    output below 1 for exactly this reason.
+    """
+    cpr = np.asarray(cpr, dtype=float)
+    if np.any(cpr < 0) or np.any(cpr >= 1):
+        raise ValueError("cpr must be in [0, 1).")
     return 1 - (1 - cpr) ** (1 / 12)
 
 def psa_cpr(month, psa_multiplier=1.0):
     """CPR implied by the PSA benchmark: ramps linearly from 0% to
     6%*psa_multiplier over the first 30 months, then flat.
+
+    month may be a scalar or an array (np.minimum, not the builtin min,
+    so this composes with apply_prepayment's vectorized month loop).
     """
-    return 0.06 * psa_multiplier * min(month, 30) / 30
+    return 0.06 * psa_multiplier * np.minimum(month, 30) / 30
 
 def apply_prepayment(beginning_balance, scheduled_principal, smm):
     """Overlay a prepayment assumption on a scheduled amortization.
@@ -50,9 +62,14 @@ def refinancing_incentive_cpr(wac, market_rate, base_cpr=0.06, sensitivity=2.0):
     incentive (wac - market_rate) when rates fall, and floors at base_cpr
     when rates rise (no incentive to refinance) - this asymmetry is the
     source of MBS negative convexity/extension risk.
+
+    Capped just under 1.0 (a pool can't prepay more than 100%/year) so the
+    result is always a valid input to single_monthly_mortality - uncapped,
+    a large incentive/sensitivity combination produces a CPR >= 1 that
+    turns single_monthly_mortality complex instead of raising.
     """
-    incentive = max(0.0, wac - market_rate)
-    return base_cpr + sensitivity * incentive
+    incentive = np.maximum(0.0, wac - market_rate)
+    return np.minimum(base_cpr + sensitivity * incentive, 0.999)
 
 def weighted_average_life(times, principal_payments):
     times = np.asarray(times, dtype=float)

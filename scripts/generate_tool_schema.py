@@ -14,6 +14,10 @@ import pm
 def iter_modules():
     yield pm
     for info in pkgutil.walk_packages(pm.__path__, prefix="pm."):
+        # Skip private modules (e.g. pm._solver) - internal helpers, not
+        # analytics functions an agent should call directly.
+        if info.name.rsplit(".", 1)[-1].startswith("_"):
+            continue
         yield __import__(info.name, fromlist=["_"])
 
 
@@ -41,6 +45,8 @@ def main():
     for module in iter_modules():
         for name, obj in sorted(vars(module).items()):
             if not inspect.isfunction(obj):
+                continue
+            if name.startswith("_"):
                 continue
             if obj.__module__ != module.__name__:
                 continue  # skip re-exports, only describe where a function is defined

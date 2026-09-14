@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 
 from pm.fixed_income.bond import bond_price
 from pm.fixed_income.duration import modified_duration
@@ -27,6 +28,12 @@ def test_psa_cpr_ramp_and_cap():
     assert np.isclose(psa_cpr(30), 0.06)
     assert np.isclose(psa_cpr(60), 0.06)
     assert np.isclose(psa_cpr(15, psa_multiplier=2.0), 0.06)
+
+def test_psa_cpr_accepts_a_month_array():
+    # apply_prepayment vectorizes smm over a whole schedule, so psa_cpr
+    # needs to accept a month array too, not just a scalar.
+    months = np.array([1, 10, 40])
+    assert np.allclose(psa_cpr(months), [0.002, 0.02, 0.06])
 
 def test_apply_prepayment_zero_smm_matches_scheduled():
     beginning = np.array([1000.0, 502.49])
@@ -66,6 +73,28 @@ def test_effective_duration_matches_modified_duration_for_plain_bond():
     ed = effective_duration(price_down, price_up, price_base, bump)
     md = modified_duration(ytm, face, coupon_rate, years, frequency)
     assert np.isclose(ed, md, atol=1e-4)
+
+def test_refinancing_incentive_cpr_caps_below_one():
+    # An extreme incentive/sensitivity combination must stay a valid input
+    # to single_monthly_mortality (cpr < 1), never reach or exceed 1 - at
+    # cpr >= 1, single_monthly_mortality's (1-cpr)**(1/12) goes complex
+    # instead of raising, which would silently corrupt a cash-flow schedule.
+    cpr = refinancing_incentive_cpr(wac=0.10, market_rate=0.0, sensitivity=12.0)
+    assert cpr < 1.0
+    smm = single_monthly_mortality(cpr)
+    assert np.isreal(smm)
+
+def test_single_monthly_mortality_rejects_cpr_at_or_above_one():
+    with pytest.raises(ValueError, match=r"\[0, 1\)"):
+        single_monthly_mortality(1.0)
+
+def test_amortization_schedule_handles_zero_rate():
+    # r=0 makes the standard annuity-payment formula divide by zero
+    # (1-(1+0)**-n == 0); a 0% loan should just amortize evenly.
+    _, principal, interest, ending = mortgage_amortization_schedule(1200.0, 0.0, 12)
+    assert np.allclose(principal, 100.0)
+    assert np.allclose(interest, 0.0)
+    assert np.isclose(ending[-1], 0.0)
 
 def test_wal_shortens_with_refinancing_incentive():
     wac, balance, months = 0.06, 1_000_000.0, 360

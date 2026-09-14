@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import pytest
 
 from pm.returns import (
     cumulative_return,
@@ -38,3 +39,19 @@ def test_zero_excess_return_gives_zero_sharpe():
 
 def test_max_drawdown_hand_example():
     assert np.isclose(max_drawdown([0.10, -0.20, 0.05]), -0.20)
+
+def test_metrics_compose_with_simple_returns_leading_nan():
+    """simple_returns's leading NaN (asserted above) must not silently
+    poison every downstream metric - it should be dropped, not propagated.
+    Same 3 real observations as test_sharpe_ratio_hand_example /
+    test_max_drawdown_hand_example, prefixed with the NaN
+    prices->simple_returns actually produces.
+    """
+    prices = pd.Series([100.0, 102.0, 106.08, 109.2624])  # -> nan, 2%, 4%, 3%
+    r = simple_returns(prices)
+    assert np.isclose(sharpe_ratio(r, risk_free_rate=0.0, periods_per_year=1), 3.0)
+    assert np.isclose(cumulative_return(r), 1.02 * 1.04 * 1.03 - 1)
+
+def test_sharpe_ratio_rejects_an_all_nan_series():
+    with pytest.raises(ValueError, match="no finite observations"):
+        sharpe_ratio([float("nan"), float("nan")])

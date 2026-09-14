@@ -1,5 +1,7 @@
 import numpy as np
+import pytest
 
+from pm.optimization import mean_variance, minimum_variance
 from pm.risk import component_risk_contribution
 from pm.robust import (
     black_litterman_posterior,
@@ -67,3 +69,33 @@ def test_scenario_robust_weights_symmetric_scenarios_give_equal_weights():
     ]
     w = scenario_robust_weights(scenario_returns)
     assert np.allclose(w, [0.5, 0.5], atol=1e-3)
+
+def test_market_implied_returns_round_trips_through_mean_variance():
+    """market_implied_returns inverts mean_variance's first-order condition
+    (mu = risk_aversion * Sigma * w) - this is the actual Black-Litterman
+    workflow (reverse-optimize market weights into a prior, then
+    re-optimize) and is the reason mean_variance carries a 1/2 on its risk
+    term. Without that 1/2 this round trip closes at risk_aversion/2
+    instead of risk_aversion, which no other test in this file catches
+    since none of them call both functions together.
+    """
+    sigma = np.array([[0.04, 0.01], [0.01, 0.09]])
+    w_market = np.array([0.6, 0.4])
+    risk_aversion = 3.0
+    pi = market_implied_returns(risk_aversion, sigma, w_market)
+    w_recovered = mean_variance(pi, sigma, risk_aversion=risk_aversion, long_only=False)
+    assert np.allclose(w_recovered, w_market, atol=1e-4)
+
+def test_infeasible_minimum_variance_raises_instead_of_returning_none():
+    # 5 long-only assets capped at 10% each can't sum to 1 - infeasible.
+    cov = np.eye(5) * 0.04
+    with pytest.raises(ValueError, match="did not reach an optimal solution"):
+        minimum_variance(cov, long_only=True, max_weight=0.1)
+
+def test_unbounded_mean_variance_raises_instead_of_returning_none():
+    # long/short with no bound on w and positive expected returns on a
+    # perfectly correlated pair is unbounded (scale up the winning leg
+    # without limit) - the solver can't reach an optimal point.
+    cov = [[0.04, 0.04], [0.04, 0.04]]
+    with pytest.raises(ValueError, match="did not reach an optimal solution"):
+        mean_variance([0.10, 0.02], cov, risk_aversion=1.0, long_only=False)

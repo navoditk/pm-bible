@@ -1,6 +1,8 @@
 import cvxpy as cp
 import numpy as np
 
+from ._solver import solved_weights
+
 
 def shrink_covariance(sample_covariance, shrinkage):
     """Shrink the sample covariance toward a diagonal target (correlations
@@ -14,6 +16,12 @@ def shrink_covariance(sample_covariance, shrinkage):
 def market_implied_returns(risk_aversion, covariance, market_weights):
     """Reverse-optimize the market-implied (equilibrium) expected returns
     that would make market_weights optimal - the Black-Litterman prior.
+
+    `pi = risk_aversion * Sigma * w_market` is the first-order condition of
+    `maximize mu'w - (risk_aversion / 2) * w'Sigma*w`, so this inverts
+    `pm.optimization.mean_variance` exactly: feeding this pi back in at the
+    same risk_aversion returns market_weights. That round trip is asserted
+    in tests/test_robust.py and is the reason mean_variance carries the 1/2.
     """
     cov = np.asarray(covariance, dtype=float)
     w = np.asarray(market_weights, dtype=float)
@@ -27,6 +35,12 @@ def black_litterman_posterior(prior_returns, covariance, view_matrix, view_retur
     view_returns (Q): (k,) expected return of each view.
     view_uncertainty (Omega): (k x k) confidence in each view (covariance
     of view errors - smaller = more confident).
+
+    Returns (posterior_mean, M) where M is the covariance of the *estimated
+    mean*, not the posterior covariance of returns. If you feed a covariance
+    into an optimizer after this, use `covariance + M` (or just `covariance`),
+    never M alone - M is smaller by roughly a factor of tau and would make
+    the optimizer wildly overconfident.
     """
     prior = np.asarray(prior_returns, dtype=float)
     sigma = np.asarray(covariance, dtype=float)
@@ -50,8 +64,7 @@ def risk_parity_weights(covariance):
     n = cov.shape[0]
     w = cp.Variable(n, pos=True)
     objective = cp.Minimize(0.5 * cp.quad_form(w, cov) - cp.sum(cp.log(w)))
-    cp.Problem(objective).solve()
-    raw = np.asarray(w.value).ravel()
+    raw = solved_weights(cp.Problem(objective), w)
     return raw / raw.sum()
 
 def scenario_robust_weights(scenario_returns, long_only=True):
@@ -65,5 +78,4 @@ def scenario_robust_weights(scenario_returns, long_only=True):
     constraints = [cp.sum(w) == 1, R @ w >= t]
     if long_only:
         constraints.append(w >= 0)
-    cp.Problem(cp.Maximize(t), constraints).solve()
-    return np.asarray(w.value).ravel()
+    return solved_weights(cp.Problem(cp.Maximize(t), constraints), w)

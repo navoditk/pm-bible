@@ -1139,9 +1139,13 @@
         {
           "name": "long_only",
           "default": "True"
+        },
+        {
+          "name": "max_weight",
+          "default": "None"
         }
       ],
-      "description": ""
+      "description": "Mean-variance optimal weights under the standard utility"
     },
     {
       "name": "minimum_variance",
@@ -1160,7 +1164,7 @@
           "default": "None"
         }
       ],
-      "description": ""
+      "description": "Global minimum-variance weights: minimize w'Sigma*w s.t. sum(w)=1."
     },
     {
       "name": "cumulative_return",
@@ -1182,7 +1186,7 @@
           "default": null
         }
       ],
-      "description": ""
+      "description": "Log returns. First element is NaN by construction, as above."
     },
     {
       "name": "max_drawdown",
@@ -1238,7 +1242,7 @@
           "default": null
         }
       ],
-      "description": ""
+      "description": "Arithmetic period returns. The first element is NaN by construction"
     },
     {
       "name": "component_risk_contribution",
