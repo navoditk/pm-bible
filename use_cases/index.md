@@ -8,12 +8,14 @@ Starter use cases:
 - [Swap DV01 Hedge](swap_dv01_hedge/README.md)
 - [Treasury Futures Hedge](treasury_futures_hedge/README.md)
 - [Equity Factor Tilt](equity_factor_tilt/README.md)
+- [FX Hedge](fx_hedge/README.md)
+- [Commodity Futures Roll](commodity_roll/README.md)
+- [MBS Extension Scenario](mbs_extension/README.md)
+- [Fundamental Credit Review](fundamental_credit_review/README.md)
 
 Future:
 - credit beta reduction
 - liquidity-aware rebalance
 - risk-budget breach
 - cash-flow matching
-- MBS extension scenario
-- FX hedge
 - multi-asset risk-off

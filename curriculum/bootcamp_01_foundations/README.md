@@ -285,7 +285,35 @@ and `risk_parity_weights` rather than needing a new formula).
 Notebook:
 - [35 Performance, LDI, and Asset Allocation](../../notebooks/integration/35_performance_ldi_and_asset_allocation.ipynb)
 
-## Extension — Day 17: Capstone
+## Extension — Day 17: Munis, convertibles, preferreds, and the wider universe
+
+The last of four workstreams from the curriculum-completeness audit:
+narrower asset-class coverage and survey-level fluency in alternatives
+and ESG. Municipal and sovereign credit analysis, the convertible-bond
+straight-bond floor, and full alternatives/ESG scoring models are
+conceptual only — see `reference/fixed_income/municipal_bonds.md`,
+`convertible_bonds.md`, and `reference/alternatives/*.md` for why.
+
+1. municipal bonds: tax-equivalent yield
+2. convertible bonds: conversion value, conversion premium
+3. preferred securities: perpetuity valuation (reuses the equity
+   module's Gordon growth function at zero growth)
+4. sovereign and EM debt: hard currency vs. local currency (conceptual)
+5. alternative investments overview: private equity, hedge funds, real
+   assets, private debt, the J-curve (conceptual)
+6. ESG and sustainable investing: negative screening, best-in-class,
+   ESG integration, engagement, impact investing (conceptual)
+
+Notebook:
+- [36 Munis, Convertibles, Preferred, and Alternatives](../../notebooks/fixed_income/36_munis_convertibles_preferred_and_alternatives.ipynb)
+
+Also new this pass: four use cases closing the last gaps in
+`use_cases/` — [FX Hedge](../../use_cases/fx_hedge/README.md),
+[Commodity Futures Roll](../../use_cases/commodity_roll/README.md),
+[MBS Extension Scenario](../../use_cases/mbs_extension/README.md), and
+[Fundamental Credit Review](../../use_cases/fundamental_credit_review/README.md).
+
+## Extension — Day 18: Capstone
 
 The last day. Less hand-holding on purpose — this is where you compose
 concepts from across the whole curriculum on one realistic portfolio

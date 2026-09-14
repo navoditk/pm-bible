@@ -1,5 +1,6 @@
 from .bond import bond_cashflows, bond_price
 from .carry import carry_and_rolldown, carry_return, rolldown_return
+from .convertibles import conversion_premium, conversion_value
 from .credit import (
     cds_bond_basis,
     credit_spread_from_hazard,
@@ -37,6 +38,7 @@ from .mbs import (
     single_monthly_mortality,
     weighted_average_life,
 )
+from .munis import tax_equivalent_yield
 from .swaps import swap_dv01, swap_spread
 
 __all__ = [
@@ -48,6 +50,8 @@ __all__ = [
     "carry_and_rolldown",
     "carry_return",
     "cds_bond_basis",
+    "conversion_premium",
+    "conversion_value",
     "convexity",
     "credit_spread_from_hazard",
     "dollar_roll_implied_financing_rate",
@@ -75,6 +79,7 @@ __all__ = [
     "survival_probability",
     "swap_dv01",
     "swap_spread",
+    "tax_equivalent_yield",
     "tips_coupon_payment",
     "tips_index_ratio",
     "tips_inflation_adjusted_principal",

@@ -66,6 +66,7 @@ instrument.
 - [Fundamental credit analysis](fundamental_credit_analysis.md)
 - [Spread duration](spread_duration.md)
 - [Credit curves](credit_curves.md)
+- [Alternative investments overview](../alternatives/alternatives_overview.md)
 
 ## Free resources
 - [Leveraged Lending and Collateralized Loan Obligations: Frequently Asked Questions — Congressional Research Service](https://www.congress.gov/crs-product/R46096) — a plain-language, non-industry-affiliated primer on the leveraged loan market and CLOs

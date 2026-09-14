@@ -812,6 +812,36 @@
       "description": "Price return from a bond 'sliding down' an unchanged yield curve as"
     },
     {
+      "name": "conversion_premium",
+      "module": "pm.fixed_income.convertibles",
+      "parameters": [
+        {
+          "name": "bond_price",
+          "default": null
+        },
+        {
+          "name": "conv_value",
+          "default": null
+        }
+      ],
+      "description": "How much richer the convertible trades than its immediate"
+    },
+    {
+      "name": "conversion_value",
+      "module": "pm.fixed_income.convertibles",
+      "parameters": [
+        {
+          "name": "conversion_ratio",
+          "default": null
+        },
+        {
+          "name": "stock_price",
+          "default": null
+        }
+      ],
+      "description": "The convertible bond's value if converted into stock immediately"
+    },
+    {
       "name": "cds_bond_basis",
       "module": "pm.fixed_income.credit",
       "parameters": [
@@ -1429,6 +1459,21 @@
         }
       ],
       "description": ""
+    },
+    {
+      "name": "tax_equivalent_yield",
+      "module": "pm.fixed_income.munis",
+      "parameters": [
+        {
+          "name": "muni_yield",
+          "default": null
+        },
+        {
+          "name": "tax_rate",
+          "default": null
+        }
+      ],
+      "description": "The pre-tax yield a fully taxable bond would need to match a"
     },
     {
       "name": "swap_dv01",

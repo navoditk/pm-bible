@@ -96,6 +96,8 @@ nav:
               - Convexity: reference/fixed_income/convexity.md
               - Key-Rate Duration: reference/fixed_income/key_rate_duration.md
               - Spread Duration: reference/fixed_income/spread_duration.md
+              - Convertible Bonds: reference/fixed_income/convertible_bonds.md
+              - Preferred Securities: reference/fixed_income/preferred_securities.md
           - Rates Portfolio Management:
               - Curve Construction: reference/fixed_income/curve_construction.md
               - Forward Rates: reference/fixed_income/forward_rates.md
@@ -116,6 +118,8 @@ nav:
               - Fundamental Credit Analysis: reference/fixed_income/fundamental_credit_analysis.md
               - Credit Indices (CDX/iTraxx): reference/fixed_income/credit_indices.md
               - Leveraged Loans: reference/fixed_income/leveraged_loans.md
+              - Municipal Bonds: reference/fixed_income/municipal_bonds.md
+              - Sovereign and EM Debt: reference/fixed_income/sovereign_and_em_debt.md
           - Securitized:
               - Pass-Throughs: reference/fixed_income/pass_throughs.md
               - Prepayment Models: reference/fixed_income/prepayment_models.md
@@ -161,6 +165,9 @@ nav:
       - Asset Allocation:
           - Strategic and Tactical Asset Allocation: reference/concepts/strategic_and_tactical_asset_allocation.md
           - Liability-Driven Investing: reference/concepts/liability_driven_investing.md
+      - Alternatives and ESG:
+          - Alternative Investments Overview: reference/alternatives/alternatives_overview.md
+          - ESG and Sustainable Investing: reference/alternatives/esg_and_sustainable_investing.md
       - Agentic PM Analytics:
           - Agentic PM Analytics: reference/concepts/agentic_pm_analytics.md
   - Notebooks:
@@ -233,5 +240,6 @@ nav:
       - FX and Commodities: resources/fx_and_commodities.md
       - Derivatives: resources/derivatives.md
       - Asset Allocation and Performance: resources/allocation_and_performance.md
+      - Alternatives and ESG: resources/alternatives_and_esg.md
       - Implementation: resources/implementation.md
   - Progress: docs/PROGRESS.md

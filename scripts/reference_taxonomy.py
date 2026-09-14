@@ -41,6 +41,8 @@ SECTIONS = [
         ("fixed_income/convexity.md", "Convexity"),
         ("fixed_income/key_rate_duration.md", "Key-Rate Duration"),
         ("fixed_income/spread_duration.md", "Spread Duration"),
+        ("fixed_income/convertible_bonds.md", "Convertible Bonds"),
+        ("fixed_income/preferred_securities.md", "Preferred Securities"),
     ]),
     ("Fixed Income", "Rates Portfolio Management", [
         ("fixed_income/curve_construction.md", "Curve Construction"),
@@ -63,6 +65,8 @@ SECTIONS = [
         ("fixed_income/fundamental_credit_analysis.md", "Fundamental Credit Analysis"),
         ("fixed_income/credit_indices.md", "Credit Indices (CDX/iTraxx)"),
         ("fixed_income/leveraged_loans.md", "Leveraged Loans"),
+        ("fixed_income/municipal_bonds.md", "Municipal Bonds"),
+        ("fixed_income/sovereign_and_em_debt.md", "Sovereign and EM Debt"),
     ]),
     ("Fixed Income", "Securitized", [
         ("fixed_income/pass_throughs.md", "Pass-Throughs"),
@@ -117,6 +121,10 @@ SECTIONS = [
         ("concepts/strategic_and_tactical_asset_allocation.md", "Strategic and Tactical Asset Allocation"),
         ("concepts/liability_driven_investing.md", "Liability-Driven Investing"),
     ]),
+    ("Alternatives and ESG", None, [
+        ("alternatives/alternatives_overview.md", "Alternative Investments Overview"),
+        ("alternatives/esg_and_sustainable_investing.md", "ESG and Sustainable Investing"),
+    ]),
     ("Agentic PM Analytics", None, [
         ("concepts/agentic_pm_analytics.md", "Agentic PM Analytics"),
     ]),
@@ -152,6 +160,7 @@ NOTEBOOKS = {
     "notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb": "22 Pass-Throughs and Prepayment",
     "notebooks/fixed_income/23_effective_duration_and_convexity.ipynb": "23 Effective Duration and Convexity",
     "notebooks/fixed_income/33_tba_dollar_roll_and_structuring.ipynb": "33 TBA, Dollar Roll, and Structuring",
+    "notebooks/fixed_income/36_munis_convertibles_preferred_and_alternatives.ipynb": "36 Munis, Convertibles, Preferred, and Alternatives",
     "notebooks/fx_commodities/24_fx_and_commodities.ipynb": "24 FX and Commodities",
     "notebooks/derivatives/34_black_scholes_greeks_and_rates_options.ipynb": "34 Black-Scholes, Greeks, and Rates Options",
     "notebooks/equity/28_equity_valuation_and_capm.ipynb": "28 Equity Valuation and CAPM",
@@ -171,4 +180,8 @@ USE_CASES = [
     ("swap_dv01_hedge", "Swap DV01 Hedge"),
     ("treasury_futures_hedge", "Treasury Futures Hedge"),
     ("equity_factor_tilt", "Equity Factor Tilt"),
+    ("fx_hedge", "FX Hedge"),
+    ("commodity_roll", "Commodity Futures Roll"),
+    ("mbs_extension", "MBS Extension Scenario"),
+    ("fundamental_credit_review", "Fundamental Credit Review"),
 ]
