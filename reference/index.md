@@ -64,6 +64,9 @@ New to this vocabulary? Start with the [Glossary](glossary.md) for a one-line-pe
 - [Credit Curves](fixed_income/credit_curves.md)
 - [CDS and Basis](fixed_income/cds_and_basis.md)
 - [Credit Migration](fixed_income/credit_migration.md)
+- [Fundamental Credit Analysis](fixed_income/fundamental_credit_analysis.md)
+- [Credit Indices (CDX/iTraxx)](fixed_income/credit_indices.md)
+- [Leveraged Loans](fixed_income/leveraged_loans.md)
 
 ### Securitized
 

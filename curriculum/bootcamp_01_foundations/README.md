@@ -139,10 +139,13 @@ aren't implemented as code here.
 4. CDS and CDS-bond basis
 5. portfolio credit scenarios (reuses Day 5's `Scenario` mechanism and
    `use_cases/spread_shock/README.md`)
+6. fundamental credit analysis (leverage/coverage ratios, covenants),
+   credit indices (CDX/iTraxx), leveraged loans (conceptual)
 
 Notebooks:
 - [20 Z-Spread and Credit Curves](../../notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb)
 - [21 Default, Recovery, and CDS](../../notebooks/fixed_income/21_default_recovery_and_cds.ipynb)
+- [32 Fundamental Credit and Indices](../../notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb)
 
 ## Extension — Day 9: Securitized / mortgages
 

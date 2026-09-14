@@ -60,6 +60,9 @@ SECTIONS = [
         ("fixed_income/credit_curves.md", "Credit Curves"),
         ("fixed_income/cds_and_basis.md", "CDS and Basis"),
         ("fixed_income/credit_migration.md", "Credit Migration"),
+        ("fixed_income/fundamental_credit_analysis.md", "Fundamental Credit Analysis"),
+        ("fixed_income/credit_indices.md", "Credit Indices (CDX/iTraxx)"),
+        ("fixed_income/leveraged_loans.md", "Leveraged Loans"),
     ]),
     ("Fixed Income", "Securitized", [
         ("fixed_income/pass_throughs.md", "Pass-Throughs"),
@@ -130,6 +133,7 @@ NOTEBOOKS = {
     "notebooks/fixed_income/31_carry_roll_and_financing.ipynb": "31 Carry, Roll, and Financing",
     "notebooks/fixed_income/20_z_spread_and_credit_curves.ipynb": "20 Z-Spread and Credit Curves",
     "notebooks/fixed_income/21_default_recovery_and_cds.ipynb": "21 Default, Recovery, and CDS",
+    "notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb": "32 Fundamental Credit and Indices",
     "notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb": "22 Pass-Throughs and Prepayment",
     "notebooks/fixed_income/23_effective_duration_and_convexity.ipynb": "23 Effective Duration and Convexity",
     "notebooks/fx_commodities/24_fx_and_commodities.ipynb": "24 FX and Commodities",

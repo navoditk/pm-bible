@@ -90,6 +90,9 @@ If no specialized persona matches the topic, fall back to
 | default, recovery, hazard rate | `fixed_income_tutor.md` | `reference/fixed_income/default_recovery.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
 | CDS, CDS-bond basis | `fixed_income_tutor.md` | `reference/fixed_income/cds_and_basis.md` | `notebooks/fixed_income/21_default_recovery_and_cds.ipynb` | `tests/test_fixed_income.py` |
 | credit migration | `fixed_income_tutor.md` | `reference/fixed_income/credit_migration.md` | — (conceptual only, no code) | — |
+| fundamental credit analysis, leverage/coverage ratios, covenants | `fixed_income_tutor.md` | `reference/fixed_income/fundamental_credit_analysis.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | `tests/test_fixed_income.py` |
+| credit indices, CDX, iTraxx | `fixed_income_tutor.md` | `reference/fixed_income/credit_indices.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | `tests/test_fixed_income.py` |
+| leveraged loans | `fixed_income_tutor.md` | `reference/fixed_income/leveraged_loans.md` | `notebooks/fixed_income/32_fundamental_credit_and_indices.ipynb` | — (conceptual only, no code) |
 | pass-throughs, amortization | `fixed_income_tutor.md` | `reference/fixed_income/pass_throughs.md` | `notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb` | `tests/test_mbs.py` |
 | prepayment, CPR, SMM, PSA | `fixed_income_tutor.md` | `reference/fixed_income/prepayment_models.md` | `notebooks/fixed_income/22_pass_throughs_and_prepayment.ipynb` | `tests/test_mbs.py` |
 | effective duration | `fixed_income_tutor.md` | `reference/fixed_income/effective_duration.md` | `notebooks/fixed_income/23_effective_duration_and_convexity.ipynb` | `tests/test_mbs.py` |
