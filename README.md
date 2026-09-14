@@ -1,70 +1,75 @@
-# Portfolio Management Bible — Starter Repository
+# Portfolio Management Bible
 
 [![CI](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml/badge.svg)](https://github.com/navoditk/pm-bible/actions/workflows/ci.yml)
 
-A living, build-first reference and learning system for portfolio management, portfolio construction, optimization, risk, and FICC.
+A build-first PM/FICC learning and analytics repository for portfolio construction, risk, optimization, and fixed-income work.
 
-This repository is intended to serve three modes simultaneously:
+## What this repo is
 
-1. **LEARN** — follow structured learning paths and interactive notebooks.
-2. **LOOK UP** — use concise reference pages, formulas, vocabulary, and code recipes.
-3. **APPLY** — work through realistic portfolio-management use cases.
+This repository is designed to support three modes at once:
 
-The long-term goal is not a one-time course. It is a continuously evolving portfolio-management knowledge and analytics platform.
+1. Learn — structured curriculum and notebooks
+2. Look up — reference pages, formulas, and code recipes
+3. Apply — realistic portfolio-management use cases and analysis workflows
 
-
-## GitHub-first development model
-
-This repository is meant to be version-controlled from the first session.
-
-Before opening the first notebook, follow `SETUP.md` to:
-1. create the remote GitHub repository,
-2. clone it locally,
-3. commit the starter baseline,
-4. bootstrap Python,
-5. create the first short-lived learning branch.
-
-Then use the branch → checkpoint commit → push → PR → review → merge lifecycle in `SDLC.md`.
-
-GitHub's `main` branch should remain a stable, test-passing quick-reference version of the PM/FICC knowledge base.
+The goal is not just to read about PM concepts. The goal is to understand them deeply enough to reproduce them in code, test them, and explain them clearly.
 
 ## Start here
 
-1. Read `GETTING_STARTED.md`.
-2. Run `scripts/bootstrap.sh` or follow `SETUP.md`.
-3. Read `ROADMAP.md`.
-4. Choose a path in `LEARNING_PATHS.md`.
-5. For the initial sprint, start at `curriculum/bootcamp_01_foundations/README.md`.
-6. Open the matching notebook.
-7. At each `MANUAL FIRST` checkpoint, type the implementation yourself.
-8. Use the corresponding code recipe only after your own attempt.
-9. Run tests.
-10. Write a short explanation in your own words.
+1. Read [docs/getting-started.md](docs/getting-started.md)
+2. Review [docs/learning-paths.md](docs/learning-paths.md)
+3. Choose a learning path from `curriculum/` or `reference/`
+4. Open the matching notebook in `notebooks/`
+5. Run the test suite and update progress in [docs/PROGRESS.md](docs/PROGRESS.md)
 
-## Three navigation modes
+## Quick start
 
-### I want to learn
-`LEARNING_PATHS.md` → curriculum → notebook → exercise → code → test → oral quiz
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -e ".[dev]"
+pytest -q
+```
 
-### I need a quick reference
-`reference/index.md` → concept/instrument/formula → example → code recipe → links
+## Repository map
 
-### I have a PM problem
-`use_cases/index.md` → realistic problem → analytics → interpretation → extensions
+- `curriculum/` — bootcamps and structured learning tracks
+- `reference/` — durable PM/FICC concept and instrument reference pages
+- `notebooks/` — hands-on labs and worked examples
+- `src/pm/` — reusable deterministic analytics library
+- `tests/` — unit tests and correctness checks
+- `use_cases/` — realistic portfolio workflows and scenario analysis
+- `resources/` — curated external material and study references
+- `tutors/` — tutor prompts and learning support
+- `agents/` — agent workflows and operating instructions
+- `templates/` — templates for new concepts, notebooks, and use cases
+- `docs/` — canonical documentation hub for setup, workflow, and progress
 
-## Main directories
+## Core principles
 
-- `curriculum/` — structured courses and bootcamps
-- `reference/` — durable PM/FICC encyclopedia
-- `notebooks/` — interactive learning labs
-- `src/pm/` — reusable analytics library
-- `tests/` — correctness checks
-- `use_cases/` — realistic PM workflows
-- `tutors/` — tutor-agent specifications and prompts
-- `resources/` — curated free learning references
-- `agents/` — Codex / Claude Code / Copilot operating instructions
-- `templates/` — templates for adding new concepts, notebooks, and use cases
+- Financial logic must be documented, unit-aware, and tested
+- Keep reusable calculations in `src/pm/`
+- Preserve notebooks as teaching artifacts
+- Prefer transparent, deterministic functions over opaque frameworks
+- Do manual reasoning before relying on an agent
 
-## Core learning rule
+## Documentation
 
-**Read → Predict → Derive → Type code yourself → Experiment → Compare to reference → Promote to library → Test → Explain**
+Use the docs hub as the canonical starting point:
+
+- [docs/README.md](docs/README.md)
+- [docs/getting-started.md](docs/getting-started.md)
+- [docs/learning-paths.md](docs/learning-paths.md)
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- [SDLC.md](SDLC.md)
+- [SETUP.md](SETUP.md)
+- [ROADMAP.md](ROADMAP.md)
+
+## Recommended workflow
+
+Follow this sequence:
+
+Read → predict → derive → type code yourself → test → compare with reference → explain
+
+That discipline is the project’s core operating model.

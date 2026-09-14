@@ -1,12 +1,12 @@
-# Setup — Remote-First GitHub Workflow
+# Setup and workflow
 
-This repository is designed to use Git/GitHub from the very beginning.
+This file is a practical workflow guide. The canonical onboarding docs live in [docs/getting-started.md](docs/getting-started.md).
 
-The recommended model is:
+## Recommended flow
 
-**Create remote GitHub repo → clone locally → copy starter contents into clone → commit baseline → work on short-lived branches → commit/push at learning checkpoints → open PR → review → merge to `main`.**
+Use this repo in a remote-first, branch-based workflow:
 
-This keeps `main` stable while still allowing frequent learning commits.
+**Create remote repo → clone locally → set up environment → branch for the topic → work in notebook + code + tests → push checkpoint → open PR → merge to `main`.**
 
 ## Prerequisites
 
@@ -15,9 +15,8 @@ Install:
 - GitHub CLI (`gh`)
 - Python 3.12+
 - VS Code and/or JupyterLab
-- Codex recommended; Claude Code optional; GitHub Copilot optional
 
-Check:
+Check versions:
 
 ```bash
 git --version
@@ -25,34 +24,22 @@ gh --version
 python3 --version
 ```
 
-Authenticate GitHub CLI:
+Authenticate:
 
 ```bash
 gh auth login
 gh auth status
 ```
 
-## Step 1 — Create the remote GitHub repository
-
-Choose a repository name, for example:
-
-```text
-portfolio-management-bible
-```
-
-From the terminal:
+## Step 1 — Create the remote repository
 
 ```bash
 gh repo create portfolio-management-bible --private
 ```
 
-Use `--public` instead if you want it public immediately.
+If you prefer a public repo, use `--public` instead.
 
-Do **not** add generated starter files on GitHub first. Keep the remote clean so the local starter can become the first meaningful commit.
-
-## Step 2 — Clone the remote locally
-
-Choose the parent directory where you keep GitHub projects:
+## Step 2 — Clone locally
 
 ```bash
 cd ~/GitHub
@@ -60,7 +47,7 @@ gh repo clone <YOUR_GITHUB_USERNAME>/portfolio-management-bible
 cd portfolio-management-bible
 ```
 
-Confirm:
+Check the repo state:
 
 ```bash
 git remote -v
@@ -68,86 +55,43 @@ git status
 git branch --show-current
 ```
 
-You should be on `main`, with `origin` pointing to GitHub.
-
-## Step 3 — Copy this starter repository into the clone
-
-Unzip the starter somewhere temporary, then copy **the contents** into the cloned repository.
-
-Example:
-
-```bash
-unzip ~/Downloads/portfolio-management-bible-github-starter.zip -d /tmp/pmb-starter
-cp -R /tmp/pmb-starter/portfolio-management-bible-starter/. .
-```
-
-Do not copy a nested `.git` directory. This starter ZIP intentionally contains project files, not Git history.
-
-Check:
-
-```bash
-git status
-```
-
-You should see the starter files as untracked.
-
-## Step 4 — Create the baseline commit
-
-Before doing any learning work:
-
-```bash
-git add .
-git commit -m "chore: initialize PM/FICC learning repository"
-git push -u origin main
-```
-
-This establishes a clean baseline.
-
-## Step 5 — Bootstrap Python
+## Step 3 — Bootstrap the environment
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-
 python -m pip install --upgrade pip
 pip install -e ".[dev]"
-
-pytest
-python scripts/check_repo.py
+pytest -q
 ```
 
-Start Jupyter:
+Start Jupyter if needed:
 
 ```bash
 jupyter lab
 ```
 
-## Step 6 — Never do substantial learning work directly on `main`
+## Step 4 — Start a learning branch
 
-For the first module:
+Never do substantial learning work directly on `main`.
 
 ```bash
 git switch -c learn/01-returns-compounding
 ```
 
-Work through:
+A good first module is:
 
 ```text
+curriculum/bootcamp_01_foundations/README.md
 notebooks/foundations/01_returns_and_compounding.ipynb
 ```
 
-Your branch should contain only work related to that learning unit and any directly supporting tests/docs.
+## Step 5 — Work in checkpoints
 
-## Step 7 — Commit at meaningful checkpoints
-
-Recommended checkpoints for a notebook:
+Commit meaningful states, not every keystroke.
 
 ### Checkpoint A — manual understanding
-After:
-- reading resources,
-- completing prediction questions,
-- doing the hand calculation,
-- implementing the first version manually.
+After reading, predicting, and doing the hand calculation.
 
 ```bash
 git add notebooks/foundations/01_returns_and_compounding.ipynb
@@ -156,10 +100,7 @@ git push -u origin learn/01-returns-compounding
 ```
 
 ### Checkpoint B — reusable implementation
-After:
-- reviewing with Codex if desired,
-- extracting the function into `src/`,
-- adding tests.
+After extracting logic into `src/pm/` and adding tests.
 
 ```bash
 git add src tests
@@ -167,67 +108,43 @@ git commit -m "feat: add reusable return calculations"
 git push
 ```
 
-### Checkpoint C — documentation and completion
-After:
-- updating the concept/reference page,
-- updating `docs/PROGRESS.md`,
-- ensuring tests pass.
+### Checkpoint C — docs and review
+After updating the reference and progress docs.
 
 ```bash
-pytest
+pytest -q
 git add reference docs README.md
 git commit -m "docs: complete returns learning module"
 git push
 ```
 
-## Step 8 — Open a pull request
+## Step 6 — Open a pull request
 
 ```bash
-gh pr create   --base main   --head learn/01-returns-compounding   --title "Learn: returns and compounding"   --body-file .github/PULL_REQUEST_TEMPLATE.md
+gh pr create --base main --head learn/01-returns-compounding --title "Learn: returns and compounding"
 ```
 
-Review the diff:
+Review the diff and verify the financial logic before merge.
 
-```bash
-gh pr diff
-gh pr view --web
-```
+## Step 7 — Merge and continue
 
-Use Codex or Claude Code as a reviewer if useful, but review the financial logic yourself.
-
-## Step 9 — Merge only after quality gates pass
-
-Required:
-- manual checkpoint completed,
+Only merge to `main` when:
+- the manual exercise is complete,
 - tests pass,
-- concept/reference page exists,
-- notebook still teaches rather than merely imports a solution,
-- `docs/PROGRESS.md` updated.
+- documentation is updated,
+- the concept is understandable in plain PM language.
 
 Then:
 
 ```bash
 gh pr merge --squash --delete-branch
-```
-
-Return to local `main`:
-
-```bash
 git switch main
 git pull --ff-only
 ```
 
-## Step 10 — Start the next unit from fresh `main`
-
-```bash
-git switch -c learn/02-covariance-diversification
-```
-
-Repeat the same lifecycle.
-
 ## Branch naming conventions
 
-Use:
+Use short, clear names:
 
 ```text
 learn/<module>
@@ -237,6 +154,13 @@ docs/<topic>
 refactor/<area>
 chore/<maintenance>
 ```
+
+## Relationship to docs
+
+- [docs/getting-started.md](docs/getting-started.md) — best place to start
+- [docs/learning-paths.md](docs/learning-paths.md) — choose your route
+- [docs/PROGRESS.md](docs/PROGRESS.md) — active status and completion tracking
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — repo design and layering
 
 Examples:
 

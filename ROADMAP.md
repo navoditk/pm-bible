@@ -1,6 +1,6 @@
-# Long-Term Roadmap
+# Roadmap
 
-The initial five-day sprint is only Phase 1.
+This file is the long-range view for the repository. The canonical docs hub is [docs/README.md](docs/README.md).
 
 ## Phase 0 — Repository foundation
 - repo conventions
@@ -144,7 +144,7 @@ The initial five-day sprint is only Phase 1.
 - observability
 - tutor agents
 
-## Definition of "done"
+## Definition of done
 
 This repository is never permanently done. Each real PM question should become one of:
 - a new reference page,
