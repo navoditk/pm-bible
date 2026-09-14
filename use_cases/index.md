@@ -7,6 +7,7 @@ Starter use cases:
 - `benchmark_relative/README.md`
 - `swap_dv01_hedge/README.md`
 - `treasury_futures_hedge/README.md`
+- `equity_factor_tilt/README.md`
 
 Future:
 - credit beta reduction

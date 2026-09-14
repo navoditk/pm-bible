@@ -55,3 +55,9 @@ decide what to revisit. Not hand-edited outside of a tutor session.
 | Regime-aware allocation | `reference/concepts/regime_aware_allocation.md` | untested | — |
 | Multi-period optimization | `reference/concepts/multi_period_optimization.md` | untested | — |
 | Agentic PM analytics | `reference/concepts/agentic_pm_analytics.md` | untested | — |
+| Dividend discount model | `reference/equity/dividend_discount_model.md` | untested | — |
+| Relative valuation multiples | `reference/equity/relative_valuation_multiples.md` | untested | — |
+| CAPM and beta | `reference/equity/capm_and_beta.md` | untested | — |
+| Equity factor investing | `reference/equity/equity_factor_investing.md` | untested | — |
+| Active share | `reference/equity/active_share.md` | untested | — |
+| Shareholder yield, total shareholder return | `reference/equity/shareholder_yield.md` | untested | — |

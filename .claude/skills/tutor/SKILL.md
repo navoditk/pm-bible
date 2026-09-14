@@ -99,6 +99,12 @@ If no specialized persona matches the topic, fall back to
 | regime-aware allocation | `portfolio_construction_tutor.md` | `reference/concepts/regime_aware_allocation.md` | — (conceptual only, no code) | — |
 | multi-period optimization | `portfolio_construction_tutor.md` | `reference/concepts/multi_period_optimization.md` | — (conceptual only, no code) | — |
 | agentic PM analytics, tool schemas | `concept_tutor.md` | `reference/concepts/agentic_pm_analytics.md` | — (no notebook — see `.claude/skills/pm-query/SKILL.md` instead) | `tests/test_tool_schema.py` |
+| dividend discount model, Gordon growth | `concept_tutor.md` | `reference/equity/dividend_discount_model.md` | `notebooks/equity/28_equity_valuation_and_capm.ipynb` | `tests/test_equity.py` |
+| relative valuation multiples, justified P/E, PEG | `concept_tutor.md` | `reference/equity/relative_valuation_multiples.md` | `notebooks/equity/28_equity_valuation_and_capm.ipynb` | `tests/test_equity.py` |
+| CAPM, beta, Jensen's alpha | `concept_tutor.md` | `reference/equity/capm_and_beta.md` | `notebooks/equity/28_equity_valuation_and_capm.ipynb` | `tests/test_equity.py` |
+| equity factor investing, style tilt | `concept_tutor.md` | `reference/equity/equity_factor_investing.md` | `notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb` | `tests/test_equity.py` |
+| active share | `concept_tutor.md` | `reference/equity/active_share.md` | `notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb` | `tests/test_equity.py` |
+| shareholder yield, buybacks, total shareholder return | `concept_tutor.md` | `reference/equity/shareholder_yield.md` | `notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb` | `tests/test_equity.py` |
 
 Where a reference page or test file is listed as missing, say so plainly
 rather than inventing content — that gap is real and belongs on the roadmap,

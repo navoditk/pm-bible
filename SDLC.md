@@ -1,35 +1,31 @@
-# SDLC for the Portfolio Management Bible
+# SDLC and workflow
 
-This repo follows a lightweight but disciplined SDLC.
+This repo follows a lightweight but disciplined development lifecycle.
 
 ## Lifecycle
 
 ```text
-Issue / learning objective
+Learning objective
         ↓
 Short-lived branch
         ↓
-Read + derive manually
+Manual derivation and concept review
         ↓
 Notebook implementation
         ↓
 Checkpoint commit + push
         ↓
-Reusable src implementation
+Reusable `src/pm/` implementation
         ↓
 Tests
         ↓
-Reference/documentation
+Reference and documentation updates
         ↓
-Agent review / human review
+Pull request review
         ↓
-Pull request
+Merge to `main`
         ↓
-CI / quality gates
-        ↓
-Squash merge to main
-        ↓
-Update roadmap/progress
+Update progress and roadmap
 ```
 
 ## Work item types
@@ -40,12 +36,12 @@ Examples:
 - duration
 - spread duration
 
-Creates or updates:
-- notebook
-- reference page
-- `src/` implementation if computational
+Produces:
+- notebook update
+- reference page update
+- code implementation if needed
 - tests
-- progress
+- progress note
 
 ### Feature
 Examples:
@@ -61,39 +57,36 @@ Examples:
 
 ### Reference enhancement
 Example:
-- add OAS vs Z-spread comparison
+- OAS vs Z-spread comparison
 
-## Definition of Ready
+## Definition of ready
 
-Before implementing:
-- topic/use case is named,
-- required reference material is identified,
-- expected output is understood,
-- relevant reference page/template exists or will be created.
+Before implementing a topic:
+- the objective is clear,
+- the concept is identified,
+- the required references are known,
+- the expected output is understood.
 
-## Definition of Done
+## Definition of done
 
-A computational concept is done when:
-- learning objective completed manually,
-- formula and units documented,
-- notebook has a worked example,
-- reusable code exists if needed,
-- deterministic tests pass,
-- limitations/approximations stated,
-- reference page links sources,
-- progress updated,
-- PR reviewed and merged.
+A concept is done when:
+- the manual exercise has been attempted,
+- the formula and units are written down,
+- the notebook contains a worked example,
+- the reusable code is in `src/pm/` if appropriate,
+- the deterministic tests pass,
+- limitations and approximation assumptions are stated,
+- the progress file is updated,
+- the PR is reviewed and merged.
 
 ## Checkpoint policy
 
 Commit logical states, not every keystroke.
 
-Typical notebook unit:
+Typical sequence:
 1. `learn:` manual lab complete
 2. `feat:` reusable implementation + tests
 3. `docs:` reference/progress complete
-
-Push after each checkpoint.
 
 ## Main branch policy
 
@@ -101,13 +94,13 @@ Push after each checkpoint.
 - runnable,
 - test-passing,
 - documented,
-- suitable as the quick-reference version of the repository.
+- suitable as a quick-reference version of the repository.
 
-Do experimental learning on branches.
+Do experimental learning on short-lived branches.
 
 ## Releases
 
-Suggested milestones:
+Suggested milestone pattern:
 
 ```text
 v0.1-foundations

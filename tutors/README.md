@@ -12,6 +12,13 @@ actual `src/pm` function and cites it, rather than teaching toward the
 answer. See `reference/concepts/agentic_pm_analytics.md` for how the two
 skills relate.
 
+To work through the *entire* curriculum rather than one topic at a time,
+use `/master` (`.claude/skills/master/SKILL.md`). It doesn't teach —
+every actual session still runs through `/tutor` — it sequences the
+curriculum in bootcamp-day order, reads `docs/mastery.md` to find the
+next weak or untested concept, hands off to `/tutor` for that concept,
+and reports aggregate progress until everything is `confirmed`.
+
 All tutors should ground themselves in:
 - relevant reference pages,
 - current notebook,

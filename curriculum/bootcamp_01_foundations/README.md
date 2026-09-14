@@ -185,10 +185,10 @@ Notebooks:
 
 ## Extension — Day 13: Agentic PM analytics
 
-Phase 12 of `ROADMAP.md`, the final roadmap phase. No notebook — this is
-the agent layer over everything built in Days 1–12, not new financial
-math. Read `reference/concepts/agentic_pm_analytics.md` first; it maps
-every roadmap bullet to the concrete artifact that satisfies it.
+Phase 12 of `ROADMAP.md`, the final FICC roadmap phase. No notebook —
+this is the agent layer over everything built in Days 1–12, not new
+financial math. Read `reference/concepts/agentic_pm_analytics.md` first;
+it maps every roadmap bullet to the concrete artifact that satisfies it.
 
 1. tool schemas — `docs/tool_schema.json`
 2. natural-language query layer — `/pm-query` (`.claude/skills/pm-query/SKILL.md`)
@@ -196,3 +196,21 @@ every roadmap bullet to the concrete artifact that satisfies it.
 4. evals — `docs/agentic_analytics_evals.md`
 5. grounding, guardrails, explainability, observability — see how both
    skills apply `AGENTS.md`'s rules and cite/log every answer
+
+## Extension — Day 14: Equity portfolio management
+
+Phase 13 of `ROADMAP.md`, the first phase to extend the repo beyond
+`docs/FICC_TAXONOMY.md`'s fixed-income/currencies/commodities scope into
+equities. Full multi-factor risk-model estimation (Barra/Axioma-style) is
+conceptual only — see `reference/equity/equity_factor_investing.md` for
+why.
+
+1. dividend discount models (Gordon growth, two-stage)
+2. relative valuation multiples (justified P/E, PEG)
+3. CAPM, beta, equity risk premium, Jensen's alpha
+4. active share and style tilt
+5. shareholder yield, buybacks, total shareholder return
+
+Notebooks:
+- `notebooks/equity/28_equity_valuation_and_capm.ipynb`
+- `notebooks/equity/29_active_share_factors_and_shareholder_yield.ipynb`
